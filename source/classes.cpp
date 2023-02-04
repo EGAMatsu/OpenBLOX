@@ -610,253 +610,86 @@ void SpecialMesh::renderMesh(int meshType) {
 void Object::calculateBrickColor(int value) {
 	//printf("Current Value: %d\n", value);
 	switch(value) {
-		//White to black
-		
-		/*White*/
+		/* White */
 		case(1):
 			color_r = 242;
 			color_g = 243;
 			color_b = 242;
 		break;
 		
-		case(208):
-			color_r = 229;
-			color_g = 228;
-			color_b = 222;
-		break;
-		
-		case(194):
-			color_r = 163;
-			color_g = 162;
-			color_b = 164;
-		break;
-		
-		case(199):
-			color_r = 99;
-			color_g = 95;
-			color_b = 97;
-		break;
-		
-		case(26):
-			color_r = 27;
-			color_g = 42;
-			color_b = 52;
-		break;
-		/*Black*/
-		
-		//Red to bright yellow
-		
-		/*Red*/
-		case(21):
-			color_r = 196;
-			color_g = 40;
-			color_b = 27;
-		break;
-		
-		case(24):
-			color_r = 245;
-			color_g = 205;
-			color_b = 47;
-		break;
-		
-		case(226):
-			color_r = 253;
-			color_g = 234;
-			color_b = 140;
-		break;
-		/*Bright Yellow*/
-		
-		//Blues
-		case(23):
-			color_r = 13;
-			color_g = 105;
-			color_b = 171;
-		break;
-		
-		case(107):
-			color_r = 0;
-			color_g = 143;
-			color_b = 155;
-		break;
-		
-		case(102):
-			color_r = 110;
-			color_g = 153;
-			color_b = 201;
-		break;
-		
-		case(11):
-			color_r = 128;
-			color_g = 187;
-			color_b = 219;
-		break;
-		
-		case(45):
-			color_r = 180;
-			color_g = 210;
-			color_b = 227;
-		break;
-		
-		case(135):
-			color_r = 116;
-			color_g = 134;
-			color_b = 156;
-		break;
-		//End of blues
-		
-		//Oranges
-		case(106):
-			color_r = 218;
-			color_g = 133;
-			color_b = 64;
-		break;
-		
-		case(105):
-			color_r = 226;
-			color_g = 155;
-			color_b = 105;
-		break;
-		//End of Oranges
-		
-		/* Half Way Mark */
-		
-		/*Greens*/
-		case(141):
-			color_r = 39;
-			color_g = 70;
-			color_b = 44;
-		break;
-		
-		case(28):
-			color_r = 40;
-			color_g = 127;
-			color_b = 70;
-		break;
-		
-		case(37):
-			color_r = 75;
-			color_g = 151;
-			color_b = 74;
-		break;
-		
-		case(119):
-			color_r = 164;
-			color_g = 189;
-			color_b = 70;
-		break;
-		
-		case(29):
+		/* Grey */
+		case(2):
 			color_r = 161;
-			color_g = 196;
-			color_b = 139;
-		break;
-	
-		case(151):
-			color_r = 120;
-			color_g = 144;
-			color_b = 129;
-		break;
-		/*End of greens*/
-		
-		/*First 2 shades of brown*/
-		case(38):
-			color_r = 160;
-			color_g = 95;
-			color_b = 52;
+			color_g = 165;
+			color_b = 165;
 		break;
 		
-		case(192):
-			color_r = 105;
-			color_g = 64;
-			color_b = 39;
-		break;
-		/*end of said shades*/
-		
-		/*Pastels to Brown*/
-		case(104):
-			color_r = 107;
-			color_g = 50;
-			color_b = 123;
+		/* Light yellow */
+		case(3):
+			color_r = 249;
+			color_g = 233;
+			color_b = 233;
 		break;
 		
-		case(9):
-			color_r = 232;
-			color_g = 186;
-			color_b = 199;
-		break;
-		
-		case(101):
-			color_r = 218;
-			color_g = 134;
-			color_b = 121;
-		break;
-		
+		/* Brick yellow */
 		case(5):
 			color_r = 215;
-			color_g = 197;
+			color_g = 215;
 			color_b = 153;
 		break;
 		
-		case(153):
-			color_r = 149;
-			color_g = 121;
-			color_b = 118;
-		break;
-	
-		case(217):
-			color_r = 124;
-			color_g = 92;
-			color_b = 69;
+		/* Light green */
+		case(6):
+			color_r = 194;
+			color_g = 194;
+			color_b = 184;
 		break;
 		
-		case(18):
-			color_r = 204;
-			color_g = 142;
-			color_b = 104;
+		/* Light reddish violet */
+		case(9):
+			color_r = 232;
+			color_g = 232;
+			color_b = 232;
 		break;
 		
-		case(125):
-			color_r = 234;
-			color_g = 184;
-			color_b = 145;
-		break;
-		/*end of said shades*/
-		
-		/*Extra*/
-		case(39):
-			color_r = 234;
-			color_g = 184;
-			color_b = 145;
+		/* Light orange brown */
+		case(9):
+			color_r = 232;
+			color_g = 232;
+			color_b = 232;
 		break;
 		
-		case(12):
-			color_r = 203;
-			color_g = 132;
-			color_b = 66;
+		/* Nougat */
+		case(9):
+			color_r = 232;
+			color_g = 232;
+			color_b = 232;
 		break;
-		/*End of Extra*/
 		
-		default:
-			color_r = 193;
-			color_g = 202;
-			color_b = 222;
+		/* Bright red */
+		case(9):
+			color_r = 232;
+			color_g = 232;
+			color_b = 232;
 		break;
+		
+		/* Med. reddish violet */
+		case(9):
+			color_r = 232;
+			color_g = 232;
+			color_b = 232;
+		break;
+		
 	}
 }
 
 void drawBlock(float x, float y, float z, float width, float height, float depth, int r, int g, int b, float alpha, bool doCull) {
-	width = (width);
-	height = (height);
-	depth = (depth);
-	/*
-	Renders a block that is scaled from the center outwards.
-	*/
+	// Set the scale
+	width = abs(width);
+	height = abs(height);
+	depth = abs(depth);
 	
-	/*
-	glScalef32(scale_width[i], scale_height[i], scale_depth[i]);
-	glTranslatef32(pos_x[i],pos_y[i],pos_z[i]);
-	*/
-	
+	// Set the positions used for making the model.
 	float xx1 = std::min(x - width, x + width);
 	float xx2 = std::max(x - width, x + width);
 
@@ -866,19 +699,9 @@ void drawBlock(float x, float y, float z, float width, float height, float depth
 	float zz1 = std::min(z - depth, z + depth);
 	float zz2 = std::max(z - depth, z + depth);
 
-/*
-	if ((x + width < x - width) || (y + height < y - height) || (z + depth < z - depth)) {
-		glPolyFmt(POLY_ALPHA(31 - int(alpha * 31)) | POLY_CULL_NONE | POLY_FORMAT_LIGHT0);
-	} else {
-		glPolyFmt(POLY_ALPHA(31 - int(alpha * 31)) | POLY_CULL_BACK | POLY_FORMAT_LIGHT0);
-	}
-*/
-	if (doCull) {
-		glPolyFmt(POLY_ALPHA(31 - int(alpha * 31)) | POLY_CULL_NONE | POLY_FORMAT_LIGHT0 | POLY_FOG );
-	} else {
-		glPolyFmt(POLY_ALPHA(31 - int(alpha * 31)) | POLY_CULL_NONE | POLY_FORMAT_LIGHT0 | POLY_FOG);
-	}
-	//need to set up some material properties since DS does not have them set by default
+	glPolyFmt(POLY_ALPHA(31 - int(alpha * 31)) | POLY_CULL_NONE | POLY_FORMAT_LIGHT0 | POLY_FOG);
+	
+	// Configure the colors to work in the 0 - 31 format instead of 0 - 255, aka 15-bit color mode.
 	int r31, g31, b31;
 	int r31s, g31s, b31s;
 	r31 = (r/16);
@@ -889,66 +712,124 @@ void drawBlock(float x, float y, float z, float width, float height, float depth
 	g31s = (g/16)*0.5;
 	b31s = (b/16)*0.5;
 	
+	// Set the material properties
 	glMaterialf(GL_AMBIENT, RGB15(r31s,g31s,b31s));
 	glMaterialf(GL_DIFFUSE, RGB15(r31,g31,b31));
 	
-	//Front
-	glBegin(GL_QUAD);
-		glNormal3f(0,0,1);
-		glVertex3(xx1, yy2, zz1);
-		glVertex3(xx2, yy2, zz1);
-		glVertex3(xx2, yy1, zz1);
-		glVertex3(xx1, yy1, zz1);
-	glEnd();
-
 	//Back
-	glBegin(GL_QUAD);
-		glNormal3f(0,0,-1);
-		glVertex3(xx1, yy1, zz2);
-		glVertex3(xx2, yy1, zz2);
-		glVertex3(xx2, yy2, zz2);
-		glVertex3(xx1, yy2, zz2);
-	glEnd();
+	if (zz2 - zz1 > 0) {
+		glBegin(GL_QUAD);
+			glNormal3f(0,0,zz2);
+			glVertex3f(xx1, yy2, zz2);
+			glVertex3f(xx2, yy2, zz2);
+			glVertex3f(xx2, yy1, zz2);
+			glVertex3f(xx1, yy1, zz2);
+		glEnd();
+	} else {
+		glBegin(GL_QUAD);
+			glNormal3f(0,0,zz2);
+			glVertex3f(xx1, yy1, zz2);
+			glVertex3f(xx2, yy1, zz2);
+			glVertex3f(xx2, yy2, zz2);
+			glVertex3f(xx1, yy2, zz2);
+		glEnd();
+	}
+
+	//Front
+	if (zz1 - zz2 < 0) {
+		glBegin(GL_QUAD);
+			glNormal3f(0,0,zz1);
+			glVertex3f(xx1, yy1, zz1);
+			glVertex3f(xx2, yy1, zz1);
+			glVertex3f(xx2, yy2, zz1);
+			glVertex3f(xx1, yy2, zz1);
+		glEnd();
+	} else {
+		glBegin(GL_QUAD);
+			glNormal3f(0,0,zz1);
+			glVertex3f(xx1, yy2, zz1);
+			glVertex3f(xx2, yy2, zz1);
+			glVertex3f(xx2, yy1, zz1);
+			glVertex3f(xx1, yy1, zz1);
+		glEnd();
+	}
 
 	//Right
-	glBegin(GL_QUAD);
-		glNormal3f(1,0,0);
-		glVertex3(xx1, yy1, zz1);
-		glVertex3(xx1, yy1, zz2);
-		glVertex3(xx1, yy2, zz2);
-		glVertex3(xx1, yy2, zz1);
-	glEnd();
+	if (xx1 - xx2 < 0) {
+		glBegin(GL_QUAD);
+			glNormal3f(xx1,0,0);
+			glVertex3f(xx1, yy2, zz1);
+			glVertex3f(xx1, yy2, zz2);
+			glVertex3f(xx1, yy1, zz2);
+			glVertex3f(xx1, yy1, zz1);
+		glEnd();
+	} else {
+		glBegin(GL_QUAD);
+			glNormal3f(xx1,0,0);
+			glVertex3f(xx1, yy1, zz1);
+			glVertex3f(xx1, yy1, zz2);
+			glVertex3f(xx1, yy2, zz2);
+			glVertex3f(xx1, yy2, zz1);
+		glEnd();
+	}
 
 	//Left
-	glBegin(GL_QUAD);
-		glNormal3f(-1,0,0);
-		glVertex3(xx2, yy1, zz2);
-		glVertex3(xx2, yy1, zz1);
-		glVertex3(xx2, yy2, zz1);
-		glVertex3(xx2, yy2, zz2);
-	glEnd();
-
-	glPolyFmt(POLY_ALPHA(31-int(alpha*31)) | POLY_CULL_NONE  | POLY_FORMAT_LIGHT0 | POLY_FOG);
-	
-	if (((x+width >= 20) || (x-width <= -20)) || ((z+depth >= 20) || (z-depth <= -20))) {
-		//glFrustum(0,0,255,191, 0.01, 8192);
+	if (xx2 - xx1 < 0) {
+		glBegin(GL_QUAD);
+			glNormal3f(xx2,0,0);
+			glVertex3f(xx2, yy1, zz2);
+			glVertex3f(xx2, yy1, zz1);
+			glVertex3f(xx2, yy2, zz1);
+			glVertex3f(xx2, yy2, zz2);
+		glEnd();
+	} else {
+		glBegin(GL_QUAD);
+			glNormal3f(xx2,0,0);
+			glVertex3f(xx2, yy1, zz1);
+			glVertex3f(xx2, yy1, zz2);
+			glVertex3f(xx2, yy2, zz2);
+			glVertex3f(xx2, yy2, zz1);
+		glEnd();
 	}
 	
-	glBegin(GL_QUAD);
-	//Bottom
-		glNormal3f(0,-1,0);
-		glVertex3(xx1, yy1, zz1);
-		glVertex3(xx2, yy1, zz1);
-		glVertex3(xx2, yy1, zz2);
-		glVertex3(xx1, yy1, zz2);
-		
+	
 	//Top
-		glNormal3f(0,1,0);
-		glVertex3(xx1, yy2, zz2);
-		glVertex3(xx2, yy2, zz2);
-		glVertex3(xx2, yy2, zz1);
-		glVertex3(xx1, yy2, zz1);
-	glEnd();
+	if (yy1 - yy2 < 0) {
+		glBegin(GL_QUAD);
+			glNormal3f(0,yy2,0);
+			glVertex3f(xx1, yy2, zz1);
+			glVertex3f(xx2, yy2, zz1);
+			glVertex3f(xx2, yy2, zz2);
+			glVertex3f(xx1, yy2, zz2);
+		glEnd();
+	} else {
+		glBegin(GL_QUAD);
+			glNormal3f(0,yy2,0);
+			glVertex3f(xx1, yy2, zz2);
+			glVertex3f(xx2, yy2, zz2);
+			glVertex3f(xx2, yy2, zz1);
+			glVertex3f(xx1, yy2, zz1);
+		glEnd();
+	}
+		
+	//Bottom
+	if (yy2 - yy1 < 0) {
+		glBegin(GL_QUAD);
+			glNormal3f(0,yy1,0);
+			glVertex3f(xx1, yy1, zz1);
+			glVertex3f(xx2, yy1, zz1);
+			glVertex3f(xx2, yy1, zz2);
+			glVertex3f(xx1, yy1, zz2);
+		glEnd();
+	} else {
+		glBegin(GL_QUAD);
+			glNormal3f(0,yy1,0);
+			glVertex3f(xx1, yy1, zz2);
+			glVertex3f(xx2, yy1, zz2);
+			glVertex3f(xx2, yy1, zz1);
+			glVertex3f(xx1, yy1, zz1);
+		glEnd();
+	}
 }
 
 //Update world physics
@@ -981,7 +862,7 @@ void Part::update(float time) {
 void Part::draw(float renderTransparency) {
 	if (transparency != 1) {
 		glPushMatrix();
-					
+
 		// Compute the angle of rotation
 		float angle = acos((r00 + r11 + r22 - 1) / 2);
 
@@ -989,11 +870,26 @@ void Part::draw(float renderTransparency) {
 		float x = (r21 - r12) / (2 * sin(angle));
 		float y = (r02 - r20) / (2 * sin(angle));
 		float z = (r10 - r01) / (2 * sin(angle));
-					
+		
 		glTranslatef32(pos_x, pos_y, pos_z);
 		// Use the glRotatef function with the angle and axis
 		glRotatef(angle * 180 / M_PI, x, y, z);
-		glScalef32(scale_width, scale_height, scale_depth);
+		
+		float scale_width_abs = abs(scale_width);
+		float scale_height_abs = abs(scale_height);
+		float scale_depth_abs = abs(scale_depth);
+		
+		glScalef32(scale_width_abs, scale_height_abs, scale_depth_abs);
+		
+		if (scale_width < 0) {
+			glScalef(1, 1, -1);
+		}
+		if (scale_height < 0) {
+			glScalef(1, -1, 1);
+		}
+		if (scale_depth < 0) {
+			glScalef(1, 1, -1);
+		}
 		
 		calculateBrickColor(brickColor);
 
@@ -1003,6 +899,7 @@ void Part::draw(float renderTransparency) {
 		glPopMatrix(1);
 	}
 }
+
 
 bool Part::isObstructed(float x, float y, float z, float radius) {
 	if (canCollide == true) {
