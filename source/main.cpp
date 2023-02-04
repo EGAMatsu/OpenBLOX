@@ -501,8 +501,9 @@ void processScript(tinyxml2::XMLElement *script) {
 }
 
 
-const char *characterFile = "content/fonts/character.rbxm";
+//const char *characterFile = "content/fonts/character.rbxm";
 
+/* Scuffed non-functional delta time func */
 float GetDeltaTime() {
     static std::chrono::time_point<std::chrono::high_resolution_clock> prevTimePoint = std::chrono::high_resolution_clock::now();
     auto currentTimePoint = std::chrono::high_resolution_clock::now();
@@ -525,17 +526,12 @@ bool extension(const std::string_view filename, const std::vector<std::string_vi
 
 int main(int argc, char **argv)
 {
-	// Initialise the console, required for printf
 	consoleDemoInit();
-	//const char *mapName = "June06.rbxl";
-	//const char *mapName = "2007 - extreme four corners.rbxl";
-	//const char *mapName = "2008 - Grow a Brick.rbxl";
-	//const char *mapName = "PartColor.rbxl";
-	//const char *mapName = "map.rbxl";
 	
 	const char *mapFile[256];
 	int mapLength = 0;
 
+	/* Start up fs */
 	if (fatInitDefault()) {
 		DIR *pdir;
 		struct dirent *pent;
@@ -559,6 +555,7 @@ int main(int argc, char **argv)
 			}
 			printf("\e[1;1H\e[2J"); 
 			
+			/* Manager variables */
 			int pressed = 0;
 			int held = 0;
 			bool update = true;
@@ -625,11 +622,13 @@ int main(int argc, char **argv)
 					fileIsSelected = true;
 				}
 			}
+			/* Load Map */
 			char filePath[256];
 			sprintf(filePath, "%s/%s", isDSiMode() ? "sd:/OpenBLOX" : "fat:/OpenBLOX", mapFile[fSelectNumb]);
 			FILE *fp = fopen(filePath, "r");
 			parseRBXL(fp);
 			
+			/* Load player model */
 			char filePathChar[256];
 			sprintf(filePath, "%s/%s", isDSiMode() ? "sd:/OpenBLOX" : "fat:/OpenBLOX", "content/fonts/character.rbxm");
 			FILE *fpchar = fopen(filePath, "r");
@@ -682,7 +681,8 @@ int main(int argc, char **argv)
 	gluLookAt(	0.0, 1.25, -2.5,		//camera possition
 				0.0, 1.25, 0.0,		//look at
 				0.0, 1.0, 0.0);		//up
-				
+	
+	//Create player
 	Player player;
 	
 	std::random_device rd; // obtain a random number from hardware
@@ -690,6 +690,7 @@ int main(int argc, char **argv)
     std::uniform_int_distribution<> distr(0, spawnCount-1); // define the range
 	int spawnID = distr(gen);
 	
+	//Spawn player @ random spawn
 	player.pos_x = -spawnLocation_X[spawnID];
 	player.pos_y = -spawnLocation_Y[spawnID] - (8192/2);
 	player.pos_z = -spawnLocation_Z[spawnID];
@@ -702,29 +703,19 @@ int main(int argc, char **argv)
 	{
 		glPushMatrix();
 		
-		// std::chrono::steady_clock::time_point lastUpdate;
-		// float deltaTime
 		auto now = std::chrono::steady_clock::now();
 		float deltaTime = std::chrono::duration_cast<std::chrono::microseconds>(now - lastUpdate).count() / 1000000.0f;
 		auto lastUpdate = now;
 		
 		int deltaScale = 1024*10;
 		float gameDelta = abs(deltaScale/(deltaTime/1000000));
-		//printf("Delta: %f\n", gameDelta);
 
 		//Camera Rotation and position
 		glRotateX(player.directionFacing_x);
 		glRotateY(player.walkDirection_y);
 		glTranslatef32(player.pos_x, player.pos_y, player.pos_z);
 
-		glMatrixMode(GL_PROJECTION);
-
-		//not a real gl function and will likely change
-		//glPolyFmt(POLY_ALPHA(31) | POLY_CULL_NONE);
-		
 		glMatrixMode(GL_MODELVIEW);
-
-		//drawBlock(0,0,0,1,1,1);
 		
 		//set up a directional ligth arguments are light number (0-3), light color, 
 		//and an x,y,z vector that points in the direction of the light
@@ -738,11 +729,12 @@ int main(int argc, char **argv)
 		std::uniform_int_distribution<> distr(0, spawnCount-1); // define the range
 		int spawnID = distr(gen);
 	
-		//Api
+		//Player API
 		player.Render();
 		player.Input();
 		player.Update(parts, partCount, 1);
 		
+		//Respawn player if below map.
 		if (player.pos_y > (256*1024)) {
 			player.pos_x = -spawnLocation_X[spawnID];
 			player.pos_y = -spawnLocation_Y[spawnID] - (8192/2);
@@ -751,32 +743,17 @@ int main(int argc, char **argv)
 		}
 		
 		/* End of Player logic ^ */
-		
-		/*
-		for (int i = 0; i < spawnCount; i++) {
-			glPushMatrix();
-			
-			glTranslatef32(spawnLocation_X[i],spawnLocation_Y[i],spawnLocation_Z[i]);
-			drawBlock(0,0,0, 0.1, 2, 0.1, 0,0,0,0,false);
-			
-			glPopMatrix(1);
-		}*/
-		
-		/*
-		glFogColor(24,24,31,31);
-		for (int fd = 0; fd <32; fd++) {
-			glFogDensity(fd, fd*31/63);
-		}
-		glFogOffset(0);
-		glFogShift(0);*/
 	
-		float divDistance = 0;
+		//The slow as fuck renderer code
+		int divDistance = 0;
 		for (auto i = 0; i < parts.size(); ++i) {
 			if (i < parts.size() - 6){
 				if (parts[i].getDistanceFromPlayer(-player.pos_x, -player.pos_y, -player.pos_z) < cullDist * 1024 ||
 				parts[i].scale_width >= (cullDist/2) * 1024 ||
 				parts[i].scale_depth >= (cullDist/2) * 1024)
 				{
+					//Unused attempt at fading parts.
+					/*
 					if (parts[i].getDistanceFromPlayer(-player.pos_x, -player.pos_y, -player.pos_z) < (cullDist * (512)) ||
 					parts[i].scale_width >= (cullDist/2) * 1024 ||
 					parts[i].scale_depth >= (cullDist/2) * 1024)
@@ -784,12 +761,15 @@ int main(int argc, char **argv)
 						divDistance = 0;
 					} else {
 						divDistance = 0;
-					}
+					}*/
+					
+					//Draw each part.
 					glPushMatrix();
 					parts[i].draw(divDistance);
 					glPopMatrix(1);
 				}
 			} else { //IF else, then it is the players part-list.
+				//Render player model!
 				glPushMatrix();
 					glTranslatef32(-player.pos_x, -player.pos_y-1024-512, -player.pos_z);
 					glRotateY(player.facingDirection_y);
