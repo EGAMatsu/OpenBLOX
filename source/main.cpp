@@ -183,6 +183,7 @@ void processModel(tinyxml2::XMLElement *model, int parent_id) {
 		}
 }
 
+//This code sees what a class is and does shit
 void processItem(tinyxml2::XMLElement *item, int parent_id) {
 	int max_id = 0;
 	for (auto &object : objects) {
@@ -191,6 +192,7 @@ void processItem(tinyxml2::XMLElement *item, int parent_id) {
 		}
 	}
 	
+	//This gets the classes instance name iirc
 	tinyxml2::XMLElement* properties = item->FirstChildElement("Properties");
 	tinyxml2::XMLElement* nameString = properties->FirstChildElement("string");
 	if ((strcmp(nameString->Attribute("name"), "Name") != 0) && nameString != nullptr) {
@@ -198,23 +200,31 @@ void processItem(tinyxml2::XMLElement *item, int parent_id) {
 	}
 	
 	objects[max_id].name = nameString->GetText();
+	//If the object is a part, then process it as a part
     if (strcmp(item->Attribute("class"), "Part") == 0) {
         processPart(item, parent_id);
 		partCount++;
-    } else if (strcmp(item->Attribute("class"), "SpawnLocation") == 0) {
+    }
+	//If the object is a spawn location, then process it as a spawn location, though it uses modified part code.
+	else if (strcmp(item->Attribute("class"), "SpawnLocation") == 0) {
         processSpawn(item, parent_id);
 		partCount++;
-    } else if (strcmp(item->Attribute("class"), "Script") == 0) {
+    }
+	//If the class is a script, then process the lua and such (Not implemented)
+	else if (strcmp(item->Attribute("class"), "Script") == 0) {
         Script s;
         s.id = objects.size();
         s.parent_id = parent_id;
         objects.push_back(s);
         scripts.push_back(s);
-    } else if (strcmp(item->Attribute("class"), "Model") == 0) {
+    }
+	//If the class is a model, then process the model and its children
+	else if (strcmp(item->Attribute("class"), "Model") == 0) {
         processModel(item, parent_id);
     }
 }
 
+//The code that processes a spawn location, if someone wants to comment this, please go on ahead for me.
 void processSpawn(tinyxml2::XMLElement *part, int parent_id) {
 	printf("Found a Part!\n");
 	Part newPart;
@@ -355,6 +365,7 @@ void processSpawn(tinyxml2::XMLElement *part, int parent_id) {
 	parts.push_back(newPart);
 }
 
+//The code that processes a part, if someone wants to comment this, please go on ahead for me.
 void processPart(tinyxml2::XMLElement *part, int parent_id) {
 	printf("Found a Part!\n");
 	Part newPart;
@@ -500,7 +511,6 @@ void processScript(tinyxml2::XMLElement *script) {
 	printf("Found a Script!\n");
 }
 
-
 //const char *characterFile = "content/fonts/character.rbxm";
 
 /* Scuffed non-functional delta time func */
@@ -512,8 +522,10 @@ float GetDeltaTime() {
     return deltaTime;
 }
 
+//Supported formats
 std::vector<std::string_view> extensions = { ".rbxl" };
 
+//Sorts files by extension and if so, then use this to add them to the list
 bool extension(const std::string_view filename, const std::vector<std::string_view> extensions) {
     for (std::string_view extension : extensions) {
         if (strcasecmp(filename.substr(filename.size() - extension.size()).data(), extension.data()) == 0) {
@@ -649,8 +661,7 @@ int main(int argc, char **argv)
 
 	// initialize gl
 	glInit();
-	
-	int cullDist = 64;
+	int cullDist = 64; //this is the part cull distance, different than the actual DS cull distance.
 	
 	// enable antialiasing
 	glEnable(GL_ANTIALIAS);
@@ -661,10 +672,12 @@ int main(int argc, char **argv)
 	glEnable(POLY_SHADOW);
 	glEnable(GL_POLY_OVERFLOW);
 	
+	//Set up the background color
 	int bgr, bgg, bgb;
 	bgr = 161;
 	bgg = 190;
 	bgb = 230;
+	
 	// setup the rear plane
 	glClearColor(bgr/31,bgg/31,bgb/31,31); // BG must be opaque for AA to work
 	glClearPolyID(63); // BG must have a unique polygon ID for AA to work
