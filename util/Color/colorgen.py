@@ -1,25 +1,25 @@
-def generate_code(filename):
-    with open(filename, 'r') as f:
-        data = f.readlines()
+def process_file(input_file, output_file):
+    data = {}
+    with open(input_file, "r") as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            parts = line.split("\t")
+            if len(parts) == 5:
+                id, name, rgb, hex, _ = parts
+                id = int(id)
+                rgb = [int(x) for x in rgb.split(", ")]
+                data[id] = (name, rgb, hex)
+            else:
+                id = int(parts[0])
+                if id in data:
+                    data[id] = (*data[id], parts[1])
+    with open(output_file, "w") as f:
+        for id, item in sorted(data.items()):
+            name, rgb, hex, shares = item
+            f.write(f"{id}\t{name}\t{rgb}\t{hex}\t{shares}\n")
 
-    code = "void Object::calculateBrickColor(int value) {\n"
-    code += "    switch(value) {\n"
-
-    for line in data:
-        values = line.strip().split()
-        color_name = values[0]
-        color_r = values[1]
-        color_g = values[2]
-        color_b = values[3]
-
-        code += f"        case({values[4]}):\n"
-        code += f"            color_r = {color_r};\n"
-        code += f"            color_g = {color_g};\n"
-        code += f"            color_b = {color_b};\n"
-        code += "            break;\n"
-        code += f"        //{color_name}\n"
-
-    code += "    }\n}\n"
-    return code
-
-print(generate_code("colors.txt"))
+input_file = "colors.txt"
+output_file = "output.txt"
+process_file(input_file, output_file)

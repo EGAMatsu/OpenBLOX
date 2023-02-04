@@ -610,6 +610,13 @@ void SpecialMesh::renderMesh(int meshType) {
 void Object::calculateBrickColor(int value) {
 	//printf("Current Value: %d\n", value);
 	switch(value) {
+		/* Fallback/null color */
+		default:
+			color_r = 255;
+			color_g = 0;
+			color_b = 255;
+		break;
+		
 		/* White */
 		case(1):
 			color_r = 242;
@@ -653,33 +660,144 @@ void Object::calculateBrickColor(int value) {
 		break;
 		
 		/* Light orange brown */
-		case(9):
-			color_r = 232;
-			color_g = 232;
-			color_b = 232;
+		case(12):
+			color_r = 203;
+			color_g = 132;
+			color_b = 66;
 		break;
 		
 		/* Nougat */
-		case(9):
-			color_r = 232;
-			color_g = 232;
-			color_b = 232;
+		case(18):
+			color_r = 204;
+			color_g = 142;
+			color_b = 104;
 		break;
 		
 		/* Bright red */
-		case(9):
-			color_r = 232;
-			color_g = 232;
-			color_b = 232;
+		case(21):
+			color_r = 196;
+			color_g = 40;
+			color_b = 27;
 		break;
 		
 		/* Med. reddish violet */
-		case(9):
-			color_r = 232;
-			color_g = 232;
-			color_b = 232;
+		case(22):
+			color_r = 196;
+			color_g = 112;
+			color_b = 160;
 		break;
 		
+		/* Bright blue */
+		case(23):
+			color_r = 13;
+			color_g = 105;
+			color_b = 171;
+		break;
+		
+		/* Bright yellow */
+		case(24):
+			color_r = 245;
+			color_g = 205;
+			color_b = 47;
+		break;
+		
+		/* Earth orange */
+		case(25):
+			color_r = 98;
+			color_g = 71;
+			color_b = 50;
+		break;
+		
+		/* Black */
+		case(26):
+			color_r = 27;
+			color_g = 42;
+			color_b = 52;
+		break;
+		
+		/* Dark grey */
+		case(27):
+			color_r = 109;
+			color_g = 110;
+			color_b = 108;
+		break;
+		
+		/* Dark green */
+		case(28):
+			color_r = 40;
+			color_g = 127;
+			color_b = 70;
+		break;
+		
+		/* Medium green */
+		case(29):
+			color_r = 161;
+			color_g = 196;
+			color_b = 139;
+		break;
+		
+		/* Lt. Yellowich orange */
+		case(36):
+			color_r = 243;
+			color_g = 207;
+			color_b = 155;
+		break;
+		
+		/* Bright green */
+		case(37):
+			color_r = 75;
+			color_g = 151;
+			color_b = 74;
+		break;
+		
+		/* Dark orange */
+		case(38):
+			color_r = 160;
+			color_g = 95;
+			color_b = 52;
+		break;
+		
+		/* Light blueish violet */
+		case(39):
+			color_r = 193;
+			color_g = 202;
+			color_b = 222;
+		break;
+		
+		/* Light blue */
+		case(45):
+			color_r = 180;
+			color_g = 210;
+			color_b = 227;
+		break;
+		
+		/* Light red */
+		case(100):
+			color_r = 238;
+			color_g = 196;
+			color_b = 182;
+		break;
+		
+		/* Medium red */
+		case(101):
+			color_r = 238;
+			color_g = 196;
+			color_b = 182;
+		break;
+		
+		/* Medium blue */
+		case(102):
+			color_r = 40;
+			color_g = 127;
+			color_b = 70;
+		break;
+		
+		/* Light gray */
+		case(103):
+			color_r = 40;
+			color_g = 127;
+			color_b = 70;
+		break;
 	}
 }
 
