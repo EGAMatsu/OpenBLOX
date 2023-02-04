@@ -232,7 +232,7 @@ void processSpawn(tinyxml2::XMLElement *part, int parent_id) {
 	newPart.parent_id = parent_id;
 	tinyxml2::XMLElement* properties = part->FirstChildElement("Properties");
 	
-	/* Get the parts name */
+	/* Get the parts name. */
 		tinyxml2::XMLElement* nameString = properties->FirstChildElement("string");
 		if ((strcmp(nameString->Attribute("name"), "Name") != 0) && nameString != nullptr) {
 			nameString = nameString->NextSiblingElement("string");
