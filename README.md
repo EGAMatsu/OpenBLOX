@@ -18,14 +18,14 @@ Go to the location of the makefile where you extracted/installed the repository
 Run "Make".
 
 # Running the game:
-On your Flashcard/SD Card, you MUST put the maps in a folder called OpenBLOX (case sensitive.) on the root of your card.\
+On your Flashcard/SD Card, you MUST put the maps in a folder called OpenBLOX (case sensitive.) on the root of your card.
 
-If you have access to a 2007 - 2011 client, look at the folder its located in and copy the folder called: "content".\
+If you have access to a 2007 - 2011 client, look at the folder its located in and copy the folder called: "content".
 
-Place the content folder in the OpenBLOX Folder.\
+Place the content folder in the OpenBLOX Folder.
 
-For the game, put it in the root of your SD Card.\
+For the game, put it in the root of your SD Card.
 
-Now, find a map from 2005 - 2008, make sure its up to 1kb - 800kb if using a Nintendo DS, and 1kb - 1mb if using a Nintendo DSi; then place the map in the OpenBLOX folder.\\
+Now, find a map from 2005 - 2008, make sure its up to 1kb - 800kb if using a Nintendo DS, and 1kb - 1mb if using a Nintendo DSi; then place the map in the OpenBLOX folder.
 
-Now load the game and play.\
+Now load the game and play.
