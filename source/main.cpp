@@ -183,7 +183,7 @@ void processModel(tinyxml2::XMLElement *model, int parent_id) {
 		}
 }
 
-//This code sees what a class is and does shit
+//This code sees what a class is and does shit.
 void processItem(tinyxml2::XMLElement *item, int parent_id) {
 	int max_id = 0;
 	for (auto &object : objects) {
