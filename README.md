@@ -1,4 +1,5 @@
-# OpenBLOX
+![OpenBLOX](https://cdn.discordapp.com/attachments/818207854292369432/1071302355129208923/OpenBLOX.png)
+# About
  A project to make a new client for older ROBLOX Maps from 2005 to 2011\
  [OpenBLOX Discord Server](https://discord.gg/Wf2bbU5z5J)
  
