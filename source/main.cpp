@@ -544,7 +544,7 @@ int main(int argc, char **argv)
 	
 	/* Set Spanws to 0,0,0 */
 	spawnLocation_X[0] = 0;
-	spawnLocation_Y[0] = 0;
+	spawnLocation_Y[0] = 128;
 	spawnLocation_Z[0] = 0;
 	
 	const char *mapFile[256];
