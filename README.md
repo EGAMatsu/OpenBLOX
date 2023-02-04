@@ -5,8 +5,8 @@
  
 # INFO ABOUT MAPS
 You cannot use any maps that use the binary ROBLOX Map Format; the map MUST have been made in any studio version from 2003 - 2012;
-though maps in latter versions (2010+) WILL have issues.
-..Also you MUST add a spawnLocation if the map does not have one already, at least as of 2/4/2023 at 2:38 AM
+though maps in latter versions (2010+) WILL have issues.\
+..Also you MUST add a spawnLocation if the map does not have one already, at least as of 2/4/2023 at 2:39 AM
 
 # How to compile:
 Download this repository
