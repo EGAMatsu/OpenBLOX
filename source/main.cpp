@@ -14,6 +14,7 @@
 #include <vector>
 #include <iostream>
 #include <random>
+#include <chrono>
 
 Part part[8192];
 int partCount;
@@ -502,6 +503,26 @@ void processScript(tinyxml2::XMLElement *script) {
 
 const char *characterFile = "content/fonts/character.rbxm";
 
+float GetDeltaTime() {
+    static std::chrono::time_point<std::chrono::high_resolution_clock> prevTimePoint = std::chrono::high_resolution_clock::now();
+    auto currentTimePoint = std::chrono::high_resolution_clock::now();
+    float deltaTime = std::chrono::duration<float, std::chrono::seconds::period>(currentTimePoint - prevTimePoint).count();
+    prevTimePoint = currentTimePoint;
+    return deltaTime;
+}
+
+std::vector<std::string_view> extensions = { ".rbxl" };
+
+bool extension(const std::string_view filename, const std::vector<std::string_view> extensions) {
+    for (std::string_view extension : extensions) {
+        if (strcasecmp(filename.substr(filename.size() - extension.size()).data(), extension.data()) == 0) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
 int main(int argc, char **argv)
 {
 	// Initialise the console, required for printf
@@ -510,32 +531,119 @@ int main(int argc, char **argv)
 	//const char *mapName = "2007 - extreme four corners.rbxl";
 	//const char *mapName = "2008 - Grow a Brick.rbxl";
 	//const char *mapName = "PartColor.rbxl";
-	const char *mapName = "map.rbxl";
+	//const char *mapName = "map.rbxl";
+	
+	const char *mapFile[256];
+	int mapLength = 0;
 
 	if (fatInitDefault()) {
-		FILE* chracterModel = fopen (characterFile, "rb");
-		FILE* test = fopen (mapName, "rb");
-		if (test != NULL) {
-			iprintf("%s has been loaded into mem.\n",mapName);
-			parseRBXL(test);
-			fclose(test);
-			if (test == NULL) {
-				printf("Map %s freed from ram.", mapName);
+		DIR *pdir;
+		struct dirent *pent;
+
+		pdir=opendir(isDSiMode() ? "sd:/OpenBLOX" : "fat:/OpenBLOX");
+
+		if (pdir){
+
+			while ((pent=readdir(pdir))!=NULL) {
+	    		if( !(strcmp(".", pent->d_name) == 0 || strcmp("..", pent->d_name) == 0) )
+	        	{
+					if(pent->d_type == DT_DIR) {
+						iprintf("Dir: [%s]\n", pent->d_name);
+					}
+					else {
+						iprintf("%s\n", pent->d_name);
+						mapFile[mapLength] = strdup(pent->d_name);
+						mapLength+=1;
+					}
+				}
 			}
+			printf("\e[1;1H\e[2J"); 
+			
+			int pressed = 0;
+			int held = 0;
+			bool update = true;
+			int j = 0;
+			bool isUpPressed = false;
+			bool isDownPressed = false;
+			
+			bool fileIsSelected = false;
+			int fSelectNumb = 0;
+			
+			/* Primitive file select */
+			while (!fileIsSelected) {
+				scanKeys();
+				pressed = keysDownRepeat();
+				held = keysHeld();
+				
+				//Print filelist
+				if (j == 0) {
+					printf("-= Map Select =-\n");
+				}
+				for (int i = 0; i < mapLength; i++) {
+					if (j <= mapLength) {
+						if (j == fSelectNumb) {
+							printf("-> ");
+						}
+						printf("%s\n", mapFile[i]);
+						j += 1;
+					}
+				}
+				
+				//Is cursor going up?
+				if ( (held & KEY_UP) && (isUpPressed == false) ) {
+					printf("\e[1;1H\e[2J"); 
+					j = 0;
+					isUpPressed = true;
+					fSelectNumb--;
+				}
+				if ( !(held & KEY_UP) && (isUpPressed == true) ) {
+					isUpPressed = false;
+				}
+				
+				//Is cursor going down?
+				if ( (held & KEY_DOWN) && (isDownPressed == false) ) {
+					printf("\e[1;1H\e[2J"); 
+					j = 0;
+					isDownPressed = true;
+					fSelectNumb++;
+				}
+				if ( !(held & KEY_DOWN) && (isDownPressed == true) ) {
+					isDownPressed = false;
+				}
+				
+				//Wrap the selection Number.
+				if (fSelectNumb < 0) {
+					fSelectNumb = mapLength;
+				}
+				if (fSelectNumb > mapLength) {
+					fSelectNumb = 0;
+				}
+				
+				//Is cursor going down?
+				if ( (held & KEY_A) ) {
+					printf("\e[1;1H\e[2J"); 
+					fileIsSelected = true;
+				}
+			}
+			char filePath[256];
+			sprintf(filePath, "%s/%s", isDSiMode() ? "sd:/OpenBLOX" : "fat:/OpenBLOX", mapFile[fSelectNumb]);
+			FILE *fp = fopen(filePath, "r");
+			parseRBXL(fp);
+			
+			char filePathChar[256];
+			sprintf(filePath, "%s/%s", isDSiMode() ? "sd:/OpenBLOX" : "fat:/OpenBLOX", "content/fonts/character.rbxm");
+			FILE *fpchar = fopen(filePath, "r");
+			parseRBXM(fpchar);
+			
+			closedir(pdir);
 		} else {
-			iprintf("%s has failed to load.\nEnsure your device/emu supports fat.\n",mapName);
+			iprintf ("opendir() failure; terminating\n");
 		}
 		
-		if (chracterModel != NULL) {
-			iprintf("%s has been loaded into mem.\n",characterFile);
-			parseRBXM(chracterModel);
-			printf("Character loaded.\n");
-		} else {
-			iprintf("%s has failed to load.\n",characterFile);
-		}
 	} else {
 		iprintf("fatInit failure\n");
 	}
+	
 
 	//set mode 0, enable BG0 and set it to 3D
 	videoSetMode(MODE_0_3D);
@@ -585,10 +693,24 @@ int main(int argc, char **argv)
 	player.pos_x = -spawnLocation_X[spawnID];
 	player.pos_y = -spawnLocation_Y[spawnID] - (8192/2);
 	player.pos_z = -spawnLocation_Z[spawnID];
-
+	
+	auto now = std::chrono::steady_clock::now();
+	auto lastUpdate = now;
+	float deltaTime = std::chrono::duration_cast<std::chrono::microseconds>(now - lastUpdate).count() / 1000000.0f;
+	
 	while(1)
 	{
 		glPushMatrix();
+		
+		// std::chrono::steady_clock::time_point lastUpdate;
+		// float deltaTime
+		auto now = std::chrono::steady_clock::now();
+		float deltaTime = std::chrono::duration_cast<std::chrono::microseconds>(now - lastUpdate).count() / 1000000.0f;
+		auto lastUpdate = now;
+		
+		int deltaScale = 1024*10;
+		float gameDelta = abs(deltaScale/(deltaTime/1000000));
+		//printf("Delta: %f\n", gameDelta);
 
 		//Camera Rotation and position
 		glRotateX(player.directionFacing_x);
@@ -619,7 +741,7 @@ int main(int argc, char **argv)
 		//Api
 		player.Render();
 		player.Input();
-		player.Update(parts, partCount);
+		player.Update(parts, partCount, 1);
 		
 		if (player.pos_y > (256*1024)) {
 			player.pos_x = -spawnLocation_X[spawnID];
@@ -648,14 +770,23 @@ int main(int argc, char **argv)
 		glFogOffset(0);
 		glFogShift(0);*/
 	
+		float divDistance = 0;
 		for (auto i = 0; i < parts.size(); ++i) {
 			if (i < parts.size() - 6){
 				if (parts[i].getDistanceFromPlayer(-player.pos_x, -player.pos_y, -player.pos_z) < cullDist * 1024 ||
-				parts[i].scale_width >= (cullDist/3) * 1024 ||
-				parts[i].scale_depth >= (cullDist/3) * 1024)
+				parts[i].scale_width >= (cullDist/2) * 1024 ||
+				parts[i].scale_depth >= (cullDist/2) * 1024)
 				{
+					if (parts[i].getDistanceFromPlayer(-player.pos_x, -player.pos_y, -player.pos_z) < (cullDist * (512)) ||
+					parts[i].scale_width >= (cullDist/2) * 1024 ||
+					parts[i].scale_depth >= (cullDist/2) * 1024)
+					{
+						divDistance = 0;
+					} else {
+						divDistance = 0;
+					}
 					glPushMatrix();
-					parts[i].draw();
+					parts[i].draw(divDistance);
 					glPopMatrix(1);
 				}
 			} else { //IF else, then it is the players part-list.
@@ -663,7 +794,7 @@ int main(int argc, char **argv)
 					glTranslatef32(-player.pos_x, -player.pos_y-1024-512, -player.pos_z);
 					glRotateY(player.facingDirection_y);
 					glTranslatef32(0,0, -(8192*3.2125));
-					parts[i].draw();
+					parts[i].draw(divDistance);
 				glPopMatrix(1);
 			}
 		}

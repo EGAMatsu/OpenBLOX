@@ -20,6 +20,13 @@ class Object {
 		void calculateBrickColor(int value);
 };
 
+class SpecialMesh : public Object {
+	public:
+		int meshType = 0;
+		void headMesh();
+		void renderMesh(int meshType);
+};
+
 class Part : public Object {
   public:
 	float pos_x, pos_y, pos_z, scale_width, scale_height, scale_depth;
@@ -37,7 +44,7 @@ class Part : public Object {
 	
 	/*The Functions*/
 	void update(float time);  // declare the update function
-	void draw();
+	void draw(float renderTransparency);
 	float getDistanceFromPlayer(float player_x, float player_y, float player_z);
 	bool isObstructed(float x, float y, float z, float radius);
 };
@@ -112,6 +119,6 @@ class Player : public Humanoid {
 		int teamColor;
 		float directionFacing_x = 0;
 		void Input();
-		void Update(std::vector<Part> parts, int partCount);
+		void Update(std::vector<Part> parts, int partCount, float deltaTime);
 		void Render();
 };
