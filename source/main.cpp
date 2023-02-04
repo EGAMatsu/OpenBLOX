@@ -555,7 +555,8 @@ int main(int argc, char **argv)
 		DIR *pdir;
 		struct dirent *pent;
 
-		pdir=opendir(isDSiMode() ? "sd:/OpenBLOX" : "fat:/OpenBLOX");
+		//Try this again.
+		pdir=opendir("/OpenBLOX");
 
 		if (pdir){
 
@@ -569,7 +570,6 @@ int main(int argc, char **argv)
 						iprintf("%s\n", pent->d_name);
 						mapFile[mapLength] = strdup(pent->d_name);
 						mapLength++;
-						free(pent->d_name);
 					}
 				}
 			}
@@ -645,13 +645,13 @@ int main(int argc, char **argv)
 			}
 			/* Load Map */
 			char filePath[256];
-			sprintf(filePath, "%s/%s", isDSiMode() ? "sd:/OpenBLOX" : "fat:/OpenBLOX", mapFile[fSelectNumb]);
+			sprintf(filePath, "%s/%s", "/OpenBLOX", mapFile[fSelectNumb]);
 			FILE *fp = fopen(filePath, "r");
 			parseRBXL(fp);
 			
 			/* Load player model */
 			char filePathChar[256];
-			sprintf(filePath, "%s/%s", isDSiMode() ? "sd:/OpenBLOX" : "fat:/OpenBLOX", "content/fonts/character.rbxm");
+			sprintf(filePath, "%s/%s", "/OpenBLOX", "content/fonts/character.rbxm");
 			FILE *fpchar = fopen(filePath, "r");
 			parseRBXM(fpchar);
 			
@@ -663,7 +663,6 @@ int main(int argc, char **argv)
 	} else {
 		iprintf("fatInit failure\n");
 	}
-	
 
 	//set mode 0, enable BG0 and set it to 3D
 	videoSetMode(MODE_0_3D);

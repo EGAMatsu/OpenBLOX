@@ -1188,6 +1188,8 @@ void Player::Update(std::vector<Part> parts, int partCount, float deltaTime) {
 
 		if (canMovePosY) {
 		  walkVelocityRelative_y += gravity * 0.002;
+		  
+		  walkVelocityRelative_y = clamp(walkVelocityRelative_y,-8,6);
 		  isOnGround = false;
 		  jump = false;
 		  newPosY = pos_y + walkVelocityRelative_y * 4;

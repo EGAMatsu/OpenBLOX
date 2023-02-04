@@ -27,3 +27,8 @@ float normalizeAngle(float angle) {
   }
   return angle;
 }
+
+
+float clamp(float value, float min, float max) {
+  return std::max(min, std::min(value, max));
+}
