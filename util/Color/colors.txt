@@ -1,340 +1,209 @@
-1	White	242, 243, 243	#F2F3F3	
-87	
-2	Grey	161, 165, 162	#A1A5A2	
-3	Light yellow	249, 233, 153	#F9E999	
-5	Brick yellow	215, 197, 154	#D7C59A	
-109	
-6	Light green (Mint)	194, 218, 184	#C2DAB8	
-9	Light reddish violet	232, 186, 200	#E8BAC8	
-88	
-11	Pastel Blue	128, 187, 219	#80BBDB	
-51	
-12	Light orange brown	203, 132, 66	#CB8442	
-18	Nougat	204, 142, 105	#CC8E69	
-110	
-21	Bright red	196, 40, 28	#C4281C	
-68	
-22	Med. reddish violet	196, 112, 160	#C470A0	
-23	Bright blue	13, 105, 172	#0D69AC	
-21	
-24	Bright yellow	245, 205, 48	#F5CD30	
-71	
-25	Earth orange	98, 71, 50	#624732	
-26	Black	27, 42, 53	#1B2A35	
-3	
-27	Dark grey	109, 110, 108	#6D6E6C	
-28	Dark green	40, 127, 71	#287F47	
-8	
-29	Medium green	161, 196, 140	#A1C48C	
-59	
-36	Lig. Yellowich orange	243, 207, 155	#F3CF9B	
-37	Bright green	75, 151, 75	#4B974B	
-25	
-38	Dark orange	160, 95, 53	#A05F35	
-119	
-39	Light bluish violet	193, 202, 222	#C1CADE	
-40	Transparent	236, 236, 236	#ECECEC	
-41	Tr. Red	205, 84, 75	#CD544B	
-42	Tr. Lg blue	193, 223, 240	#C1DFF0	
-43	Tr. Blue	123, 182, 232	#7BB6E8	
-44	Tr. Yellow	247, 241, 141	#F7F18D	
-45	Light blue	180, 210, 228	#B4D2E4	
-63	
-47	Tr. Flu. Reddish orange	217, 133, 108	#D9856C	
-48	Tr. Green	132, 182, 141	#84B68D	
-49	Tr. Flu. Green	248, 241, 132	#F8F184	
-50	Phosph. White	236, 232, 222	#ECE8DE	
-100	Light red	238, 196, 182	#EEC4B6	
-101	Medium red	218, 134, 122	#DA867A	
-101	
-102	Medium blue	110, 153, 202	#6E99CA	
-20	
-103	Light grey	199, 193, 183	#C7C1B7	
-104	Bright violet	107, 50, 124	#6B327C	
-44	
-105	Br. yellowish orange	226, 155, 64	#E29B40	
-94	
-106	Bright orange	218, 133, 65	#DA8541	
-83	
-107	Bright bluish green	0, 143, 156	#008F9C	
-2	
-108	Earth yellow	104, 92, 67	#685C43	
-110	Bright bluish violet	67, 84, 147	#435493	
-111	Tr. Brown	191, 183, 177	#BFB7B1	
-112	Medium bluish violet	104, 116, 172	#6874AC	
-113	Tr. Medi. reddish violet	229, 173, 200	#E5ADC8	
-115	Med. yellowish green	199, 210, 60	#C7D23C	
-116	Med. bluish green	85, 165, 175	#55A5AF	
-118	Light bluish green	183, 215, 213	#B7D7D5	
-119	Br. yellowish green	164, 189, 71	#A4BD47	
-46	
-120	Lig. yellowish green	217, 228, 167	#D9E4A7	
-121	Med. yellowish orange	231, 172, 88	#E7AC58	
-123	Br. reddish orange	211, 111, 76	#D36F4C	
-124	Bright reddish violet	146, 57, 120	#923978	
-125	Light orange	234, 184, 146	#EAB892	
-100	
-126	Tr. Bright bluish violet	165, 165, 203	#A5A5CB	
-127	Gold	220, 188, 129	#DCBC81	
-Shares Name with 333 (BrickColor.new returns 333)
-128	Dark nougat	174, 122, 89	#AE7A59	
-131	Silver	156, 163, 168	#9CA3A8	
-133	Neon orange	213, 115, 61	#D5733D	
-82	
-134	Neon green	216, 221, 86	#D8DD56	
-135	Sand blue	116, 134, 157	#74869D	
-19	
-136	Sand violet	135, 124, 144	#877C90	
-137	Medium orange	224, 152, 100	#E09864	
-138	Sand yellow	149, 138, 115	#958A73	
-140	Earth blue	32, 58, 86	#203A56	
-141	Earth green	39, 70, 45	#27462D	
-0	
-143	Tr. Flu. Blue	207, 226, 247	#CFE2F7	
-145	Sand blue metallic	121, 136, 161	#7988A1	
-146	Sand violet metallic	149, 142, 163	#958EA3	
-147	Sand yellow metallic	147, 135, 103	#938767	
-148	Dark grey metallic	87, 88, 87	#575857	
-149	Black metallic	22, 29, 50	#161D32	
-150	Light grey metallic	171, 173, 172	#ABADAC	
-151	Sand green	120, 144, 130	#789082	
-34	
-153	Sand red	149, 121, 119	#957977	
-114	
-154	Dark red	123, 46, 47	#7B2E2F	
-157	Tr. Flu. Yellow	255, 246, 123	#FFF67B	
-158	Tr. Flu. Red	225, 164, 194	#E1A4C2	
-168	Gun metallic	117, 108, 98	#756C62	
-176	Red flip/flop	151, 105, 91	#97695B	
-178	Yellow flip/flop	180, 132, 85	#B48455	
-179	Silver flip/flop	137, 135, 136	#898788	
-180	Curry	215, 169, 75	#D7A94B	
-190	Fire Yellow	249, 214, 46	#F9D62E	
-191	Flame yellowish orange	232, 171, 45	#E8AB2D	
-192	Reddish brown	105, 64, 40	#694028	
-103	
-193	Flame reddish orange	207, 96, 36	#CF6024	
-194	Medium stone grey	163, 162, 165	#A3A2A5	
-123	
-195	Royal blue	70, 103, 164	#4667A4	
-196	Dark Royal blue	35, 71, 139	#23478B	
-198	Bright reddish lilac	142, 66, 133	#8E4285	
-199	Dark stone grey	99, 95, 98	#635F62	
-122	
-200	Lemon metalic	130, 138, 93	#828A5D	
-208	Light stone grey	229, 228, 223	#E5E4DF	
-62	
-209	Dark Curry	176, 142, 68	#B08E44	
-210	Faded green	112, 149, 120	#709578	
-211	Turquoise	121, 181, 181	#79B5B5	
-212	Light Royal blue	159, 195, 233	#9FC3E9	
-213	Medium Royal blue	108, 129, 183	#6C81B7	
-216	Rust	144, 76, 42	#904C2A	
-Shares Name with 345 (BrickColor.new returns 345)
-217	Brown	124, 92, 70	#7C5C46	
-111	
-218	Reddish lilac	150, 112, 159	#96709F	
-219	Lilac	107, 98, 155	#6B629B	
-Shares Name with 321 (BrickColor.new returns 321)
-220	Light lilac	167, 169, 206	#A7A9CE	
-221	Bright purple	205, 98, 152	#CD6298	
-222	Light purple	228, 173, 200	#E4ADC8	
-223	Light pink	220, 144, 149	#DC9095	
-224	Light brick yellow	240, 213, 160	#F0D5A0	
-225	Warm yellowish orange	235, 184, 127	#EBB87F	
-226	Cool yellow	253, 234, 141	#FDEA8D	
-73	
-232	Dove blue	125, 187, 221	#7DBBDD	
-268	Medium lilac	52, 43, 117	#342B75	
-301	Slime green	80, 109, 84	#506D54	
-1	
-302	Smoky grey	91, 93, 105	#5B5D69	
-10	
-303	Dark blue	0, 16, 176	#0010B0	
-5	
-304	Parsley green	44, 101, 29	#2C651D	
-7	
-305	Steel blue	82, 124, 174	#527CAE	
-11	
-306	Storm blue	51, 88, 130	#335882	
-12	
-307	Lapis	16, 42, 220	#102ADC	
-13	
-308	Dark indigo	61, 21, 133	#3D1585	
-14	
-309	Sea green	52, 142, 64	#348E40	
-16	
-310	Shamrock	91, 154, 76	#5B9A4C	
-17	
-311	Fossil	159, 161, 172	#9FA1AC	
-29	
-312	Mulberry	89, 34, 89	#592259	
-23	
-313	Forest green	31, 128, 29	#1F801D	
-24	
-314	Cadet blue	159, 173, 192	#9FADC0	
-39	
-315	Electric blue	9, 137, 207	#0989CF	
-30	
-316	Eggplant	123, 0, 123	#7B007B	
-33	
-317	Moss	124, 156, 107	#7C9C6B	
-35	
-318	Artichoke	138, 171, 133	#8AAB85	
-36	
-319	Sage green	185, 196, 177	#B9C4B1	
-37	
-320	Ghost grey	202, 203, 209	#CACBD1	
-50	
-321	Lilac	167, 94, 155	#A75E9B	
-42	Shares Name with 219 (BrickColor.new returns 321)
-322	Plum	123, 47, 123	#7B2F7B	
-43	
-323	Olivine	148, 190, 129	#94BE81	
-47	
-324	Laurel green	168, 189, 153	#A8BD99	
-48	
-325	Quill grey	223, 223, 222	#DFDFDE	
-49	
-327	Crimson	151, 0, 0	#970000	
-56	
-328	Mint	177, 229, 166	#B1E5A6	
-60	
-329	Baby blue	152, 194, 219	#98C2DB	
-64	
-330	Carnation pink	255, 152, 220	#FF98DC	
-65	
-331	Persimmon	255, 89, 89	#FF5959	
-66	
-332	Maroon	117, 0, 0	#750000	
-69	
-333	Gold	239, 184, 56	#EFB838	
-70	Shares Name with 127 (BrickColor.new returns 333)
-334	Daisy orange	248, 217, 109	#F8D96D	
-72	
-335	Pearl	231, 231, 236	#E7E7EC	
-75	
-336	Fog	199, 212, 228	#C7D4E4	
-76	
-337	Salmon	255, 148, 148	#FF9494	
-90	
-338	Terra Cotta	190, 104, 98	#BE6862	
-79	
-339	Cocoa	86, 36, 36	#562424	
-81	
-340	Wheat	241, 231, 199	#F1E7C7	
-84	
-341	Buttermilk	254, 243, 187	#FEF3BB	
-85	
-342	Mauve	224, 178, 208	#E0B2D0	
-77	
-343	Sunrise	212, 144, 189	#D490BD	
-78	
-344	Tawny	150, 85, 85	#965555	
-91	
-345	Rust	143, 76, 42	#8F4C2A	
-92	Shares Name with 216 (BrickColor.new returns 345)
-346	Cashmere	211, 190, 150	#D3BE96	
-95	
-347	Khaki	226, 220, 188	#E2DCBC	
-96	
-348	Lily white	237, 234, 234	#EDEAEA	
-97	
-349	Seashell	233, 218, 218	#E9DADA	
-98	
-350	Burgundy	136, 62, 62	#883E3E	
-102	
-351	Cork	188, 155, 93	#BC9B5D	
-104	
-352	Burlap	199, 172, 120	#C7AC78	
-105	
-353	Beige	202, 191, 163	#CABFA3	
-106	
-354	Oyster	187, 179, 178	#BBB3B2	
-107	
-355	Pine Cone	108, 88, 75	#6C584B	
-112	
-356	Fawn brown	160, 132, 79	#A0844F	
-113	
-357	Hurricane grey	149, 137, 136	#958988	
-115	
-358	Cloudy grey	171, 168, 158	#ABA89E	
-116	
-359	Linen	175, 148, 131	#AF9483	
-117	
-360	Copper	150, 103, 102	#966766	
-118	
-361	Dirt brown	86, 66, 54	#564236	
-120	
-362	Bronze	126, 104, 63	#7E683F	
-121	
-363	Flint	105, 102, 92	#69665C	
-124	
-364	Dark taupe	90, 76, 66	#5A4C42	
-125	
-365	Burnt Sienna	106, 57, 9	#6A3909	
-126	
-1001	Institutional white	248, 248, 248	#F8F8F8	
-86	
-1002	Mid gray	205, 205, 205	#CDCDCD	
-108	
-1003	Really black	17, 17, 17	#111111	
-127	
-1004	Really red	255, 0, 0	#FF0000	
-67	
-1005	Deep orange	255, 176, 0	#FFB000	
-57	Shares Name with 1017 (BrickColor.new returns 1005)
-1006	Alder	180, 128, 255	#B480FF	
-41	
-1007	Dusty Rose	163, 75, 75	#A34B4B	
-80	
-1008	Olive	193, 190, 66	#C1BE42	
-45	
-1009	New Yeller	255, 255, 0	#FFFF00	
-58	
-1010	Really blue	0, 0, 255	#0000FF	
-22	
-1011	Navy blue	0, 32, 96	#002060	
-6	
-1012	Deep blue	33, 84, 185	#2154B9	
-4	
-1013	Cyan	4, 175, 236	#04AFEC	
-40	
-1014	CGA brown	170, 85, 0	#AA5500	
-93	
-1015	Magenta	170, 0, 170	#AA00AA	
-55	
-1016	Pink	255, 102, 204	#FF66CC	
-53	
-1017	Deep orange	255, 175, 0	#FFAF00	
-Shares Name with 1005 (BrickColor.new returns 1005)
-1018	Teal	18, 238, 212	#12EED4	
-9	
-1019	Toothpaste	0, 255, 255	#00FFFF	
-18	
-1020	Lime green	0, 255, 0	#00FF00	
-27	
-1021	Camo	58, 125, 21	#3A7D15	
-15	
-1022	Grime	127, 142, 100	#7F8E64	
-26	
-1023	Lavender	140, 91, 159	#8C5B9F	
-31	
-1024	Pastel light blue	175, 221, 255	#AFDDFF	
-38	
-1025	Pastel orange	255, 201, 201	#FFC9C9	
-89	
-1026	Pastel violet	177, 167, 255	#B1A7FF	
-52	
-1027	Pastel blue-green	159, 243, 233	#9FF3E9	
-28	
-1028	Pastel green	204, 255, 204	#CCFFCC	
-61	
-1029	Pastel yellow	255, 255, 204	#FFFFCC	
-74	
-1030	Pastel brown	255, 204, 153	#FFCC99	
-99	
-1031	Royal purple	98, 37, 209	#6225D1	
-32	
-1032	Hot pink	255, 0, 191	#FF00BF	
-54
+insert(BrickColor::brick_1, 242, 243, 243, "White"); //	CoolGrey 1 C
+insert(BrickColor::brick_2, 161, 165, 162, "Grey"); //	422 C
+insert(BrickColor::brick_3, 249, 233, 153, "Light yellow"); //	1215 C
+insert(BrickColor::brick_5, 215, 197, 154, "Brick yellow"); //	467 C
+insert(BrickColor::brick_6, 194, 218, 184, "Light green (Mint)"); //	351 C
+insert(BrickColor::brick_9, 232, 186, 200, "Light reddish violet"); //	203 C
+insert(BrickColor::brick_11, 128,187,219, "Pastel Blue"); //	
+insert(BrickColor::brick_12, 203, 132, 66, "Light orange brown"); //	1385 C
+insert(BrickColor::brick_18, 204, 142, 105, "Nougat"); //	472 C
+insert(BrickColor::brick_21, 196, 40, 28, "Bright red"); //	032 C
+insert(BrickColor::brick_22, 196, 112, 160, "Med. reddish violet"); //	2375 C
+insert(BrickColor::brick_23, 13, 105, 172, "Bright blue"); //	293 C
+insert(BrickColor::brick_24, 245, 205, 48, "Bright yellow"); //	116 C
+insert(BrickColor::brick_25, 98, 71, 50, "Earth orange"); //	469 C
+insert(BrickColor::brick_26, 27, 42, 53, "Black"); //	Process Black C
+insert(BrickColor::brick_27, 109, 110, 108, "Dark grey"); //	418 C
+insert(BrickColor::brick_28, 40, 127, 71, "Dark green"); //	348 C
+insert(BrickColor::brick_29, 161, 196, 140, "Medium green"); //	353 C
+insert(BrickColor::brick_36, 243, 207, 155, "Lig. Yellowich orange"); //	148 C
+insert(BrickColor::brick_37, 75, 151, 75, "Bright green"); //	355 C
+insert(BrickColor::brick_38, 160, 95, 53, "Dark orange"); //	471 C
+insert(BrickColor::brick_39, 193, 202, 222, "Light bluish violet"); //	2706 C
+insert(BrickColor::brick_40, 236, 236, 236, "Transparent"); //	CoolGrey 1 C
+insert(BrickColor::brick_41, 205, 84, 75, "Tr. Red"); //	185 C
+insert(BrickColor::brick_42, 193, 223, 240, "Tr. Lg blue"); //	304 C
+insert(BrickColor::brick_43, 123, 182, 232, "Tr. Blue"); //	298 C
+insert(BrickColor::brick_44, 247, 241, 141, "Tr. Yellow"); //	393 C
+insert(BrickColor::brick_45, 180, 210, 228, "Light blue"); //	545 C
+insert(BrickColor::brick_47, 217, 133, 108, "Tr. Flu. Reddish orange"); //	165 C
+insert(BrickColor::brick_48, 132, 182, 141, "Tr. Green"); //	360 C
+insert(BrickColor::brick_49, 248, 241, 132, "Tr. Flu. Green"); //	387 C
+insert(BrickColor::brick_50, 236, 232, 222, "Phosph. White"); //	427 C
+insert(BrickColor::brick_100, 238, 196, 182, "Light red"); //	169 C
+insert(BrickColor::brick_101, 218, 134, 122, "Medium red"); //	170 C
+insert(BrickColor::brick_102, 110, 153, 202, "Medium blue"); //	284 C
+insert(BrickColor::brick_103, 199, 193, 183, "Light grey"); //	421 C
+insert(BrickColor::brick_104, 107, 50, 124, "Bright violet"); //	2592 C
+insert(BrickColor::brick_105, 226, 155, 64, "Br. yellowish orange"); //	137 C
+insert(BrickColor::brick_106, 218, 133, 65, "Bright orange"); //	151 C
+insert(BrickColor::brick_107, 0, 143, 156, "Bright bluish green"); //	327 C
+insert(BrickColor::brick_108, 104, 92, 67, "Earth yellow"); //	1405 C
+insert(BrickColor::brick_110, 67, 84, 147, "Bright bluish violet"); //	2736 C
+insert(BrickColor::brick_111, 191, 183, 177, "Tr. Brown"); //	WarmGrey 3 C
+insert(BrickColor::brick_112, 104, 116, 172, "Medium bluish violet"); //	2726 C
+insert(BrickColor::brick_113, 228, 173, 200, "Tr. Medi. reddish violet"); //	230 C
+insert(BrickColor::brick_115, 199, 210, 60, "Med. yellowish green"); //	381 C
+insert(BrickColor::brick_116, 85, 165, 175, "Med. bluish green"); //	326 C
+insert(BrickColor::brick_118, 183, 215, 213, "Light bluish green"); //	324 C
+insert(BrickColor::brick_119, 164, 189, 71, "Br. yellowish green"); //	390 C
+insert(BrickColor::brick_120, 217, 228, 167, "Lig. yellowish green"); //	365 C
+insert(BrickColor::brick_121, 231, 172, 88, "Med. yellowish orange"); //	1365 C
+insert(BrickColor::brick_123, 211, 111, 76, "Br. reddish orange"); //	165 C
+insert(BrickColor::brick_124, 146, 57, 120, "Bright reddish violet"); //	241 C
+insert(BrickColor::brick_125, 234, 184, 146, "Light orange"); //	1555 C
+insert(BrickColor::brick_126, 165, 165, 203, "Tr. Bright bluish violet"); //	271 C
+insert(BrickColor::brick_127, 220, 188, 129, "Gold"); //	156 C
+insert(BrickColor::brick_128, 174, 122, 89, "Dark nougat"); //	471 C
+insert(BrickColor::brick_131, 156, 163, 168, "Silver"); //	429 C
+insert(BrickColor::brick_133, 213, 115, 61, "Neon orange"); //	165 C
+insert(BrickColor::brick_134, 216, 221, 86, "Neon green"); //	374 C
+insert(BrickColor::brick_135, 116, 134, 157, "Sand blue"); //	5415 C
+insert(BrickColor::brick_136, 135, 124, 144, "Sand violet"); //	666 C
+insert(BrickColor::brick_137, 224, 152, 100, "Medium orange"); //	1575 C
+insert(BrickColor::brick_138, 149, 138, 115, "Sand yellow"); //	451 C
+insert(BrickColor::brick_140, 32, 58, 86, "Earth blue"); //	2955 C
+insert(BrickColor::brick_141, 39, 70, 45, "Earth green"); //	350 C
+insert(BrickColor::brick_143, 207, 226, 247, "Tr. Flu. Blue"); //	657 C
+insert(BrickColor::brick_145, 121, 136, 161, "Sand blue metallic"); //	652C
+insert(BrickColor::brick_146, 149, 142, 163, "Sand violet metallic"); //	5285 C
+insert(BrickColor::brick_147, 147, 135, 103, "Sand yellow metallic"); //	873 C
+insert(BrickColor::brick_148, 87, 88, 87, "Dark grey metallic"); //	446 C
+insert(BrickColor::brick_149, 22, 29, 50, "Black metallic"); //	2767 C
+insert(BrickColor::brick_150, 171, 173, 172, "Light grey metallic"); //	422 C
+insert(BrickColor::brick_151, 120, 144, 130, "Sand green"); //	624 C
+insert(BrickColor::brick_153, 149, 121, 119, "Sand red"); //	4995 C
+insert(BrickColor::brick_154, 123, 46, 47, "Dark red"); //	194 C
+insert(BrickColor::brick_157, 255, 246, 123, "Tr. Flu. Yellow"); //	395 C
+insert(BrickColor::brick_158, 225, 164, 194, "Tr. Flu. Red"); //	211 C
+insert(BrickColor::brick_168, 117, 108, 98, "Gun metallic"); //	WarmGrey 11 C
+insert(BrickColor::brick_176, 151, 105, 91, "Red flip/flop"); //	483 C
+insert(BrickColor::brick_178, 180, 132, 85, "Yellow flip/flop"); //	160 C
+insert(BrickColor::brick_179, 137, 135, 136, "Silver flip/flop"); //	410 C
+insert(BrickColor::brick_180, 215, 169, 75, "Curry"); //	131 C
+insert(BrickColor::brick_190, 249, 214, 46, "Fire Yellow"); //	012 C
+insert(BrickColor::brick_191, 232, 171, 45, "Flame yellowish orange"); //	137 C
+insert(BrickColor::brick_192, 105, 64, 40, "Reddish brown"); //	499 C
+insert(BrickColor::brick_193, 207, 96, 36, "Flame reddish orange"); //	173 C
+insert(BrickColor::brick_194, 163, 162, 165, "Medium stone grey"); //	429 C
+insert(BrickColor::brick_195, 70, 103, 164, "Royal blue"); //	2728 C
+insert(BrickColor::brick_196, 35, 71, 139, "Dark Royal blue"); //	286 C
+insert(BrickColor::brick_198, 142, 66, 133, "Bright reddish lilac"); //	254 C
+insert(BrickColor::brick_199, 99, 95, 98, "Dark stone grey"); //	431 C
+insert(BrickColor::brick_200, 130, 138, 93, "Lemon metalic"); //	5767 C
+insert(BrickColor::brick_208, 229, 228, 223, "Light stone grey"); //	428 C
+insert(BrickColor::brick_209, 176, 142, 68, "Dark Curry"); //	118 C
+insert(BrickColor::brick_210, 112, 149, 120, "Faded green"); //	364 C
+insert(BrickColor::brick_211, 121, 181, 181, "Turquoise"); //	3255 C
+insert(BrickColor::brick_212, 159, 195, 233, "Light Royal blue"); //	292 C
+insert(BrickColor::brick_213, 108, 129, 183, "Medium Royal blue"); //	2727 C
+insert(BrickColor::brick_216, 143, 76, 42, "Rust"); //	174 C
+insert(BrickColor::brick_217, 124, 92, 70, "Brown"); //	161 C
+insert(BrickColor::brick_218, 150, 112, 159, "Reddish lilac"); //	2573 C
+insert(BrickColor::brick_219, 107, 98, 155, "Lilac"); //	2725 C
+insert(BrickColor::brick_220, 167, 169, 206, "Light lilac"); //	2716 C
+insert(BrickColor::brick_221, 205, 98, 152, "Bright purple"); //	232 C
+insert(BrickColor::brick_222, 228, 173, 200, "Light purple"); //	236 C
+insert(BrickColor::brick_223, 220, 144, 149, "Light pink"); //	183 C
+insert(BrickColor::brick_224, 240, 213, 160, "Light brick yellow"); //	7501 C
+insert(BrickColor::brick_225, 235, 184, 127, "Warm yellowish orange"); //	713 C
+insert(BrickColor::brick_226, 253, 234, 141, "Cool yellow"); //	120 C
+insert(BrickColor::brick_232, 125, 187, 221, "Dove blue"); //	311 C
+insert(BrickColor::brick_268, 52, 43, 117, "Medium lilac"); //	2685 C
+insert(BrickColor::brick_301, 80,109,84, "Slime green");
+insert(BrickColor::brick_302, 91,93,105, "Smoky grey");
+insert(BrickColor::brick_303, 0,16,176, "Dark blue");
+insert(BrickColor::brick_304, 44,101,29, "Parsley green");
+insert(BrickColor::brick_305, 82,124,174, "Steel blue");
+insert(BrickColor::brick_306, 51,88,130, "Storm blue");
+insert(BrickColor::brick_307, 16,42,220, "Lapis");
+insert(BrickColor::brick_308, 61,21,133, "Dark indigo");
+insert(BrickColor::brick_309, 52,142,64, "Sea green");
+insert(BrickColor::brick_310, 91,154,76, "Shamrock");
+insert(BrickColor::brick_311, 159,161,172, "Fossil");
+insert(BrickColor::brick_312, 89,34,89, "Mulberry");
+insert(BrickColor::brick_313, 31,128,29, "Forest green");
+insert(BrickColor::brick_314, 159,173,192, "Cadet blue");
+insert(BrickColor::brick_315, 9,137,207, "Electric blue");
+insert(BrickColor::brick_316, 123,0,123, "Eggplant");
+insert(BrickColor::brick_317, 124,156,107, "Moss");
+insert(BrickColor::brick_318, 138,171,133, "Artichoke");
+insert(BrickColor::brick_319, 185,196,177, "Sage green");
+insert(BrickColor::brick_320, 202,203,209, "Ghost grey");
+insert(BrickColor::brick_321, 167,94,155, "Lilac");
+insert(BrickColor::brick_322, 123,47,123, "Plum");
+insert(BrickColor::brick_323, 148,190,129, "Olivine");
+insert(BrickColor::brick_324, 168,189,153, "Laurel green");
+insert(BrickColor::brick_325, 223,223,222, "Quill grey");
+//insert(BrickColor::brick_326, 218,220,225, "Iron");
+insert(BrickColor::brick_327, 151,0,0, "Crimson");
+insert(BrickColor::brick_328, 177,229,166, "Mint");
+insert(BrickColor::brick_329, 152,194,219, "Baby blue");
+insert(BrickColor::brick_330, 255,152,220, "Carnation pink");
+insert(BrickColor::brick_331, 255,89,89, "Persimmon");
+insert(BrickColor::brick_332, 117,0,0, "Maroon");
+insert(BrickColor::brick_333, 239,184,56, "Gold");
+insert(BrickColor::brick_334, 248,217,109, "Daisy orange");
+insert(BrickColor::brick_335, 231,231,236, "Pearl");
+insert(BrickColor::brick_336, 199,212,228, "Fog");
+insert(BrickColor::brick_337, 255,148,148, "Salmon");
+insert(BrickColor::brick_338, 190,104,98, "Terra Cotta");
+insert(BrickColor::brick_339, 86,36,36, "Cocoa");
+insert(BrickColor::brick_340, 241,231,199, "Wheat");
+insert(BrickColor::brick_341, 254,243,187, "Buttermilk");
+insert(BrickColor::brick_342, 224,178,208, "Mauve");
+insert(BrickColor::brick_343, 212,144,189, "Sunrise");
+insert(BrickColor::brick_344, 150,85,85, "Tawny");
+insert(BrickColor::brick_345, 143,76,42, "Rust");
+insert(BrickColor::brick_346, 211,190,150, "Cashmere");
+insert(BrickColor::brick_347, 226,220,188, "Khaki");
+insert(BrickColor::brick_348, 237,234,234, "Lily white");
+insert(BrickColor::brick_349, 233,218,218, "Seashell");
+insert(BrickColor::brick_350, 136,62,62, "Burgundy");
+insert(BrickColor::brick_351, 188,155,93, "Cork");
+insert(BrickColor::brick_352, 199,172,120, "Burlap");
+insert(BrickColor::brick_353, 202,191,163, "Beige");
+insert(BrickColor::brick_354, 187,179,178, "Oyster");
+insert(BrickColor::brick_355, 108,88,75, "Pine Cone");
+insert(BrickColor::brick_356, 160,132,79, "Fawn brown");
+insert(BrickColor::brick_357, 149,137,136, "Hurricane grey");
+insert(BrickColor::brick_358, 171,168,158, "Cloudy grey");
+insert(BrickColor::brick_359, 175,148,131, "Linen");
+insert(BrickColor::brick_360, 150,103,102, "Copper");
+insert(BrickColor::brick_361, 86,66,54, "Dirt brown");
+insert(BrickColor::brick_362, 126,104,63, "Bronze");
+insert(BrickColor::brick_363, 105,102,92, "Flint");
+insert(BrickColor::brick_364, 90,76,66, "Dark taupe");
+insert(BrickColor::brick_365, 106,57,9, "Burnt Sienna");
+insert(BrickColor::roblox_1001, 248, 248, 248, "Institutional white");
+insert(BrickColor::roblox_1002, 205, 205, 205, "Mid gray");
+insert(BrickColor::roblox_1003, 17, 17, 17, "Really black");
+insert(BrickColor::roblox_1004, 255, 0, 0, "Really red");
+insert(BrickColor::roblox_1005, 255, 175, 0, "Deep orange");
+insert(BrickColor::roblox_1006, 180, 128, 255, "Alder");
+insert(BrickColor::roblox_1007, 163, 75, 75, "Dusty Rose");
+insert(BrickColor::roblox_1008, 193, 190, 66, "Olive");
+insert(BrickColor::roblox_1009, 255, 255, 0, "New Yeller");
+insert(BrickColor::roblox_1010, 0, 0, 255, "Really blue");
+insert(BrickColor::roblox_1011, 0, 32, 96, "Navy blue");
+insert(BrickColor::roblox_1012, 33, 84, 185, "Deep blue");
+insert(BrickColor::roblox_1013, 4, 175, 236, "Cyan");
+insert(BrickColor::roblox_1014, 170, 85, 0, "CGA brown");
+insert(BrickColor::roblox_1015, 170, 0, 170, "Magenta");
+insert(BrickColor::roblox_1016, 255, 102, 204, "Pink");
+insert(BrickColor::roblox_1017, 255, 175, 0, "Deep orange");
+insert(BrickColor::roblox_1018, 18, 238, 212, "Teal");
+insert(BrickColor::roblox_1019, 0, 255, 255, "Toothpaste");
+insert(BrickColor::roblox_1020, 0, 255, 0, "Lime green");
+insert(BrickColor::roblox_1021, 58, 125, 21, "Camo");
+insert(BrickColor::roblox_1022, 127, 142, 100, "Grime");
+insert(BrickColor::roblox_1023, 140, 91, 159, "Lavender");
+insert(BrickColor::roblox_1024, 175, 221, 255, "Pastel light blue");
+insert(BrickColor::roblox_1025, 255, 201, 201, "Pastel orange");
+insert(BrickColor::roblox_1026, 177, 167, 255, "Pastel violet");
+insert(BrickColor::roblox_1027, 159, 243, 233, "Pastel blue-green");
+insert(BrickColor::roblox_1028, 204, 255, 204, "Pastel green");
+insert(BrickColor::roblox_1029, 255, 255, 204, "Pastel yellow");
+insert(BrickColor::roblox_1030, 255, 204, 153, "Pastel brown");
+insert(BrickColor::roblox_1031, 98, 37, 209, "Royal purple");
+insert(BrickColor::roblox_1032, 255, 0, 191, "Hot pink");

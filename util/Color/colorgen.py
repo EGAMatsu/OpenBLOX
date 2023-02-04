@@ -1,25 +1,20 @@
-def process_file(input_file, output_file):
-    data = {}
-    with open(input_file, "r") as f:
-        for line in f:
-            line = line.strip()
-            if not line:
-                continue
-            parts = line.split("\t")
-            if len(parts) == 5:
-                id, name, rgb, hex, _ = parts
-                id = int(id)
-                rgb = [int(x) for x in rgb.split(", ")]
-                data[id] = (name, rgb, hex)
-            else:
-                id = int(parts[0])
-                if id in data:
-                    data[id] = (*data[id], parts[1])
-    with open(output_file, "w") as f:
-        for id, item in sorted(data.items()):
-            name, rgb, hex, shares = item
-            f.write(f"{id}\t{name}\t{rgb}\t{hex}\t{shares}\n")
+#!/usr/bin/env python
 
-input_file = "colors.txt"
-output_file = "output.txt"
-process_file(input_file, output_file)
+color_dict = {}
+
+print("switch (value) {")
+with open("colors.txt", "r") as file:
+    for line in file:
+        elements = line.split(",")
+        brick_color = elements[0].split("::")[1].replace("roblox_", "").replace("brick_", "")
+        if not brick_color in color_dict:
+            r = int(elements[1])
+            g = int(elements[2])
+            b = int(elements[3])
+            name = elements[4].strip().replace('/', "").replace(";", "")
+            color_dict[brick_color] = (r, g, b, name)
+for brick_color, color_info in color_dict.items():
+    print(" case ({}):".format(brick_color))
+    print("     color_r = {};\n     color_g = {};\n     color_b = {};".format(*color_info[:3]))
+    print(" break;")
+print("}");
