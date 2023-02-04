@@ -218,7 +218,7 @@ void processItem(tinyxml2::XMLElement *item, int parent_id) {
         objects.push_back(s);
         scripts.push_back(s);
     }
-	//If the class is a model, then process the model and its children
+	//If the class is a model, then process the model and its children.
 	else if (strcmp(item->Attribute("class"), "Model") == 0) {
         processModel(item, parent_id);
     }
