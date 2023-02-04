@@ -845,9 +845,9 @@ void Object::calculateBrickColor(int value) {
 }
 
 void drawBlock(float x, float y, float z, float width, float height, float depth, int r, int g, int b, float alpha, bool doCull) {
-	width = abs(width);
-	height = abs(height);
-	depth = abs(depth);
+	width = (width);
+	height = (height);
+	depth = (depth);
 	/*
 	Renders a block that is scaled from the center outwards.
 	*/
@@ -874,7 +874,7 @@ void drawBlock(float x, float y, float z, float width, float height, float depth
 	}
 */
 	if (doCull) {
-		glPolyFmt(POLY_ALPHA(31 - int(alpha * 31)) | POLY_CULL_BACK | POLY_FORMAT_LIGHT0 | POLY_FOG );
+		glPolyFmt(POLY_ALPHA(31 - int(alpha * 31)) | POLY_CULL_NONE | POLY_FORMAT_LIGHT0 | POLY_FOG );
 	} else {
 		glPolyFmt(POLY_ALPHA(31 - int(alpha * 31)) | POLY_CULL_NONE | POLY_FORMAT_LIGHT0 | POLY_FOG);
 	}
@@ -1014,11 +1014,11 @@ bool Part::isObstructed(float x, float y, float z, float radius) {
 		float half_height = scale_height;
 		float half_depth = scale_depth;
 		  
-		float closest_x = fmaxf(0.0f - half_width, fminf(transformed_x, half_width));
-		float closest_y = fmaxf(0.0f - half_height, fminf(transformed_y, half_height));
-		float closest_z = fmaxf(0.0f - half_depth, fminf(transformed_z, half_depth));
+		float closest_x = std::fmax(-half_width, std::fmin(transformed_x, half_width));
+		float closest_y = std::fmax(-half_height, std::fmin(transformed_y, half_height));
+		float closest_z = std::fmax(-half_depth, std::fmin(transformed_z, half_depth));
 		  
-		float distance = sqrt(pow(transformed_x - closest_x, 2) + pow(transformed_y - closest_y, 2) + pow(transformed_z - closest_z, 2));
+		float distance = sqrtf(powf(transformed_x - closest_x, 2) + powf(transformed_y - closest_y, 2) + powf(transformed_z - closest_z, 2));
 		  
 		if (distance <= radius)
 		{
@@ -1027,6 +1027,7 @@ bool Part::isObstructed(float x, float y, float z, float radius) {
 	}
 	return false;
 }
+
 
 float Part::getDistanceFromPlayer(float player_x, float player_y, float player_z) {
 	float delta_x = player_x - pos_x;
@@ -1130,18 +1131,39 @@ void Player::Update(std::vector<Part> parts, int partCount, float deltaTime) {
 	
 	bool canMoveX = true;
 	bool canMoveZ = true;
+	bool canMovePosY = true;
+	bool canMoveNegY = true;
 	lastGoodX = pos_x;
 	lastGoodZ = pos_z;
 	
 	// Call draw function for every part
 	for (int i = 0; i < partCount - 5; i++) {
 		int sphereSize = 8;
+		int footSize = 90;
+		
+		int bodySize = (footSize * sphereSize) * 2.5;
+		
 		float torsoPosY = (pos_y - (2048));
-		float feetPosY = (pos_y + 1024 + 512 + walkVelocityRelative_y);
-		canMoveX = !parts[i].isObstructed(-(pos_x + (_xx*8)), -torsoPosY, -pos_z, 80*sphereSize);
-		canMoveZ = !parts[i].isObstructed(-pos_x, -torsoPosY, -(pos_z + (_zz*8)),80*sphereSize);
-		bool canMovePosY = !parts[i].isObstructed(-pos_x, -feetPosY, -pos_z, abs(walkVelocityRelative_y * 5)*sphereSize);
-		//bool canMoveNegY = parts[i].isObstructed(-pos_x, -headPosY, -pos_z, abs(walkVelocityRelative_y * 4)*(sphereSize*2.5));
+		float feetPosY = (pos_y + ((1024 + 512) + walkVelocityRelative_y));
+		float headPosY = (pos_y - ((1024 + 1024 + 512) + walkVelocityRelative_y));
+		
+		bool obstructX = parts[i].isObstructed(-(pos_x + (_xx * 4)), -torsoPosY, -pos_z, bodySize);
+		bool obstructZ = parts[i].isObstructed(-pos_x, -torsoPosY, -(pos_z + (_zz * 4)), bodySize);
+		
+		bool obstructX_FineTuneUp = parts[i].isObstructed(-(pos_x + (_xx * 4)), -(torsoPosY + 1024), -pos_z, bodySize);
+		bool obstructZ_FineTuneUp = parts[i].isObstructed(-pos_x, -(torsoPosY + 1024 + 1024), -(pos_z + (_zz * 4)), bodySize);
+		
+		bool obstructX_FineTuneDown = parts[i].isObstructed(-(pos_x + (_xx * 4)), -(torsoPosY - 1024), -pos_z, bodySize);
+		bool obstructZ_FineTuneDown = parts[i].isObstructed(-pos_x, -(torsoPosY - 1024 - 1024), -(pos_z + (_zz * 4)), bodySize);
+		
+		bool obstructPosY = parts[i].isObstructed(-pos_x, -feetPosY, -pos_z, footSize * sphereSize);
+		bool obstructPosY_FineTune = parts[i].isObstructed(-pos_x, -feetPosY, -pos_z, (footSize/2) * sphereSize);
+		bool obstructNegY = parts[i].isObstructed(-pos_x, -headPosY, -pos_z, footSize * sphereSize);
+
+		canMoveX = !obstructX || !obstructX_FineTuneUp || !obstructX_FineTuneDown;
+		canMoveZ = !obstructZ || !obstructZ_FineTuneUp || !obstructZ_FineTuneDown;
+		canMovePosY = !obstructPosY || !obstructPosY_FineTune;
+		canMoveNegY = !obstructNegY;
 
 		if (canMoveX) {
 			
@@ -1157,21 +1179,31 @@ void Player::Update(std::vector<Part> parts, int partCount, float deltaTime) {
 			targetPoint_z = lastGoodZ;
 		}
 		
-		if (canMovePosY) {
-			walkVelocityRelative_y += gravity * 0.009;
-			isOnGround = false;
-			jump = false;
-		} else {
-			walkVelocityRelative_y = -0.05 - int(walkVelocityRelative_y*0.3);
-			isOnGround = true;
-			pos_y = -(parts[i].pos_y + 1024 + 512 + parts[i].scale_height);
-			if (keys & KEY_B) {
-				isOnGround = false;
-				jump = true;
-				walkVelocityRelative_y = -jumpForce * 0.8;
-				pos_y -= walkVelocityRelative_y * 4;
-			}
+		if (!canMoveNegY) {
+			walkVelocityRelative_y = -walkVelocityRelative_y;
+			pos_y = -(parts[i].pos_y - parts[i].scale_height) + (1024 + 1024 + 512 + 256) + (footSize * sphereSize);
 		}
+		
+		float newPosY;
+
+		if (canMovePosY) {
+		  walkVelocityRelative_y += gravity * 0.002;
+		  isOnGround = false;
+		  jump = false;
+		  newPosY = pos_y + walkVelocityRelative_y * 4;
+		} else {
+		  walkVelocityRelative_y = -0.05 - (walkVelocityRelative_y * 0.3);
+		  isOnGround = true;
+		  newPosY = -(parts[i].pos_y + 1024 + 512 + parts[i].scale_height);
+		  if (keys & KEY_B) {
+			isOnGround = false;
+			jump = true;
+			walkVelocityRelative_y = -jumpForce * 0.2;
+			newPosY -= (walkVelocityRelative_y * 4) + (footSize * sphereSize);
+		  }
+		}
+
+		pos_y = newPosY;
 
 	if (!isOnGround) pos_y += walkVelocityRelative_y;
 	}

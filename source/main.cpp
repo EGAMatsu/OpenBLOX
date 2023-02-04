@@ -16,8 +16,18 @@
 #include <random>
 #include <chrono>
 
+//Map stuff
+std::vector<Object> objects;
+std::vector<Model> models;
+std::vector<Part> parts;
+std::vector<Humanoid> humanoids;
+std::vector<Script> scripts;
+int object[8192];
+
+/* Legacy shit V */
 Part part[8192];
 int partCount;
+/* ^^^^^^ */
 
 int spawnLocation_X[255], spawnLocation_Y[255], spawnLocation_Z[255];
 int spawnCount = 0;
@@ -97,14 +107,6 @@ void drawCylinder(float x, float y, float z, float radius, float height, float d
 		}
 	glEnd();
 }
-
-//Map stuff
-std::vector<Object> objects;
-std::vector<Model> models;
-std::vector<Part> parts;
-std::vector<Humanoid> humanoids;
-std::vector<Script> scripts;
-int object[8192];
 
 //Prototypes
 void processWorkspace(tinyxml2::XMLElement *workspace);
@@ -540,6 +542,11 @@ int main(int argc, char **argv)
 {
 	consoleDemoInit();
 	
+	/* Set Spanws to 0,0,0 */
+	spawnLocation_X[0] = 0;
+	spawnLocation_Y[0] = 0;
+	spawnLocation_Z[0] = 0;
+	
 	const char *mapFile[256];
 	int mapLength = 0;
 
@@ -561,7 +568,8 @@ int main(int argc, char **argv)
 					else {
 						iprintf("%s\n", pent->d_name);
 						mapFile[mapLength] = strdup(pent->d_name);
-						mapLength+=1;
+						mapLength++;
+						free(pent->d_name);
 					}
 				}
 			}
@@ -588,8 +596,9 @@ int main(int argc, char **argv)
 				if (j == 0) {
 					printf("-= Map Select =-\n");
 				}
-				for (int i = 0; i < mapLength; i++) {
-					if (j <= mapLength) {
+				int lowerMapLen = 1;
+				for (int i = 0; i <= mapLength; i++) {
+					if (j <= mapLength-lowerMapLen) {
 						if (j == fSelectNumb) {
 							printf("-> ");
 						}
@@ -622,9 +631,9 @@ int main(int argc, char **argv)
 				
 				//Wrap the selection Number.
 				if (fSelectNumb < 0) {
-					fSelectNumb = mapLength;
+					fSelectNumb = mapLength-lowerMapLen;
 				}
-				if (fSelectNumb > mapLength) {
+				if (fSelectNumb > mapLength-lowerMapLen) {
 					fSelectNumb = 0;
 				}
 				
@@ -704,6 +713,7 @@ int main(int argc, char **argv)
 	int spawnID = distr(gen);
 	
 	//Spawn player @ random spawn
+	
 	player.pos_x = -spawnLocation_X[spawnID];
 	player.pos_y = -spawnLocation_Y[spawnID] - (8192/2);
 	player.pos_z = -spawnLocation_Z[spawnID];
