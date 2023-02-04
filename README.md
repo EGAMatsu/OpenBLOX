@@ -15,7 +15,7 @@ Go to the location of the makefile where you extracted/installed the repository
 Run "Make".
 
 # Running the game:
-On your Flashcard/SD Card, you MUST put the maps in a folder called OpenBLOX on the root of your card.
+On your Flashcard/SD Card, you MUST put the maps in a folder called OpenBLOX (case sensitive.) on the root of your card.
 
 If you have access to a 2007 - 2011 client, look at the folder its located in and copy the folder called: "content".
 
