@@ -15,14 +15,12 @@ Go to the location of the makefile where you extracted/installed the repository
 Run "Make".
 
 # Running the game:
-On your system/SD Card, put the .nds file either on root or its own folder.
+On your Flashcard/SD Card, you MUST put the maps in a folder called OpenBLOX on the root of your card.
 
-If you have access to a 2007 - 2011 client, look at the folder its located in and copy the folder called: "Content".
+If you have access to a 2007 - 2011 client, look at the folder its located in and copy the folder called: "content".
 
-Place the content folder in the same folder as the .nds file.
+Place the content folder in the OpenBLOX Folder, same with the game, though the game can be anywhere, I would suggest to put it in the OpenBLOX folder.
 
-Now, find a map from 2005 - 2008, make sure its up to 1kb - 800kb if using a Nintendo DS, and 1kb - 1mb if using a Nintendo DSi.
-
-Copy the map in the folder as the .nds and rename it to: "map.rbxl".
+Now, find a map from 2005 - 2008, make sure its up to 1kb - 800kb if using a Nintendo DS, and 1kb - 1mb if using a Nintendo DSi; then place the map in the OpenBLOX folder
 
 Now load the game and play.
