@@ -1,8 +1,11 @@
 # OpenBLOX
  A project to make a new client for older ROBLOX Maps from 2005 to 2011
+ 
+# INFO ABOUT MAPS
+You cannot use any maps that use the binary ROBLOX Map Format; the map MUST have been made in any studio version from 2003 - 2012;
+though maps in latter versions (2010+) WILL have issues.
 
 # How to compile:
-
 Download this repository
 
 Install devkitpro
