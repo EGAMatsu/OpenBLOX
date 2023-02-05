@@ -1,9 +1,13 @@
 ![OpenBLOX](https://cdn.discordapp.com/attachments/818207854292369432/1071302355129208923/OpenBLOX.png)
 # About
-A project to make a new client for older ROBLOX Maps from 2005 to 2011\
-And to make programs/games that can play ROBLOX Maps, aka something like a game in Unity that can play old ROBLOX games, or UE5\
-Or even to make maps playable in places like VRChat.\
-Pretty much, we want to make it so people know how the game works and to make their own ports of ROBLOX maps/ROBLOX itself.\
+A project to make a new client for older ROBLOX Maps from 2005 to 2011
+
+And to make programs/games that can play ROBLOX Maps, aka something like a game in Unity that can play old ROBLOX games, or UE5
+
+Or even to make maps playable in places like VRChat.
+
+Pretty much, we want to make it so people know how the game works and to make their own ports of ROBLOX maps/ROBLOX itself.
+
 [OpenBLOX Discord Server](https://discord.gg/Wf2bbU5z5J)
  
 # INFO ABOUT MAPS
