@@ -1832,10 +1832,42 @@ void Part::update(float time) {
   velocity_z += forces_z * time;
 }
 
+bool orthonormalize(float &r00, float &r01, float &r02,
+					float &r10, float &r11, float &r12,
+					float &r20, float &r21, float &r22)
+{
+	float x = r00, y = r10, z = r20;
+	float len = sqrt(x * x + y * y + z * z);
+
+	if (len < 1e-6f) {
+		return false;
+	}
+
+	x /= len; y /= len; z /= len;
+
+	float t = x * r01 + y * r11 + z * r21;
+	r01 -= t * x; r11 -= t * y; r21 -= t * z;
+	len = sqrt(r01 * r01 + r11 * r11 + r21 * r21);
+
+	if (len < 1e-6f) {
+		return false;
+	}
+
+	r01 /= len; r11 /= len; r21 /= len;
+
+	r02 = y * r21 - z * r11;
+	r12 = z * r01 - x * r21;
+	r22 = x * r11 - y * r01;
+
+	return true;
+}
+
 //Render a part
 void Part::draw(float renderTransparency) {
 	if (transparency != 1) {
 		glPushMatrix();
+
+		bool success = orthonormalize(r00, r01, r02, r10, r11, r12, r20, r21, r22);
 
 		// Compute the angle of rotation
 		float angle = acos((r00 + r11 + r22 - 1) / 2);
@@ -1844,10 +1876,13 @@ void Part::draw(float renderTransparency) {
 		float x = (r21 - r12) / (2 * sin(angle));
 		float y = (r02 - r20) / (2 * sin(angle));
 		float z = (r10 - r01) / (2 * sin(angle));
-		
+
 		glTranslatef32(pos_x, pos_y, pos_z);
+
 		// Use the glRotatef function with the angle and axis
-		glRotatef(angle * 180 / M_PI, x, y, z);
+		if (success) {
+			glRotatef(angle * 180 / M_PI, x, y, z);
+		}
 		
 		float scale_width_abs = abs(scale_width);
 		float scale_height_abs = abs(scale_height);
