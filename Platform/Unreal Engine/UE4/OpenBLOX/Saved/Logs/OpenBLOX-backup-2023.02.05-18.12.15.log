@@ -1,0 +1,1621 @@
+﻿Log file open, 02/05/23 12:11:12
+LogWindows: Failed to load 'aqProf.dll' (GetLastError=126)
+LogWindows: File 'aqProf.dll' does not exist
+LogWindows: Failed to load 'VtuneApi.dll' (GetLastError=126)
+LogWindows: File 'VtuneApi.dll' does not exist
+LogWindows: Failed to load 'VtuneApi32e.dll' (GetLastError=126)
+LogWindows: File 'VtuneApi32e.dll' does not exist
+LogConsoleResponse: Display: Failed to find resolution value strings in scalability ini. Falling back to default.
+LogConsoleResponse: Display: Failed to find resolution value strings in scalability ini. Falling back to default.
+LogInit: Display: Running engine for game: OpenBLOX
+LogPlatformFile: Not using cached read wrapper
+LogTaskGraph: Started task graph with 5 named threads and 35 total threads with 3 sets of task threads.
+LogStats: Stats thread started at 0.220121
+LogICUInternationalization: ICU TimeZone Detection - Raw Offset: -6:00, Platform Override: ''
+LogInit: Display: Loading text-based GConfig....
+LogPluginManager: Mounting plugin MeshPainting
+LogPluginManager: Mounting plugin XGEController
+LogPluginManager: Mounting plugin Paper2D
+LogPluginManager: Mounting plugin AISupport
+LogPluginManager: Mounting plugin EnvironmentQueryEditor
+LogPluginManager: Mounting plugin LiveLink
+LogPluginManager: Mounting plugin GameplayCameras
+LogPluginManager: Mounting plugin LightPropagationVolume
+LogPluginManager: Mounting plugin AnimationSharing
+LogPluginManager: Mounting plugin CameraShakePreviewer
+LogPluginManager: Mounting plugin CLionSourceCodeAccess
+LogPluginManager: Mounting plugin OodleData
+LogPluginManager: Mounting plugin OodleNetwork
+LogPluginManager: Mounting plugin CodeLiteSourceCodeAccess
+LogPluginManager: Mounting plugin GitSourceControl
+LogPluginManager: Mounting plugin KDevelopSourceCodeAccess
+LogPluginManager: Mounting plugin NullSourceCodeAccess
+LogPluginManager: Mounting plugin PerforceSourceControl
+LogPluginManager: Mounting plugin PixWinPlugin
+LogPluginManager: Mounting plugin PluginUtils
+LogPluginManager: Mounting plugin PlasticSourceControl
+LogPluginManager: Mounting plugin PropertyAccessNode
+LogPluginManager: Mounting plugin RiderSourceCodeAccess
+LogPluginManager: Mounting plugin SubversionSourceControl
+LogPluginManager: Mounting plugin TextureFormatOodle
+LogPluginManager: Mounting plugin UObjectPlugin
+LogPluginManager: Mounting plugin VisualStudioSourceCodeAccess
+LogPluginManager: Mounting plugin XCodeSourceCodeAccess
+LogPluginManager: Mounting plugin VisualStudioCodeSourceCodeAccess
+LogPluginManager: Mounting plugin AlembicImporter
+LogPluginManager: Mounting plugin AutomationUtils
+LogPluginManager: Mounting plugin BackChannel
+LogPluginManager: Mounting plugin AssetManagerEditor
+LogPluginManager: Mounting plugin CurveEditorTools
+LogPluginManager: Mounting plugin CryptoKeys
+LogPluginManager: Mounting plugin ChaosCloth
+LogPluginManager: Mounting plugin DataValidation
+LogPluginManager: Mounting plugin FacialAnimation
+LogPluginManager: Mounting plugin DatasmithContent
+LogPluginManager: Mounting plugin ChaosClothEditor
+LogPluginManager: Mounting plugin GameplayTagsEditor
+LogPluginManager: Mounting plugin GeometryMode
+LogPluginManager: Mounting plugin ChaosEditor
+LogPluginManager: Mounting plugin ChaosNiagara
+LogPluginManager: Mounting plugin MacGraphicsSwitching
+LogPluginManager: Mounting plugin ChaosSolverPlugin
+LogPluginManager: Mounting plugin MaterialAnalyzer
+LogPluginManager: Mounting plugin MobileLauncherProfileWizard
+LogPluginManager: Mounting plugin PluginBrowser
+LogPluginManager: Mounting plugin SpeedTreeImporter
+LogPluginManager: Mounting plugin CharacterAI
+LogPluginManager: Mounting plugin VariantManagerContent
+LogPluginManager: Mounting plugin GeometryCache
+LogPluginManager: Mounting plugin GeometryCollectionPlugin
+LogPluginManager: Mounting plugin Niagara
+LogPluginManager: Mounting plugin GeometryProcessing
+LogPluginManager: Mounting plugin MotoSynth
+LogPluginManager: Mounting plugin OpenImageDenoise
+LogPluginManager: Mounting plugin ProxyLODPlugin
+LogPluginManager: Mounting plugin PlanarCut
+LogPluginManager: Mounting plugin PlatformCrypto
+LogPluginManager: Mounting plugin PythonScriptPlugin
+LogPluginManager: Mounting plugin SkeletalReduction
+LogPluginManager: Mounting plugin LuminPlatformFeatures
+LogPluginManager: Mounting plugin MagicLeap
+LogPluginManager: Mounting plugin MagicLeapLightEstimation
+LogPluginManager: Mounting plugin MagicLeapMedia
+LogPluginManager: Mounting plugin AndroidMedia
+LogPluginManager: Mounting plugin MagicLeapPassableWorld
+LogPluginManager: Mounting plugin TcpMessaging
+LogPluginManager: Mounting plugin MLSDK
+LogPluginManager: Mounting plugin UdpMessaging
+LogPluginManager: Mounting plugin ActorSequence
+LogPluginManager: Mounting plugin LevelSequenceEditor
+LogPluginManager: Mounting plugin AvfMedia
+LogPluginManager: Mounting plugin MatineeToLevelSequence
+LogPluginManager: Mounting plugin TemplateSequence
+LogPluginManager: Mounting plugin MediaCompositing
+LogPluginManager: Mounting plugin ImgMedia
+LogPluginManager: Mounting plugin MediaPlayerEditor
+LogPluginManager: Mounting plugin WebMMedia
+LogPluginManager: Mounting plugin WmfMedia
+LogPluginManager: Mounting plugin OnlineSubsystem
+LogPluginManager: Mounting plugin OnlineSubsystemNull
+LogPluginManager: Mounting plugin OnlineSubsystemUtils
+LogPluginManager: Mounting plugin LauncherChunkInstaller
+LogPluginManager: Mounting plugin ActorLayerUtilities
+LogPluginManager: Mounting plugin AndroidDeviceProfileSelector
+LogPluginManager: Mounting plugin AndroidMoviePlayer
+LogPluginManager: Mounting plugin AndroidPermission
+LogPluginManager: Mounting plugin AppleImageUtils
+LogPluginManager: Mounting plugin AppleMoviePlayer
+LogPluginManager: Mounting plugin ArchVisCharacter
+LogPluginManager: Mounting plugin AssetTags
+LogPluginManager: Mounting plugin AudioCapture
+LogPluginManager: Mounting plugin AudioSynesthesia
+LogPluginManager: Mounting plugin CableComponent
+LogPluginManager: Mounting plugin ChunkDownloader
+LogPluginManager: Mounting plugin CustomMeshComponent
+LogPluginManager: Mounting plugin EditableMesh
+LogPluginManager: Mounting plugin ExampleDeviceProfileSelector
+LogPluginManager: Mounting plugin GoogleCloudMessaging
+LogPluginManager: Mounting plugin GooglePAD
+LogPluginManager: Mounting plugin IOSDeviceProfileSelector
+LogPluginManager: Mounting plugin LinuxDeviceProfileSelector
+LogPluginManager: Mounting plugin LocationServicesBPLibrary
+LogPluginManager: Mounting plugin MobilePatchingUtils
+LogPluginManager: Mounting plugin OpenXR
+LogPluginManager: Mounting plugin OpenXREyeTracker
+LogPluginManager: Mounting plugin OpenXRHandTracking
+LogPluginManager: Mounting plugin PhysXVehicles
+LogPluginManager: Mounting plugin ScreenshotTools
+LogPluginManager: Mounting plugin Takes
+LogPluginManager: Mounting plugin PostSplashScreen
+LogPluginManager: Mounting plugin ProceduralMeshComponent
+LogPluginManager: Mounting plugin PropertyAccessEditor
+LogPluginManager: Mounting plugin RuntimePhysXCooking
+LogPluginManager: Mounting plugin SignificanceManager
+LogPluginManager: Mounting plugin SoundFields
+LogPluginManager: Mounting plugin Synthesis
+LogPluginManager: Mounting plugin WebMMoviePlayer
+LogPluginManager: Mounting plugin WindowsMoviePlayer
+LogPluginManager: Mounting plugin ContentBrowserAssetDataSource
+LogPluginManager: Mounting plugin ContentBrowserClassDataSource
+LogPluginManager: Mounting plugin ContentBrowserFileDataSource
+LogPluginManager: Mounting plugin OnlineSubsystemGooglePlay
+LogPluginManager: Mounting plugin OnlineSubsystemIOS
+LogPluginManager: Mounting plugin OculusVR
+LogPluginManager: Mounting plugin SteamVR
+PixWinPlugin: PIX capture plugin failed to initialize! Check that the process is launched from PIX.
+LogLuminAPIImpl: Warning: MLSDK not found.  This likely means the MLSDK environment variable is not set.
+LogInit: Using libcurl 7.55.1-DEV
+LogInit:  - built for x86_64-pc-win32
+LogInit:  - supports SSL with OpenSSL/1.1.1
+LogInit:  - supports HTTP deflate (compression) using libz 1.2.8
+LogInit:  - other features:
+LogInit:      CURL_VERSION_SSL
+LogInit:      CURL_VERSION_LIBZ
+LogInit:      CURL_VERSION_IPV6
+LogInit:      CURL_VERSION_ASYNCHDNS
+LogInit:      CURL_VERSION_LARGEFILE
+LogInit:      CURL_VERSION_IDN
+LogInit:  CurlRequestOptions (configurable via config and command line):
+LogInit:  - bVerifyPeer = true  - Libcurl will verify peer certificate
+LogInit:  - bUseHttpProxy = false  - Libcurl will NOT use HTTP proxy
+LogInit:  - bDontReuseConnections = false  - Libcurl will reuse connections
+LogInit:  - MaxHostConnections = 16  - Libcurl will limit the number of connections to a host
+LogInit:  - LocalHostAddr = Default
+LogInit:  - BufferSize = 65536
+LogOnline: OSS: Creating online subsystem instance for: NULL
+LogInit: WinSock: version 1.1 (2.2), MaxSocks=32767, MaxUdp=65467
+LogOnline: OSS: TryLoadSubsystemAndSetDefault: Loaded subsystem for module [NULL]
+LogOculusPluginWrapper: OculusPlugin initialized successfully
+LogHMD: Failed initializing OVRPlugin 1.59.0
+LogInit: Build: ++UE4+Release-4.27-CL-18319896
+LogInit: Engine Version: 4.27.2-18319896+++UE4+Release-4.27
+LogInit: Compatible Engine Version: 4.27.0-17155196+++UE4+Release-4.27
+LogInit: Net CL: 17155196
+LogInit: OS: Windows 10 (Release 2009) (), CPU: AMD Ryzen 5 3600 6-Core Processor              , GPU: AMD Radeon RX 6600
+LogInit: Compiled (64-bit): Nov 30 2021 07:12:08
+LogInit: Compiled with Visual C++: 19.24.28315.00
+LogInit: Build Configuration: Development
+LogInit: Branch Name: ++UE4+Release-4.27
+LogInit: Command Line:  -EpicPortal -epicusername=OrphanDonor420 -epicuserid=08ac997ba57a42fdbce60827f0da4e04 -epiclocale=en -epicsandboxid=ue
+LogInit: Base Directory: E:/EpicGames/UE_4.27/Engine/Binaries/Win64/
+LogInit: Allocator: TBB
+LogInit: Installed Engine Build: 1
+LogDevObjectVersion: Number of dev versions registered: 29
+LogDevObjectVersion:   Dev-Blueprints (B0D832E4-1F89-4F0D-ACCF-7EB736FD4AA2): 10
+LogDevObjectVersion:   Dev-Build (E1C64328-A22C-4D53-A36C-8E866417BD8C): 0
+LogDevObjectVersion:   Dev-Core (375EC13C-06E4-48FB-B500-84F0262A717E): 4
+LogDevObjectVersion:   Dev-Editor (E4B068ED-F494-42E9-A231-DA0B2E46BB41): 40
+LogDevObjectVersion:   Dev-Framework (CFFC743F-43B0-4480-9391-14DF171D2073): 37
+LogDevObjectVersion:   Dev-Mobile (B02B49B5-BB20-44E9-A304-32B752E40360): 3
+LogDevObjectVersion:   Dev-Networking (A4E4105C-59A1-49B5-A7C5-40C4547EDFEE): 0
+LogDevObjectVersion:   Dev-Online (39C831C9-5AE6-47DC-9A44-9C173E1C8E7C): 0
+LogDevObjectVersion:   Dev-Physics (78F01B33-EBEA-4F98-B9B4-84EACCB95AA2): 14
+LogDevObjectVersion:   Dev-Platform (6631380F-2D4D-43E0-8009-CF276956A95A): 0
+LogDevObjectVersion:   Dev-Rendering (12F88B9F-8875-4AFC-A67C-D90C383ABD29): 45
+LogDevObjectVersion:   Dev-Sequencer (7B5AE74C-D270-4C10-A958-57980B212A5A): 13
+LogDevObjectVersion:   Dev-VR (D7296918-1DD6-4BDD-9DE2-64A83CC13884): 3
+LogDevObjectVersion:   Dev-LoadTimes (C2A15278-BFE7-4AFE-6C17-90FF531DF755): 1
+LogDevObjectVersion:   Private-Geometry (6EACA3D4-40EC-4CC1-B786-8BED09428FC5): 3
+LogDevObjectVersion:   Dev-AnimPhys (29E575DD-E0A3-4627-9D10-D276232CDCEA): 17
+LogDevObjectVersion:   Dev-Anim (AF43A65D-7FD3-4947-9873-3E8ED9C1BB05): 15
+LogDevObjectVersion:   Dev-ReflectionCapture (6B266CEC-1EC7-4B8F-A30B-E4D90942FC07): 1
+LogDevObjectVersion:   Dev-Automation (0DF73D61-A23F-47EA-B727-89E90C41499A): 1
+LogDevObjectVersion:   FortniteMain (601D1886-AC64-4F84-AA16-D3DE0DEAC7D6): 47
+LogDevObjectVersion:   FortniteRelease (E7086368-6B23-4C58-8439-1B7016265E91): 1
+LogDevObjectVersion:   Dev-Enterprise (9DFFBCD6-494F-0158-E221-12823C92A888): 10
+LogDevObjectVersion:   Dev-Niagara (F2AED0AC-9AFE-416F-8664-AA7FFA26D6FC): 1
+LogDevObjectVersion:   Dev-Destruction (174F1F0B-B4C6-45A5-B13F-2EE8D0FB917D): 10
+LogDevObjectVersion:   Dev-Physics-Ext (35F94A83-E258-406C-A318-09F59610247C): 41
+LogDevObjectVersion:   Dev-PhysicsMaterial-Chaos (B68FC16E-8B1B-42E2-B453-215C058844FE): 1
+LogDevObjectVersion:   Dev-CineCamera (B2E18506-4273-CFC2-A54E-F4BB758BBA07): 1
+LogDevObjectVersion:   Dev-VirtualProduction (64F58936-FD1B-42BA-BA96-7289D5D0FA4E): 1
+LogDevObjectVersion:   Dev-MediaFramework (6F0ED827-A609-4895-9C91-998D90180EA4): 2
+LogInit: Presizing for max 25165824 objects, including 0 objects not considered by GC, pre-allocating 0 bytes for permanent pool.
+LogConfig: Applying CVar settings from Section [/Script/Engine.StreamingSettings] File [C:/Users/Luke/Documents/OpenBLOX/OpenBLOX/Platform/Unreal Engine/UE4/OpenBLOX/Saved/Config/Windows/Engine.ini]
+LogConfig: Setting CVar [[s.MinBulkDataSizeForAsyncLoading:131072]]
+LogConfig: Setting CVar [[s.AsyncLoadingThreadEnabled:0]]
+LogConfig: Setting CVar [[s.EventDrivenLoaderEnabled:1]]
+LogConfig: Setting CVar [[s.WarnIfTimeLimitExceeded:0]]
+LogConfig: Setting CVar [[s.TimeLimitExceededMultiplier:1.5]]
+LogConfig: Setting CVar [[s.TimeLimitExceededMinTime:0.005]]
+LogConfig: Setting CVar [[s.UseBackgroundLevelStreaming:1]]
+LogConfig: Setting CVar [[s.PriorityAsyncLoadingExtraTime:15.0]]
+LogConfig: Setting CVar [[s.LevelStreamingActorsUpdateTimeLimit:5.0]]
+LogConfig: Setting CVar [[s.PriorityLevelStreamingActorsUpdateExtraTime:5.0]]
+LogConfig: Setting CVar [[s.LevelStreamingComponentsRegistrationGranularity:10]]
+LogConfig: Setting CVar [[s.UnregisterComponentsTimeLimit:1.0]]
+LogConfig: Setting CVar [[s.LevelStreamingComponentsUnregistrationGranularity:5]]
+LogConfig: Setting CVar [[s.FlushStreamingOnExit:1]]
+LogInit: Object subsystem initialized
+LogConfig: Setting CVar [[con.DebugEarlyDefault:1]]
+LogConfig: Setting CVar [[r.setres:1280x720]]
+[2023.02.05-18.11.13:562][  0]LogConfig: Setting CVar [[r.VSync:0]]
+[2023.02.05-18.11.13:562][  0]LogConfig: Setting CVar [[r.RHICmdBypass:0]]
+[2023.02.05-18.11.13:562][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererSettings] File [C:/Users/Luke/Documents/OpenBLOX/OpenBLOX/Platform/Unreal Engine/UE4/OpenBLOX/Saved/Config/Windows/Engine.ini]
+[2023.02.05-18.11.13:562][  0]LogConfig: Setting CVar [[r.GPUCrashDebugging:0]]
+[2023.02.05-18.11.13:562][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererOverrideSettings] File [C:/Users/Luke/Documents/OpenBLOX/OpenBLOX/Platform/Unreal Engine/UE4/OpenBLOX/Saved/Config/Windows/Engine.ini]
+[2023.02.05-18.11.13:562][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.StreamingSettings] File [C:/Users/Luke/Documents/OpenBLOX/OpenBLOX/Platform/Unreal Engine/UE4/OpenBLOX/Saved/Config/Windows/Engine.ini]
+[2023.02.05-18.11.13:562][  0]LogConfig: Setting CVar [[s.MinBulkDataSizeForAsyncLoading:131072]]
+[2023.02.05-18.11.13:562][  0]LogConfig: Setting CVar [[s.AsyncLoadingThreadEnabled:0]]
+[2023.02.05-18.11.13:562][  0]LogConfig: Setting CVar [[s.EventDrivenLoaderEnabled:1]]
+[2023.02.05-18.11.13:562][  0]LogConfig: Setting CVar [[s.WarnIfTimeLimitExceeded:0]]
+[2023.02.05-18.11.13:562][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMultiplier:1.5]]
+[2023.02.05-18.11.13:562][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMinTime:0.005]]
+[2023.02.05-18.11.13:562][  0]LogConfig: Setting CVar [[s.UseBackgroundLevelStreaming:1]]
+[2023.02.05-18.11.13:562][  0]LogConfig: Setting CVar [[s.PriorityAsyncLoadingExtraTime:15.0]]
+[2023.02.05-18.11.13:562][  0]LogConfig: Setting CVar [[s.LevelStreamingActorsUpdateTimeLimit:5.0]]
+[2023.02.05-18.11.13:562][  0]LogConfig: Setting CVar [[s.PriorityLevelStreamingActorsUpdateExtraTime:5.0]]
+[2023.02.05-18.11.13:562][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsRegistrationGranularity:10]]
+[2023.02.05-18.11.13:562][  0]LogConfig: Setting CVar [[s.UnregisterComponentsTimeLimit:1.0]]
+[2023.02.05-18.11.13:562][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsUnregistrationGranularity:5]]
+[2023.02.05-18.11.13:562][  0]LogConfig: Setting CVar [[s.FlushStreamingOnExit:1]]
+[2023.02.05-18.11.13:562][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.GarbageCollectionSettings] File [C:/Users/Luke/Documents/OpenBLOX/OpenBLOX/Platform/Unreal Engine/UE4/OpenBLOX/Saved/Config/Windows/Engine.ini]
+[2023.02.05-18.11.13:562][  0]LogConfig: Setting CVar [[gc.MaxObjectsNotConsideredByGC:1]]
+[2023.02.05-18.11.13:562][  0]LogConfig: Setting CVar [[gc.SizeOfPermanentObjectPool:0]]
+[2023.02.05-18.11.13:562][  0]LogConfig: Setting CVar [[gc.FlushStreamingOnGC:0]]
+[2023.02.05-18.11.13:562][  0]LogConfig: Setting CVar [[gc.NumRetriesBeforeForcingGC:10]]
+[2023.02.05-18.11.13:562][  0]LogConfig: Setting CVar [[gc.AllowParallelGC:1]]
+[2023.02.05-18.11.13:562][  0]LogConfig: Setting CVar [[gc.TimeBetweenPurgingPendingKillObjects:61.1]]
+[2023.02.05-18.11.13:562][  0]LogConfig: Setting CVar [[gc.MaxObjectsInEditor:25165824]]
+[2023.02.05-18.11.13:562][  0]LogConfig: Setting CVar [[gc.IncrementalBeginDestroyEnabled:1]]
+[2023.02.05-18.11.13:562][  0]LogConfig: Setting CVar [[gc.CreateGCClusters:1]]
+[2023.02.05-18.11.13:562][  0]LogConfig: Setting CVar [[gc.MinGCClusterSize:5]]
+[2023.02.05-18.11.13:562][  0]LogConfig: Setting CVar [[gc.ActorClusteringEnabled:0]]
+[2023.02.05-18.11.13:562][  0]LogConfig: Setting CVar [[gc.BlueprintClusteringEnabled:0]]
+[2023.02.05-18.11.13:562][  0]LogConfig: Setting CVar [[gc.UseDisregardForGCOnDedicatedServers:0]]
+[2023.02.05-18.11.13:562][  0]LogConfig: Setting CVar [[gc.MultithreadedDestructionEnabled:1]]
+[2023.02.05-18.11.13:562][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.NetworkSettings] File [C:/Users/Luke/Documents/OpenBLOX/OpenBLOX/Platform/Unreal Engine/UE4/OpenBLOX/Saved/Config/Windows/Engine.ini]
+[2023.02.05-18.11.13:562][  0]LogConfig: Applying CVar settings from Section [/Script/UnrealEd.CookerSettings] File [C:/Users/Luke/Documents/OpenBLOX/OpenBLOX/Platform/Unreal Engine/UE4/OpenBLOX/Saved/Config/Windows/Engine.ini]
+[2023.02.05-18.11.13:566][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [C:/Users/Luke/Documents/OpenBLOX/OpenBLOX/Platform/Unreal Engine/UE4/OpenBLOX/Saved/Config/Windows/Scalability.ini]
+[2023.02.05-18.11.13:566][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
+[2023.02.05-18.11.13:566][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
+[2023.02.05-18.11.13:566][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [C:/Users/Luke/Documents/OpenBLOX/OpenBLOX/Platform/Unreal Engine/UE4/OpenBLOX/Saved/Config/Windows/Scalability.ini]
+[2023.02.05-18.11.13:566][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
+[2023.02.05-18.11.13:566][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [C:/Users/Luke/Documents/OpenBLOX/OpenBLOX/Platform/Unreal Engine/UE4/OpenBLOX/Saved/Config/Windows/Scalability.ini]
+[2023.02.05-18.11.13:566][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
+[2023.02.05-18.11.13:566][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
+[2023.02.05-18.11.13:566][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
+[2023.02.05-18.11.13:566][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
+[2023.02.05-18.11.13:566][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
+[2023.02.05-18.11.13:566][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
+[2023.02.05-18.11.13:566][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
+[2023.02.05-18.11.13:566][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
+[2023.02.05-18.11.13:566][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
+[2023.02.05-18.11.13:566][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
+[2023.02.05-18.11.13:566][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
+[2023.02.05-18.11.13:566][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
+[2023.02.05-18.11.13:566][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
+[2023.02.05-18.11.13:566][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
+[2023.02.05-18.11.13:566][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
+[2023.02.05-18.11.13:566][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
+[2023.02.05-18.11.13:566][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
+[2023.02.05-18.11.13:566][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
+[2023.02.05-18.11.13:566][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [C:/Users/Luke/Documents/OpenBLOX/OpenBLOX/Platform/Unreal Engine/UE4/OpenBLOX/Saved/Config/Windows/Scalability.ini]
+[2023.02.05-18.11.13:566][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
+[2023.02.05-18.11.13:566][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
+[2023.02.05-18.11.13:566][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
+[2023.02.05-18.11.13:566][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
+[2023.02.05-18.11.13:566][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
+[2023.02.05-18.11.13:567][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
+[2023.02.05-18.11.13:567][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
+[2023.02.05-18.11.13:567][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
+[2023.02.05-18.11.13:567][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
+[2023.02.05-18.11.13:567][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
+[2023.02.05-18.11.13:567][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
+[2023.02.05-18.11.13:567][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
+[2023.02.05-18.11.13:567][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
+[2023.02.05-18.11.13:567][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
+[2023.02.05-18.11.13:567][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
+[2023.02.05-18.11.13:567][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
+[2023.02.05-18.11.13:567][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
+[2023.02.05-18.11.13:567][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
+[2023.02.05-18.11.13:567][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
+[2023.02.05-18.11.13:567][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
+[2023.02.05-18.11.13:567][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
+[2023.02.05-18.11.13:567][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
+[2023.02.05-18.11.13:567][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
+[2023.02.05-18.11.13:567][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
+[2023.02.05-18.11.13:567][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
+[2023.02.05-18.11.13:567][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
+[2023.02.05-18.11.13:567][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
+[2023.02.05-18.11.13:567][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
+[2023.02.05-18.11.13:567][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
+[2023.02.05-18.11.13:567][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
+[2023.02.05-18.11.13:567][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [C:/Users/Luke/Documents/OpenBLOX/OpenBLOX/Platform/Unreal Engine/UE4/OpenBLOX/Saved/Config/Windows/Scalability.ini]
+[2023.02.05-18.11.13:567][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
+[2023.02.05-18.11.13:567][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
+[2023.02.05-18.11.13:567][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
+[2023.02.05-18.11.13:567][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
+[2023.02.05-18.11.13:567][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
+[2023.02.05-18.11.13:567][  0]LogConfig: Setting CVar [[r.VT.MaxAnisotropy:8]]
+[2023.02.05-18.11.13:567][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
+[2023.02.05-18.11.13:567][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
+[2023.02.05-18.11.13:567][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
+[2023.02.05-18.11.13:567][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [C:/Users/Luke/Documents/OpenBLOX/OpenBLOX/Platform/Unreal Engine/UE4/OpenBLOX/Saved/Config/Windows/Scalability.ini]
+[2023.02.05-18.11.13:567][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
+[2023.02.05-18.11.13:567][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
+[2023.02.05-18.11.13:567][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
+[2023.02.05-18.11.13:567][  0]LogConfig: Setting CVar [[r.SSR.HalfResSceneColor:0]]
+[2023.02.05-18.11.13:567][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
+[2023.02.05-18.11.13:567][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
+[2023.02.05-18.11.13:567][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
+[2023.02.05-18.11.13:567][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
+[2023.02.05-18.11.13:567][  0]LogConfig: Setting CVar [[r.AnisotropicMaterials:1]]
+[2023.02.05-18.11.13:567][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
+[2023.02.05-18.11.13:567][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
+[2023.02.05-18.11.13:567][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
+[2023.02.05-18.11.13:567][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:0]]
+[2023.02.05-18.11.13:567][  0]LogConfig: Setting CVar [[r.SSGI.Quality:3]]
+[2023.02.05-18.11.13:567][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.FastApplyOnOpaque:1 ; Always have FastSkyLUT 1 in this case to avoid wrong sky]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.SampleCountMaxPerSlice:4]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.DepthResolution:16.0]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT:1]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMin:4.0]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMax:128.0]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMin:4.0]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMax:128.0]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.UseSmallFormat:0]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.SampleCount:10.0]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.MultiScatteringLUT.SampleCount:15.0]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.SkyLight.RealTimeReflectionCapture:1]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [C:/Users/Luke/Documents/OpenBLOX/OpenBLOX/Platform/Unreal Engine/UE4/OpenBLOX/Saved/Config/Windows/Scalability.ini]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Applying CVar settings from Section [ShadingQuality@3] File [C:/Users/Luke/Documents/OpenBLOX/OpenBLOX/Platform/Unreal Engine/UE4/OpenBLOX/Saved/Config/Windows/Scalability.ini]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.HairStrands.SkyLighting.IntegrationType:2]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.HairStrands.SkyAO.SampleCount:4]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.HairStrands.Visibility.MSAA.SamplePerPixel:4]]
+[2023.02.05-18.11.13:568][  0]LogInit: Selected Device Profile: [Windows]
+[2023.02.05-18.11.13:568][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
+[2023.02.05-18.11.13:568][  0]LogHAL: Display: Platform has ~ 16 GB [17128280064 / 17179869184 / 16], which maps to Larger [LargestMinGB=32, LargerMinGB=12, DefaultMinGB=8, SmallerMinGB=6, SmallestMinGB=0)
+[2023.02.05-18.11.13:568][  0]LogInit: Going up to parent DeviceProfile []
+[2023.02.05-18.11.13:568][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [C:/Users/Luke/Documents/OpenBLOX/OpenBLOX/Platform/Unreal Engine/UE4/OpenBLOX/Saved/Config/Windows/Scalability.ini]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [C:/Users/Luke/Documents/OpenBLOX/OpenBLOX/Platform/Unreal Engine/UE4/OpenBLOX/Saved/Config/Windows/Scalability.ini]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [C:/Users/Luke/Documents/OpenBLOX/OpenBLOX/Platform/Unreal Engine/UE4/OpenBLOX/Saved/Config/Windows/Scalability.ini]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [C:/Users/Luke/Documents/OpenBLOX/OpenBLOX/Platform/Unreal Engine/UE4/OpenBLOX/Saved/Config/Windows/Scalability.ini]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [C:/Users/Luke/Documents/OpenBLOX/OpenBLOX/Platform/Unreal Engine/UE4/OpenBLOX/Saved/Config/Windows/Scalability.ini]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.VT.MaxAnisotropy:8]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [C:/Users/Luke/Documents/OpenBLOX/OpenBLOX/Platform/Unreal Engine/UE4/OpenBLOX/Saved/Config/Windows/Scalability.ini]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
+[2023.02.05-18.11.13:568][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
+[2023.02.05-18.11.13:569][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
+[2023.02.05-18.11.13:569][  0]LogConfig: Setting CVar [[r.SSR.HalfResSceneColor:0]]
+[2023.02.05-18.11.13:569][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
+[2023.02.05-18.11.13:569][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
+[2023.02.05-18.11.13:569][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
+[2023.02.05-18.11.13:569][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
+[2023.02.05-18.11.13:569][  0]LogConfig: Setting CVar [[r.AnisotropicMaterials:1]]
+[2023.02.05-18.11.13:569][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
+[2023.02.05-18.11.13:569][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
+[2023.02.05-18.11.13:569][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
+[2023.02.05-18.11.13:569][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:0]]
+[2023.02.05-18.11.13:569][  0]LogConfig: Setting CVar [[r.SSGI.Quality:3]]
+[2023.02.05-18.11.13:569][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
+[2023.02.05-18.11.13:569][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
+[2023.02.05-18.11.13:569][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.FastApplyOnOpaque:1 ; Always have FastSkyLUT 1 in this case to avoid wrong sky]]
+[2023.02.05-18.11.13:569][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.SampleCountMaxPerSlice:4]]
+[2023.02.05-18.11.13:569][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.DepthResolution:16.0]]
+[2023.02.05-18.11.13:569][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT:1]]
+[2023.02.05-18.11.13:569][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMin:4.0]]
+[2023.02.05-18.11.13:569][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMax:128.0]]
+[2023.02.05-18.11.13:569][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMin:4.0]]
+[2023.02.05-18.11.13:569][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMax:128.0]]
+[2023.02.05-18.11.13:569][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.UseSmallFormat:0]]
+[2023.02.05-18.11.13:569][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.SampleCount:10.0]]
+[2023.02.05-18.11.13:569][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.MultiScatteringLUT.SampleCount:15.0]]
+[2023.02.05-18.11.13:569][  0]LogConfig: Setting CVar [[r.SkyLight.RealTimeReflectionCapture:1]]
+[2023.02.05-18.11.13:569][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [C:/Users/Luke/Documents/OpenBLOX/OpenBLOX/Platform/Unreal Engine/UE4/OpenBLOX/Saved/Config/Windows/Scalability.ini]
+[2023.02.05-18.11.13:569][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
+[2023.02.05-18.11.13:569][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
+[2023.02.05-18.11.13:569][  0]LogConfig: Applying CVar settings from Section [ShadingQuality@3] File [C:/Users/Luke/Documents/OpenBLOX/OpenBLOX/Platform/Unreal Engine/UE4/OpenBLOX/Saved/Config/Windows/Scalability.ini]
+[2023.02.05-18.11.13:569][  0]LogConfig: Setting CVar [[r.HairStrands.SkyLighting.IntegrationType:2]]
+[2023.02.05-18.11.13:569][  0]LogConfig: Setting CVar [[r.HairStrands.SkyAO.SampleCount:4]]
+[2023.02.05-18.11.13:569][  0]LogConfig: Setting CVar [[r.HairStrands.Visibility.MSAA.SamplePerPixel:4]]
+[2023.02.05-18.11.13:569][  0]LogConfig: Applying CVar settings from Section [Startup] File [../../../Engine/Config/ConsoleVariables.ini]
+[2023.02.05-18.11.13:569][  0]LogConfig: Setting CVar [[net.UseAdaptiveNetUpdateFrequency:0]]
+[2023.02.05-18.11.13:569][  0]LogConfig: Setting CVar [[p.chaos.AllowCreatePhysxBodies:1]]
+[2023.02.05-18.11.13:569][  0]LogConfig: Setting CVar [[fx.SkipVectorVMBackendOptimizations:1]]
+[2023.02.05-18.11.13:569][  0]LogConfig: Applying CVar settings from Section [ConsoleVariables] File [C:/Users/Luke/Documents/OpenBLOX/OpenBLOX/Platform/Unreal Engine/UE4/OpenBLOX/Saved/Config/Windows/Engine.ini]
+[2023.02.05-18.11.13:569][  0]LogConfig: Applying CVar settings from Section [ConsoleVariables] File [C:/Users/Luke/Documents/OpenBLOX/OpenBLOX/Platform/Unreal Engine/UE4/OpenBLOX/Saved/Config/Windows/Editor.ini]
+[2023.02.05-18.11.13:569][  0]LogInit: Computer: DESKTOP-5S8FRSH
+[2023.02.05-18.11.13:569][  0]LogInit: User: Luke
+[2023.02.05-18.11.13:569][  0]LogInit: CPU Page size=4096, Cores=6
+[2023.02.05-18.11.13:569][  0]LogInit: High frequency timer resolution =10.000000 MHz
+[2023.02.05-18.11.13:569][  0]LogMemory: Memory total: Physical=16.0GB (16GB approx)
+[2023.02.05-18.11.13:569][  0]LogMemory: Platform Memory Stats for Windows
+[2023.02.05-18.11.13:569][  0]LogMemory: Process Physical Memory: 147.02 MB used, 151.74 MB peak
+[2023.02.05-18.11.13:569][  0]LogMemory: Process Virtual Memory: 131.61 MB used, 131.61 MB peak
+[2023.02.05-18.11.13:569][  0]LogMemory: Physical Memory: 7560.11 MB used,  8774.70 MB free, 16334.80 MB total
+[2023.02.05-18.11.13:569][  0]LogMemory: Virtual Memory: 134211584.00 MB used,  6146.23 MB free, 134217728.00 MB total
+[2023.02.05-18.11.13:571][  0]LogWindows: WindowsPlatformFeatures enabled
+[2023.02.05-18.11.13:591][  0]LogInit: Physics initialised using underlying interface: PhysX
+[2023.02.05-18.11.13:591][  0]LogInit: Using OS detected language (en-US).
+[2023.02.05-18.11.13:591][  0]LogInit: Using OS detected locale (en-US).
+[2023.02.05-18.11.13:594][  0]LogTextLocalizationManager: No specific localization for 'en-US' exists, so the 'en' localization will be used.
+[2023.02.05-18.11.13:746][  0]LogInit: Setting process to per monitor DPI aware
+[2023.02.05-18.11.13:753][  0]LogWindowsTextInputMethodSystem: Display: IME system deactivated.
+[2023.02.05-18.11.13:765][  0]LogSlate: New Slate User Created.  User Index 0, Is Virtual User: 0
+[2023.02.05-18.11.13:765][  0]LogSlate: Slate User Registered.  User Index 0, Is Virtual User: 0
+[2023.02.05-18.11.13:939][  0]LogD3D11RHI: Loaded GFSDK_Aftermath_Lib.x64.dll
+[2023.02.05-18.11.13:965][  0]LogHMD: Failed to initialize OpenVR with code 126
+[2023.02.05-18.11.13:965][  0]LogD3D11RHI: D3D11 min allowed feature level: 11_0
+[2023.02.05-18.11.13:965][  0]LogD3D11RHI: D3D11 max allowed feature level: 11_0
+[2023.02.05-18.11.13:965][  0]LogD3D11RHI: D3D11 adapters:
+[2023.02.05-18.11.14:049][  0]LogD3D11RHI:    0. 'AMD Radeon RX 6600' (Feature Level 11_0)
+[2023.02.05-18.11.14:049][  0]LogD3D11RHI:       8147/0/8167 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:1, VendorId:0x1002
+[2023.02.05-18.11.14:051][  0]LogD3D11RHI:    1. 'Microsoft Basic Render Driver' (Feature Level 11_0)
+[2023.02.05-18.11.14:051][  0]LogD3D11RHI:       0/0/8167 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x1414
+[2023.02.05-18.11.14:051][  0]LogD3D11RHI: Chosen D3D11 Adapter:
+[2023.02.05-18.11.14:051][  0]LogD3D11RHI:     Description : AMD Radeon RX 6600
+[2023.02.05-18.11.14:051][  0]LogD3D11RHI:     VendorId    : 1002
+[2023.02.05-18.11.14:051][  0]LogD3D11RHI:     DeviceId    : 73ff
+[2023.02.05-18.11.14:051][  0]LogD3D11RHI:     SubSysId    : 50221462
+[2023.02.05-18.11.14:051][  0]LogD3D11RHI:     Revision    : 00c7
+[2023.02.05-18.11.14:051][  0]LogD3D11RHI:     DedicatedVideoMemory : 8542969856 bytes
+[2023.02.05-18.11.14:051][  0]LogD3D11RHI:     DedicatedSystemMemory : 0 bytes
+[2023.02.05-18.11.14:051][  0]LogD3D11RHI:     SharedSystemMemory : 8564140032 bytes
+[2023.02.05-18.11.14:051][  0]LogD3D11RHI:     AdapterLuid : 0 52246
+[2023.02.05-18.11.14:056][  0]LogD3D11RHI: Creating new Direct3DDevice
+[2023.02.05-18.11.14:056][  0]LogD3D11RHI:     GPU DeviceId: 0x73ff (for the marketing name, search the web for "GPU Device Id")
+[2023.02.05-18.11.14:056][  0]LogWindows: EnumDisplayDevices:
+[2023.02.05-18.11.14:056][  0]LogWindows:    0. 'AMD Radeon RX 6600' (P:1 D:1)
+[2023.02.05-18.11.14:057][  0]LogWindows:    1. 'AMD Radeon RX 6600' (P:0 D:0)
+[2023.02.05-18.11.14:057][  0]LogWindows:    2. 'AMD Radeon RX 6600' (P:0 D:0)
+[2023.02.05-18.11.14:057][  0]LogWindows:    3. 'AMD Radeon RX 6600' (P:0 D:0)
+[2023.02.05-18.11.14:057][  0]LogWindows:    4. 'AMD Radeon RX 6600' (P:0 D:0)
+[2023.02.05-18.11.14:058][  0]LogWindows:    5. 'AMD Radeon RX 6600' (P:0 D:0)
+[2023.02.05-18.11.14:058][  0]LogWindows: DebugString: FoundDriverCount:6 
+[2023.02.05-18.11.14:058][  0]LogD3D11RHI:     Adapter Name: AMD Radeon RX 6600
+[2023.02.05-18.11.14:058][  0]LogD3D11RHI:   Driver Version: AMD Software: Adrenalin Edition 22.11.2 (internal:31.0.12029.10015, unified:31.0.12029.10015)
+[2023.02.05-18.11.14:058][  0]LogD3D11RHI:      Driver Date: 11-30-2022
+[2023.02.05-18.11.14:058][  0]LogRHI: Texture pool is 5165 MB (70% of 7379 MB)
+[2023.02.05-18.11.14:078][  0]LogD3D11RHI: Creating D3DDevice with AMD AGS, using adapter:
+[2023.02.05-18.11.14:078][  0]LogD3D11RHI:     Description : AMD Radeon RX 6600
+[2023.02.05-18.11.14:078][  0]LogD3D11RHI:     VendorId    : 1002
+[2023.02.05-18.11.14:078][  0]LogD3D11RHI:     DeviceId    : 73ff
+[2023.02.05-18.11.14:078][  0]LogD3D11RHI:     SubSysId    : 50221462
+[2023.02.05-18.11.14:078][  0]LogD3D11RHI:     Revision    : 00c7
+[2023.02.05-18.11.14:078][  0]LogD3D11RHI:     DedicatedVideoMemory : 8542969856 bytes
+[2023.02.05-18.11.14:078][  0]LogD3D11RHI:     DedicatedSystemMemory : 0 bytes
+[2023.02.05-18.11.14:078][  0]LogD3D11RHI:     SharedSystemMemory : 8564140032 bytes
+[2023.02.05-18.11.14:078][  0]LogD3D11RHI:     AdapterLuid : 0 52246
+[2023.02.05-18.11.14:141][  0]LogD3D11RHI: Created device via AGS, feature level 11_0, supported extensions 1fffffbf.
+[2023.02.05-18.11.14:141][  0]LogD3D11RHI: RHI has support for 64 bit atomics
+[2023.02.05-18.11.14:141][  0]LogD3D11RHI: Async texture creation enabled
+[2023.02.05-18.11.14:141][  0]LogD3D11RHI: Array index from any shader is supported
+[2023.02.05-18.11.14:155][  0]LogD3D11RHI: GPU Timing Frequency: 100.000000 (Debug: 2 1)
+[2023.02.05-18.11.14:376][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'AllDesktop'
+[2023.02.05-18.11.14:394][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android'
+[2023.02.05-18.11.14:394][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ASTC'
+[2023.02.05-18.11.14:394][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_DXT'
+[2023.02.05-18.11.14:394][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ETC2'
+[2023.02.05-18.11.14:394][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'AndroidClient'
+[2023.02.05-18.11.14:394][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ASTCClient'
+[2023.02.05-18.11.14:395][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_DXTClient'
+[2023.02.05-18.11.14:395][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ETC2Client'
+[2023.02.05-18.11.14:395][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_Multi'
+[2023.02.05-18.11.14:395][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_MultiClient'
+[2023.02.05-18.11.14:411][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'IOSClient'
+[2023.02.05-18.11.14:411][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'IOS'
+[2023.02.05-18.11.14:419][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Linux'
+[2023.02.05-18.11.14:422][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxNoEditor'
+[2023.02.05-18.11.14:425][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxClient'
+[2023.02.05-18.11.14:429][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxServer'
+[2023.02.05-18.11.14:436][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxAArch64NoEditor'
+[2023.02.05-18.11.14:440][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxAArch64Client'
+[2023.02.05-18.11.14:443][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxAArch64Server'
+[2023.02.05-18.11.14:464][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Lumin'
+[2023.02.05-18.11.14:464][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LuminClient'
+[2023.02.05-18.11.14:471][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'MacNoEditor'
+[2023.02.05-18.11.14:476][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Mac'
+[2023.02.05-18.11.14:480][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'MacClient'
+[2023.02.05-18.11.14:484][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'MacServer'
+[2023.02.05-18.11.14:492][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'TVOSClient'
+[2023.02.05-18.11.14:492][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'TVOS'
+[2023.02.05-18.11.14:500][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsNoEditor'
+[2023.02.05-18.11.14:505][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Windows'
+[2023.02.05-18.11.14:509][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsClient'
+[2023.02.05-18.11.14:513][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsServer'
+[2023.02.05-18.11.14:513][  0]LogTargetPlatformManager: Display: Building Assets For Windows
+[2023.02.05-18.11.14:520][  0]LogAudioDebug: Display: Lib vorbis DLL was dynamically loaded.
+[2023.02.05-18.11.14:557][  0]LogTextureFormatOodle: Display: Oodle Texture 2.9.0 init RDO Off
+[2023.02.05-18.11.14:588][  0]LogRendererCore: Ray tracing is disabled. Reason: r.RayTracing=0.
+[2023.02.05-18.11.14:588][  0]LogShaderCompilers: Guid format shader working directory is -32 characters bigger than the processId version (C:/Users/Luke/Documents/OpenBLOX/OpenBLOX/Platform/Unreal Engine/UE4/OpenBLOX/Intermediate/Shaders/WorkingDirectory/3604/).
+[2023.02.05-18.11.14:588][  0]LogShaderCompilers: Cleaned the shader compiler working directory 'C:/Users/Luke/AppData/Local/Temp/UnrealShaderWorkingDir/9FFD010E4D4C37E6E11241B9FBC3F84D/'.
+[2023.02.05-18.11.14:588][  0]LogXGEController: Cannot use XGE Controller as Incredibuild is not installed on this machine.
+[2023.02.05-18.11.14:588][  0]LogShaderCompilers: Cannot use XGE Shader Compiler as Incredibuild is not installed on this machine.
+[2023.02.05-18.11.14:588][  0]LogShaderCompilers: Display: Using Local Shader Compiler.
+[2023.02.05-18.11.15:170][  0]LogDerivedDataCache: Display: Max Cache Size: 512 MB
+[2023.02.05-18.11.15:232][  0]LogDerivedDataCache: Loaded boot cache 0.06s 94MB C:/Users/Luke/AppData/Local/UnrealEngine/4.27/DerivedDataCache/Boot.ddc.
+[2023.02.05-18.11.15:232][  0]LogDerivedDataCache: Display: Loaded Boot cache: C:/Users/Luke/AppData/Local/UnrealEngine/4.27/DerivedDataCache/Boot.ddc
+[2023.02.05-18.11.15:233][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file C:/Users/Luke/Documents/OpenBLOX/OpenBLOX/Platform/Unreal Engine/UE4/OpenBLOX/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
+[2023.02.05-18.11.15:233][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
+[2023.02.05-18.11.15:233][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file C:/Users/Luke/Documents/OpenBLOX/OpenBLOX/Platform/Unreal Engine/UE4/OpenBLOX/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2023.02.05-18.11.15:233][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
+[2023.02.05-18.11.15:249][  0]LogDerivedDataCache: Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
+[2023.02.05-18.11.15:249][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  EnterprisePak pak cache file ../../../Enterprise/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2023.02.05-18.11.15:249][  0]LogDerivedDataCache: Unable to find inner node EnterprisePak for hierarchical cache Hierarchy.
+[2023.02.05-18.11.15:255][  0]LogDerivedDataCache: Speed tests for C:/Users/Luke/AppData/Local/UnrealEngine/Common/DerivedDataCache took 0.01 seconds
+[2023.02.05-18.11.15:255][  0]LogDerivedDataCache: Display: Performance to C:/Users/Luke/AppData/Local/UnrealEngine/Common/DerivedDataCache: Latency=0.02ms. RandomReadSpeed=1660.45MBs, RandomWriteSpeed=187.44MBs. Assigned SpeedClass 'Local'
+[2023.02.05-18.11.15:256][  0]LogDerivedDataCache: Using Local data cache path C:/Users/Luke/AppData/Local/UnrealEngine/Common/DerivedDataCache: Writable
+[2023.02.05-18.11.15:256][  0]LogDerivedDataCache: Shared data cache path not found in *engine.ini, will not use an Shared cache.
+[2023.02.05-18.11.15:256][  0]LogDerivedDataCache: Unable to find inner node Shared for hierarchical cache Hierarchy.
+[2023.02.05-18.11.15:298][  0]LogSlate: Using FreeType 2.10.0
+[2023.02.05-18.11.15:298][  0]LogSlate: SlateFontServices - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
+[2023.02.05-18.11.15:320][  0]LogAssetRegistry: FAssetRegistry took 0.0024 seconds to start up
+[2023.02.05-18.11.15:553][  0]LogInit: Selected Device Profile: [Windows]
+[2023.02.05-18.11.15:553][  0]LogInit: Active device profile: [0000022B603EB700][0000022B5E9ECF80 49] Windows
+[2023.02.05-18.11.15:553][  0]LogInit: Profiles: [0000022B603EB700][0000022B5E9ECF80 49] Windows, [0000022B603A8B00][0000022B5E9F5100 49] WindowsNoEditor, [0000022B603E8B00][0000022B5E9F9280 49] WindowsServer, [0000022B603AB000][0000022B5E9FD400 49] WindowsClient, [0000022B603EAF00][0000022B5F57B580 49] IOS, [0000022B603A9300][0000022B5F57F700 49] iPadAir, [0000022B603E9200][0000022B5F583880 49] iPadAir2, [0000022B60343F00][0000022B5F58BB40 49] IPadPro, [0000022B60343C00][0000022B5F587B80 49] iPadAir3, [0000022B603EAA00][0000022B5F58E180 49] iPadAir4, [0000022B60341000][0000022B5F5A2300 49] iPadMini2, [0000022B603E9600][0000022B5F5A6480 49] iPadMini3, [0000022B60342A00][0000022B5F5AA600 49] iPadMini4, [0000022B603EA300][0000022B5F5AE780 49] iPadMini5, [0000022B60387800][0000022B5E9F0A00 49] iPhone6, [0000022B60387900][0000022B5F5B2A40 49] iPodTouch6, [0000022B60341300][0000022B5F5BAC80 49] iPhone7, [0000022B60341100][0000022B5F5B6CC0 49] iPodTouch7, [0000022B60384F00][0000022B5F5C2E40 49] iPhone5S, [0000022B60340600][0000022B5F5C6FC0 49] iPhone6Plus, [0000022B60386B00][0000022B5F5CB140 49] iPhone6S, [0000022B60340A00][0000022B5F5CF2C0 49] iPhone6SPlus, [0000022B60385600][0000022B5F5D3440 49] iPhone7Plus, [0000022B60343E00][0000022B5F5D75C0 49] iPhoneSE, [0000022B60386400][0000022B5F5DB740 49] iPhone8, [0000022B60341F00][0000022B5F5DF8C0 49] iPhone8Plus, [0000022B60385D00][0000022B5F5E3A40 49] iPhoneX, [0000022B60342600][0000022B5F5E7BC0 49] iPhoneXS, [0000022B60384A00][0000022B5F5EA1C0 49] iPhoneXSMax, [0000022B60340E00][0000022B5F5EE340 49] iPhoneXR, [0000022B60385500][0000022B5F5F24C0 49] iPhone11, [0000022B60340700][0000022B5F5F6640 49] iPhone11Pro, [0000022B60385900][0000022B5F5FA7C0 49] iPhone11ProMax, [0000022B60342300][0000022B5F5FE940 49] iPhoneSE2, [0000022B60386E00][0000022B5F602AC0 49] iPhone12Mini, [0000022B60342E00][0000022B5F5BEC00 49] iPhone12, [0000022B60385A00][0000022B5F606D40 49] iPhone12Pro, [0000022B60340800][0000022B5F60AE80 49] iPhone12ProMax, [0000022B60384C00][0000022B5F60EFC0 49] iPadPro105, [0000022B60343200][0000022B5F617140 49] iPadPro129, [0000022B60385C00][0000022B5F61B2C0 49] iPadPro97, [0000022B60343D00][0000022B5F61F440 49] iPadPro2_129, [0000022B60387100][0000022B5F6235C0 49] iPad5, [0000022B60341900][0000022B5F627740 49] iPad6, [0000022B60384D00][0000022B5F62B8C0 49] iPad7, [0000022B60343600][0000022B5EE21A40 49] iPad8, [0000022B60386200][0000022B5EE25BC0 49] iPadPro11, [0000022B60340200][0000022B5EE281C0 49] iPadPro2_11, [0000022B60387F00][0000022B5EE2C340 49] iPadPro3_129, [0000022B60342C00][0000022B5EE304C0 49] iPadPro4_129, [0000022B60385F00][0000022B5EE34640 49] AppleTV, [0000022B60340500][0000022B5EE387C0 49] AppleTV4K, [0000022B60384100][0000022B5EE3C940 49] TVOS, [0000022B60340300][0000022B5EE40AC0 49] Mac, [0000022B60386900][0000022B5EE44C40 49] MacClient, [0000022B60341600][0000022B5F612D80 49] MacNoEditor, [0000022B60384800][0000022B5EE48EC0 49] MacServer, [0000022B60343800][0000022B5EE4D000 49] Linux, [0000022B60387200][0000022B5EE51140 49] LinuxAArch64, [0000022B60343100][0000022B5EE7B2C0 49] LinuxNoEditor, [0000022B60385400][0000022B5EE91440 49] LinuxAArch64NoEditor, [0000022B60424100][0000022B5EE955C0 49] LinuxClient, [0000022B603AA900][0000022B5EE99740 49] LinuxAArch64Client, [0000022B60426000][0000022B5EE9D8C0 49] LinuxServer, [0000022B603A8900][0000022B5EEA1A40 49] LinuxAArch64Server, [0000022B60426600][0000022B5EEA5BC0 49] Android, [0000022B603A9000][0000022B5EEA81C0 49] Android_Low, [0000022B60425600][0000022B5EEAC340 49] Android_Mid, [0000022B603A9200][0000022B5EEB04C0 49] Android_High, [0000022B60424F00][0000022B5EEB4640 49] Android_Default, [0000022B603ABE00][0000022B5EEB87C0 49] Android_Adreno4xx, [0000022B60425A00][0000022B5EEBC940 49] Android_Adreno5xx_Low, [0000022B603AAB00][0000022B5EEC0AC0 49] Android_Adreno5xx, [0000022B60425400][0000022B5EEC4C40 49] Android_Adreno6xx, [0000022B603A9400][0000022B5EEC8DC0 49] Android_Adreno6xx_Vulkan, [0000022B60426900][0000022B5EECCF40 49] Android_Mali_T6xx, [0000022B603A8E00][0000022B5EE77080 49] Android_Mali_T7xx, [0000022B60425100][0000022B5EED11C0 49] Android_Mali_T8xx, [0000022B603A9C00][0000022B5EED5300 49] Android_Mali_G71, [0000022B60425E00][0000022B5EEDD480 49] Android_Mali_G72, [0000022B603A9800][0000022B5EEE1600 49] Android_Mali_G72_Vulkan, [0000022B60424900][0000022B5EEE5780 49] Android_Mali_G76, [0000022B603A9B00][0000022B5EEE9900 49] Android_Mali_G76_Vulkan, [0000022B60386D00][0000022B5EEEDA80 49] Android_Mali_G77, [0000022B60343400][0000022B5EEF1C00 49] Android_Mali_G77_Vulkan, [0000022B60387A00][0000022B5EEF4200 49] Android_Mali_G78, [0000022B60342700][0000022B5EEF8380 49] Android_Mali_G78_Vulkan, [0000022B60385300][0000022B5EEFC500 49] Android_Mali_G710, [0000022B60341400][0000022B5EF00680 49] Android_Mali_G710_Vulkan, [0000022B60385800][0000022B5EF04800 49] Android_Vulkan_SM5, [0000022B60342800][0000022B5EF08980 49] Android_PowerVR_G6xxx, [0000022B60384B00][0000022B5EF0CB00 49] Android_PowerVR_GT7xxx, [0000022B60342D00][0000022B5EF10C80 49] Android_PowerVR_GE8xxx, [0000022B60424D00][0000022B5EF14E00 49] Android_PowerVR_GM9xxx, [0000022B60341B00][0000022B5EF18F80 49] Android_PowerVR_GM9xxx_Vulkan, [0000022B60425500][0000022B5EF1D100 49] Android_TegraK1, [0000022B60343B00][0000022B5EED9240 49] Android_Unknown_Vulkan, [0000022B60425800][0000022B5EF21380 49] Lumin, [0000022B60343A00][0000022B5EF254C0 49] Lumin_Desktop, [0000022B60426200][0000022B5EF2D640 49] HoloLens, 
+[2023.02.05-18.11.15:694][  0]LogMeshReduction: Using QuadricMeshReduction for automatic static mesh reduction
+[2023.02.05-18.11.15:694][  0]LogMeshReduction: Using SimplygonMeshReduction for automatic skeletal mesh reduction
+[2023.02.05-18.11.15:694][  0]LogMeshReduction: Using ProxyLODMeshReduction for automatic mesh merging
+[2023.02.05-18.11.15:694][  0]LogMeshReduction: No distributed automatic mesh merging module available
+[2023.02.05-18.11.15:694][  0]LogMeshMerging: No distributed automatic mesh merging module available
+[2023.02.05-18.11.15:710][  0]LogNetVersion: OpenBLOX 1.0.0, NetCL: 17155196, EngineNetVer: 17, GameNetVer: 0 (Checksum: 339887519)
+[2023.02.05-18.11.16:123][  0]LogTexture: Default maximum texture size for cubemaps generated from long-lat sources has been changed from 512 to unlimited. In order to preserve old behaiour for '/Engine/MapTemplates/Sky/DaylightAmbientCubemap.DaylightAmbientCubemap', its maximum texture size has been explicitly set to 512.
+[2023.02.05-18.11.16:195][  0]LogHMD: PokeAHoleMaterial loaded successfully
+[2023.02.05-18.11.16:204][  0]LogUObjectArray: 17178 objects as part of root set at end of initial load.
+[2023.02.05-18.11.16:204][  0]LogUObjectAllocator: 4302048 out of 0 bytes used by permanent object pool.
+[2023.02.05-18.11.16:204][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
+[2023.02.05-18.11.16:553][  0]LogNiagaraDebuggerClient: Niagara Debugger Client Initialized | Session: 022B17CC491FBD12BD37D99621AD1AFA | Instance: D20E24464C49831FD664BFB1923ED26E (DESKTOP-5S8FRSH-3604).
+[2023.02.05-18.11.16:600][  0]LogPython: Using Python 3.7.7
+[2023.02.05-18.11.17:229][  0]LogTcpMessaging: Initializing TcpMessaging bridge
+[2023.02.05-18.11.17:242][  0]LogUdpMessaging: Initializing bridge on interface 0.0.0.0:0 to multicast group 230.0.0.1:6666.
+[2023.02.05-18.11.17:380][  0]SourceControl: Source control is disabled
+[2023.02.05-18.11.17:380][  0]SourceControl: Source control is disabled
+[2023.02.05-18.11.17:382][  0]SourceControl: Source control is disabled
+[2023.02.05-18.11.17:386][  0]SourceControl: Source control is disabled
+[2023.02.05-18.11.17:392][  0]SourceControl: Source control is disabled
+[2023.02.05-18.11.17:397][  0]LogUProjectInfo: Found projects:
+[2023.02.05-18.11.17:564][  0]LogOpenImageDenoise: OIDN starting up
+[2023.02.05-18.11.17:602][  0]LogAndroidPermission: UAndroidPermissionCallbackProxy::GetInstance
+[2023.02.05-18.11.17:620][  0]LogAudioCaptureCore: Display: No Audio Capture implementations found. Audio input will be silent.
+[2023.02.05-18.11.17:620][  0]LogAudioCaptureCore: Display: No Audio Capture implementations found. Audio input will be silent.
+[2023.02.05-18.11.17:730][  0]LogCollectionManager: Loaded 0 collections in 0.001168 seconds
+[2023.02.05-18.11.17:754][  0]LogFileCache: Scanning file cache for directory 'C:/Users/Luke/Documents/OpenBLOX/OpenBLOX/Platform/Unreal Engine/UE4/OpenBLOX/Saved/Collections/' took 0.00s
+[2023.02.05-18.11.17:754][  0]LogFileCache: Scanning file cache for directory 'C:/Users/Luke/Documents/OpenBLOX/OpenBLOX/Platform/Unreal Engine/UE4/OpenBLOX/Content/Developers/Luke/Collections/' took 0.00s
+[2023.02.05-18.11.17:754][  0]LogFileCache: Scanning file cache for directory 'C:/Users/Luke/Documents/OpenBLOX/OpenBLOX/Platform/Unreal Engine/UE4/OpenBLOX/Content/Collections/' took 0.00s
+[2023.02.05-18.11.17:754][  0]LogOcInput: OculusInput pre-init called
+[2023.02.05-18.11.17:940][  0]LogEngine: Initializing Engine...
+[2023.02.05-18.11.17:997][  0]LogHMD: Failed to initialize OpenVR with code 108
+[2023.02.05-18.11.18:013][  0]LogHMD: Optional extension XR_VARJO_quad_views is not available
+[2023.02.05-18.11.18:013][  0]LogHMD: Warning: Required extension XR_EXT_eye_gaze_interaction is not available
+[2023.02.05-18.11.18:013][  0]LogHMD: Could not enable all required OpenXR extensions for OpenXREyeTracker on current system. This plugin will be loaded but ignored, but will be enabled on a target platform that supports the required extension.
+[2023.02.05-18.11.18:047][  0]LogHMD: Failed to create an OpenXR instance, result is XR_ERROR_RUNTIME_FAILURE. Please check if you have an OpenXR runtime installed. The following extensions were enabled:
+[2023.02.05-18.11.18:047][  0]LogHMD: - XR_KHR_D3D11_enable
+[2023.02.05-18.11.18:047][  0]LogHMD: - XR_KHR_D3D12_enable
+[2023.02.05-18.11.18:047][  0]LogHMD: - XR_KHR_opengl_enable
+[2023.02.05-18.11.18:047][  0]LogHMD: - XR_KHR_vulkan_enable
+[2023.02.05-18.11.18:047][  0]LogHMD: - XR_KHR_composition_layer_depth
+[2023.02.05-18.11.18:047][  0]LogHMD: - XR_KHR_visibility_mask
+[2023.02.05-18.11.18:047][  0]LogHMD: - XR_EXT_hand_tracking
+[2023.02.05-18.11.18:047][  0]LogMagicLeap: Warning: VR disabled because ZI is not enabled.  To enable, in the editor, Edit -> Project Settings -> Plugins -> Magic Leap Plugin -> Enable Zero Iteration
+[2023.02.05-18.11.18:048][  0]LogStats: UGameplayTagsManager::InitializeManager -  0.000 s
+[2023.02.05-18.11.18:159][  0]LogInit: Initializing FReadOnlyCVARCache
+[2023.02.05-18.11.18:167][  0]LogAIModule: Creating AISystem for world Untitled
+[2023.02.05-18.11.18:168][  0]LogAudio: Display: Initializing Audio Device Manager...
+[2023.02.05-18.11.18:171][  0]LogAudio: Display: Loading Default Audio Settings Objects...
+[2023.02.05-18.11.18:171][  0]LogAudio: Display: No default SoundConcurrencyObject specified (or failed to load).
+[2023.02.05-18.11.18:172][  0]LogAudio: Display: Audio Device Manager Initialized
+[2023.02.05-18.11.18:172][  0]LogAudio: Display: Creating Audio Device:                 Id: 1, Scope: Shared, Realtime: True
+[2023.02.05-18.11.18:172][  0]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2023.02.05-18.11.18:172][  0]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2023.02.05-18.11.18:172][  0]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2023.02.05-18.11.18:172][  0]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2023.02.05-18.11.18:172][  0]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2023.02.05-18.11.18:172][  0]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2023.02.05-18.11.18:172][  0]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2023.02.05-18.11.18:172][  0]LogAudio: Display: AudioDevice MaxSources: 32
+[2023.02.05-18.11.18:172][  0]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2023.02.05-18.11.18:172][  0]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2023.02.05-18.11.18:172][  0]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2023.02.05-18.11.18:172][  0]LogAudioMixer: Display: Initializing audio mixer.
+[2023.02.05-18.11.18:185][  0]LogAudioMixer: Display: 0: FrontLeft
+[2023.02.05-18.11.18:185][  0]LogAudioMixer: Display: 1: FrontRight
+[2023.02.05-18.11.18:197][  0]LogAudioMixer: Display: Using Audio Device Speakers (High Definition Audio Device)
+[2023.02.05-18.11.18:200][  0]LogAudioMixer: Display: Initializing Sound Submixes...
+[2023.02.05-18.11.18:202][  0]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2023.02.05-18.11.18:202][  0]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2023.02.05-18.11.18:203][  0]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2023.02.05-18.11.18:203][  0]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2023.02.05-18.11.18:203][  0]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2023.02.05-18.11.18:203][  0]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2023.02.05-18.11.18:203][  0]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2023.02.05-18.11.18:203][  0]LogInit: FAudioDevice initialized.
+[2023.02.05-18.11.18:203][  0]LogAudio: Display: Audio Device (ID: 1) registered with world 'Untitled'.
+[2023.02.05-18.11.18:203][  0]LogNetVersion: Set ProjectVersion to 1.0.0.0. Version Checksum will be recalculated on next use.
+[2023.02.05-18.11.18:544][  0]LogDerivedDataCache: Saved boot cache 0.34s 94MB C:/Users/Luke/AppData/Local/UnrealEngine/4.27/DerivedDataCache/Boot.ddc.
+[2023.02.05-18.11.18:547][  0]LogInit: Texture streaming: Enabled
+[2023.02.05-18.11.18:558][  0]LogAnalytics: Display: [UEEditor.Rocket.Release] APIServer = https://datarouter.ol.epicgames.com/. AppVersion = 4.27.2-18319896+++UE4+Release-4.27
+[2023.02.05-18.11.18:562][  0]LogEngineSessionManager: EngineSessionManager initialized
+[2023.02.05-18.11.18:562][  0]LogEditorSessionSummary: Verbose: Initializing EditorSessionSummaryWriter for editor session tracking
+[2023.02.05-18.11.18:563][  0]LogEditorSessionSummary: EditorSessionSummaryWriter initialized
+[2023.02.05-18.11.18:577][  0]LogInit: Transaction tracking system initialized
+[2023.02.05-18.11.18:597][  0]BlueprintLog: New page: Editor Load
+[2023.02.05-18.11.18:686][  0]LocalizationService: Localization service is disabled
+[2023.02.05-18.11.18:707][  0]TimingProfiler: Initialize
+[2023.02.05-18.11.18:707][  0]TimingProfiler: OnSessionChanged
+[2023.02.05-18.11.18:707][  0]LoadingProfiler: Initialize
+[2023.02.05-18.11.18:707][  0]LoadingProfiler: OnSessionChanged
+[2023.02.05-18.11.18:707][  0]NetworkingProfiler: Initialize
+[2023.02.05-18.11.18:707][  0]NetworkingProfiler: OnSessionChanged
+[2023.02.05-18.11.18:707][  0]MemoryProfiler: Initialize
+[2023.02.05-18.11.18:707][  0]MemoryProfiler: OnSessionChanged
+[2023.02.05-18.11.18:850][  0]LogCook: Display: CookSettings for Memory: MemoryMaxUsedVirtual 0MiB, MemoryMaxUsedPhysical 16384MiB, MemoryMinFreeVirtual 0MiB, MemoryMinFreePhysical 1024MiB
+[2023.02.05-18.11.18:850][  0]LogCook: Display: Mobile HDR setting 1
+[2023.02.05-18.11.18:993][  0]LogFileCache: Scanning file cache for directory 'C:/Users/Luke/Documents/OpenBLOX/OpenBLOX/Platform/Unreal Engine/UE4/OpenBLOX/Content/' took 0.00s
+[2023.02.05-18.11.19:141][  0]LogInit: Display: Engine is initialized. Leaving FEngineLoop::Init()
+[2023.02.05-18.11.19:146][  0]SourceControl: Source control is disabled
+[2023.02.05-18.11.19:146][  0]LogUnrealEdMisc: Loading editor; pre map load, took 7.384
+[2023.02.05-18.11.19:146][  0]Cmd: MAP LOAD FILE="../../../Engine/Content/Maps/Templates/Template_Default.umap" TEMPLATE=1 SHOWPROGRESS=1 FEATURELEVEL=3
+[2023.02.05-18.11.19:146][  0]LightingResults: New page: Lighting Build
+[2023.02.05-18.11.19:148][  0]LogWorld: UWorld::CleanupWorld for Untitled, bSessionEnded=true, bCleanupResources=true
+[2023.02.05-18.11.19:148][  0]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.02.05-18.11.19:148][  0]MapCheck: New page: Map Check
+[2023.02.05-18.11.19:148][  0]LightingResults: New page: Lighting Build
+[2023.02.05-18.11.19:152][  0]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2023.02.05-18.11.19:157][  0]LogUObjectHash: Compacting FUObjectHashTables data took   0.93ms
+[2023.02.05-18.11.19:221][  0]LogTexture: Display: Building textures: DeprecatedTextureEB9CBE3C423008B5E8E130901E171C89 (BGRA8, 128X128)
+[2023.02.05-18.11.19:224][  0]LogAudio: Display: Audio Device (ID: 1) registered with world 'Untitled_1'.
+[2023.02.05-18.11.19:226][  0]LogAIModule: Creating AISystem for world Untitled_1
+[2023.02.05-18.11.19:234][  0]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2023.02.05-18.11.19:241][  0]LogUObjectHash: Compacting FUObjectHashTables data took   0.81ms
+[2023.02.05-18.11.19:241][  0]Cmd: MAP CHECKDEP NOCLEARLOG
+[2023.02.05-18.11.19:241][  0]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 0.14ms to complete.
+[2023.02.05-18.11.19:241][  0]LogFileHelpers: Loading map 'Template_Default' took 0.094
+[2023.02.05-18.11.19:243][  0]LogUnrealEdMisc: Total Editor Startup Time, took 7.480
+[2023.02.05-18.11.19:391][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2023.02.05-18.11.19:396][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2023.02.05-18.11.19:401][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2023.02.05-18.11.19:405][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2023.02.05-18.11.19:424][  0]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0098 seconds. Added 3822 classes and 928 folders.
+[2023.02.05-18.11.19:425][  0]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'WidgetCarousel' in 0.0003 seconds. Added 0 classes and 0 folders.
+[2023.02.05-18.11.19:427][  0]LogPakFile: PakFile PrimaryIndexSize=191
+[2023.02.05-18.11.19:427][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2023.02.05-18.11.19:427][  0]LogPakFile: PakFile FullDirectoryIndexSize=160
+[2023.02.05-18.11.19:427][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: PakFile 'E:/EpicGames/UE_4.27/FeaturePacks/MobileStarterContent.upack' (chunk index -1, root 'root:/') mounted
+[2023.02.05-18.11.19:427][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: pending pak file info (ChunkID:-1 Root:root:/ File:E:/EpicGames/UE_4.27/FeaturePacks/MobileStarterContent.upack)
+[2023.02.05-18.11.19:427][  0]LogPakFile: OnPakFileMounted2Time == 0.000051
+[2023.02.05-18.11.19:427][  0]LogPakFile: PakFile PrimaryIndexSize=185
+[2023.02.05-18.11.19:427][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2023.02.05-18.11.19:427][  0]LogPakFile: PakFile FullDirectoryIndexSize=148
+[2023.02.05-18.11.19:427][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: PakFile 'E:/EpicGames/UE_4.27/FeaturePacks/StarterContent.upack' (chunk index -1, root 'root:/') mounted
+[2023.02.05-18.11.19:427][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: pending pak file info (ChunkID:-1 Root:root:/ File:E:/EpicGames/UE_4.27/FeaturePacks/StarterContent.upack)
+[2023.02.05-18.11.19:428][  0]LogPakFile: OnPakFileMounted2Time == 0.000034
+[2023.02.05-18.11.19:428][  0]LogPakFile: PakFile PrimaryIndexSize=187
+[2023.02.05-18.11.19:428][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2023.02.05-18.11.19:428][  0]LogPakFile: PakFile FullDirectoryIndexSize=148
+[2023.02.05-18.11.19:428][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: PakFile 'E:/EpicGames/UE_4.27/FeaturePacks/FP_FirstPerson.upack' (chunk index -1, root 'root:/') mounted
+[2023.02.05-18.11.19:428][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: pending pak file info (ChunkID:-1 Root:root:/ File:E:/EpicGames/UE_4.27/FeaturePacks/FP_FirstPerson.upack)
+[2023.02.05-18.11.19:428][  0]LogPakFile: OnPakFileMounted2Time == 0.000027
+[2023.02.05-18.11.19:428][  0]LogPakFile: PakFile PrimaryIndexSize=189
+[2023.02.05-18.11.19:428][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2023.02.05-18.11.19:429][  0]LogPakFile: PakFile FullDirectoryIndexSize=152
+[2023.02.05-18.11.19:429][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: PakFile 'E:/EpicGames/UE_4.27/FeaturePacks/FP_FirstPersonBP.upack' (chunk index -1, root 'root:/') mounted
+[2023.02.05-18.11.19:429][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: pending pak file info (ChunkID:-1 Root:root:/ File:E:/EpicGames/UE_4.27/FeaturePacks/FP_FirstPersonBP.upack)
+[2023.02.05-18.11.19:429][  0]LogPakFile: OnPakFileMounted2Time == 0.000030
+[2023.02.05-18.11.19:429][  0]LogPakFile: PakFile PrimaryIndexSize=190
+[2023.02.05-18.11.19:429][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2023.02.05-18.11.19:429][  0]LogPakFile: PakFile FullDirectoryIndexSize=154
+[2023.02.05-18.11.19:429][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: PakFile 'E:/EpicGames/UE_4.27/FeaturePacks/TP_2DSideScroller.upack' (chunk index -1, root 'root:/') mounted
+[2023.02.05-18.11.19:429][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: pending pak file info (ChunkID:-1 Root:root:/ File:E:/EpicGames/UE_4.27/FeaturePacks/TP_2DSideScroller.upack)
+[2023.02.05-18.11.19:429][  0]LogPakFile: OnPakFileMounted2Time == 0.000030
+[2023.02.05-18.11.19:430][  0]LogPakFile: PakFile PrimaryIndexSize=192
+[2023.02.05-18.11.19:430][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2023.02.05-18.11.19:430][  0]LogPakFile: PakFile FullDirectoryIndexSize=158
+[2023.02.05-18.11.19:430][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: PakFile 'E:/EpicGames/UE_4.27/FeaturePacks/TP_2DSideScrollerBP.upack' (chunk index -1, root 'root:/') mounted
+[2023.02.05-18.11.19:430][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: pending pak file info (ChunkID:-1 Root:root:/ File:E:/EpicGames/UE_4.27/FeaturePacks/TP_2DSideScrollerBP.upack)
+[2023.02.05-18.11.19:430][  0]LogPakFile: OnPakFileMounted2Time == 0.000027
+[2023.02.05-18.11.19:430][  0]LogPakFile: PakFile PrimaryIndexSize=182
+[2023.02.05-18.11.19:430][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2023.02.05-18.11.19:430][  0]LogPakFile: PakFile FullDirectoryIndexSize=138
+[2023.02.05-18.11.19:430][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: PakFile 'E:/EpicGames/UE_4.27/FeaturePacks/TP_Flying.upack' (chunk index -1, root 'root:/') mounted
+[2023.02.05-18.11.19:430][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: pending pak file info (ChunkID:-1 Root:root:/ File:E:/EpicGames/UE_4.27/FeaturePacks/TP_Flying.upack)
+[2023.02.05-18.11.19:430][  0]LogPakFile: OnPakFileMounted2Time == 0.000027
+[2023.02.05-18.11.19:431][  0]LogPakFile: PakFile PrimaryIndexSize=184
+[2023.02.05-18.11.19:431][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2023.02.05-18.11.19:431][  0]LogPakFile: PakFile FullDirectoryIndexSize=142
+[2023.02.05-18.11.19:431][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: PakFile 'E:/EpicGames/UE_4.27/FeaturePacks/TP_FlyingBP.upack' (chunk index -1, root 'root:/') mounted
+[2023.02.05-18.11.19:431][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: pending pak file info (ChunkID:-1 Root:root:/ File:E:/EpicGames/UE_4.27/FeaturePacks/TP_FlyingBP.upack)
+[2023.02.05-18.11.19:431][  0]LogPakFile: OnPakFileMounted2Time == 0.000027
+[2023.02.05-18.11.19:431][  0]LogPakFile: PakFile PrimaryIndexSize=188
+[2023.02.05-18.11.19:431][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2023.02.05-18.11.19:431][  0]LogPakFile: PakFile FullDirectoryIndexSize=150
+[2023.02.05-18.11.19:431][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: PakFile 'E:/EpicGames/UE_4.27/FeaturePacks/TP_HandheldARBP.upack' (chunk index -1, root 'root:/') mounted
+[2023.02.05-18.11.19:431][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: pending pak file info (ChunkID:-1 Root:root:/ File:E:/EpicGames/UE_4.27/FeaturePacks/TP_HandheldARBP.upack)
+[2023.02.05-18.11.19:431][  0]LogPakFile: OnPakFileMounted2Time == 0.000026
+[2023.02.05-18.11.19:432][  0]LogPakFile: PakFile PrimaryIndexSize=182
+[2023.02.05-18.11.19:432][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2023.02.05-18.11.19:432][  0]LogPakFile: PakFile FullDirectoryIndexSize=138
+[2023.02.05-18.11.19:432][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: PakFile 'E:/EpicGames/UE_4.27/FeaturePacks/TP_Puzzle.upack' (chunk index -1, root 'root:/') mounted
+[2023.02.05-18.11.19:432][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: pending pak file info (ChunkID:-1 Root:root:/ File:E:/EpicGames/UE_4.27/FeaturePacks/TP_Puzzle.upack)
+[2023.02.05-18.11.19:432][  0]LogPakFile: OnPakFileMounted2Time == 0.000029
+[2023.02.05-18.11.19:432][  0]LogPakFile: PakFile PrimaryIndexSize=184
+[2023.02.05-18.11.19:432][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2023.02.05-18.11.19:432][  0]LogPakFile: PakFile FullDirectoryIndexSize=142
+[2023.02.05-18.11.19:432][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: PakFile 'E:/EpicGames/UE_4.27/FeaturePacks/TP_PuzzleBP.upack' (chunk index -1, root 'root:/') mounted
+[2023.02.05-18.11.19:432][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: pending pak file info (ChunkID:-1 Root:root:/ File:E:/EpicGames/UE_4.27/FeaturePacks/TP_PuzzleBP.upack)
+[2023.02.05-18.11.19:432][  0]LogPakFile: OnPakFileMounted2Time == 0.000026
+[2023.02.05-18.11.19:433][  0]LogPakFile: PakFile PrimaryIndexSize=183
+[2023.02.05-18.11.19:433][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2023.02.05-18.11.19:433][  0]LogPakFile: PakFile FullDirectoryIndexSize=140
+[2023.02.05-18.11.19:433][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: PakFile 'E:/EpicGames/UE_4.27/FeaturePacks/TP_Rolling.upack' (chunk index -1, root 'root:/') mounted
+[2023.02.05-18.11.19:433][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: pending pak file info (ChunkID:-1 Root:root:/ File:E:/EpicGames/UE_4.27/FeaturePacks/TP_Rolling.upack)
+[2023.02.05-18.11.19:433][  0]LogPakFile: OnPakFileMounted2Time == 0.000026
+[2023.02.05-18.11.19:433][  0]LogPakFile: PakFile PrimaryIndexSize=185
+[2023.02.05-18.11.19:433][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2023.02.05-18.11.19:433][  0]LogPakFile: PakFile FullDirectoryIndexSize=144
+[2023.02.05-18.11.19:433][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: PakFile 'E:/EpicGames/UE_4.27/FeaturePacks/TP_RollingBP.upack' (chunk index -1, root 'root:/') mounted
+[2023.02.05-18.11.19:433][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: pending pak file info (ChunkID:-1 Root:root:/ File:E:/EpicGames/UE_4.27/FeaturePacks/TP_RollingBP.upack)
+[2023.02.05-18.11.19:433][  0]LogPakFile: OnPakFileMounted2Time == 0.000026
+[2023.02.05-18.11.19:434][  0]LogPakFile: PakFile PrimaryIndexSize=188
+[2023.02.05-18.11.19:434][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2023.02.05-18.11.19:434][  0]LogPakFile: PakFile FullDirectoryIndexSize=150
+[2023.02.05-18.11.19:434][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: PakFile 'E:/EpicGames/UE_4.27/FeaturePacks/TP_SideScroller.upack' (chunk index -1, root 'root:/') mounted
+[2023.02.05-18.11.19:434][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: pending pak file info (ChunkID:-1 Root:root:/ File:E:/EpicGames/UE_4.27/FeaturePacks/TP_SideScroller.upack)
+[2023.02.05-18.11.19:434][  0]LogPakFile: OnPakFileMounted2Time == 0.000026
+[2023.02.05-18.11.19:434][  0]LogPakFile: PakFile PrimaryIndexSize=190
+[2023.02.05-18.11.19:434][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2023.02.05-18.11.19:434][  0]LogPakFile: PakFile FullDirectoryIndexSize=154
+[2023.02.05-18.11.19:434][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: PakFile 'E:/EpicGames/UE_4.27/FeaturePacks/TP_SideScrollerBP.upack' (chunk index -1, root 'root:/') mounted
+[2023.02.05-18.11.19:434][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: pending pak file info (ChunkID:-1 Root:root:/ File:E:/EpicGames/UE_4.27/FeaturePacks/TP_SideScrollerBP.upack)
+[2023.02.05-18.11.19:434][  0]LogPakFile: OnPakFileMounted2Time == 0.000026
+[2023.02.05-18.11.19:435][  0]LogPakFile: PakFile PrimaryIndexSize=187
+[2023.02.05-18.11.19:435][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2023.02.05-18.11.19:435][  0]LogPakFile: PakFile FullDirectoryIndexSize=148
+[2023.02.05-18.11.19:435][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: PakFile 'E:/EpicGames/UE_4.27/FeaturePacks/TP_ThirdPerson.upack' (chunk index -1, root 'root:/') mounted
+[2023.02.05-18.11.19:435][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: pending pak file info (ChunkID:-1 Root:root:/ File:E:/EpicGames/UE_4.27/FeaturePacks/TP_ThirdPerson.upack)
+[2023.02.05-18.11.19:435][  0]LogPakFile: OnPakFileMounted2Time == 0.000026
+[2023.02.05-18.11.19:435][  0]LogPakFile: PakFile PrimaryIndexSize=189
+[2023.02.05-18.11.19:435][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2023.02.05-18.11.19:435][  0]LogPakFile: PakFile FullDirectoryIndexSize=152
+[2023.02.05-18.11.19:435][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: PakFile 'E:/EpicGames/UE_4.27/FeaturePacks/TP_ThirdPersonBP.upack' (chunk index -1, root 'root:/') mounted
+[2023.02.05-18.11.19:435][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: pending pak file info (ChunkID:-1 Root:root:/ File:E:/EpicGames/UE_4.27/FeaturePacks/TP_ThirdPersonBP.upack)
+[2023.02.05-18.11.19:435][  0]LogPakFile: OnPakFileMounted2Time == 0.000028
+[2023.02.05-18.11.19:436][  0]LogPakFile: PakFile PrimaryIndexSize=183
+[2023.02.05-18.11.19:436][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2023.02.05-18.11.19:436][  0]LogPakFile: PakFile FullDirectoryIndexSize=140
+[2023.02.05-18.11.19:436][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: PakFile 'E:/EpicGames/UE_4.27/FeaturePacks/TP_TopDown.upack' (chunk index -1, root 'root:/') mounted
+[2023.02.05-18.11.19:436][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: pending pak file info (ChunkID:-1 Root:root:/ File:E:/EpicGames/UE_4.27/FeaturePacks/TP_TopDown.upack)
+[2023.02.05-18.11.19:436][  0]LogPakFile: OnPakFileMounted2Time == 0.000034
+[2023.02.05-18.11.19:436][  0]LogPakFile: PakFile PrimaryIndexSize=185
+[2023.02.05-18.11.19:436][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2023.02.05-18.11.19:436][  0]LogPakFile: PakFile FullDirectoryIndexSize=144
+[2023.02.05-18.11.19:436][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: PakFile 'E:/EpicGames/UE_4.27/FeaturePacks/TP_TopDownBP.upack' (chunk index -1, root 'root:/') mounted
+[2023.02.05-18.11.19:436][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: pending pak file info (ChunkID:-1 Root:root:/ File:E:/EpicGames/UE_4.27/FeaturePacks/TP_TopDownBP.upack)
+[2023.02.05-18.11.19:436][  0]LogPakFile: OnPakFileMounted2Time == 0.000031
+[2023.02.05-18.11.19:437][  0]LogPakFile: PakFile PrimaryIndexSize=185
+[2023.02.05-18.11.19:437][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2023.02.05-18.11.19:437][  0]LogPakFile: PakFile FullDirectoryIndexSize=144
+[2023.02.05-18.11.19:437][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: PakFile 'E:/EpicGames/UE_4.27/FeaturePacks/TP_TwinStick.upack' (chunk index -1, root 'root:/') mounted
+[2023.02.05-18.11.19:437][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: pending pak file info (ChunkID:-1 Root:root:/ File:E:/EpicGames/UE_4.27/FeaturePacks/TP_TwinStick.upack)
+[2023.02.05-18.11.19:437][  0]LogPakFile: OnPakFileMounted2Time == 0.000027
+[2023.02.05-18.11.19:437][  0]LogPakFile: PakFile PrimaryIndexSize=187
+[2023.02.05-18.11.19:437][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2023.02.05-18.11.19:437][  0]LogPakFile: PakFile FullDirectoryIndexSize=148
+[2023.02.05-18.11.19:437][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: PakFile 'E:/EpicGames/UE_4.27/FeaturePacks/TP_TwinStickBP.upack' (chunk index -1, root 'root:/') mounted
+[2023.02.05-18.11.19:437][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: pending pak file info (ChunkID:-1 Root:root:/ File:E:/EpicGames/UE_4.27/FeaturePacks/TP_TwinStickBP.upack)
+[2023.02.05-18.11.19:438][  0]LogPakFile: OnPakFileMounted2Time == 0.000029
+[2023.02.05-18.11.19:438][  0]LogPakFile: PakFile PrimaryIndexSize=183
+[2023.02.05-18.11.19:438][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2023.02.05-18.11.19:438][  0]LogPakFile: PakFile FullDirectoryIndexSize=140
+[2023.02.05-18.11.19:438][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: PakFile 'E:/EpicGames/UE_4.27/FeaturePacks/TP_Vehicle.upack' (chunk index -1, root 'root:/') mounted
+[2023.02.05-18.11.19:438][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: pending pak file info (ChunkID:-1 Root:root:/ File:E:/EpicGames/UE_4.27/FeaturePacks/TP_Vehicle.upack)
+[2023.02.05-18.11.19:438][  0]LogPakFile: OnPakFileMounted2Time == 0.000027
+[2023.02.05-18.11.19:439][  0]LogPakFile: PakFile PrimaryIndexSize=186
+[2023.02.05-18.11.19:439][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2023.02.05-18.11.19:439][  0]LogPakFile: PakFile FullDirectoryIndexSize=146
+[2023.02.05-18.11.19:439][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: PakFile 'E:/EpicGames/UE_4.27/FeaturePacks/TP_VehicleAdv.upack' (chunk index -1, root 'root:/') mounted
+[2023.02.05-18.11.19:439][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: pending pak file info (ChunkID:-1 Root:root:/ File:E:/EpicGames/UE_4.27/FeaturePacks/TP_VehicleAdv.upack)
+[2023.02.05-18.11.19:439][  0]LogPakFile: OnPakFileMounted2Time == 0.000027
+[2023.02.05-18.11.19:439][  0]LogPakFile: PakFile PrimaryIndexSize=188
+[2023.02.05-18.11.19:439][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2023.02.05-18.11.19:439][  0]LogPakFile: PakFile FullDirectoryIndexSize=150
+[2023.02.05-18.11.19:439][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: PakFile 'E:/EpicGames/UE_4.27/FeaturePacks/TP_VehicleAdvBP.upack' (chunk index -1, root 'root:/') mounted
+[2023.02.05-18.11.19:439][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: pending pak file info (ChunkID:-1 Root:root:/ File:E:/EpicGames/UE_4.27/FeaturePacks/TP_VehicleAdvBP.upack)
+[2023.02.05-18.11.19:439][  0]LogPakFile: OnPakFileMounted2Time == 0.000026
+[2023.02.05-18.11.19:440][  0]LogPakFile: PakFile PrimaryIndexSize=185
+[2023.02.05-18.11.19:440][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2023.02.05-18.11.19:440][  0]LogPakFile: PakFile FullDirectoryIndexSize=144
+[2023.02.05-18.11.19:440][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: PakFile 'E:/EpicGames/UE_4.27/FeaturePacks/TP_VehicleBP.upack' (chunk index -1, root 'root:/') mounted
+[2023.02.05-18.11.19:440][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: pending pak file info (ChunkID:-1 Root:root:/ File:E:/EpicGames/UE_4.27/FeaturePacks/TP_VehicleBP.upack)
+[2023.02.05-18.11.19:440][  0]LogPakFile: OnPakFileMounted2Time == 0.000027
+[2023.02.05-18.11.19:440][  0]LogPakFile: PakFile PrimaryIndexSize=192
+[2023.02.05-18.11.19:440][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2023.02.05-18.11.19:440][  0]LogPakFile: PakFile FullDirectoryIndexSize=158
+[2023.02.05-18.11.19:440][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: PakFile 'E:/EpicGames/UE_4.27/FeaturePacks/TP_VirtualRealityBP.upack' (chunk index -1, root 'root:/') mounted
+[2023.02.05-18.11.19:440][  0]LogShaderLibrary: Display: ShaderCodeLibraryPakFileMountedCallback: pending pak file info (ChunkID:-1 Root:root:/ File:E:/EpicGames/UE_4.27/FeaturePacks/TP_VirtualRealityBP.upack)
+[2023.02.05-18.11.19:440][  0]LogPakFile: OnPakFileMounted2Time == 0.000029
+[2023.02.05-18.11.19:510][  0]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'AddContentDialog' in 0.0003 seconds. Added 0 classes and 0 folders.
+[2023.02.05-18.11.19:514][  0]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'SceneOutliner' in 0.0002 seconds. Added 2 classes and 0 folders.
+[2023.02.05-18.11.19:559][  0]LogSlate: Took 0.000171 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K)
+[2023.02.05-18.11.19:565][  0]LogSlate: Took 0.004833 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/FontAwesome.ttf' (139K)
+[2023.02.05-18.11.19:566][  0]LogSlate: Took 0.000095 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Bold.ttf' (160K)
+[2023.02.05-18.11.19:653][  0]LogRenderer: Reallocating scene render targets to support 1056x492 Format 10 NumSamples 1 (Frame:1).
+[2023.02.05-18.11.19:738][  0]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'HierarchicalLODOutliner' in 0.0003 seconds. Added 0 classes and 0 folders.
+[2023.02.05-18.11.19:738][  0]LogLoad: (Engine Initialization) Total time: 7.98 seconds
+[2023.02.05-18.11.19:738][  0]LogLoad: (Engine Initialization) Total Blueprint compile time: 0.00 seconds
+[2023.02.05-18.11.19:779][  0]LogAssetRegistry: Asset discovery search completed in 4.4594 seconds
+[2023.02.05-18.11.19:783][  0]LogCollectionManager: Fixed up redirectors for 0 collections in 0.000004 seconds (updated 0 objects)
+[2023.02.05-18.11.19:785][  0]LogContentStreaming: Texture pool size now 1000 MB
+[2023.02.05-18.11.23:436][ 11]LogSlate: Took 0.000149 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2023.02.05-18.11.31:091][ 72]LogSlate: Window 'Save Level As' being destroyed
+[2023.02.05-18.11.33:477][333]LogUObjectHash: Compacting FUObjectHashTables data took   0.70ms
+[2023.02.05-18.11.33:539][333]LogSlate: Took 0.000129 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2023.02.05-18.11.33:593][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\OB_API\Loader.uasset: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:593][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\OB_API\Loader.uasset: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:593][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\OB_API\Loader.uasset: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:593][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\OB_API\Loader.uasset: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:593][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\OB_API\Loader.uasset: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:594][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\OB_API\Loader.uasset: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:594][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\OB_API\Loader.uasset: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:594][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\OB_API\Loader.uasset: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:594][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\OB_API\Loader.uasset: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:594][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\OB_API\Loader.uasset: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:594][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\OB_API\Loader.uasset: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:594][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\OB_API\Loader.uasset: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:594][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\OB_API\Loader.uasset: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:594][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\OB_API\Loader.uasset: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:595][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:595][333]LoadErrors: Failed to load /Script/EasyXMLParser.EEasyXMLParserFound Referenced by addPart
+[2023.02.05-18.11.33:595][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:595][333]LoadErrors: Failed to load /Script/EasyXMLParser.EEasyXMLParserErrorCode Referenced by parseRBXL
+[2023.02.05-18.11.33:595][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:595][333]LoadErrors: Failed to load /Script/EasyXMLParser.EEasyXMLParserFound Referenced by parseRBXL
+[2023.02.05-18.11.33:595][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:595][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:596][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:596][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:596][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:596][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:596][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:596][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:596][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:596][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:596][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:597][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:597][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:597][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:597][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:597][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:597][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:597][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:598][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:598][333]LoadErrors: Failed to load /Script/EasyXMLParser.EasyXMLElement Referenced by K2Node_CallFunction_44
+[2023.02.05-18.11.33:599][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:599][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:599][333]LoadErrors: Failed to load /Script/EasyXMLParser.EEasyXMLParserFound Referenced by K2Node_CallFunction_44
+[2023.02.05-18.11.33:599][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:599][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:599][333]LoadErrors: Failed to load /Script/EasyXMLParser.EasyXMLElement Referenced by K2Node_MacroInstance_12
+[2023.02.05-18.11.33:599][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:599][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:600][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:600][333]LoadErrors: Failed to load /Script/EasyXMLParser.EasyXMLElement Referenced by K2Node_CallFunction_61
+[2023.02.05-18.11.33:600][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:600][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:600][333]LoadErrors: Failed to load /Script/EasyXMLParser.EEasyXMLParserFound Referenced by K2Node_CallFunction_61
+[2023.02.05-18.11.33:600][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:600][333]LoadErrors: Failed to load /Script/EasyXMLParser.EasyXMLAttribute Referenced by K2Node_CallFunction_61
+[2023.02.05-18.11.33:600][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:600][333]LoadErrors: Failed to load /Script/EasyXMLParser.EasyXMLObject Referenced by K2Node_CallFunction_62
+[2023.02.05-18.11.33:600][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:600][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:600][333]LoadErrors: Failed to load /Script/EasyXMLParser.EasyXMLParseManager Referenced by K2Node_CallFunction_41
+[2023.02.05-18.11.33:601][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:601][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:601][333]LoadErrors: Failed to load /Script/EasyXMLParser.Default__EasyXMLParseManager Referenced by K2Node_CallFunction_41
+[2023.02.05-18.11.33:601][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:601][333]LoadErrors: Failed to load /Script/EasyXMLParser.EEasyXMLParserErrorCode Referenced by K2Node_CallFunction_41
+[2023.02.05-18.11.33:601][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:601][333]LoadErrors: Failed to load /Script/EasyXMLParser.EasyXMLElement Referenced by K2Node_CallFunction_41
+[2023.02.05-18.11.33:601][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:601][333]LoadErrors: Failed to load /Script/EasyXMLParser.EasyXMLElement Referenced by K2Node_MacroInstance_0
+[2023.02.05-18.11.33:601][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:602][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:602][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:602][333]LoadErrors: Failed to load /Script/EasyXMLParser.EasyXMLElement Referenced by K2Node_CallFunction_33
+[2023.02.05-18.11.33:602][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:602][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:602][333]LoadErrors: Failed to load /Script/EasyXMLParser.EEasyXMLParserFound Referenced by K2Node_CallFunction_33
+[2023.02.05-18.11.33:602][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:602][333]LoadErrors: Failed to load /Script/EasyXMLParser.EasyXMLAttribute Referenced by K2Node_CallFunction_33
+[2023.02.05-18.11.33:602][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:602][333]LoadErrors: Failed to load /Script/EasyXMLParser.EasyXMLObject Referenced by K2Node_CallFunction_34
+[2023.02.05-18.11.33:602][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:603][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:603][333]LoadErrors: Failed to load /Script/EasyXMLParser.EasyXMLElement Referenced by K2Node_VariableGet_3
+[2023.02.05-18.11.33:603][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:603][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:603][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:603][333]LoadErrors: Failed to load /Script/EasyXMLParser.EasyXMLElement Referenced by K2Node_CallFunction_70
+[2023.02.05-18.11.33:604][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:604][333]LoadErrors: Failed to load /Script/EasyXMLParser.EasyXMLElement Referenced by K2Node_FunctionEntry_0
+[2023.02.05-18.11.33:604][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:604][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:604][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:604][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:604][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:604][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:605][333]LoadErrors: Failed to load /Script/EasyXMLParser.EasyXMLElement Referenced by K2Node_VariableGet_1
+[2023.02.05-18.11.33:605][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:605][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:605][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:605][333]LoadErrors: Failed to load /Script/EasyXMLParser.EasyXMLObject Referenced by K2Node_VariableGet_2
+[2023.02.05-18.11.33:605][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:605][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:605][333]LoadErrors: Failed to load /Script/EasyXMLParser.EasyXMLElement Referenced by K2Node_MacroInstance_1
+[2023.02.05-18.11.33:605][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:606][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:606][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:606][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:606][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:606][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:606][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:606][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:606][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:607][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:607][333]LoadErrors: Failed to load /Script/EasyXMLParser.EasyXMLObject Referenced by K2Node_CallFunction_17
+[2023.02.05-18.11.33:607][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:607][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:607][333]LoadErrors: Failed to load /Script/EasyXMLParser.EasyXMLElement Referenced by K2Node_CallFunction_20
+[2023.02.05-18.11.33:607][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:607][333]LoadErrors: Failed to load /Script/EasyXMLParser.EasyXMLElement Referenced by K2Node_CallFunction_26
+[2023.02.05-18.11.33:608][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:608][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:608][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:608][333]LoadErrors: Failed to load /Script/EasyXMLParser.EasyXMLObject Referenced by K2Node_MacroInstance_0
+[2023.02.05-18.11.33:608][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:608][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:609][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:609][333]LoadErrors: Failed to load /Script/EasyXMLParser.EasyXMLObject Referenced by K2Node_VariableGet_0
+[2023.02.05-18.11.33:609][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:609][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:609][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:609][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:609][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:609][333]LoadErrors: Failed to load /Script/EasyXMLParser.EasyXMLObject Referenced by K2Node_CallFunction_7
+[2023.02.05-18.11.33:609][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:611][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:611][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:611][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:611][333]LoadErrors: Failed to load /Script/EasyXMLParser.EasyXMLElement Referenced by K2Node_VariableGet_0
+[2023.02.05-18.11.33:612][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:612][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:612][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:612][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:612][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:612][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:612][333]LoadErrors: Failed to load /Script/EasyXMLParser.EasyXMLObject Referenced by K2Node_VariableGet_1
+[2023.02.05-18.11.33:612][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:613][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:613][333]LoadErrors: Failed to load /Script/EasyXMLParser.EasyXMLObject Referenced by K2Node_CallFunction_1
+[2023.02.05-18.11.33:613][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:613][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:613][333]LogLinker: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\Map\Default.umap: Failed to load '/Script/EasyXMLParser': Can't find file.
+[2023.02.05-18.11.33:621][333]LogBlueprint: Error: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\OB_API\Loader.uasset: [Compiler] Invalid pin connection from  Array Element  and  Part : Object Reference is not compatible with Object Reference. (You may have changed the type after the connections were made)
+[2023.02.05-18.11.33:622][333]LogBlueprint: Error: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\OB_API\Loader.uasset: [Compiler] In use pin  Successed  no longer exists on node  Load from File . Please refresh node or break links to remove pin.
+[2023.02.05-18.11.33:622][333]LogBlueprint: Error: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\OB_API\Loader.uasset: [Compiler] In use pin  Failed  no longer exists on node  Load from File . Please refresh node or break links to remove pin.
+[2023.02.05-18.11.33:622][333]LogBlueprint: Error: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\OB_API\Loader.uasset: [Compiler] In use pin  <Unnamed>  no longer exists on node  Load from File . Please refresh node or break links to remove pin.
+[2023.02.05-18.11.33:622][333]LogBlueprint: Error: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\OB_API\Loader.uasset: [Compiler] In use pin  File Path  no longer exists on node  Load from File . Please refresh node or break links to remove pin.
+[2023.02.05-18.11.33:622][333]LogBlueprint: Error: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\OB_API\Loader.uasset: [Compiler] In use pin  Return Value  no longer exists on node  Load from File . Please refresh node or break links to remove pin.
+[2023.02.05-18.11.33:622][333]LogBlueprint: Error: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\OB_API\Loader.uasset: [Compiler] Could not find a function named "LoadFromFile" in 'Loader'.
+Make sure 'Loader' has been compiled for  Load from File
+[2023.02.05-18.11.33:623][333]LogBlueprint: Error: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\OB_API\Loader.uasset: [Compiler] In use pin  Found  no longer exists on node  Read Elements . Please refresh node or break links to remove pin.
+[2023.02.05-18.11.33:623][333]LogBlueprint: Error: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\OB_API\Loader.uasset: [Compiler] In use pin  Not Found  no longer exists on node  Read Elements . Please refresh node or break links to remove pin.
+[2023.02.05-18.11.33:623][333]LogBlueprint: Error: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\OB_API\Loader.uasset: [Compiler] In use pin  <Unnamed>  no longer exists on node  Read Elements . Please refresh node or break links to remove pin.
+[2023.02.05-18.11.33:623][333]LogBlueprint: Error: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\OB_API\Loader.uasset: [Compiler] In use pin  Target  no longer exists on node  Read Elements . Please refresh node or break links to remove pin.
+[2023.02.05-18.11.33:623][333]LogBlueprint: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\OB_API\Loader.uasset: [Compiler] Input pin  Access String  specifying non-default value no longer exists on node  Read Elements . Please refresh node or reset pin to default value to remove pin.
+[2023.02.05-18.11.33:623][333]LogBlueprint: Error: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\OB_API\Loader.uasset: [Compiler] In use pin  Return Value  no longer exists on node  Read Elements . Please refresh node or break links to remove pin.
+[2023.02.05-18.11.33:623][333]LogBlueprint: Error: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\OB_API\Loader.uasset: [Compiler] Could not find a function named "ReadElements" in 'Loader'.
+Make sure 'Loader' has been compiled for  Read Elements
+[2023.02.05-18.11.33:625][333]LogBlueprint: Error: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\OB_API\Loader.uasset: [Compiler] Invalid pin connection from  Array Element  and  Reference : Object Reference is not compatible with Object Reference. (You may have changed the type after the connections were made)
+[2023.02.05-18.11.33:625][333]LogBlueprint: Error: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\OB_API\Loader.uasset: [Compiler] Invalid pin connection from  Array Element  and  Reference : Object Reference is not compatible with Object Reference. (You may have changed the type after the connections were made)
+[2023.02.05-18.11.33:626][333]LogBlueprint: Error: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\OB_API\Loader.uasset: [Compiler] COMPILER ERROR: failed building connection with 'Object Reference is not compatible with Object Reference.' at  Get (a copy) generated from expanding For Each Loop
+[2023.02.05-18.11.33:626][333]LogBlueprint: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\OB_API\Loader.uasset: [Compiler] Could not find a variable named "Children" in 'Loader'.
+Make sure 'Loader' has been compiled for  Get Children
+[2023.02.05-18.11.33:626][333]LogBlueprint: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\OB_API\Loader.uasset: [Compiler] Could not find a variable named "Name" in 'Loader'.
+Make sure 'Loader' has been compiled for  Get Name
+[2023.02.05-18.11.33:626][333]LogBlueprint: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\OB_API\Loader.uasset: [Compiler] Could not find a variable named "Children" in 'Loader'.
+Make sure 'Loader' has been compiled for  Get Children
+[2023.02.05-18.11.33:626][333]LogBlueprint: Error: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\OB_API\Loader.uasset: [Compiler] In use pin  Target  no longer exists on node  Get Attribute . Please refresh node or break links to remove pin.
+[2023.02.05-18.11.33:626][333]LogBlueprint: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\OB_API\Loader.uasset: [Compiler] Input pin  Atrribute Name  specifying non-default value no longer exists on node  Get Attribute . Please refresh node or reset pin to default value to remove pin.
+[2023.02.05-18.11.33:626][333]LogBlueprint: Error: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\OB_API\Loader.uasset: [Compiler] In use pin  Return Value  no longer exists on node  Get Attribute . Please refresh node or break links to remove pin.
+[2023.02.05-18.11.33:626][333]LogBlueprint: Error: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\OB_API\Loader.uasset: [Compiler] Could not find a function named "GetAttribute" in 'Loader'.
+Make sure 'Loader' has been compiled for  Get Attribute
+[2023.02.05-18.11.33:627][333]LogBlueprint: Error: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\OB_API\Loader.uasset: [Compiler] In use pin  Target  no longer exists on node  Get String Value . Please refresh node or break links to remove pin.
+[2023.02.05-18.11.33:627][333]LogBlueprint: Error: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\OB_API\Loader.uasset: [Compiler] In use pin  Return Value  no longer exists on node  Get String Value . Please refresh node or break links to remove pin.
+[2023.02.05-18.11.33:627][333]LogBlueprint: Error: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\OB_API\Loader.uasset: [Compiler] Could not find a function named "GetStringValue" in 'Loader'.
+Make sure 'Loader' has been compiled for  Get String Value
+[2023.02.05-18.11.33:630][333]LogBlueprint: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\OB_API\Loader.uasset: [Compiler] Could not find a variable named "Name" in 'Loader'.
+Make sure 'Loader' has been compiled for  Get Name
+[2023.02.05-18.11.33:630][333]LogBlueprint: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\OB_API\Loader.uasset: [Compiler] Could not find a variable named "Children" in 'Loader'.
+Make sure 'Loader' has been compiled for  Get Children
+[2023.02.05-18.11.33:631][333]LogBlueprint: Error: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\OB_API\Loader.uasset: [Compiler] In use pin  Target  no longer exists on node  Get Float Value . Please refresh node or break links to remove pin.
+[2023.02.05-18.11.33:631][333]LogBlueprint: Error: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\OB_API\Loader.uasset: [Compiler] In use pin  Return Value  no longer exists on node  Get Float Value . Please refresh node or break links to remove pin.
+[2023.02.05-18.11.33:631][333]LogBlueprint: Error: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\OB_API\Loader.uasset: [Compiler] Could not find a function named "GetFloatValue" in 'Loader'.
+Make sure 'Loader' has been compiled for  Get Float Value
+[2023.02.05-18.11.33:633][333]LogBlueprint: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\OB_API\Loader.uasset: [Compiler] Could not find a variable named "Children" in 'Loader'.
+Make sure 'Loader' has been compiled for  Get Children
+[2023.02.05-18.11.33:633][333]LogBlueprint: Warning: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\OB_API\Loader.uasset: [Compiler] Could not find a variable named "Name" in 'Loader'.
+Make sure 'Loader' has been compiled for  Get Name
+[2023.02.05-18.11.33:633][333]LogBlueprint: Error: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\OB_API\Loader.uasset: [Compiler] In use pin  Target  no longer exists on node  Get Float Value . Please refresh node or break links to remove pin.
+[2023.02.05-18.11.33:633][333]LogBlueprint: Error: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\OB_API\Loader.uasset: [Compiler] In use pin  Return Value  no longer exists on node  Get Float Value . Please refresh node or break links to remove pin.
+[2023.02.05-18.11.33:634][333]LogBlueprint: Error: [AssetLog] C:\Users\Luke\Documents\OpenBLOX\OpenBLOX\Platform\Unreal Engine\UE4\OpenBLOX\Content\OB_API\Loader.uasset: [Compiler] Could not find a function named "GetFloatValue" in 'Loader'.
+Make sure 'Loader' has been compiled for  Get Float Value
+[2023.02.05-18.11.33:645][333]LogAssetEditorSubsystem: Opening Asset editor for World /Game/Map/Default.Default
+[2023.02.05-18.11.33:645][333]Cmd: MAP LOAD FILE="C:/Users/Luke/Documents/OpenBLOX/OpenBLOX/Platform/Unreal Engine/UE4/OpenBLOX/Content/Map/Default.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
+[2023.02.05-18.11.33:645][333]LightingResults: New page: Lighting Build
+[2023.02.05-18.11.33:645][333]LoadErrors: New page: Loading map: Default.umap
+[2023.02.05-18.11.33:646][333]LogWorld: UWorld::CleanupWorld for Untitled_1, bSessionEnded=true, bCleanupResources=true
+[2023.02.05-18.11.33:646][333]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.02.05-18.11.33:646][333]MapCheck: New page: Map Check
+[2023.02.05-18.11.33:646][333]LightingResults: New page: Lighting Build
+[2023.02.05-18.11.33:650][333]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2023.02.05-18.11.33:652][333]LogUObjectHash: Compacting FUObjectHashTables data took   0.84ms
+[2023.02.05-18.11.33:652][333]LogAudio: Display: Audio Device (ID: 1) registered with world 'Default'.
+[2023.02.05-18.11.33:654][333]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2023.02.05-18.11.33:654][333]LogAIModule: Creating AISystem for world Default
+[2023.02.05-18.11.33:659][333]LogUObjectHash: Compacting FUObjectHashTables data took   0.66ms
+[2023.02.05-18.11.33:660][333]Cmd: MAP CHECKDEP NOCLEARLOG
+[2023.02.05-18.11.33:660][333]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 0.091ms to complete.
+[2023.02.05-18.11.33:660][333]LogFileHelpers: Loading map 'Default' took 0.015
+[2023.02.05-18.11.35:079][460]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Map/Default" FILE="C:/Users/Luke/Documents/OpenBLOX/OpenBLOX/Platform/Unreal Engine/UE4/OpenBLOX/Content/Map/Default.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2023.02.05-18.11.35:082][460]LogUObjectHash: Compacting FUObjectHashTables data took   0.27ms
+[2023.02.05-18.11.35:089][460]LogSavePackage: Moving 'C:/Users/Luke/Documents/OpenBLOX/OpenBLOX/Platform/Unreal Engine/UE4/OpenBLOX/Saved/DefaultE8A4EE9D4C2D8AF34B3523A7D0EA1B12.tmp' to 'C:/Users/Luke/Documents/OpenBLOX/OpenBLOX/Platform/Unreal Engine/UE4/OpenBLOX/Content/Map/Default.umap'
+[2023.02.05-18.11.35:093][460]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Map/Default_BuiltData" FILE="C:/Users/Luke/Documents/OpenBLOX/OpenBLOX/Platform/Unreal Engine/UE4/OpenBLOX/Content/Map/Default_BuiltData.uasset" SILENT=true
+[2023.02.05-18.11.35:106][460]LogSavePackage: Moving 'C:/Users/Luke/Documents/OpenBLOX/OpenBLOX/Platform/Unreal Engine/UE4/OpenBLOX/Saved/Default_BuiltData493C7F554CA650640374D2A6DD97CB33.tmp' to 'C:/Users/Luke/Documents/OpenBLOX/OpenBLOX/Platform/Unreal Engine/UE4/OpenBLOX/Content/Map/Default_BuiltData.uasset'
+[2023.02.05-18.11.35:117][460]AssetCheck: New page: Asset Save: multiple assets
+[2023.02.05-18.11.35:117][460]LogContentValidation: Display: Validating MapBuildDataRegistry /Game/Map/Default_BuiltData.Default_BuiltData
+[2023.02.05-18.11.35:117][460]LogContentValidation: Display: Validating World /Game/Map/Default.Default
+[2023.02.05-18.11.38:725][888]LogTemp: Repeating last play command: Selected Viewport
+[2023.02.05-18.11.38:728][888]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2023.02.05-18.11.38:728][888]BlueprintLog: Warning: Blueprint failed to compile:  Loader
+[2023.02.05-18.11.38:728][888]LogCustomDialog: Dialog displayed:
+[2023.02.05-18.11.45:450][888]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/OB_API/Loader.Loader
+[2023.02.05-18.11.45:648][888]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'BlueprintGraph' in 0.0005 seconds. Added 126 classes and 0 folders.
+[2023.02.05-18.11.52:033][888]LogSlate: Window 'Blueprint Compilation Errors' being destroyed
+[2023.02.05-18.11.52:044][888]LogSlate: Took 0.000131 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-BoldCondensed.ttf' (158K)
+[2023.02.05-18.11.52:053][888]LogSlate: Took 0.005732 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/DroidSansMono.ttf' (77K)
+[2023.02.05-18.12.04:601][254]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/OB_API/Loader" FILE="C:/Users/Luke/Documents/OpenBLOX/OpenBLOX/Platform/Unreal Engine/UE4/OpenBLOX/Content/OB_API/Loader.uasset" SILENT=true
+[2023.02.05-18.12.04:655][254]LogSavePackage: Moving 'C:/Users/Luke/Documents/OpenBLOX/OpenBLOX/Platform/Unreal Engine/UE4/OpenBLOX/Saved/Loader799C76CB420655712FAC1AA51880830A.tmp' to 'C:/Users/Luke/Documents/OpenBLOX/OpenBLOX/Platform/Unreal Engine/UE4/OpenBLOX/Content/OB_API/Loader.uasset'
+[2023.02.05-18.12.04:668][254]AssetCheck: New page: Asset Save: Loader
+[2023.02.05-18.12.04:668][254]LogContentValidation: Display: Validating Blueprint /Game/OB_API/Loader.Loader
+[2023.02.05-18.12.12:645][ 53]Cmd: CLOSE_SLATE_MAINFRAME
+[2023.02.05-18.12.12:664][ 53]LogUObjectHash: Compacting FUObjectHashTables data took   2.23ms
+[2023.02.05-18.12.12:666][ 53]LogSlate: Window 'Loader' being destroyed
+[2023.02.05-18.12.12:709][ 53]LogWorld: UWorld::CleanupWorld for World_0, bSessionEnded=true, bCleanupResources=true
+[2023.02.05-18.12.12:709][ 53]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2023.02.05-18.12.12:762][ 53]LogSlate: Window 'Plugins' being destroyed
+[2023.02.05-18.12.12:766][ 53]LogDirectoryWatcher: A directory notification for '../../../Engine/Plugins/' was aborted.
+[2023.02.05-18.12.12:768][ 53]LogSlate: Window 'OpenBLOX - Unreal Editor' being destroyed
+[2023.02.05-18.12.12:985][ 54]Cmd: QUIT_EDITOR
+[2023.02.05-18.12.12:985][ 54]LogCore: Engine exit requested (reason: UUnrealEdEngine::CloseEditor())
+[2023.02.05-18.12.12:993][ 54]LogCore: Engine exit requested (reason: EngineExit() was called; note: exit was already requested)
+[2023.02.05-18.12.12:994][ 54]LogAudio: Display: Beginning Audio Device Manager Shutdown (Module: AudioMixerXAudio2)...
+[2023.02.05-18.12.12:995][ 54]LogAudio: Display: Destroying 1 Remaining Audio Device(s)...
+[2023.02.05-18.12.12:995][ 54]LogAudio: Display: Audio Device unregistered from world 'Default'.
+[2023.02.05-18.12.12:995][ 54]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2023.02.05-18.12.12:996][ 54]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2023.02.05-18.12.12:999][ 54]LogAudio: Display: Audio Device Manager Shutdown
+[2023.02.05-18.12.13:000][ 54]LogWindowsTextInputMethodSystem: Display: IME system deactivated.
+[2023.02.05-18.12.13:004][ 54]LogExit: Preparing to exit.
+[2023.02.05-18.12.13:307][ 54]LogUObjectHash: Compacting FUObjectHashTables data took   1.83ms
+[2023.02.05-18.12.13:581][ 54]LogDemo: Cleaned up 0 splitscreen connections with owner deletion
+[2023.02.05-18.12.13:587][ 54]LogWorld: UWorld::CleanupWorld for None, bSessionEnded=true, bCleanupResources=true
+[2023.02.05-18.12.13:587][ 54]LogExit: Editor shut down
+[2023.02.05-18.12.13:589][ 54]LogExit: Transaction tracking system shut down
+[2023.02.05-18.12.13:860][ 54]LogExit: Object subsystem successfully closed.
+[2023.02.05-18.12.13:877][ 54]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2023.02.05-18.12.13:877][ 54]LogShaderCompilers: Display: Total job queries 0, among them cache hits 0 (0.00%)
+[2023.02.05-18.12.13:877][ 54]LogShaderCompilers: Display: Tracking 0 distinct input hashes that result in 0 distinct outputs (0.00%)
+[2023.02.05-18.12.13:877][ 54]LogShaderCompilers: Display: RAM used: 0.00 MB (0.00 GB) of 819.20 MB (0.80 GB) budget. Usage: 0.00%
+[2023.02.05-18.12.13:877][ 54]LogShaderCompilers: Display: ================================================
+[2023.02.05-18.12.13:881][ 54]LogShaderCompilers: Display: Shaders left to compile 0
+[2023.02.05-18.12.13:901][ 54]LogModuleManager: Shutting down and abandoning module BlueprintGraph (872)
+[2023.02.05-18.12.13:901][ 54]LogModuleManager: Shutting down and abandoning module HierarchicalLODOutliner (870)
+[2023.02.05-18.12.13:901][ 54]LogModuleManager: Shutting down and abandoning module SceneOutliner (868)
+[2023.02.05-18.12.13:901][ 54]LogModuleManager: Shutting down and abandoning module AddContentDialog (866)
+[2023.02.05-18.12.13:901][ 54]LogModuleManager: Shutting down and abandoning module WidgetCarousel (865)
+[2023.02.05-18.12.13:901][ 54]LogModuleManager: Shutting down and abandoning module EditorWidgets (862)
+[2023.02.05-18.12.13:901][ 54]LogModuleManager: Shutting down and abandoning module StatsViewer (860)
+[2023.02.05-18.12.13:901][ 54]LogModuleManager: Shutting down and abandoning module PIEPreviewDeviceProfileSelector (858)
+[2023.02.05-18.12.13:901][ 54]LogModuleManager: Shutting down and abandoning module SequenceRecorderSections (856)
+[2023.02.05-18.12.13:901][ 54]LogModuleManager: Shutting down and abandoning module AutomationWorker (854)
+[2023.02.05-18.12.13:901][ 54]LogModuleManager: Shutting down and abandoning module SteamVREditor (852)
+[2023.02.05-18.12.13:901][ 54]LogModuleManager: Shutting down and abandoning module OculusMR (850)
+[2023.02.05-18.12.13:901][ 54]LogModuleManager: Shutting down and abandoning module TakeRecorderSources (848)
+[2023.02.05-18.12.13:901][ 54]LogModuleManager: Shutting down and abandoning module TakeRecorder (847)
+[2023.02.05-18.12.13:901][ 54]LogModuleManager: Shutting down and abandoning module TakeTrackRecorders (844)
+[2023.02.05-18.12.13:901][ 54]LogModuleManager: Shutting down and abandoning module TakesCore (842)
+[2023.02.05-18.12.13:901][ 54]LogModuleManager: Shutting down and abandoning module OpenXRInput (840)
+[2023.02.05-18.12.13:901][ 54]LogModuleManager: Shutting down and abandoning module GooglePADEditor (838)
+[2023.02.05-18.12.13:901][ 54]LogModuleManager: Shutting down and abandoning module AudioCaptureEditor (836)
+[2023.02.05-18.12.13:901][ 54]LogModuleManager: Shutting down and abandoning module WmfMediaFactory (834)
+[2023.02.05-18.12.13:901][ 54]LogModuleManager: Shutting down and abandoning module WmfMediaEditor (832)
+[2023.02.05-18.12.13:901][ 54]LogModuleManager: Shutting down and abandoning module WebMMediaFactory (830)
+[2023.02.05-18.12.13:901][ 54]LogModuleManager: Shutting down and abandoning module WebMMediaEditor (828)
+[2023.02.05-18.12.13:901][ 54]LogModuleManager: Shutting down and abandoning module WebMMedia (826)
+[2023.02.05-18.12.13:901][ 54]LogModuleManager: Shutting down and abandoning module MediaPlayerEditor (824)
+[2023.02.05-18.12.13:901][ 54]LogModuleManager: Shutting down and abandoning module OpenExrWrapper (822)
+[2023.02.05-18.12.13:902][ 54]LogModuleManager: Shutting down and abandoning module ImgMediaFactory (820)
+[2023.02.05-18.12.13:902][ 54]LogModuleManager: Shutting down and abandoning module ImgMediaEditor (818)
+[2023.02.05-18.12.13:902][ 54]LogModuleManager: Shutting down and abandoning module MediaCompositingEditor (816)
+[2023.02.05-18.12.13:902][ 54]LogModuleManager: Shutting down and abandoning module SequenceRecorder (815)
+[2023.02.05-18.12.13:902][ 54]LogModuleManager: Shutting down and abandoning module TemplateSequenceEditor (812)
+[2023.02.05-18.12.13:902][ 54]LogModuleManager: Shutting down and abandoning module MatineeToLevelSequence (810)
+[2023.02.05-18.12.13:902][ 54]LogModuleManager: Shutting down and abandoning module AvfMediaFactory (808)
+[2023.02.05-18.12.13:902][ 54]LogModuleManager: Shutting down and abandoning module AvfMediaEditor (806)
+[2023.02.05-18.12.13:902][ 54]LogModuleManager: Shutting down and abandoning module LevelSequenceEditor (804)
+[2023.02.05-18.12.13:902][ 54]LogModuleManager: Shutting down and abandoning module ActorSequenceEditor (802)
+[2023.02.05-18.12.13:902][ 54]LogModuleManager: Shutting down and abandoning module AndroidMediaFactory (800)
+[2023.02.05-18.12.13:902][ 54]LogModuleManager: Shutting down and abandoning module AndroidMediaEditor (798)
+[2023.02.05-18.12.13:902][ 54]LogModuleManager: Shutting down and abandoning module MagicLeapMediaCodecFactory (796)
+[2023.02.05-18.12.13:902][ 54]LogModuleManager: Shutting down and abandoning module MagicLeapMediaFactory (794)
+[2023.02.05-18.12.13:902][ 54]LogModuleManager: Shutting down and abandoning module MagicLeapMediaEditor (792)
+[2023.02.05-18.12.13:902][ 54]LogModuleManager: Shutting down and abandoning module PlanarCut (790)
+[2023.02.05-18.12.13:902][ 54]LogModuleManager: Shutting down and abandoning module CharacterAI (788)
+[2023.02.05-18.12.13:902][ 54]LogModuleManager: Shutting down and abandoning module TextureAlignMode (786)
+[2023.02.05-18.12.13:902][ 54]LogModuleManager: Shutting down and abandoning module BspMode (784)
+[2023.02.05-18.12.13:902][ 54]LogModuleManager: Shutting down and abandoning module GeometryMode (782)
+[2023.02.05-18.12.13:902][ 54]LogModuleManager: Shutting down and abandoning module CameraShakePreviewer (780)
+[2023.02.05-18.12.13:902][ 54]LogModuleManager: Shutting down and abandoning module SmartSnapping (778)
+[2023.02.05-18.12.13:902][ 54]LogModuleManager: Shutting down and abandoning module SessionServices (776)
+[2023.02.05-18.12.13:902][ 54]LogModuleManager: Shutting down and abandoning module MeshPaint (774)
+[2023.02.05-18.12.13:902][ 54]LogModuleManager: Shutting down and abandoning module VirtualTexturingEditor (772)
+[2023.02.05-18.12.13:902][ 54]LogModuleManager: Shutting down and abandoning module FoliageEdit (770)
+[2023.02.05-18.12.13:902][ 54]LogModuleManager: Shutting down and abandoning module LandscapeEditor (768)
+[2023.02.05-18.12.13:902][ 54]LogModuleManager: Shutting down and abandoning module MeshPaintMode (766)
+[2023.02.05-18.12.13:902][ 54]LogModuleManager: Shutting down and abandoning module SceneDepthPickerMode (764)
+[2023.02.05-18.12.13:902][ 54]LogModuleManager: Shutting down and abandoning module ActorPickerMode (762)
+[2023.02.05-18.12.13:902][ 54]LogModuleManager: Shutting down and abandoning module PlacementMode (760)
+[2023.02.05-18.12.13:902][ 54]LogModuleManager: Shutting down and abandoning module ViewportSnapping (758)
+[2023.02.05-18.12.13:902][ 54]LogModuleManager: Shutting down and abandoning module ViewportInteraction (756)
+[2023.02.05-18.12.13:902][ 54]LogModuleManager: Shutting down and abandoning module ClothPainter (754)
+[2023.02.05-18.12.13:902][ 54]LogModuleManager: Shutting down and abandoning module SkeletalMeshEditor (753)
+[2023.02.05-18.12.13:902][ 54]LogModuleManager: Shutting down and abandoning module LogVisualizer (750)
+[2023.02.05-18.12.13:902][ 54]LogModuleManager: Shutting down and abandoning module IntroTutorials (748)
+[2023.02.05-18.12.13:902][ 54]LogModuleManager: Shutting down and abandoning module GameProjectGeneration (747)
+[2023.02.05-18.12.13:902][ 54]LogModuleManager: Shutting down and abandoning module LuminPlatformEditor (744)
+[2023.02.05-18.12.13:902][ 54]LogModuleManager: Shutting down and abandoning module IOSPlatformEditor (742)
+[2023.02.05-18.12.13:902][ 54]LogModuleManager: Shutting down and abandoning module AndroidPlatformEditor (740)
+[2023.02.05-18.12.13:902][ 54]LogModuleManager: Shutting down and abandoning module AndroidDeviceDetection (739)
+[2023.02.05-18.12.14:792][ 54]LogModuleManager: Shutting down and abandoning module WindowsPlatformEditor (736)
+[2023.02.05-18.12.14:792][ 54]LogModuleManager: Shutting down and abandoning module LuminRuntimeSettings (734)
+[2023.02.05-18.12.14:793][ 54]LogModuleManager: Shutting down and abandoning module IOSRuntimeSettings (732)
+[2023.02.05-18.12.14:793][ 54]LogModuleManager: Shutting down and abandoning module AndroidRuntimeSettings (730)
+[2023.02.05-18.12.14:793][ 54]LogModuleManager: Shutting down and abandoning module TraceInsights (728)
+[2023.02.05-18.12.14:793][ 54]MemoryProfiler: Shutdown
+[2023.02.05-18.12.14:793][ 54]NetworkingProfiler: Shutdown
+[2023.02.05-18.12.14:793][ 54]LoadingProfiler: Shutdown
+[2023.02.05-18.12.14:793][ 54]TimingProfiler: Shutdown
+[2023.02.05-18.12.14:793][ 54]LogModuleManager: Shutting down and abandoning module TraceServices (727)
+[2023.02.05-18.12.14:793][ 54]LogModuleManager: Shutting down and abandoning module EditorInteractiveToolsFramework (724)
+[2023.02.05-18.12.14:793][ 54]LogModuleManager: Shutting down and abandoning module TimeManagementEditor (722)
+[2023.02.05-18.12.14:793][ 54]LogModuleManager: Shutting down and abandoning module InputBindingEditor (720)
+[2023.02.05-18.12.14:793][ 54]LogModuleManager: Shutting down and abandoning module MergeActors (718)
+[2023.02.05-18.12.14:793][ 54]LogModuleManager: Shutting down and abandoning module LocalizationDashboard (716)
+[2023.02.05-18.12.14:793][ 54]LogModuleManager: Shutting down and abandoning module LocalizationService (715)
+[2023.02.05-18.12.14:793][ 54]LogModuleManager: Shutting down and abandoning module HardwareTargeting (712)
+[2023.02.05-18.12.14:793][ 54]LogModuleManager: Shutting down and abandoning module DeviceProfileEditor (710)
+[2023.02.05-18.12.14:793][ 54]LogModuleManager: Shutting down and abandoning module UndoHistory (708)
+[2023.02.05-18.12.14:793][ 54]LogModuleManager: Shutting down and abandoning module XmlParser (706)
+[2023.02.05-18.12.14:793][ 54]LogModuleManager: Shutting down and abandoning module Blutility (704)
+[2023.02.05-18.12.14:793][ 54]LogModuleManager: Shutting down and abandoning module ProjectSettingsViewer (702)
+[2023.02.05-18.12.14:793][ 54]LogModuleManager: Shutting down and abandoning module ProjectTargetPlatformEditor (701)
+[2023.02.05-18.12.14:793][ 54]LogModuleManager: Shutting down and abandoning module EditorSettingsViewer (698)
+[2023.02.05-18.12.14:793][ 54]LogModuleManager: Shutting down and abandoning module InternationalizationSettings (697)
+[2023.02.05-18.12.14:794][ 54]LogModuleManager: Shutting down and abandoning module SettingsEditor (694)
+[2023.02.05-18.12.14:794][ 54]LogModuleManager: Shutting down and abandoning module ProjectLauncher (692)
+[2023.02.05-18.12.14:794][ 54]LogModuleManager: Shutting down and abandoning module SessionFrontend (690)
+[2023.02.05-18.12.14:794][ 54]LogModuleManager: Shutting down and abandoning module ProfilerClient (688)
+[2023.02.05-18.12.14:794][ 54]LogModuleManager: Shutting down and abandoning module DeviceManager (686)
+[2023.02.05-18.12.14:794][ 54]LogModuleManager: Shutting down and abandoning module TargetDeviceServices (685)
+[2023.02.05-18.12.14:827][ 54]LogModuleManager: Shutting down and abandoning module AutomationController (682)
+[2023.02.05-18.12.14:827][ 54]LogModuleManager: Shutting down and abandoning module AutomationWindow (680)
+[2023.02.05-18.12.14:827][ 54]LogModuleManager: Shutting down and abandoning module Layers (678)
+[2023.02.05-18.12.14:827][ 54]LogModuleManager: Shutting down and abandoning module ComponentVisualizers (676)
+[2023.02.05-18.12.14:827][ 54]LogModuleManager: Shutting down and abandoning module DetailCustomizations (674)
+[2023.02.05-18.12.14:827][ 54]LogModuleManager: Shutting down and abandoning module PackagesDialog (672)
+[2023.02.05-18.12.14:827][ 54]LogModuleManager: Shutting down and abandoning module AnimationBlueprintEditor (670)
+[2023.02.05-18.12.14:827][ 54]LogModuleManager: Shutting down and abandoning module Persona (668)
+[2023.02.05-18.12.14:827][ 54]LogModuleManager: Shutting down and abandoning module AdvancedPreviewScene (667)
+[2023.02.05-18.12.14:827][ 54]LogModuleManager: Shutting down and abandoning module AnimGraph (665)
+[2023.02.05-18.12.14:827][ 54]LogModuleManager: Shutting down and abandoning module Kismet (662)
+[2023.02.05-18.12.14:833][ 54]LogModuleManager: Shutting down and abandoning module KismetWidgets (661)
+[2023.02.05-18.12.14:833][ 54]LogModuleManager: Shutting down and abandoning module GraphEditor (658)
+[2023.02.05-18.12.14:833][ 54]LogModuleManager: Shutting down and abandoning module StructViewer (656)
+[2023.02.05-18.12.14:833][ 54]LogModuleManager: Shutting down and abandoning module ClassViewer (654)
+[2023.02.05-18.12.14:833][ 54]LogModuleManager: Shutting down and abandoning module Toolbox (652)
+[2023.02.05-18.12.14:833][ 54]LogModuleManager: Shutting down and abandoning module ModuleUI (650)
+[2023.02.05-18.12.14:833][ 54]LogModuleManager: Shutting down and abandoning module OutputLog (648)
+[2023.02.05-18.12.14:834][ 54]LogModuleManager: Shutting down and abandoning module GammaUI (646)
+[2023.02.05-18.12.14:834][ 54]LogModuleManager: Shutting down and abandoning module Documentation (644)
+[2023.02.05-18.12.14:834][ 54]LogModuleManager: Shutting down and abandoning module LiveCoding (642)
+[2023.02.05-18.12.14:834][ 54]LogModuleManager: Shutting down and abandoning module LevelSequence (640)
+[2023.02.05-18.12.14:834][ 54]LogModuleManager: Shutting down and abandoning module MovieSceneTracks (638)
+[2023.02.05-18.12.14:834][ 54]LogModuleManager: Shutting down and abandoning module MovieScene (636)
+[2023.02.05-18.12.14:834][ 54]LogModuleManager: Shutting down and abandoning module StreamingPauseRendering (634)
+[2023.02.05-18.12.14:834][ 54]LogModuleManager: Shutting down and abandoning module LauncherPlatform (632)
+[2023.02.05-18.12.14:834][ 54]LogModuleManager: Shutting down and abandoning module AnalyticsET (630)
+[2023.02.05-18.12.14:834][ 54]LogModuleManager: Shutting down and abandoning module PortalServices (628)
+[2023.02.05-18.12.14:834][ 54]LogModuleManager: Shutting down and abandoning module PortalRpc (626)
+[2023.02.05-18.12.14:834][ 54]LogModuleManager: Shutting down and abandoning module MessagingRpc (624)
+[2023.02.05-18.12.14:834][ 54]LogModuleManager: Shutting down and abandoning module AudioMixerXAudio2 (622)
+[2023.02.05-18.12.14:834][ 54]LogModuleManager: Shutting down and abandoning module AudioMixerCore (621)
+[2023.02.05-18.12.14:834][ 54]LogModuleManager: Shutting down and abandoning module AIModule (618)
+[2023.02.05-18.12.14:834][ 54]LogModuleManager: Shutting down and abandoning module GameplayDebugger (617)
+[2023.02.05-18.12.14:834][ 54]LogModuleManager: Shutting down and abandoning module AITestSuite (615)
+[2023.02.05-18.12.14:834][ 54]LogModuleManager: Shutting down and abandoning module NavigationSystem (613)
+[2023.02.05-18.12.14:834][ 54]LogModuleManager: Shutting down and abandoning module ImageWriteQueue (610)
+[2023.02.05-18.12.14:838][ 54]LogModuleManager: Shutting down and abandoning module ProfilerService (608)
+[2023.02.05-18.12.15:013][ 54]LogModuleManager: Shutting down and abandoning module TaskGraph (606)
+[2023.02.05-18.12.15:013][ 54]LogModuleManager: Shutting down and abandoning module AudioSynesthesiaEditor (604)
+[2023.02.05-18.12.15:013][ 54]LogModuleManager: Shutting down and abandoning module OculusEditor (602)
+[2023.02.05-18.12.15:013][ 54]LogModuleManager: Shutting down and abandoning module OculusInput (600)
+[2023.02.05-18.12.15:013][ 54]LogModuleManager: Shutting down and abandoning module ContentBrowserFileDataSource (598)
+[2023.02.05-18.12.15:013][ 54]LogModuleManager: Shutting down and abandoning module ContentBrowserClassDataSource (596)
+[2023.02.05-18.12.15:013][ 54]LogModuleManager: Shutting down and abandoning module ContentBrowserAssetDataSource (594)
+[2023.02.05-18.12.15:013][ 54]LogModuleManager: Shutting down and abandoning module CollectionManager (593)
+[2023.02.05-18.12.15:013][ 54]LogModuleManager: Shutting down and abandoning module SynthesisEditor (590)
+[2023.02.05-18.12.15:013][ 54]LogModuleManager: Shutting down and abandoning module Synthesis (588)
+[2023.02.05-18.12.15:013][ 54]LogModuleManager: Shutting down and abandoning module ProceduralMeshComponentEditor (586)
+[2023.02.05-18.12.15:013][ 54]LogModuleManager: Shutting down and abandoning module ProceduralMeshComponent (584)
+[2023.02.05-18.12.15:013][ 54]LogModuleManager: Shutting down and abandoning module TakeSequencer (582)
+[2023.02.05-18.12.15:013][ 54]LogModuleManager: Shutting down and abandoning module TakeMovieScene (580)
+[2023.02.05-18.12.15:013][ 54]LogModuleManager: Shutting down and abandoning module ScreenshotTools (578)
+[2023.02.05-18.12.15:013][ 54]LogModuleManager: Shutting down and abandoning module OpenXREditor (576)
+[2023.02.05-18.12.15:013][ 54]LogModuleManager: Shutting down and abandoning module MobilePatchingUtils (574)
+[2023.02.05-18.12.15:013][ 54]LogModuleManager: Shutting down and abandoning module GooglePAD (572)
+[2023.02.05-18.12.15:013][ 54]LogModuleManager: Shutting down and abandoning module EditableMesh (570)
+[2023.02.05-18.12.15:013][ 54]LogModuleManager: Shutting down and abandoning module CustomMeshComponent (568)
+[2023.02.05-18.12.15:013][ 54]LogModuleManager: Shutting down and abandoning module CableComponent (566)
+[2023.02.05-18.12.15:013][ 54]LogModuleManager: Shutting down and abandoning module AudioCapture (564)
+[2023.02.05-18.12.15:013][ 54]LogModuleManager: Shutting down and abandoning module AudioCaptureRtAudio (563)
+[2023.02.05-18.12.15:013][ 54]LogModuleManager: Shutting down and abandoning module AssetTags (560)
+[2023.02.05-18.12.15:013][ 54]LogModuleManager: Shutting down and abandoning module ArchVisCharacter (558)
+[2023.02.05-18.12.15:013][ 54]LogModuleManager: Shutting down and abandoning module AppleImageUtilsBlueprintSupport (556)
+[2023.02.05-18.12.15:013][ 54]LogModuleManager: Shutting down and abandoning module AppleImageUtils (554)
+[2023.02.05-18.12.15:013][ 54]LogModuleManager: Shutting down and abandoning module AndroidPermission (552)
+[2023.02.05-18.12.15:013][ 54]LogModuleManager: Shutting down and abandoning module ActorLayerUtilitiesEditor (550)
+[2023.02.05-18.12.15:013][ 54]LogModuleManager: Shutting down and abandoning module ActorLayerUtilities (548)
+[2023.02.05-18.12.15:013][ 54]LogModuleManager: Shutting down and abandoning module ImgMedia (546)
+[2023.02.05-18.12.15:013][ 54]LogModuleManager: Shutting down and abandoning module MediaCompositing (544)
+[2023.02.05-18.12.15:013][ 54]LogModuleManager: Shutting down and abandoning module TemplateSequence (542)
+[2023.02.05-18.12.15:013][ 54]LogModuleManager: Shutting down and abandoning module MagicLeapSharedWorld (540)
+[2023.02.05-18.12.15:013][ 54]LogModuleManager: Shutting down and abandoning module MagicLeapLightEstimation (538)
+[2023.02.05-18.12.15:013][ 54]LogModuleManager: Shutting down and abandoning module MagicLeapHelperVulkan (536)
+[2023.02.05-18.12.15:013][ 54]LogModuleManager: Shutting down and abandoning module MagicLeapHelperOpenGL (534)
+[2023.02.05-18.12.15:013][ 54]LogModuleManager: Shutting down and abandoning module MagicLeapAudio (532)
+[2023.02.05-18.12.15:013][ 54]LogModuleManager: Shutting down and abandoning module OpenImageDenoise (530)
+[2023.02.05-18.12.15:013][ 54]LogOpenImageDenoise: OIDN shutting down
+[2023.02.05-18.12.15:013][ 54]LogModuleManager: Shutting down and abandoning module MotoSynthEditor (528)
+[2023.02.05-18.12.15:014][ 54]LogModuleManager: Shutting down and abandoning module MotoSynth (526)
+[2023.02.05-18.12.15:014][ 54]LogModuleManager: Shutting down and abandoning module MeshConversion (524)
+[2023.02.05-18.12.15:014][ 54]LogModuleManager: Shutting down and abandoning module DynamicMesh (522)
+[2023.02.05-18.12.15:014][ 54]LogModuleManager: Shutting down and abandoning module GeometryAlgorithms (520)
+[2023.02.05-18.12.15:014][ 54]LogModuleManager: Shutting down and abandoning module GeometricObjects (518)
+[2023.02.05-18.12.15:014][ 54]LogModuleManager: Shutting down and abandoning module NiagaraEditorWidgets (516)
+[2023.02.05-18.12.15:014][ 54]LogModuleManager: Shutting down and abandoning module GeometryCollectionTracks (514)
+[2023.02.05-18.12.15:014][ 54]LogModuleManager: Shutting down and abandoning module GeometryCollectionSequencer (513)
+[2023.02.05-18.12.15:014][ 54]LogModuleManager: Shutting down and abandoning module GeometryCollectionEditor (510)
+[2023.02.05-18.12.15:014][ 54]LogModuleManager: Shutting down and abandoning module GeometryCacheTracks (508)
+[2023.02.05-18.12.15:014][ 54]LogModuleManager: Shutting down and abandoning module GeometryCacheStreamer (506)
+[2023.02.05-18.12.15:014][ 54]LogModuleManager: Shutting down and abandoning module GeometryCacheSequencer (504)
+[2023.02.05-18.12.15:014][ 54]LogModuleManager: Shutting down and abandoning module VariantManagerContentEditor (502)
+[2023.02.05-18.12.15:014][ 54]LogModuleManager: Shutting down and abandoning module SpeedTreeImporter (500)
+[2023.02.05-18.12.15:014][ 54]LogModuleManager: Shutting down and abandoning module PluginBrowser (498)
+[2023.02.05-18.12.15:014][ 54]LogModuleManager: Shutting down and abandoning module MobileLauncherProfileWizard (496)
+[2023.02.05-18.12.15:014][ 54]LogModuleManager: Shutting down and abandoning module MaterialAnalyzer (494)
+[2023.02.05-18.12.15:014][ 54]LogModuleManager: Shutting down and abandoning module ChaosSolverEditor (492)
+[2023.02.05-18.12.15:014][ 54]LogModuleManager: Shutting down and abandoning module ChaosNiagara (490)
+[2023.02.05-18.12.15:014][ 54]LogModuleManager: Shutting down and abandoning module FractureEditor (488)
+[2023.02.05-18.12.15:014][ 54]LogModuleManager: Shutting down and abandoning module FieldSystemEngine (487)
+[2023.02.05-18.12.15:014][ 54]LogModuleManager: Shutting down and abandoning module ChaosClothEditor (484)
+[2023.02.05-18.12.15:014][ 54]LogModuleManager: Shutting down and abandoning module DatasmithContentEditor (482)
+[2023.02.05-18.12.15:014][ 54]LogModuleManager: Shutting down and abandoning module CryptoKeysOpenSSL (480)
+[2023.02.05-18.12.15:014][ 54]LogModuleManager: Shutting down and abandoning module CryptoKeys (478)
+[2023.02.05-18.12.15:014][ 54]LogModuleManager: Shutting down and abandoning module CurveEditorTools (476)
+[2023.02.05-18.12.15:014][ 54]LogModuleManager: Shutting down and abandoning module BackChannel (474)
+[2023.02.05-18.12.15:014][ 54]LogModuleManager: Shutting down and abandoning module AutomationUtilsEditor (472)
+[2023.02.05-18.12.15:014][ 54]LogModuleManager: Shutting down and abandoning module AutomationUtils (470)
+[2023.02.05-18.12.15:014][ 54]LogModuleManager: Shutting down and abandoning module AlembicImporter (468)
+[2023.02.05-18.12.15:014][ 54]LogModuleManager: Shutting down and abandoning module AlembicLibrary (467)
+[2023.02.05-18.12.15:014][ 54]LogModuleManager: Shutting down and abandoning module GeometryCache (466)
+[2023.02.05-18.12.15:014][ 54]LogModuleManager: Shutting down and abandoning module GeometryCacheEd (465)
+[2023.02.05-18.12.15:014][ 54]LogModuleManager: Shutting down and abandoning module VisualStudioCodeSourceCodeAccess (460)
+[2023.02.05-18.12.15:014][ 54]LogModuleManager: Shutting down and abandoning module VisualStudioSourceCodeAccess (458)
+[2023.02.05-18.12.15:014][ 54]LogModuleManager: Shutting down and abandoning module UObjectPlugin (456)
+[2023.02.05-18.12.15:014][ 54]LogModuleManager: Shutting down and abandoning module SubversionSourceControl (454)
+[2023.02.05-18.12.15:014][ 54]LogModuleManager: Shutting down and abandoning module RiderSourceCodeAccess (452)
+[2023.02.05-18.12.15:014][ 54]LogModuleManager: Shutting down and abandoning module PlasticSourceControl (450)
+[2023.02.05-18.12.15:014][ 54]LogModuleManager: Shutting down and abandoning module PluginUtils (448)
+[2023.02.05-18.12.15:014][ 54]LogModuleManager: Shutting down and abandoning module PerforceSourceControl (446)
+[2023.02.05-18.12.15:014][ 54]LogModuleManager: Shutting down and abandoning module GitSourceControl (444)
+[2023.02.05-18.12.15:014][ 54]LogModuleManager: Shutting down and abandoning module SourceControl (443)
+[2023.02.05-18.12.15:014][ 54]LogModuleManager: Shutting down and abandoning module OodleNetworkHandlerComponent (440)
+[2023.02.05-18.12.15:014][ 54]LogModuleManager: Shutting down and abandoning module CLionSourceCodeAccess (438)
+[2023.02.05-18.12.15:014][ 54]LogModuleManager: Shutting down and abandoning module AnimationSharingEd (436)
+[2023.02.05-18.12.15:014][ 54]LogModuleManager: Shutting down and abandoning module LightPropagationVolumeEditor (434)
+[2023.02.05-18.12.15:014][ 54]LogModuleManager: Shutting down and abandoning module LiveLinkSequencer (432)
+[2023.02.05-18.12.15:014][ 54]LogModuleManager: Shutting down and abandoning module LiveLinkMovieScene (430)
+[2023.02.05-18.12.15:014][ 54]LogModuleManager: Shutting down and abandoning module LiveLinkGraphNode (428)
+[2023.02.05-18.12.15:014][ 54]LogModuleManager: Shutting down and abandoning module LiveLinkEditor (426)
+[2023.02.05-18.12.15:014][ 54]LogModuleManager: Shutting down and abandoning module LiveLinkComponents (424)
+[2023.02.05-18.12.15:014][ 54]LogModuleManager: Shutting down and abandoning module LiveLink (422)
+[2023.02.05-18.12.15:352][ 54]LogModuleManager: Shutting down and abandoning module PaperTiledImporter (420)
+[2023.02.05-18.12.15:352][ 54]LogModuleManager: Shutting down and abandoning module PaperSpriteSheetImporter (418)
+[2023.02.05-18.12.15:352][ 54]LogModuleManager: Shutting down and abandoning module Paper2DEditor (416)
+[2023.02.05-18.12.15:352][ 54]LogModuleManager: Shutting down and abandoning module MeshPaintingToolset (414)
+[2023.02.05-18.12.15:352][ 54]LogModuleManager: Shutting down and abandoning module MeshPaintEditorMode (412)
+[2023.02.05-18.12.15:352][ 54]LogModuleManager: Shutting down and abandoning module SoundFields (410)
+[2023.02.05-18.12.15:352][ 54]LogModuleManager: Shutting down and abandoning module SignificanceManager (408)
+[2023.02.05-18.12.15:352][ 54]LogModuleManager: Shutting down and abandoning module RuntimePhysXCooking (406)
+[2023.02.05-18.12.15:352][ 54]LogModuleManager: Shutting down and abandoning module PropertyAccessEditor (404)
+[2023.02.05-18.12.15:352][ 54]LogModuleManager: Shutting down and abandoning module PhysXVehiclesEditor (402)
+[2023.02.05-18.12.15:352][ 54]LogModuleManager: Shutting down and abandoning module LocationServicesBPLibrary (398)
+[2023.02.05-18.12.15:352][ 54]LogModuleManager: Shutting down and abandoning module AudioSynesthesia (396)
+[2023.02.05-18.12.15:352][ 54]LogModuleManager: Shutting down and abandoning module AudioSynesthesiaCore (394)
+[2023.02.05-18.12.15:352][ 54]LogModuleManager: Shutting down and abandoning module ImgMediaEngine (392)
+[2023.02.05-18.12.15:352][ 54]LogModuleManager: Shutting down and abandoning module ActorSequence (390)
+[2023.02.05-18.12.15:352][ 54]LogModuleManager: Shutting down and abandoning module UdpMessaging (388)
+[2023.02.05-18.12.15:453][ 54]LogModuleManager: Shutting down and abandoning module TcpMessaging (386)
+[2023.02.05-18.12.15:554][ 54]LogModuleManager: Shutting down and abandoning module MagicLeapARPin (384)
+[2023.02.05-18.12.15:554][ 54]LogModuleManager: Shutting down and abandoning module MagicLeapHandMeshing (382)
+[2023.02.05-18.12.15:554][ 54]LogModuleManager: Shutting down and abandoning module MagicLeapSecureStorage (380)
+[2023.02.05-18.12.15:554][ 54]LogModuleManager: Shutting down and abandoning module MagicLeapPrivileges (378)
+[2023.02.05-18.12.15:554][ 54]LogModuleManager: Shutting down and abandoning module MagicLeapPlanes (376)
+[2023.02.05-18.12.15:554][ 54]LogMagicLeapPlanes: Planes tracker already destroyed.
+[2023.02.05-18.12.15:554][ 54]LogModuleManager: Shutting down and abandoning module MagicLeapImageTracker (374)
+[2023.02.05-18.12.15:554][ 54]LogModuleManager: Shutting down and abandoning module MagicLeapIdentity (372)
+[2023.02.05-18.12.15:554][ 54]LogModuleManager: Shutting down and abandoning module MagicLeapHandTracking (370)
+[2023.02.05-18.12.15:554][ 54]LogModuleManager: Shutting down and abandoning module MagicLeapEyeTracker (368)
+[2023.02.05-18.12.15:554][ 54]LogModuleManager: Shutting down and abandoning module MagicLeapController (366)
+[2023.02.05-18.12.15:554][ 54]LogModuleManager: Shutting down and abandoning module MagicLeapARPinImpl (364)
+[2023.02.05-18.12.15:554][ 54]LogModuleManager: Shutting down and abandoning module MagicLeapAR (362)
+[2023.02.05-18.12.15:554][ 54]LogModuleManager: Shutting down and abandoning module PythonScriptPlugin (360)
+[2023.02.05-18.12.15:554][ 54]LogModuleManager: Shutting down and abandoning module NiagaraAnimNotifies (358)
+[2023.02.05-18.12.15:554][ 54]LogModuleManager: Shutting down and abandoning module Niagara (356)
+[2023.02.05-18.12.15:554][ 54]LogModuleManager: Shutting down and abandoning module SignalProcessing (355)
+[2023.02.05-18.12.15:554][ 54]LogModuleManager: Shutting down and abandoning module NiagaraEditor (353)
+[2023.02.05-18.12.15:554][ 54]LogModuleManager: Shutting down and abandoning module NiagaraCore (350)
+[2023.02.05-18.12.15:554][ 54]LogModuleManager: Shutting down and abandoning module GameplayTagsEditor (348)
+[2023.02.05-18.12.15:554][ 54]LogModuleManager: Shutting down and abandoning module FacialAnimationEditor (346)
+[2023.02.05-18.12.15:554][ 54]LogModuleManager: Shutting down and abandoning module FacialAnimation (344)
+[2023.02.05-18.12.15:554][ 54]LogModuleManager: Shutting down and abandoning module DataValidation (342)
+[2023.02.05-18.12.15:554][ 54]LogModuleManager: Shutting down and abandoning module AssetManagerEditor (340)
+[2023.02.05-18.12.15:554][ 54]LogModuleManager: Shutting down and abandoning module LevelEditor (339)
+[2023.02.05-18.12.15:556][ 54]LogModuleManager: Shutting down and abandoning module PixelInspectorModule (338)
+[2023.02.05-18.12.15:556][ 54]LogModuleManager: Shutting down and abandoning module CommonMenuExtensions (336)
+[2023.02.05-18.12.15:556][ 54]LogModuleManager: Shutting down and abandoning module MainFrame (334)
+[2023.02.05-18.12.15:556][ 54]LogModuleManager: Shutting down and abandoning module HotReload (333)
+[2023.02.05-18.12.15:556][ 54]LogModuleManager: Shutting down and abandoning module ToolMenus (329)
+[2023.02.05-18.12.15:556][ 54]LogModuleManager: Shutting down and abandoning module ContentBrowser (327)
+[2023.02.05-18.12.15:556][ 54]LogModuleManager: Shutting down and abandoning module ContentBrowserData (326)
+[2023.02.05-18.12.15:556][ 54]LogModuleManager: Shutting down and abandoning module TreeMap (323)
+[2023.02.05-18.12.15:556][ 54]LogModuleManager: Shutting down and abandoning module PropertyAccessNode (320)
+[2023.02.05-18.12.15:556][ 54]LogModuleManager: Shutting down and abandoning module AnimationSharing (318)
+[2023.02.05-18.12.15:556][ 54]LogModuleManager: Shutting down and abandoning module LightPropagationVolumeRuntime (316)
+[2023.02.05-18.12.15:556][ 54]LogModuleManager: Shutting down and abandoning module GameplayCameras (314)
+[2023.02.05-18.12.15:556][ 54]LogModuleManager: Shutting down and abandoning module EnvironmentQueryEditor (312)
+[2023.02.05-18.12.15:556][ 54]LogModuleManager: Shutting down and abandoning module Paper2D (310)
+[2023.02.05-18.12.15:556][ 54]LogModuleManager: Shutting down and abandoning module WindowsMoviePlayer (308)
+[2023.02.05-18.12.15:557][ 54]LogModuleManager: Shutting down and abandoning module WebMMoviePlayer (306)
+[2023.02.05-18.12.15:557][ 54]LogModuleManager: Shutting down and abandoning module NetworkReplayStreaming (304)
+[2023.02.05-18.12.15:557][ 54]LogModuleManager: Shutting down and abandoning module PacketHandler (302)
+[2023.02.05-18.12.15:557][ 54]LogModuleManager: Shutting down and abandoning module ClothingSystemEditor (300)
+[2023.02.05-18.12.15:557][ 54]LogModuleManager: Shutting down and abandoning module ClothingSystemRuntimeNv (298)
+[2023.02.05-18.12.15:557][ 54]LogModuleManager: Shutting down and abandoning module MediaAssets (296)
+[2023.02.05-18.12.15:557][ 54]LogModuleManager: Shutting down and abandoning module Overlay (294)
+[2023.02.05-18.12.15:557][ 54]LogModuleManager: Shutting down and abandoning module OverlayEditor (293)
+[2023.02.05-18.12.15:557][ 54]LogModuleManager: Shutting down and abandoning module VREditor (290)
+[2023.02.05-18.12.15:557][ 54]LogModuleManager: Shutting down and abandoning module StringTableEditor (288)
+[2023.02.05-18.12.15:557][ 54]LogModuleManager: Shutting down and abandoning module GameplayTasksEditor (286)
+[2023.02.05-18.12.15:557][ 54]LogModuleManager: Shutting down and abandoning module BehaviorTreeEditor (284)
+[2023.02.05-18.12.15:557][ 54]LogModuleManager: Shutting down and abandoning module FunctionalTesting (282)
+[2023.02.05-18.12.15:557][ 54]LogModuleManager: Shutting down and abandoning module CollisionAnalyzer (280)
+[2023.02.05-18.12.15:557][ 54]LogModuleManager: Shutting down and abandoning module WorkspaceMenuStructure (279)
+[2023.02.05-18.12.15:557][ 54]LogModuleManager: Shutting down and abandoning module UMG (276)
+[2023.02.05-18.12.15:557][ 54]LogModuleManager: Shutting down and abandoning module UMGEditor (275)
+[2023.02.05-18.12.15:557][ 54]LogModuleManager: Shutting down and abandoning module MessageLog (273)
+[2023.02.05-18.12.15:557][ 54]LogModuleManager: Shutting down and abandoning module SlateReflector (268)
+[2023.02.05-18.12.15:557][ 54]LogModuleManager: Shutting down and abandoning module Slate (266)
+[2023.02.05-18.12.15:557][ 54]LogModuleManager: Shutting down and abandoning module SlateCore (264)
+[2023.02.05-18.12.15:558][ 54]LogModuleManager: Shutting down and abandoning module LandscapeEditorUtilities (262)
+[2023.02.05-18.12.15:558][ 54]LogModuleManager: Shutting down and abandoning module UnrealEd (260)
+[2023.02.05-18.12.15:558][ 54]LogModuleManager: Shutting down and abandoning module MRMesh (258)
+[2023.02.05-18.12.15:558][ 54]LogModuleManager: Shutting down and abandoning module SourceCodeAccess (256)
+[2023.02.05-18.12.15:558][ 54]LogModuleManager: Shutting down and abandoning module HeadMountedDisplay (254)
+[2023.02.05-18.12.15:558][ 54]LogModuleManager: Shutting down and abandoning module XAudio2 (252)
+[2023.02.05-18.12.15:558][ 54]LogModuleManager: Shutting down and abandoning module Networking (250)
+[2023.02.05-18.12.15:558][ 54]LogModuleManager: Shutting down and abandoning module Core (248)
+[2023.02.05-18.12.15:558][ 54]LogModuleManager: Shutting down and abandoning module MaterialEditor (246)
+[2023.02.05-18.12.15:558][ 54]LogModuleManager: Shutting down and abandoning module MovieSceneTools (244)
+[2023.02.05-18.12.15:559][ 54]LogModuleManager: Shutting down and abandoning module CurveEditor (243)
+[2023.02.05-18.12.15:559][ 54]LogModuleManager: Shutting down and abandoning module Sequencer (241)
+[2023.02.05-18.12.15:559][ 54]LogModuleManager: Shutting down and abandoning module EditorStyle (240)
+[2023.02.05-18.12.15:559][ 54]LogModuleManager: Shutting down and abandoning module KismetCompiler (236)
+[2023.02.05-18.12.15:559][ 54]LogModuleManager: Shutting down and abandoning module MeshBuilder (234)
+[2023.02.05-18.12.15:559][ 54]LogModuleManager: Shutting down and abandoning module MeshUtilities (232)
+[2023.02.05-18.12.15:560][ 54]LogModuleManager: Shutting down and abandoning module MeshMergeUtilities (231)
+[2023.02.05-18.12.15:560][ 54]LogModuleManager: Shutting down and abandoning module MeshReductionInterface (230)
+[2023.02.05-18.12.15:560][ 54]LogModuleManager: Shutting down and abandoning module MeshBoneReduction (229)
+[2023.02.05-18.12.15:560][ 54]LogModuleManager: Shutting down and abandoning module SkeletalMeshReduction (227)
+[2023.02.05-18.12.15:560][ 54]LogModuleManager: Shutting down and abandoning module ProxyLODMeshReduction (225)
+[2023.02.05-18.12.15:560][ 54]LogModuleManager: Shutting down and abandoning module QuadricMeshReduction (223)
+[2023.02.05-18.12.15:560][ 54]LogModuleManager: Shutting down and abandoning module MaterialBaking (219)
+[2023.02.05-18.12.15:560][ 54]LogModuleManager: Shutting down and abandoning module NullInstallBundleManager (214)
+[2023.02.05-18.12.15:560][ 54]LogModuleManager: Shutting down and abandoning module DerivedDataCache (212)
+[2023.02.05-18.12.15:560][ 54]LogModuleManager: Shutting down and abandoning module TargetPlatform (210)
+[2023.02.05-18.12.15:560][ 54]LogModuleManager: Shutting down and abandoning module VulkanShaderFormat (209)
+[2023.02.05-18.12.15:560][ 54]LogModuleManager: Shutting down and abandoning module ShaderFormatVectorVM (207)
+[2023.02.05-18.12.15:560][ 54]LogModuleManager: Shutting down and abandoning module ShaderFormatOpenGL (205)
+[2023.02.05-18.12.15:560][ 54]LogModuleManager: Shutting down and abandoning module ShaderFormatD3D (203)
+[2023.02.05-18.12.15:560][ 54]LogModuleManager: Shutting down and abandoning module MetalShaderFormat (201)
+[2023.02.05-18.12.15:560][ 54]LogModuleManager: Shutting down and abandoning module TextureFormatOodle (199)
+[2023.02.05-18.12.15:560][ 54]LogModuleManager: Shutting down and abandoning module TextureFormatUncompressed (197)
+[2023.02.05-18.12.15:560][ 54]LogModuleManager: Shutting down and abandoning module TextureFormatPVR (195)
+[2023.02.05-18.12.15:560][ 54]LogModuleManager: Shutting down and abandoning module TextureFormatETC2 (193)
+[2023.02.05-18.12.15:560][ 54]LogModuleManager: Shutting down and abandoning module TextureFormatDXT (191)
+[2023.02.05-18.12.15:560][ 54]LogModuleManager: Shutting down and abandoning module TextureFormatIntelISPCTexComp (189)
+[2023.02.05-18.12.15:560][ 54]LogModuleManager: Shutting down and abandoning module TextureFormatASTC (187)
+[2023.02.05-18.12.15:560][ 54]LogModuleManager: Shutting down and abandoning module ImageWrapper (186)
+[2023.02.05-18.12.15:560][ 54]LogModuleManager: Shutting down and abandoning module AudioFormatOpus (183)
+[2023.02.05-18.12.15:560][ 54]LogModuleManager: Shutting down and abandoning module AudioFormatOgg (181)
+[2023.02.05-18.12.15:560][ 54]LogModuleManager: Shutting down and abandoning module AudioFormatADPCM (179)
+[2023.02.05-18.12.15:560][ 54]LogModuleManager: Shutting down and abandoning module WindowsServerTargetPlatform (177)
+[2023.02.05-18.12.15:560][ 54]LogModuleManager: Shutting down and abandoning module WindowsClientTargetPlatform (175)
+[2023.02.05-18.12.15:560][ 54]LogModuleManager: Shutting down and abandoning module WindowsTargetPlatform (173)
+[2023.02.05-18.12.15:560][ 54]LogModuleManager: Shutting down and abandoning module WindowsNoEditorTargetPlatform (171)
+[2023.02.05-18.12.15:560][ 54]LogModuleManager: Shutting down and abandoning module TVOSTargetPlatform (169)
+[2023.02.05-18.12.15:561][ 54]LogModuleManager: Shutting down and abandoning module MacServerTargetPlatform (167)
+[2023.02.05-18.12.15:561][ 54]LogModuleManager: Shutting down and abandoning module MacClientTargetPlatform (165)
+[2023.02.05-18.12.15:561][ 54]LogModuleManager: Shutting down and abandoning module MacTargetPlatform (163)
+[2023.02.05-18.12.15:561][ 54]LogModuleManager: Shutting down and abandoning module MacNoEditorTargetPlatform (161)
+[2023.02.05-18.12.15:561][ 54]LogModuleManager: Shutting down and abandoning module LuminTargetPlatform (159)
+[2023.02.05-18.12.15:562][ 54]LogModuleManager: Shutting down and abandoning module LinuxAArch64ServerTargetPlatform (157)
+[2023.02.05-18.12.15:562][ 54]LogModuleManager: Shutting down and abandoning module LinuxAArch64ClientTargetPlatform (155)
+[2023.02.05-18.12.15:562][ 54]LogModuleManager: Shutting down and abandoning module LinuxAArch64NoEditorTargetPlatform (153)
+[2023.02.05-18.12.15:562][ 54]LogModuleManager: Shutting down and abandoning module LinuxServerTargetPlatform (151)
+[2023.02.05-18.12.15:562][ 54]LogModuleManager: Shutting down and abandoning module LinuxClientTargetPlatform (149)
+[2023.02.05-18.12.15:562][ 54]LogModuleManager: Shutting down and abandoning module LinuxNoEditorTargetPlatform (147)
+[2023.02.05-18.12.15:562][ 54]LogModuleManager: Shutting down and abandoning module LinuxTargetPlatform (145)
+[2023.02.05-18.12.15:562][ 54]LogModuleManager: Shutting down and abandoning module Messaging (143)
+[2023.02.05-18.12.15:562][ 54]LogModuleManager: Shutting down and abandoning module IOSTargetPlatform (141)
+[2023.02.05-18.12.15:562][ 54]LogModuleManager: Shutting down and abandoning module AndroidTargetPlatform (139)
+[2023.02.05-18.12.15:566][ 54]LogModuleManager: Shutting down and abandoning module AllDesktopTargetPlatform (137)
+[2023.02.05-18.12.15:566][ 54]LogModuleManager: Shutting down and abandoning module D3D11RHI (134)
+[2023.02.05-18.12.15:566][ 54]LogModuleManager: Shutting down and abandoning module InputCore (132)
+[2023.02.05-18.12.15:566][ 54]LogModuleManager: Shutting down and abandoning module Settings (130)
+[2023.02.05-18.12.15:566][ 54]LogModuleManager: Shutting down and abandoning module DirectoryWatcher (128)
+[2023.02.05-18.12.15:566][ 54]LogModuleManager: Shutting down and abandoning module PhysXCooking (126)
+[2023.02.05-18.12.15:566][ 54]LogModuleManager: Shutting down and abandoning module Chaos (124)
+[2023.02.05-18.12.15:566][ 54]LogModuleManager: Shutting down and abandoning module WindowsPlatformFeatures (122)
+[2023.02.05-18.12.15:566][ 54]LogModuleManager: Shutting down and abandoning module GameplayMediaEncoder (121)
+[2023.02.05-18.12.15:566][ 54]LogModuleManager: Shutting down and abandoning module AVEncoder (120)
+[2023.02.05-18.12.15:566][ 54]LogModuleManager: Shutting down and abandoning module SteamVRInputDevice (116)
+[2023.02.05-18.12.15:566][ 54]LogModuleManager: Shutting down and abandoning module SteamVRInput (114)
+[2023.02.05-18.12.15:566][ 54]LogModuleManager: Shutting down and abandoning module SteamVR (112)
+[2023.02.05-18.12.15:566][ 54]LogHMD: Freeing OpenVRDLLHandle.
+[2023.02.05-18.12.15:566][ 54]LogModuleManager: Shutting down and abandoning module OculusHMD (110)
+[2023.02.05-18.12.15:566][ 54]LogModuleManager: Shutting down and abandoning module OpenXRHandTracking (108)
+[2023.02.05-18.12.15:566][ 54]LogSlate: Slate User Destroyed.  User Index 0, Is Virtual User: 0
+[2023.02.05-18.12.15:567][ 54]LogModuleManager: Shutting down and abandoning module OpenXREyeTracker (106)
+[2023.02.05-18.12.15:567][ 54]LogModuleManager: Shutting down and abandoning module OpenXRAR (104)
+[2023.02.05-18.12.15:567][ 54]LogModuleManager: Shutting down and abandoning module AugmentedReality (103)
+[2023.02.05-18.12.15:567][ 54]LogModuleManager: Shutting down and abandoning module OpenXRHMD (100)
+[2023.02.05-18.12.15:567][ 54]LogModuleManager: Shutting down and abandoning module ExampleDeviceProfileSelector (98)
+[2023.02.05-18.12.15:567][ 54]LogModuleManager: Shutting down and abandoning module ChunkDownloader (96)
+[2023.02.05-18.12.15:567][ 54]LogModuleManager: Shutting down and abandoning module LauncherChunkInstaller (94)
+[2023.02.05-18.12.15:567][ 54]LogModuleManager: Shutting down and abandoning module OnlineBlueprintSupport (92)
+[2023.02.05-18.12.15:567][ 54]LogModuleManager: Shutting down and abandoning module OnlineSubsystem (88)
+[2023.02.05-18.12.15:568][ 54]LogModuleManager: Shutting down and abandoning module XMPP (83)
+[2023.02.05-18.12.15:569][ 54]LogModuleManager: Shutting down and abandoning module WebSockets (82)
+[2023.02.05-18.12.15:580][ 54]LogModuleManager: Shutting down and abandoning module HTTP (79)
+[2023.02.05-18.12.15:580][ 54]LogHttp: Display: Http module shutting down, but needs to wait on 1 outstanding Http requests:
+[2023.02.05-18.12.15:580][ 54]LogHttp: Display: 	verb=[POST] url=[https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B8ADFDA90-4294-3248-0AE3-19B51AA698AE%7D&AppID=UEEditor.Rocket.Release&AppVersion=4.27.2-18319896%2B%2B%2BUE4%2BRelease-4.27&UserID=72c8650b43ffae36ad3d6e8e704f9432%7C08ac997ba57a42fdbce60827f0da4e04%7C5b6f97e2-3707-45e2-a865-6cbe59d533f9&AppEnvironment=datacollector-binary&UploadType=eteventstream] refs=[1] status=Processing
+[2023.02.05-18.12.15:580][ 54]LogHttp: Display: cleaning up 1 outstanding Http requests.
+[2023.02.05-18.12.15:600][ 54]LogModuleManager: Shutting down and abandoning module SSL (78)
+[2023.02.05-18.12.15:601][ 54]LogModuleManager: Shutting down and abandoning module WmfMedia (74)
+[2023.02.05-18.12.15:602][ 54]LogModuleManager: Shutting down and abandoning module Media (73)
+[2023.02.05-18.12.15:603][ 54]LogModuleManager: Shutting down and abandoning module MediaInfo (72)
+[2023.02.05-18.12.15:603][ 54]LogModuleManager: Shutting down and abandoning module ExrReaderGpu (68)
+[2023.02.05-18.12.15:603][ 54]LogModuleManager: Shutting down and abandoning module MLSDK (66)
+[2023.02.05-18.12.15:603][ 54]LogModuleManager: Shutting down and abandoning module MagicLeap (64)
+[2023.02.05-18.12.15:603][ 54]LogModuleManager: Shutting down and abandoning module NiagaraVertexFactories (62)
+[2023.02.05-18.12.15:603][ 54]LogModuleManager: Shutting down and abandoning module NiagaraShader (60)
+[2023.02.05-18.12.15:603][ 54]LogModuleManager: Shutting down and abandoning module VariantManagerContent (58)
+[2023.02.05-18.12.15:603][ 54]LogModuleManager: Shutting down and abandoning module DatasmithContent (56)
+[2023.02.05-18.12.15:603][ 54]LogModuleManager: Shutting down and abandoning module ChaosCloth (54)
+[2023.02.05-18.12.15:603][ 54]LogModuleManager: Shutting down and abandoning module PixWinPlugin (52)
+[2023.02.05-18.12.15:603][ 54]LogModuleManager: Shutting down and abandoning module AISupportModule (50)
+[2023.02.05-18.12.15:603][ 54]LogModuleManager: Shutting down and abandoning module DesktopPlatform (48)
+[2023.02.05-18.12.15:603][ 54]LogModuleManager: Shutting down and abandoning module PythonScriptPluginPreload (46)
+[2023.02.05-18.12.15:603][ 54]LogModuleManager: Shutting down and abandoning module PlatformCryptoOpenSSL (44)
+[2023.02.05-18.12.15:603][ 54]LogModuleManager: Shutting down and abandoning module PlatformCryptoTypes (42)
+[2023.02.05-18.12.15:603][ 54]LogModuleManager: Shutting down and abandoning module PlatformCrypto (40)
+[2023.02.05-18.12.15:603][ 54]LogModuleManager: Shutting down and abandoning module OodleDataCompressionFormat (38)
+[2023.02.05-18.12.15:603][ 54]LogModuleManager: Shutting down and abandoning module XGEController (36)
+[2023.02.05-18.12.15:603][ 54]LogModuleManager: Shutting down and abandoning module AnimationModifiers (34)
+[2023.02.05-18.12.15:603][ 54]LogModuleManager: Shutting down and abandoning module AudioEditor (32)
+[2023.02.05-18.12.15:604][ 54]LogModuleManager: Shutting down and abandoning module PropertyEditor (31)
+[2023.02.05-18.12.15:604][ 54]LogModuleManager: Shutting down and abandoning module TextureCompressor (28)
+[2023.02.05-18.12.15:604][ 54]LogModuleManager: Shutting down and abandoning module RenderCore (26)
+[2023.02.05-18.12.15:604][ 54]LogModuleManager: Shutting down and abandoning module Landscape (24)
+[2023.02.05-18.12.15:604][ 54]LogModuleManager: Shutting down and abandoning module SlateRHIRenderer (22)
+[2023.02.05-18.12.15:604][ 54]LogModuleManager: Shutting down and abandoning module AnimGraphRuntime (20)
+[2023.02.05-18.12.15:604][ 54]LogModuleManager: Shutting down and abandoning module Renderer (18)
+[2023.02.05-18.12.15:604][ 54]LogModuleManager: Shutting down and abandoning module Engine (16)
+[2023.02.05-18.12.15:604][ 54]LogModuleManager: Shutting down and abandoning module CoreUObject (14)
+[2023.02.05-18.12.15:604][ 54]LogModuleManager: Shutting down and abandoning module NetworkFile (12)
+[2023.02.05-18.12.15:604][ 54]LogModuleManager: Shutting down and abandoning module CookedIterativeFile (10)
+[2023.02.05-18.12.15:604][ 54]LogModuleManager: Shutting down and abandoning module StreamingFile (8)
+[2023.02.05-18.12.15:604][ 54]LogModuleManager: Shutting down and abandoning module SandboxFile (6)
+[2023.02.05-18.12.15:604][ 54]LogModuleManager: Shutting down and abandoning module PakFile (4)
+[2023.02.05-18.12.15:604][ 54]LogModuleManager: Shutting down and abandoning module RSA (3)
+[2023.02.05-18.12.15:663][ 54]LogContentStreaming: Display: There are 1 unreleased StreamingManagers
+[2023.02.05-18.12.15:682][ 54]LogD3D11RHI: Shutdown
+[2023.02.05-18.12.15:682][ 54]LogD3D11RHI: CleanupD3DDevice
+[2023.02.05-18.12.15:684][ 54]LogExit: Exiting.
+[2023.02.05-18.12.15:697][ 54]Log file closed, 02/05/23 12:12:15
