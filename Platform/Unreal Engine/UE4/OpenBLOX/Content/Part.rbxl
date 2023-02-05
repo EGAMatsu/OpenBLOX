@@ -29,32 +29,32 @@
 				<Ref name="CameraSubject">null</Ref>
 				<token name="CameraType">0</token>
 				<CoordinateFrame name="CoordinateFrame">
-					<X>-29.9020596</X>
-					<Y>15.2464495</Y>
-					<Z>7.03937006</Z>
-					<R00>0.415804148</R00>
-					<R01>0.358932763</R01>
-					<R02>-0.835628033</R02>
-					<R10>2.65630398e-008</R10>
-					<R11>0.918823659</R11>
-					<R12>0.394668341</R12>
-					<R20>0.909454167</R20>
-					<R21>-0.16410476</R21>
-					<R22>0.382050693</R22>
+					<X>-16.9267235</X>
+					<Y>26.6817017</Y>
+					<Z>9.4011898</Z>
+					<R00>0.838530302</R00>
+					<R01>0.279767662</R01>
+					<R02>-0.467543572</R02>
+					<R10>-1.75993158e-008</R10>
+					<R11>0.858106494</R11>
+					<R12>0.513471782</R12>
+					<R20>0.544854999</R20>
+					<R21>-0.430561632</R21>
+					<R22>0.719548285</R22>
 				</CoordinateFrame>
 				<CoordinateFrame name="Focus">
-					<X>-13.1895008</X>
-					<Y>7.35308266</Y>
-					<Z>-0.601644993</Z>
-					<R00>0.415804237</R00>
-					<R01>0.358932763</R01>
-					<R02>-0.835627973</R02>
-					<R10>6.72072176e-009</R10>
-					<R11>0.918823659</R11>
-					<R12>0.394668341</R12>
-					<R20>0.909454167</R20>
-					<R21>-0.164104775</R21>
-					<R22>0.382050753</R22>
+					<X>-7.57585192</X>
+					<Y>16.4122658</Y>
+					<Z>-4.98977566</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
 				</CoordinateFrame>
 				<string name="Name">Camera</string>
 				<bool name="archivable">true</bool>
@@ -74,7 +74,7 @@
 				<int name="BrickColor">194</int>
 				<CoordinateFrame name="CFrame">
 					<X>6</X>
-					<Y>0</Y>
+					<Y>0.600000024</Y>
 					<Z>-12</Z>
 					<R00>1</R00>
 					<R01>0</R01>
@@ -126,9 +126,9 @@
 				<bool name="archivable">true</bool>
 				<token name="shape">1</token>
 				<Vector3 name="size">
-					<X>4</X>
+					<X>64</X>
 					<Y>1.20000005</Y>
-					<Z>2</Z>
+					<Z>64</Z>
 				</Vector3>
 			</Properties>
 		</Item>
@@ -145,18 +145,18 @@
 				<token name="BottomSurfaceInput">0</token>
 				<int name="BrickColor">194</int>
 				<CoordinateFrame name="CFrame">
-					<X>6</X>
-					<Y>7.80000019</Y>
-					<Z>-17</Z>
-					<R00>-0</R00>
+					<X>4</X>
+					<Y>7.79999971</Y>
+					<Z>-25</Z>
+					<R00>1</R00>
 					<R01>0</R01>
-					<R02>1</R02>
-					<R10>-0</R10>
+					<R02>0</R02>
+					<R10>0</R10>
 					<R11>1</R11>
 					<R12>0</R12>
-					<R20>-1</R20>
+					<R20>0</R20>
 					<R21>0</R21>
-					<R22>0</R22>
+					<R22>1</R22>
 				</CoordinateFrame>
 				<bool name="CanCollide">true</bool>
 				<token name="Controller">0</token>
@@ -198,8 +198,8 @@
 				<bool name="archivable">true</bool>
 				<token name="shape">1</token>
 				<Vector3 name="size">
-					<X>4</X>
-					<Y>14.4000006</Y>
+					<X>24</X>
+					<Y>13.2000008</Y>
 					<Z>2</Z>
 				</Vector3>
 			</Properties>
