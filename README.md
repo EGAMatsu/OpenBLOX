@@ -13,9 +13,12 @@ though maps in latter versions (2010+) WILL have issues.\
 
 # How to compile for DS/i:
 [Install devkitPro](https://devkitpro.org/wiki/Getting_Started)
-Clone/Download this repository\
-Extract it in a desired location if you downloaded it\
-Go to Platforms->NDS then run Make.\
+
+Clone/Download this repository
+
+Extract it in a desired location if you downloaded it
+
+Go to Platforms->NDS then run Make.
 
 # Running the game on DS/i:
 On your Flashcard/SD Card, you MUST put the maps in a folder called OpenBLOX (case sensitive.) on the root of your card.
