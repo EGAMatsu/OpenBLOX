@@ -538,9 +538,30 @@ bool extension(const std::string_view filename, const std::vector<std::string_vi
     return false;
 }
 
+bool fileIsSelected = false;
+bool _timerStarted = false;
+int _timeElapsed = 0;
+
+float oldVal = 1;
+float deltaTime_Value = 0;
+float newVal = 1;
+
+void timeInc() {
+	_timeElapsed++;
+}
+
+void timerHandler() {
+	timeInc();
+}
+
 int main(int argc, char **argv)
 {
 	consoleDemoInit();
+	
+	if(!_timerStarted) {
+		timerStart(0, ClockDivider_1, TIMER_FREQ_1024(1), timerHandler);
+		_timerStarted = true;
+	}
 	
 	/* Set Spanws to 0,0,0 */
 	spawnLocation_X[0] = 0;
@@ -583,7 +604,6 @@ int main(int argc, char **argv)
 			bool isUpPressed = false;
 			bool isDownPressed = false;
 			
-			bool fileIsSelected = false;
 			int fSelectNumb = 0;
 			
 			/* Primitive file select */
