@@ -32,6 +32,8 @@ int partCount;
 int spawnLocation_X[255], spawnLocation_Y[255], spawnLocation_Z[255];
 int spawnCount = 0;
 
+int crop = 0;
+
 void drawCylinder(float x, float y, float z, float radius, float height, float depth, int r, int g, int b, float alpha) {
 	/*
 	Renders a 7-sided cylinder that is scaled from the center outwards.
@@ -553,6 +555,7 @@ void timeInc() {
 void timerHandler() {
 	timeInc();
 }
+int cropCurrent = 0;
 
 int main(int argc, char **argv)
 {
@@ -603,6 +606,7 @@ int main(int argc, char **argv)
 			int j = 0;
 			bool isUpPressed = false;
 			bool isDownPressed = false;
+			bool isRightPressed = false;
 			
 			int fSelectNumb = 0;
 			
@@ -614,7 +618,7 @@ int main(int argc, char **argv)
 				
 				//Print filelist
 				if (j == 0) {
-					printf("-= Map Select =-\n");
+					printf("-= Map Select =- Crop is %d\n", crop);
 				}
 				int lowerMapLen = 1;
 				for (int i = 0; i <= mapLength; i++) {
@@ -626,7 +630,22 @@ int main(int argc, char **argv)
 						j += 1;
 					}
 				}
-				
+				//Is r down?
+				if ( (held & KEY_R) && (isRightPressed == false) ) {
+					printf("\e[1;1H\e[2J"); 
+					j = 0;
+					isRightPressed = true;
+					cropCurrent++;
+				}
+				if ( !(held & KEY_R) && (isRightPressed == true) ) {
+					isRightPressed = false;
+				}
+
+				if (cropCurrent > 8) {
+					cropCurrent = 0;
+				}
+				crop = cropCurrent*8;
+
 				//Is cursor going up?
 				if ( (held & KEY_UP) && (isUpPressed == false) ) {
 					printf("\e[1;1H\e[2J"); 
@@ -712,7 +731,7 @@ int main(int argc, char **argv)
 	glClearDepth(0x7FFF);
 
 	//this should work the same as the normal gl call
-	glViewport(0,0,255,191);
+	glViewport(crop,crop,255-crop,191-crop);
 
 	//any floating point gl call is being converted to fixed prior to being implemented
 	glMatrixMode(GL_PROJECTION);
