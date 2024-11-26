@@ -1,0 +1,14 @@
+*.o
+*.nds
+*.elf
+*.ds.gba
+
+*.exe
+*.64
+*.86
+*.arm
+*.arm64
+*.irix
+*.n64
+*.z64
+*.cdi
