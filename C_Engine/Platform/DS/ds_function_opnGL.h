@@ -10,8 +10,8 @@ void initOpenGL() {
     // Start GL
     glInit();
     glEnable(GL_TEXTURE_2D);
-    glClearColor(0, 0, 0, 31); // Background must be opaque for antialiasing to work
-    glClearPolyID(63); // Background must have a unique polygon ID for antialiasing to work
+    glClearColor(0, 0, 0, 31);
+    glClearPolyID(63);
     glClearDepth(0x7FFF);
     glViewport(0, 0, 255, 191);
 }
@@ -22,7 +22,7 @@ void perspectiveModeGL() {
     // Set up the projection matrix
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    gluPerspective(70, 256.0 / 192.0, 0.1, 2048); // Adjusted to match your previous example
+    gluPerspective(70, 256.0 / 192.0, 0.1, 2048);
 
     gluLookAt(  0.0, 0.0, 0.0,      // Camera position
                 0.0, 0.0, 1.0,      // Look at

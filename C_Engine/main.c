@@ -25,7 +25,7 @@ int main()
     while(isGameRunning) {
         // Do NOTHING.
         start3DFrame();
-        render_cube_transform(0, 0, 2);
+        render_cube_transform(0, 0, 2, 0, 45, 0, 1, 1, 1);
         endFrame();
     }
 

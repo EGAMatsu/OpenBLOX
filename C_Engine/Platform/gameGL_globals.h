@@ -95,11 +95,11 @@ float cube_norm[] = {
 
 void scale_rotate_translate(float xs, float ys, float zs, float rx, float ry, float rz, float tx, float ty, float tz) {
     // Use appropriate gl functions for transformations
-    glScalef(xs, ys, zs);
+    glTranslatef(tx, ty, tz);
     glRotatef(rx, 1.0, 0.0, 0.0);
     glRotatef(ry, 0.0, 1.0, 0.0);
     glRotatef(rz, 0.0, 0.0, 1.0);
-    glTranslatef(tx, ty, tz);
+    glScalef(xs, ys, zs);
 }
 
 void render_cube() {
@@ -113,9 +113,9 @@ void render_cube() {
     glEnd();
 }
 
-void render_cube_transform(float x, float y, float z) {
+void render_cube_transform(float x, float y, float z, float rx, float ry, float rz, float sx, float sy, float sz) {
     pushMatrix();
-        glTranslatef(x, y, z);
+        scale_rotate_translate(sx, sy, sz, rx, ry, rz, x, y, z);
         render_cube();
     popMatrix();
 }
