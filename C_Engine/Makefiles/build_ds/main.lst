@@ -3,21 +3,21 @@
 00000000 A __sync_synchronize
 01ff8000 t __itcm_start
 01ff8038 00000018 T __excpt_vectors
-01ff8050 00000004 t __arm_excpt_rst
-01ff8054 00000004 t __arm_excpt_pabt
-01ff8058 0000000c t __arm_excpt_und
-01ff8064 0000000c t __arm_excpt_dabt
-01ff8070 00000030 t __excpt_entry
-01ff80a0 000000e4 t __arm_excpt_irq
-01ff8184 00000088 t threadReschedule
-01ff820c 000000d4 T threadBlock
-01ff82e0 000000c0 T threadUnblockOneByValue
-01ff83a0 00000144 T threadUnblockAllByValue
-01ff84e4 00000134 T threadUnblockAllByMask
-01ff8618 0000002c T armContextSave
-01ff8644 00000020 T armContextLoad
-01ff8648 T armContextLoadFromSvc
-01ff8664 00000008 T armWaitForIrq
+01ff8050 00000088 t threadReschedule
+01ff80d8 000000d4 T threadBlock
+01ff81ac 000000c0 T threadUnblockOneByValue
+01ff826c 00000144 T threadUnblockAllByValue
+01ff83b0 00000134 T threadUnblockAllByMask
+01ff84e4 0000002c T armContextSave
+01ff8510 00000020 T armContextLoad
+01ff8514 T armContextLoadFromSvc
+01ff8530 00000008 T armWaitForIrq
+01ff8538 00000004 t __arm_excpt_rst
+01ff853c 00000004 t __arm_excpt_pabt
+01ff8540 0000000c t __arm_excpt_und
+01ff854c 0000000c t __arm_excpt_dabt
+01ff8558 00000030 t __excpt_entry
+01ff8588 000000e4 t __arm_excpt_irq
 01ff866c 0000000c T armDrainWriteBuffer
 01ff8678 00000028 T armDCacheFlushAll
 01ff86a0 0000000c T armICacheInvalidateAll
@@ -34,342 +34,357 @@
 02001360 T _init
 02001360 t __main_start
 0200136c 00000022 T exit
-02001390 0000004c T main
-020013dc t __do_global_dtors_aux
-02001408 t frame_dummy
-0200142c 000000dc t newRow
-02001508 000000e0 T consolePrintChar
-020015e8 00000320 T con_write
-02001908 00000314 T consoleLoadFont
-02001c1c 0000018c T consoleInit
-02001da8 00000040 T consoleDemoInit
-02001de8 0000006c T checkIfText
-02001e54 000000f4 T bgUpdate
-02001f48 000000b0 T bgInit_call
-02001ff8 000000b8 T bgInitSub_call
-020020b0 0000004c T sinLutLookup
-020020fc 00000038 T sinLerp
-02002134 00000048 T cosLerp
-0200217c 00000014 T __syscall_getreent
-02002190 00000024 T __errno
-020021b4 00000004 T __syscall_lock_acquire
-020021b8 00000004 T __syscall_lock_release
-020021bc 00000040 T __syscall_lock_acquire_recursive
-020021fc 00000018 T __syscall_lock_release_recursive
-02002214 00000004 t _pxiMailboxHandler
-02002218 00000004 W _pxiRecvUnhandled
-0200221c 00000154 t _pxiRecvIrqHandler
-02002370 00000058 T _pxiInit
-020023c8 00000074 T pxiSetHandler
-0200243c 00000068 T pxiSetMailbox
-020024a4 00000038 T pxiWaitRemote
-020024dc 00000050 T pxiSendPacket
-0200252c 00000004 W systemUserStartup
-02002530 00000104 W systemStartup
-02002634 00000064 T irqSet
-02002698 00000098 T threadExit
-02002730 00000010 t _threadTickTask
-02002740 00000098 T _threadInit
-020027d8 00000098 T threadPrepare
-02002870 000000c0 T threadStart
-02002930 00000098 T threadIrqWait
-020029c8 00000058 T threadSleepTicks
-02002a20 000001c4 t threadUpdateDynamicPrio
-02002be4 000001a8 t threadRemoveWaiter
-02002d8c 00000144 T mutexLock
-02002ed0 000000bc T mutexUnlock
-02002f8c 0000009c T mailboxTrySend
-02003028 0000008c T mailboxRecv
-020030b4 00000040 t _pmCallEventHandlers
-020030f4 000000a0 t _pmPxiThreadMain
-02003194 00000028 t _pmResetPxiHandler
-020031bc 00000004 W systemUserExit
-020031c0 00000004 W systemErrorExit
-020031c4 00000138 T __syscall_exit
-020032fc 00000058 T pmInit
-02003354 0000001c t _tickCountIsr
-02003370 00000098 t _tickTaskSchedule.part.0.isra.0
-02003408 0000008c T tickInit
-02003494 0000006c T tickGetCount
-02003500 00000110 t _tickTaskIsr
-02003610 0000011c T tickTaskStart
-0200372c T __aeabi_idiv
-0200372c 00000130 T __divsi3
-02003734 t .divsi3_skip_div0_test
-0200385c 00000020 T __aeabi_idivmod
-0200387c 00000002 W __aeabi_idiv0
-0200387c 00000002 W __aeabi_ldiv0
-02003880 T __aeabi_uldivmod
-020038bc 0000019c T __udivmoddi4
-02003a58 00000028 T __clzdi2
-02003a80 00000048 T __clzsi2
-02003ac8 00000044 T sprintf
-02003b0c 00000050 T siscanf
-02003b5c 00000034 T __sread
-02003b90 00000004 T __seofread
-02003b94 0000004c T __swrite
-02003be0 0000003c T __sseek
-02003c1c 00000010 T __sclose
-02003c2c 00000588 T _malloc_r
-020041b4 000000ac T _malloc_trim_r
-02004260 000001f4 T _free_r
-02004454 00000428 t get_arg
-0200487c 000023da T _svfprintf_r
+02001390 000000c8 T main
+02001458 t __do_global_dtors_aux
+02001484 t frame_dummy
+020014a8 00000074 T initOpenGL
+0200151c 0000048c T perspectiveModeGL
+020019a8 000000b8 T render_cube
+02001a60 000000dc t newRow
+02001b3c 000000e0 T consolePrintChar
+02001c1c 00000320 T con_write
+02001f3c 00000314 T consoleLoadFont
+02002250 0000018c T consoleInit
+020023dc 00000040 T consoleDemoInit
+0200241c 0000004c T sinLutLookup
+02002468 00000038 T sinLerp
+020024a0 00000048 T cosLerp
+020024e8 000000b0 T tanLerp
+02002598 00000002 W _glInitGlobals
+0200259c 000000dc T glInit
+02002678 0000006c T checkIfText
+020026e4 000000f4 T bgUpdate
+020027d8 000000b0 T bgInit_call
+02002888 000000b8 T bgInitSub_call
+02002940 00000018 T powerOn
+02002958 00000098 T threadExit
+020029f0 00000010 t _threadTickTask
+02002a00 00000098 T _threadInit
+02002a98 00000098 T threadPrepare
+02002b30 000000c0 T threadStart
+02002bf0 00000098 T threadIrqWait
+02002c88 00000058 T threadSleepTicks
+02002ce0 0000001c t _tickCountIsr
+02002cfc 00000098 t _tickTaskSchedule.part.0.isra.0
+02002d94 0000008c T tickInit
+02002e20 0000006c T tickGetCount
+02002e8c 00000110 t _tickTaskIsr
+02002f9c 0000011c T tickTaskStart
+020030b8 00000014 T __syscall_getreent
+020030cc 00000024 T __errno
+020030f0 00000004 T __syscall_lock_acquire
+020030f4 00000004 T __syscall_lock_release
+020030f8 00000040 T __syscall_lock_acquire_recursive
+02003138 00000018 T __syscall_lock_release_recursive
+02003150 00000004 t _pxiMailboxHandler
+02003154 00000004 W _pxiRecvUnhandled
+02003158 00000154 t _pxiRecvIrqHandler
+020032ac 00000058 T _pxiInit
+02003304 00000074 T pxiSetHandler
+02003378 00000068 T pxiSetMailbox
+020033e0 00000038 T pxiWaitRemote
+02003418 00000050 T pxiSendPacket
+02003468 00000004 W systemUserStartup
+0200346c 00000104 W systemStartup
+02003570 00000064 T irqSet
+020035d4 000001c4 t threadUpdateDynamicPrio
+02003798 000001a8 t threadRemoveWaiter
+02003940 00000144 T mutexLock
+02003a84 000000bc T mutexUnlock
+02003b40 0000009c T mailboxTrySend
+02003bdc 0000008c T mailboxRecv
+02003c68 00000040 t _pmCallEventHandlers
+02003ca8 000000a0 t _pmPxiThreadMain
+02003d48 00000028 t _pmResetPxiHandler
+02003d70 00000004 W systemUserExit
+02003d74 00000004 W systemErrorExit
+02003d78 00000138 T __syscall_exit
+02003eb0 00000058 T pmInit
+02003f08 00000198 W __aeabi_fmul
+02003f08 00000198 W __mulsf3
+020040a0 T __aeabi_idiv
+020040a0 00000130 T __divsi3
+020040a8 t .divsi3_skip_div0_test
+020041d0 00000020 T __aeabi_idivmod
+020041f0 00000002 W __aeabi_idiv0
+020041f0 00000002 W __aeabi_ldiv0
+020041f4 T __aeabi_drsub
+020041fc 00000314 T __aeabi_dsub
+020041fc 00000314 T __subdf3
+02004200 00000310 T __adddf3
+02004200 00000310 T __aeabi_dadd
+02004510 00000024 T __aeabi_ui2d
+02004510 00000024 T __floatunsidf
+02004534 00000028 T __aeabi_i2d
+02004534 00000028 T __floatsidf
+0200455c 00000048 T __aeabi_f2d
+0200455c 00000048 T __extendsfdf2
+020045a4 00000074 T __aeabi_ul2d
+020045a4 00000074 T __floatundidf
+020045b8 00000060 T __aeabi_l2d
+020045b8 00000060 T __floatdidf
+02004618 00000290 T __aeabi_dmul
+02004618 00000290 T __muldf3
+020048a8 0000020c T __aeabi_ddiv
+020048a8 0000020c T __divdf3
 02004990 a __crt0_lma
+02004ab4 0000005c T __aeabi_d2iz
+02004ab4 0000005c T __fixdfsi
+02004b10 0000005c T __aeabi_f2iz
+02004b10 0000005c T __fixsfsi
+02004b6c T __aeabi_uldivmod
+02004ba8 00000062 T __aeabi_lmul
+02004ba8 00000062 T __muldi3
+02004c0c 0000019c T __udivmoddi4
 02004cf0 a __itcm_lma
 02004cf0 a __loadlist_lma
-02006c58 000001ac T setvbuf
-02006e04 00000026 T malloc
-02006e2c 00000014 T free
-02006e40 000000ae T memcpy
-02006ef0 00000024 T printf
-02006f14 00000098 T memset
-02006fac 00000014 T __malloc_lock
-02006fc0 00000014 T __malloc_unlock
-02006fd4 0000000c W __call_exitprocs
-02006fe0 00000068 T strncpy
-02007048 0000001a T _wcsrtombs_r
-02007064 00000052 T __libc_init_array
-020070b8 00000194 T __sflush_r
-0200724c 0000006e T _fflush_r
-020072bc 0000006c T frexp
-02007328 00000060 T strlen
-02007388 00000020 T __locale_mb_cur_max
-020073a8 0000005e T __ssprint_r
-02007408 00000428 t get_arg
-02007830 00001722 T _vfiprintf_r
-02008f54 0000007c t __sbprintf
-02008fd0 00000128 T _memalign_r
-020090f8 00000080 T memchr
-02009178 0000010a T _wcsnrtombs_l
-02009284 00000040 T _wcsnrtombs_r
-020092c4 0000003e t get_arg
-02009302 0000007e T _sungetc_r
-02009380 00000042 T __ssrefill_r
-020093c2 00000088 T _sfread_r
-0200944c 00001a88 T __ssvfiscanf_r
-0200aed4 00000154 t _strtoul_l.isra.0
-0200b028 00000020 T _strtoul_r
-0200b048 00000232 T __utf8_mbtowc
-0200b27c 0000002e T __libc_fini_array
-0200b2ac 00000024 T __sprint_r
-0200b2d0 0000000e T iswspace
-0200b2e0 000000a0 T __sccl
-0200b380 0000001c T _localeconv_r
-0200b39c 00000428 t get_arg
-0200b7c4 0000243a T _vfprintf_r
-0200dc00 0000007c t __sbprintf
-0200dc7c 000000da T __smakebuf_r
-0200dd58 0000005c T __swhatbuf_r
-0200ddb4 00000018 T realloc
-0200ddcc 00000020 t stdio_exit_handler
-0200ddec 00000040 t cleanup_stdio
-0200de2c 00000128 t global_stdio_init.part.0
-0200df54 0000003c T __sinit
-0200df90 00000014 T __sfp_lock_acquire
-0200dfa4 00000014 T __sfp_lock_release
-0200dfb8 00000154 t quorem
-0200e10c 00001140 T _dtoa_r
-0200f24c 00000084 T _wcrtomb_r
-0200f2d0 0000025c t _strtol_l.part.0
-0200f52c 00000034 T _strtol_r
-0200f560 00000384 T _realloc_r
-0200f8e4 000000d4 T __ssputs_r
-0200f9b8 0000004c T _fwalk_sglue
-0200fa04 000000b4 T __utf8_wctomb
-0200fab8 000001bc t _strtoull_l.isra.0
-0200fc74 00000020 T _strtoull_r
-0200fc94 00000090 T _mbrtowc_r
-0200fd24 00000100 T __swsetup_r
-0200fe24 00000088 T __submore
-0200feac 000000ca T memmove
-0200ff78 00000040 T __assert_func
-0200ffb8 00000028 T iswspace_l
-0200ffe0 00000052 T _Balloc
-02010034 00000014 T _Bfree
-02010048 000000a8 T __multadd
-020100f0 0000005e T __hi0bits
-02010150 00000092 T __lo0bits
-020101e4 00000064 T __i2b
-02010248 000001b4 T __multiply
-020103fc 000000dc T __pow5mult
-020104d8 00000100 T __lshift
-020105d8 0000003e T __mcmp
-02010618 000001ac T __mdiff
-020107c4 000000c8 T __d2b
-0201088c 00000304 T __sfvwrite_r
-02010b90 0000030c t _strtoll_l.isra.0
-02010e9c 00000020 T _strtoll_r
-02010ebc 00000026 T fiprintf
-02010ee4 0000000e T abort
-02010ef4 000000d4 T _fclose_r
-02010fc8 000000b8 T _calloc_r
-02011080 00000058 T category
-020110d8 0000005e T _raise_r
-02011138 00000014 T raise
-0201114c 00000014 T _exit
-02011160 00000056 T _fstat_r
-020111b8 0000000a T _getpid_r
-020111c4 00000020 T __getreent
-020111e4 00000034 T __get_handle
-02011218 000000b6 T _close_r
-020112d0 00000004 t null_write
-020112d4 00000004 T _isatty_r
-020112d8 0000000a T _kill_r
-020112e4 0000005e T _lseek_r
-02011344 00000056 T _read_r
-0201139c 00000054 W _sbrk_r
-020113f0 00000018 T __libc_lock_acquire
-02011408 00000018 T __libc_lock_release
-02011420 00000018 T __libc_lock_acquire_recursive
-02011438 00000018 T __libc_lock_release_recursive
-02011450 00000056 T _write_r
-020114a8 00000012 T __gnu_thumb1_case_uqi
-020114bc 00000014 T __gnu_thumb1_case_uhi
-020114d0 T __aeabi_uidiv
-020114d0 000000fc T __udivsi3
-020114d0 t .udivsi3_skip_div0_test
-020115cc 00000020 T __aeabi_uidivmod
-020115ec T __aeabi_drsub
-020115f4 00000314 T __aeabi_dsub
-020115f4 00000314 T __subdf3
-020115f8 00000310 T __adddf3
-020115f8 00000310 T __aeabi_dadd
-02011908 00000024 T __aeabi_ui2d
-02011908 00000024 T __floatunsidf
-0201192c 00000028 T __aeabi_i2d
-0201192c 00000028 T __floatsidf
-02011954 00000048 T __aeabi_f2d
-02011954 00000048 T __extendsfdf2
-0201199c 00000074 T __aeabi_ul2d
-0201199c 00000074 T __floatundidf
-020119b0 00000060 T __aeabi_l2d
-020119b0 00000060 T __floatdidf
-02011a10 00000290 T __aeabi_dmul
-02011a10 00000290 T __muldf3
-02011ca0 0000020c T __aeabi_ddiv
-02011ca0 0000020c T __divdf3
-02011eac 00000098 T __gedf2
-02011eac 00000098 T __gtdf2
-02011eb4 00000090 T __ledf2
-02011eb4 00000090 T __ltdf2
-02011ebc 00000088 T __cmpdf2
-02011ebc 00000088 T __eqdf2
-02011ebc 00000088 T __nedf2
-02011f44 00000034 T __aeabi_cdrcmple
-02011f60 00000018 T __aeabi_cdcmpeq
-02011f60 00000018 T __aeabi_cdcmple
-02011f78 00000018 T __aeabi_dcmpeq
-02011f90 00000018 T __aeabi_dcmplt
-02011fa8 00000018 T __aeabi_dcmple
-02011fc0 00000018 T __aeabi_dcmpge
-02011fd8 00000018 T __aeabi_dcmpgt
-02011ff0 00000038 T __aeabi_dcmpun
-02011ff0 00000038 T __unorddf2
-02012028 0000005c T __aeabi_d2iz
-02012028 0000005c T __fixdfsi
-02012084 00000062 T __aeabi_lmul
-02012084 00000062 T __muldi3
-020120e8 T _fini
-020120f8 00000008 t ____aeabi_ldiv0_from_arm
-02012100 00000008 t ____aeabi_idiv0_from_arm
-02012390 00000080 t dotab_stdout
-02012410 T default_font_bin
-02012c10 T default_font_bin_end
-02012c10 00000102 T SIN_LUT
-02012d50 00000010 t zeroes.0
-02012d60 00000010 t blanks.1
-02012d70 0000006c T __action_table
-02012ddc 0000006c T __state_table
-02012e48 00000100 T __chclass
-02012f48 00000010 t zeroes.0
-02012f58 00000010 t blanks.1
-02012f68 00000022 t basefix.0
-02012f8c 00000010 t zeroes.0
-02012f9c 00000010 t blanks.1
-02012fac 00000101 T _ctype_
-020130b0 0000000c t p05.0
-020130c0 00000028 T __mprec_bigtens
-020130e8 000000c8 T __mprec_tens
-020131b0 000035dc t categories
-0201678c 00000080 T dotab_stdnull
-02016810 00000004 D platformName
-02016814 00000001 D isGameRunning
-02016815 00000001 d firstConsoleInit.0
-02016818 00000004 D currentConsole
-0201681c 0000005c D defaultConsole
-02016878 00000020 D bgTransform
-02016898 00000020 D bgScrollTable
-020168b8 00000020 D bgControl
-020168d8 00000004 D __malloc_sbrk_base
-020168dc 00000004 D __malloc_trim_threshold
-020168e0 00000408 D __malloc_av_
-02016ce8 00000004 D _impure_ptr
-02016cf0 00000120 D _impure_data
-02016e10 0000016c D __global_locale
-02016f7c 0000000c D __sglue
-02016f88 00001000 d handles
-02017f88 0000000c d __stderr_handle
-02017f94 0000000c d __stdout_handle
-02017fa0 0000000c d __stdin_handle
-02017fac 0000008c D devoptab_list
-02018038 r __EH_FRAME_BEGIN__
-02018038 r __FRAME_END__
-0201803c r __tls_info
-02018048 d __frame_dummy_init_array_entry
-02018048 d __init_array_start
-02018048 d __preinit_array_end
-02018048 d __preinit_array_start
-0201804c d __do_global_dtors_aux_fini_array_entry
-0201804c d __fini_array_start
-0201804c d __init_array_end
-02018050 b completed.1
-02018050 d __fini_array_end
-02018050 d __main_end
-02018050 ? __tls_end
-02018050 ? __tls_start
-02018054 b object.0
-0201806c 00000001 B isDebgRunning
-02018070 0000005c B currentCopy
-020180cc 00000008 B bgIsTextLut
-020180d4 00000140 B bgState
-02018214 00000004 b s_defaultErrno.0
-02018218 00000001 B g_isTwlMode
-0201821c 000001f0 b s_pxiChannels
-0201840c 00000004 b s_pxiRecvState
-02018410 00000008 b s_pxiRecvQueue
-02018418 00000004 b s_pxiSendMutex
-0201841c 00000008 b s_sleepThreads
-02018424 00000008 b s_joinThreads
-0201842c 00000070 b s_idleThread
-0201849c 00000070 b s_mainThread
-0201850c 00000008 b s_mailboxRecvQueue
-02018518 00000200 b s_pmPxiThreadStack
-02018718 00000070 b s_pmPxiThread
-02018788 00000008 b s_pmState
-02018790 00000004 b s_firstTask
-02018798 00000008 b s_highTickCount
-020187a0 00000001 b s_tickInit
-020187a4 00000028 B __malloc_current_mallinfo
-020187cc 00000004 B __malloc_max_total_mem
-020187d0 00000004 B __malloc_max_sbrked_mem
-020187d4 00000004 B __malloc_top_pad
-020187d8 0000000c b __malloc_recursive_mutex
-020187e4 0000000c b __sfp_recursive_mutex
-020187f0 00000168 B __sf
-02018958 00000004 B __stdio_exit_handler
-0201895c 00000004 b __hndl_lock
-02018960 00000004 B fake_heap_start
-02018964 00000004 B fake_heap_end
-02018968 00000004 b heap_start.0
-0201896c b __heap_start_ntr
-0201896c b __main_bss_end
-02018980 r __heap_start_twl
-02018980 ? __twl_bss_end
-02018980 ? __twl_end
-02018980 ? __twl_start
-0201c08c a __loadlist_start
-0201c0bc a __loadlist_end
+02004da8 00000028 T __clzdi2
+02004dd0 00000048 T __clzsi2
+02004e18 00000044 T sprintf
+02004e5c 00000050 T siscanf
+02004eac 00000034 T __sread
+02004ee0 00000004 T __seofread
+02004ee4 0000004c T __swrite
+02004f30 0000003c T __sseek
+02004f6c 00000010 T __sclose
+02004f7c 00000588 T _malloc_r
+02005504 000000ac T _malloc_trim_r
+020055b0 000001f4 T _free_r
+020057a4 00000428 t get_arg
+02005bcc 000023da T _svfprintf_r
+02007fa8 000001ac T setvbuf
+02008154 00000026 T malloc
+0200817c 00000014 T free
+02008190 000000ae T memcpy
+02008240 00000024 T printf
+02008264 00000098 T memset
+020082fc 00000014 T __malloc_lock
+02008310 00000014 T __malloc_unlock
+02008324 0000000c W __call_exitprocs
+02008330 00000068 T strncpy
+02008398 0000001a T _wcsrtombs_r
+020083b4 00000052 T __libc_init_array
+02008408 00000194 T __sflush_r
+0200859c 0000006e T _fflush_r
+0200860c 0000006c T frexp
+02008678 00000060 T strlen
+020086d8 00000020 T __locale_mb_cur_max
+020086f8 0000005e T __ssprint_r
+02008758 00000428 t get_arg
+02008b80 00001722 T _vfiprintf_r
+0200a2a4 0000007c t __sbprintf
+0200a320 00000128 T _memalign_r
+0200a448 00000080 T memchr
+0200a4c8 0000010a T _wcsnrtombs_l
+0200a5d4 00000040 T _wcsnrtombs_r
+0200a614 0000003e t get_arg
+0200a652 0000007e T _sungetc_r
+0200a6d0 00000042 T __ssrefill_r
+0200a712 00000088 T _sfread_r
+0200a79c 00001a88 T __ssvfiscanf_r
+0200c224 00000154 t _strtoul_l.isra.0
+0200c378 00000020 T _strtoul_r
+0200c398 00000232 T __utf8_mbtowc
+0200c5cc 0000002e T __libc_fini_array
+0200c5fc 00000024 T __sprint_r
+0200c620 0000000e T iswspace
+0200c630 000000a0 T __sccl
+0200c6d0 0000001c T _localeconv_r
+0200c6ec 00000428 t get_arg
+0200cb14 0000243a T _vfprintf_r
+0200ef50 0000007c t __sbprintf
+0200efcc 000000da T __smakebuf_r
+0200f0a8 0000005c T __swhatbuf_r
+0200f104 00000018 T realloc
+0200f11c 00000020 t stdio_exit_handler
+0200f13c 00000040 t cleanup_stdio
+0200f17c 00000128 t global_stdio_init.part.0
+0200f2a4 0000003c T __sinit
+0200f2e0 00000014 T __sfp_lock_acquire
+0200f2f4 00000014 T __sfp_lock_release
+0200f308 00000154 t quorem
+0200f45c 00001140 T _dtoa_r
+0201059c 00000084 T _wcrtomb_r
+02010620 0000025c t _strtol_l.part.0
+0201087c 00000034 T _strtol_r
+020108b0 00000384 T _realloc_r
+02010c34 000000d4 T __ssputs_r
+02010d08 0000004c T _fwalk_sglue
+02010d54 000000b4 T __utf8_wctomb
+02010e08 000001bc t _strtoull_l.isra.0
+02010fc4 00000020 T _strtoull_r
+02010fe4 00000090 T _mbrtowc_r
+02011074 00000100 T __swsetup_r
+02011174 00000088 T __submore
+020111fc 000000ca T memmove
+020112c8 00000040 T __assert_func
+02011308 00000028 T iswspace_l
+02011330 00000052 T _Balloc
+02011384 00000014 T _Bfree
+02011398 000000a8 T __multadd
+02011440 0000005e T __hi0bits
+020114a0 00000092 T __lo0bits
+02011534 00000064 T __i2b
+02011598 000001b4 T __multiply
+0201174c 000000dc T __pow5mult
+02011828 00000100 T __lshift
+02011928 0000003e T __mcmp
+02011968 000001ac T __mdiff
+02011b14 000000c8 T __d2b
+02011bdc 00000304 T __sfvwrite_r
+02011ee0 0000030c t _strtoll_l.isra.0
+020121ec 00000020 T _strtoll_r
+0201220c 00000026 T fiprintf
+02012234 0000000e T abort
+02012244 000000d4 T _fclose_r
+02012318 000000b8 T _calloc_r
+020123d0 00000058 T category
+02012428 0000005e T _raise_r
+02012488 00000014 T raise
+0201249c 00000014 T _exit
+020124b0 00000056 T _fstat_r
+02012508 0000000a T _getpid_r
+02012514 00000020 T __getreent
+02012534 00000034 T __get_handle
+02012568 000000b6 T _close_r
+02012620 00000004 t null_write
+02012624 00000004 T _isatty_r
+02012628 0000000a T _kill_r
+02012634 0000005e T _lseek_r
+02012694 00000056 T _read_r
+020126ec 00000054 W _sbrk_r
+02012740 00000018 T __libc_lock_acquire
+02012758 00000018 T __libc_lock_release
+02012770 00000018 T __libc_lock_acquire_recursive
+02012788 00000018 T __libc_lock_release_recursive
+020127a0 00000056 T _write_r
+020127f8 00000012 T __gnu_thumb1_case_uqi
+0201280c 00000014 T __gnu_thumb1_case_uhi
+02012820 T __aeabi_uidiv
+02012820 000000fc T __udivsi3
+02012820 t .udivsi3_skip_div0_test
+0201291c 00000020 T __aeabi_uidivmod
+0201293c 00000098 T __gedf2
+0201293c 00000098 T __gtdf2
+02012944 00000090 T __ledf2
+02012944 00000090 T __ltdf2
+0201294c 00000088 T __cmpdf2
+0201294c 00000088 T __eqdf2
+0201294c 00000088 T __nedf2
+020129d4 00000034 T __aeabi_cdrcmple
+020129f0 00000018 T __aeabi_cdcmpeq
+020129f0 00000018 T __aeabi_cdcmple
+02012a08 00000018 T __aeabi_dcmpeq
+02012a20 00000018 T __aeabi_dcmplt
+02012a38 00000018 T __aeabi_dcmple
+02012a50 00000018 T __aeabi_dcmpge
+02012a68 00000018 T __aeabi_dcmpgt
+02012a80 00000038 T __aeabi_dcmpun
+02012a80 00000038 T __unorddf2
+02012ab8 T _fini
+02012ac8 00000008 t ____aeabi_idiv0_from_arm
+02012ad0 00000008 t ____aeabi_ldiv0_from_arm
+02012d60 00000080 t dotab_stdout
+02012de0 00000204 T TAN_LUT
+02012fe4 00000102 T SIN_LUT
+020130e8 T default_font_bin
+020138e8 T default_font_bin_end
+02013924 00000010 t zeroes.0
+02013934 00000010 t blanks.1
+02013944 0000006c T __action_table
+020139b0 0000006c T __state_table
+02013a1c 00000100 T __chclass
+02013b1c 00000010 t zeroes.0
+02013b2c 00000010 t blanks.1
+02013b3c 00000022 t basefix.0
+02013b60 00000010 t zeroes.0
+02013b70 00000010 t blanks.1
+02013b80 00000101 T _ctype_
+02013c84 0000000c t p05.0
+02013c90 00000028 T __mprec_bigtens
+02013cb8 000000c8 T __mprec_tens
+02013d80 000035dc t categories
+0201735c 00000080 T dotab_stdnull
+020173e0 00000024 D cube_inds
+02017404 00000120 D cube_vert
+02017524 00000004 D platformName
+02017528 00000001 D isGameRunning
+02017529 00000001 d firstConsoleInit.0
+0201752c 00000004 D currentConsole
+02017530 0000005c D defaultConsole
+0201758c 00000020 D bgTransform
+020175ac 00000020 D bgScrollTable
+020175cc 00000020 D bgControl
+020175ec 00000004 D __malloc_sbrk_base
+020175f0 00000004 D __malloc_trim_threshold
+020175f8 00000408 D __malloc_av_
+02017a00 00000004 D _impure_ptr
+02017a08 00000120 D _impure_data
+02017b28 0000016c D __global_locale
+02017c94 0000000c D __sglue
+02017ca0 00001000 d handles
+02018ca0 0000000c d __stderr_handle
+02018cac 0000000c d __stdout_handle
+02018cb8 0000000c d __stdin_handle
+02018cc4 0000008c D devoptab_list
+02018d50 r __EH_FRAME_BEGIN__
+02018d50 r __FRAME_END__
+02018d54 r __tls_info
+02018d60 d __frame_dummy_init_array_entry
+02018d60 d __init_array_start
+02018d60 d __preinit_array_end
+02018d60 d __preinit_array_start
+02018d64 d __do_global_dtors_aux_fini_array_entry
+02018d64 d __fini_array_start
+02018d64 d __init_array_end
+02018d68 b completed.1
+02018d68 d __fini_array_end
+02018d68 d __main_end
+02018d68 ? __tls_end
+02018d68 ? __tls_start
+02018d6c b object.0
+02018d84 00000001 B isDebgRunning
+02018d88 0000005c B currentCopy
+02018de4 00000004 B glCurClearColor
+02018de8 00000008 B bgIsTextLut
+02018df0 00000140 B bgState
+02018f30 00000008 b s_sleepThreads
+02018f38 00000008 b s_joinThreads
+02018f40 00000070 b s_idleThread
+02018fb0 00000070 b s_mainThread
+02019020 00000004 b s_firstTask
+02019028 00000008 b s_highTickCount
+02019030 00000001 b s_tickInit
+02019034 00000004 b s_defaultErrno.0
+02019038 00000001 B g_isTwlMode
+0201903c 000001f0 b s_pxiChannels
+0201922c 00000004 b s_pxiRecvState
+02019230 00000008 b s_pxiRecvQueue
+02019238 00000004 b s_pxiSendMutex
+0201923c 00000008 b s_mailboxRecvQueue
+02019248 00000200 b s_pmPxiThreadStack
+02019448 00000070 b s_pmPxiThread
+020194b8 00000008 b s_pmState
+020194c0 00000028 B __malloc_current_mallinfo
+020194e8 00000004 B __malloc_max_total_mem
+020194ec 00000004 B __malloc_max_sbrked_mem
+020194f0 00000004 B __malloc_top_pad
+020194f4 0000000c b __malloc_recursive_mutex
+02019500 0000000c b __sfp_recursive_mutex
+02019510 00000168 B __sf
+02019678 00000004 B __stdio_exit_handler
+0201967c 00000004 b __hndl_lock
+02019680 00000004 B fake_heap_start
+02019684 00000004 B fake_heap_end
+02019688 00000004 b heap_start.0
+0201968c b __heap_start_ntr
+0201968c b __main_bss_end
+020196a0 r __heap_start_twl
+020196a0 ? __twl_bss_end
+020196a0 ? __twl_end
+020196a0 ? __twl_start
+0201cda4 a __loadlist_start
+0201cdd4 a __loadlist_end
 02400000 a __twl_lma
 02400000 a __twl_loadlist_lma
 02400000 a __twl_loadlist_start

@@ -7,6 +7,8 @@
     #include "Platform/PC/pcINC.h"
 #endif
 
+#include "Platform/gameGL_globals.h"
+
 int main()
 {
     // Enable printing debug info
@@ -17,8 +19,14 @@ int main()
     sprintf(string, "OpenBLOX says Hi.\nCurrent Platform: %s", platformName);
     print_message(string);
 
+    initOpenGL();
+    perspectiveModeGL();
+
     while(isGameRunning) {
         // Do NOTHING.
+        start3DFrame();
+        render_cube_transform(0, 0, 2);
+        endFrame();
     }
 
     return 0;

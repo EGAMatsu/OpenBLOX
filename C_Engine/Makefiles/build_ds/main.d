@@ -114,7 +114,9 @@ main.o: /home/luke-warren/OpenBLOX/C_Engine/Makefiles/../main.c \
  /opt/devkitpro/libnds/include/nds/arm9/trig_lut.h \
  /opt/devkitpro/libnds/include/nds/arm9/video.h \
  /opt/devkitpro/libnds/include/nds/arm9/videoGL.h \
- /home/luke-warren/OpenBLOX/C_Engine/Makefiles/../Platform/DS/ds_function_debug.h
+ /home/luke-warren/OpenBLOX/C_Engine/Makefiles/../Platform/DS/ds_function_debug.h \
+ /home/luke-warren/OpenBLOX/C_Engine/Makefiles/../Platform/DS/ds_function_opnGL.h \
+ /home/luke-warren/OpenBLOX/C_Engine/Makefiles/../Platform/gameGL_globals.h
 /home/luke-warren/OpenBLOX/C_Engine/Makefiles/../Platform/gameGlobalVariables.h:
 /home/luke-warren/OpenBLOX/C_Engine/Makefiles/../Platform/DS/dsINC.h:
 /opt/devkitpro/libnds/include/nds.h:
@@ -231,3 +233,5 @@ main.o: /home/luke-warren/OpenBLOX/C_Engine/Makefiles/../main.c \
 /opt/devkitpro/libnds/include/nds/arm9/video.h:
 /opt/devkitpro/libnds/include/nds/arm9/videoGL.h:
 /home/luke-warren/OpenBLOX/C_Engine/Makefiles/../Platform/DS/ds_function_debug.h:
+/home/luke-warren/OpenBLOX/C_Engine/Makefiles/../Platform/DS/ds_function_opnGL.h:
+/home/luke-warren/OpenBLOX/C_Engine/Makefiles/../Platform/gameGL_globals.h:
