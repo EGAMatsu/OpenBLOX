@@ -1,6 +1,7 @@
 #include "Platform/gameGlobalVariables.h"
 
 #include <stdio.h>
+
 #ifdef NDS_BUILD
     #include "Platform/DS/dsINC.h"
 #elif   PC_BUILD
@@ -8,11 +9,13 @@
 #endif
 
 #include "Platform/gameGL_globals.h"
+#include "Platform/timing.h"
 
 int main()
 {
     // Enable printing debug info
     enableDebugConsole(1);
+    systemStart();
 
     // Print hello and platform
     char* string = malloc(128*sizeof(char));
@@ -23,11 +26,20 @@ int main()
     perspectiveModeGL();
 
     while(isGameRunning) {
-        // Do NOTHING.
-        start3DFrame();
-        render_cube_transform(0, 0, 2, 0, 45, 0, 1, 1, 1);
-        endFrame();
+        gameRenderLoop();
+
+        deltaTime = deltaTimeCalc();
+        sprintf(string, "DeltaTime: %f\n", deltaTime);
+        //print_message(string);
     }
 
     return 0;
+}
+
+float test = 0;
+void gameRenderLoop() {
+    start3DFrame();
+    test += 90*deltaTime;
+    render_cube_transform(0, 0, 2, 0, test, 0, 1, 1, 1);
+    endFrame();
 }
