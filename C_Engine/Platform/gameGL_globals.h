@@ -102,8 +102,8 @@ void scale_rotate_translate(float xs, float ys, float zs, float rx, float ry, fl
     glScalef(xs, ys, zs);
 }
 
-void render_cube() {
-    int color = colorGrab(26, 0);
+void render_cube(int colorIndex) {
+    int color = colorGrab(colorIndex, 0);
     int r = getHex_value(color, 0);
     int g = getHex_value(color, 1);
     int b = getHex_value(color, 2);
@@ -117,9 +117,9 @@ void render_cube() {
     glEnd();
 }
 
-void render_cube_transform(float x, float y, float z, float rx, float ry, float rz, float sx, float sy, float sz) {
+void render_cube_transform(float x, float y, float z, float rx, float ry, float rz, float sx, float sy, float sz, int color) {
     pushMatrix();
         scale_rotate_translate(sx, sy, sz, rx, ry, rz, x, y, z);
-        render_cube();
+        render_cube(color);
     popMatrix();
 }

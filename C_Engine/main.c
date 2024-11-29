@@ -42,6 +42,8 @@ float test = 0;
 void gameRenderLoop() {
     start3DFrame();
     test += 90*deltaTime;
-    render_cube_transform(0, 0, 2, 0, test, 0, 1, 1, 1);
+    render_cube_transform(0, 0, 2, 0, test, 0, 1, 1, 1, 1);
+    render_cube_transform(3, 1, 4, 0, test, 0, 1, 1, 1, 26);
+    render_cube_transform(-3, 1, 4, 0, test, 0, 1, 1, 1, 137);
     endFrame();
 }

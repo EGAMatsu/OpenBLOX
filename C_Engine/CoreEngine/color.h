@@ -1067,6 +1067,10 @@ int colorGrab(int value, unsigned char returnType) {
         case(3):
             return color_b;
     }
+
+    // Too all professional programmers, I'm sorry about THIS BIG ASS ROUTINE.
+    // I plan to eventually make it 3 large arrays that get accessed instead of this switch bullshit.
+    // Not like it matters really, since it wont be called too many times per frame, if at all.
 }
 
 // Get the color I want
