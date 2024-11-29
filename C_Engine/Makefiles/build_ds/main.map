@@ -508,13 +508,13 @@ Discarded input sections
                 0x00000000       0x24 main.o
  .text.get_clock_time
                 0x00000000       0x20 main.o
+ .text.deltaTimeCalc
+                0x00000000       0x3c main.o
  .text.systemStart
                 0x00000000        0xc main.o
  .text.scale_rotate_translate
                 0x00000000       0xf8 main.o
  .text.render_cube_transform
-                0x00000000       0x3c main.o
- .text.deltaTimeCalc
                 0x00000000       0x3c main.o
  .data.cube_norm
                 0x00000000      0x120 main.o
@@ -2785,34 +2785,34 @@ LOAD /opt/devkitpro/devkitARM/bin/../lib/gcc/arm-none-eabi/14.2.0/thumb/crtn.o
  .debug_abbrev  0x00003c67       0x26 /opt/devkitpro/calico/lib/libcalico_ds9.a(arm-cache.32.o)
  .debug_abbrev  0x00003c8d      0x686 /opt/devkitpro/calico/lib/libcalico_ds9.a(pm.o)
 
-.debug_line     0x00000000    0x14dd6
+.debug_line     0x00000000    0x14ddb
  *(.debug_line .debug_line.* .debug_line_end)
- .debug_line    0x00000000     0xae36 main.o
- .debug_line    0x0000ae36     0x167e /opt/devkitpro/libnds/lib/libnds9.a(console.o)
- .debug_line    0x0000c4b4      0x788 /opt/devkitpro/libnds/lib/libnds9.a(trig.o)
- .debug_line    0x0000cc3c      0xa91 /opt/devkitpro/libnds/lib/libnds9.a(videoGL_base.o)
- .debug_line    0x0000d6cd      0x52a /opt/devkitpro/libnds/lib/libnds9.a(timers.o)
- .debug_line    0x0000dbf7      0x63d /opt/devkitpro/libnds/lib/libnds9.a(background.o)
- .debug_line    0x0000e234      0x197 /opt/devkitpro/libnds/lib/libnds9.a(system.o)
- .debug_line    0x0000e3cb      0x26e /opt/devkitpro/calico/lib/libcalico_ds9.a(irq.o)
- .debug_line    0x0000e639      0xa32 /opt/devkitpro/calico/lib/libcalico_ds9.a(tick.o)
- .debug_line    0x0000f06b      0xe43 /opt/devkitpro/calico/lib/libcalico_ds9.a(thread_cold.o)
- .debug_line    0x0000feae     0x106c /opt/devkitpro/calico/lib/libcalico_ds9.a(thread_hot.32.o)
- .debug_line    0x00010f1a       0x69 /opt/devkitpro/calico/lib/libcalico_ds9.a(arm-context.32.o)
- .debug_line    0x00010f83      0x2a4 /opt/devkitpro/calico/lib/libcalico_ds9.a(arm-shims.32.o)
- .debug_line    0x00011227       0xf4 /opt/devkitpro/calico/lib/libcalico_ds9.a(bootstub_arm9.o)
- .debug_line    0x0001131b       0x66 /opt/devkitpro/calico/lib/libcalico_ds9.a(excpt_handler.32.o)
- .debug_line    0x00011381      0x795 /opt/devkitpro/calico/lib/libcalico_ds9.a(newlib_syscalls.o)
- .debug_line    0x00011b16      0x396 /opt/devkitpro/calico/lib/libcalico_ds9.a(startup.crt0.o)
- .debug_line    0x00011eac       0x7d /opt/devkitpro/calico/lib/libcalico_ds9.a(utils.crt0.o)
- .debug_line    0x00011f29       0x92 /opt/devkitpro/calico/lib/libcalico_ds9.a(irq_handler.32.o)
- .debug_line    0x00011fbb      0x97b /opt/devkitpro/calico/lib/libcalico_ds9.a(pxi.o)
- .debug_line    0x00012936       0x6e /opt/devkitpro/calico/lib/libcalico_ds9.a(mpu_setup.crt0.o)
- .debug_line    0x000129a4      0x46b /opt/devkitpro/calico/lib/libcalico_ds9.a(sys_startup.o)
- .debug_line    0x00012e0f      0xc8c /opt/devkitpro/calico/lib/libcalico_ds9.a(mutex.o)
- .debug_line    0x00013a9b      0x4ce /opt/devkitpro/calico/lib/libcalico_ds9.a(mailbox.o)
- .debug_line    0x00013f69       0xb2 /opt/devkitpro/calico/lib/libcalico_ds9.a(arm-cache.32.o)
- .debug_line    0x0001401b      0xdbb /opt/devkitpro/calico/lib/libcalico_ds9.a(pm.o)
+ .debug_line    0x00000000     0xae3b main.o
+ .debug_line    0x0000ae3b     0x167e /opt/devkitpro/libnds/lib/libnds9.a(console.o)
+ .debug_line    0x0000c4b9      0x788 /opt/devkitpro/libnds/lib/libnds9.a(trig.o)
+ .debug_line    0x0000cc41      0xa91 /opt/devkitpro/libnds/lib/libnds9.a(videoGL_base.o)
+ .debug_line    0x0000d6d2      0x52a /opt/devkitpro/libnds/lib/libnds9.a(timers.o)
+ .debug_line    0x0000dbfc      0x63d /opt/devkitpro/libnds/lib/libnds9.a(background.o)
+ .debug_line    0x0000e239      0x197 /opt/devkitpro/libnds/lib/libnds9.a(system.o)
+ .debug_line    0x0000e3d0      0x26e /opt/devkitpro/calico/lib/libcalico_ds9.a(irq.o)
+ .debug_line    0x0000e63e      0xa32 /opt/devkitpro/calico/lib/libcalico_ds9.a(tick.o)
+ .debug_line    0x0000f070      0xe43 /opt/devkitpro/calico/lib/libcalico_ds9.a(thread_cold.o)
+ .debug_line    0x0000feb3     0x106c /opt/devkitpro/calico/lib/libcalico_ds9.a(thread_hot.32.o)
+ .debug_line    0x00010f1f       0x69 /opt/devkitpro/calico/lib/libcalico_ds9.a(arm-context.32.o)
+ .debug_line    0x00010f88      0x2a4 /opt/devkitpro/calico/lib/libcalico_ds9.a(arm-shims.32.o)
+ .debug_line    0x0001122c       0xf4 /opt/devkitpro/calico/lib/libcalico_ds9.a(bootstub_arm9.o)
+ .debug_line    0x00011320       0x66 /opt/devkitpro/calico/lib/libcalico_ds9.a(excpt_handler.32.o)
+ .debug_line    0x00011386      0x795 /opt/devkitpro/calico/lib/libcalico_ds9.a(newlib_syscalls.o)
+ .debug_line    0x00011b1b      0x396 /opt/devkitpro/calico/lib/libcalico_ds9.a(startup.crt0.o)
+ .debug_line    0x00011eb1       0x7d /opt/devkitpro/calico/lib/libcalico_ds9.a(utils.crt0.o)
+ .debug_line    0x00011f2e       0x92 /opt/devkitpro/calico/lib/libcalico_ds9.a(irq_handler.32.o)
+ .debug_line    0x00011fc0      0x97b /opt/devkitpro/calico/lib/libcalico_ds9.a(pxi.o)
+ .debug_line    0x0001293b       0x6e /opt/devkitpro/calico/lib/libcalico_ds9.a(mpu_setup.crt0.o)
+ .debug_line    0x000129a9      0x46b /opt/devkitpro/calico/lib/libcalico_ds9.a(sys_startup.o)
+ .debug_line    0x00012e14      0xc8c /opt/devkitpro/calico/lib/libcalico_ds9.a(mutex.o)
+ .debug_line    0x00013aa0      0x4ce /opt/devkitpro/calico/lib/libcalico_ds9.a(mailbox.o)
+ .debug_line    0x00013f6e       0xb2 /opt/devkitpro/calico/lib/libcalico_ds9.a(arm-cache.32.o)
+ .debug_line    0x00014020      0xdbb /opt/devkitpro/calico/lib/libcalico_ds9.a(pm.o)
 
 .debug_frame    0x00000000     0x1ff0
  *(.debug_frame)

@@ -1,6 +1,7 @@
 main.o: /home/luke-warren/OpenBLOX/C_Engine/Makefiles/../main.c \
- /home/luke-warren/OpenBLOX/C_Engine/Makefiles/../Platform/gameGlobalVariables.h \
+ /home/luke-warren/OpenBLOX/C_Engine/Makefiles/../CoreEngine/gameGlobalVariables.h \
  /home/luke-warren/OpenBLOX/C_Engine/Makefiles/../CoreEngine/color.h \
+ /home/luke-warren/OpenBLOX/C_Engine/Makefiles/../CoreEngine/timing.h \
  /home/luke-warren/OpenBLOX/C_Engine/Makefiles/../ThirdParty/TinyPhysicsEngine/tinyphysicsengine.h \
  /home/luke-warren/OpenBLOX/C_Engine/Makefiles/../Platform/DS/dsINC.h \
  /opt/devkitpro/libnds/include/nds.h \
@@ -119,10 +120,10 @@ main.o: /home/luke-warren/OpenBLOX/C_Engine/Makefiles/../main.c \
  /home/luke-warren/OpenBLOX/C_Engine/Makefiles/../Platform/DS/ds_function_debug.h \
  /home/luke-warren/OpenBLOX/C_Engine/Makefiles/../Platform/DS/ds_function_opnGL.h \
  /home/luke-warren/OpenBLOX/C_Engine/Makefiles/../Platform/DS/ds_function_time.h \
- /home/luke-warren/OpenBLOX/C_Engine/Makefiles/../Platform/gameGL_globals.h \
- /home/luke-warren/OpenBLOX/C_Engine/Makefiles/../Platform/timing.h
-/home/luke-warren/OpenBLOX/C_Engine/Makefiles/../Platform/gameGlobalVariables.h:
+ /home/luke-warren/OpenBLOX/C_Engine/Makefiles/../CoreEngine/GL/gameGL_globals.h
+/home/luke-warren/OpenBLOX/C_Engine/Makefiles/../CoreEngine/gameGlobalVariables.h:
 /home/luke-warren/OpenBLOX/C_Engine/Makefiles/../CoreEngine/color.h:
+/home/luke-warren/OpenBLOX/C_Engine/Makefiles/../CoreEngine/timing.h:
 /home/luke-warren/OpenBLOX/C_Engine/Makefiles/../ThirdParty/TinyPhysicsEngine/tinyphysicsengine.h:
 /home/luke-warren/OpenBLOX/C_Engine/Makefiles/../Platform/DS/dsINC.h:
 /opt/devkitpro/libnds/include/nds.h:
@@ -241,5 +242,4 @@ main.o: /home/luke-warren/OpenBLOX/C_Engine/Makefiles/../main.c \
 /home/luke-warren/OpenBLOX/C_Engine/Makefiles/../Platform/DS/ds_function_debug.h:
 /home/luke-warren/OpenBLOX/C_Engine/Makefiles/../Platform/DS/ds_function_opnGL.h:
 /home/luke-warren/OpenBLOX/C_Engine/Makefiles/../Platform/DS/ds_function_time.h:
-/home/luke-warren/OpenBLOX/C_Engine/Makefiles/../Platform/gameGL_globals.h:
-/home/luke-warren/OpenBLOX/C_Engine/Makefiles/../Platform/timing.h:
+/home/luke-warren/OpenBLOX/C_Engine/Makefiles/../CoreEngine/GL/gameGL_globals.h:
