@@ -301,8 +301,8 @@
 02013188 00000038 T __aeabi_dcmpun
 02013188 00000038 T __unorddf2
 020131c0 T _fini
-020131d0 00000008 t ____aeabi_idiv0_from_arm
-020131d8 00000008 t ____aeabi_ldiv0_from_arm
+020131d0 00000008 t ____aeabi_ldiv0_from_arm
+020131d8 00000008 t ____aeabi_idiv0_from_arm
 02013478 00000080 t dotab_stdout
 020134f8 00000204 T TAN_LUT
 020136fc 00000102 T SIN_LUT

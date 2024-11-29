@@ -1,6 +1,8 @@
 #include "Platform/gameGlobalVariables.h"
 
 #include <stdio.h>
+#include "CoreEngine/color.h"
+#include "ThirdParty/TinyPhysicsEngine/tinyphysicsengine.h"
 
 #ifdef NDS_BUILD
     #include "Platform/DS/dsINC.h"

@@ -1,5 +1,7 @@
 main.o: /home/luke-warren/OpenBLOX/C_Engine/Makefiles/../main.c \
  /home/luke-warren/OpenBLOX/C_Engine/Makefiles/../Platform/gameGlobalVariables.h \
+ /home/luke-warren/OpenBLOX/C_Engine/Makefiles/../CoreEngine/color.h \
+ /home/luke-warren/OpenBLOX/C_Engine/Makefiles/../ThirdParty/TinyPhysicsEngine/tinyphysicsengine.h \
  /home/luke-warren/OpenBLOX/C_Engine/Makefiles/../Platform/DS/dsINC.h \
  /opt/devkitpro/libnds/include/nds.h \
  /opt/devkitpro/calico/include/calico.h \
@@ -120,6 +122,8 @@ main.o: /home/luke-warren/OpenBLOX/C_Engine/Makefiles/../main.c \
  /home/luke-warren/OpenBLOX/C_Engine/Makefiles/../Platform/gameGL_globals.h \
  /home/luke-warren/OpenBLOX/C_Engine/Makefiles/../Platform/timing.h
 /home/luke-warren/OpenBLOX/C_Engine/Makefiles/../Platform/gameGlobalVariables.h:
+/home/luke-warren/OpenBLOX/C_Engine/Makefiles/../CoreEngine/color.h:
+/home/luke-warren/OpenBLOX/C_Engine/Makefiles/../ThirdParty/TinyPhysicsEngine/tinyphysicsengine.h:
 /home/luke-warren/OpenBLOX/C_Engine/Makefiles/../Platform/DS/dsINC.h:
 /opt/devkitpro/libnds/include/nds.h:
 /opt/devkitpro/calico/include/calico.h:

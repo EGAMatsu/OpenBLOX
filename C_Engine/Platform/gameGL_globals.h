@@ -103,10 +103,14 @@ void scale_rotate_translate(float xs, float ys, float zs, float rx, float ry, fl
 }
 
 void render_cube() {
+    int color = colorGrab(26, 0);
+    int r = getHex_value(color, 0);
+    int g = getHex_value(color, 1);
+    int b = getHex_value(color, 2);
     glBegin(GL_TRIANGLES);
     for (int i = 0; i < sizeof(cube_inds) / sizeof(cube_inds[0]); i++) {
         int index = cube_inds[i];
-        glColor3b(255,255,255);
+        glColor3b(r, g, b);
         //glNormal3f(cube_norm[index * 3], cube_norm[index * 3 + 1], cube_norm[index * 3 + 2]);
         glVertex3f(cube_vert[index * 3], cube_vert[index * 3 + 1], cube_vert[index * 3 + 2]);
     }
