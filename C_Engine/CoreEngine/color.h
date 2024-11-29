@@ -2,7 +2,7 @@
     OpenBLOX Color
 */
 
-// Giant-ass copy-paste from the original code because i have no real reason to do otherwise.
+// Giant-ass copy-paste from the original code because i have no real reason to redo it all from scratch.
 int colorGrab(int value, unsigned char returnType) {
     unsigned char color_r = 255;
     unsigned char color_g = 0;
