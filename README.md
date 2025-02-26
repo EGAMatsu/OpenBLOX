@@ -1,4 +1,5 @@
-![OpenBLOX](https://cdn.discordapp.com/attachments/818207854292369432/1071302355129208923/OpenBLOX.png)
+[OpenBLOX, By Digi-Space Productions](https://www.youtube.com/@DigiSpaceProductions) (Todo, Fix thumbnail)
+
 # About
 A project to make a new client for older ROBLOX Maps from 2005 to 2011
 
@@ -25,6 +26,8 @@ Extract it in a desired location if you downloaded it
 Go to Platforms->NDS then run Make.
 
 # Running the game on DS/i:
+[Timecode within a video by SharkBlox showing how to set this version up](https://youtu.be/Nzu9oocSujc?t=154)
+
 On your Flashcard/SD Card, you MUST put the maps in a folder called OpenBLOX (case sensitive.) on the root of your card.
 
 If you have access to a 2007 - 2011 client, look at the folder its located in and copy the folder called: "content".
