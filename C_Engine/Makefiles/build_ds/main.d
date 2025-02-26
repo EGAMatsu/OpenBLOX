@@ -1,9 +1,10 @@
-main.o: /home/luke-warren/OpenBLOX/C_Engine/Makefiles/../main.c \
- /home/luke-warren/OpenBLOX/C_Engine/Makefiles/../CoreEngine/gameGlobalVariables.h \
- /home/luke-warren/OpenBLOX/C_Engine/Makefiles/../CoreEngine/color.h \
- /home/luke-warren/OpenBLOX/C_Engine/Makefiles/../CoreEngine/timing.h \
- /home/luke-warren/OpenBLOX/C_Engine/Makefiles/../ThirdParty/TinyPhysicsEngine/tinyphysicsengine.h \
- /home/luke-warren/OpenBLOX/C_Engine/Makefiles/../Platform/DS/dsINC.h \
+main.o: \
+ /home/luke-warren/kms/OpenBLOX-Complete-Rework/C_Engine/Makefiles/../main.c \
+ /home/luke-warren/kms/OpenBLOX-Complete-Rework/C_Engine/Makefiles/../CoreEngine/gameGlobalVariables.h \
+ /home/luke-warren/kms/OpenBLOX-Complete-Rework/C_Engine/Makefiles/../CoreEngine/color.h \
+ /home/luke-warren/kms/OpenBLOX-Complete-Rework/C_Engine/Makefiles/../CoreEngine/timing.h \
+ /home/luke-warren/kms/OpenBLOX-Complete-Rework/C_Engine/Makefiles/../ThirdParty/TinyPhysicsEngine/tinyphysicsengine.h \
+ /home/luke-warren/kms/OpenBLOX-Complete-Rework/C_Engine/Makefiles/../Platform/DS/dsINC.h \
  /opt/devkitpro/libnds/include/nds.h \
  /opt/devkitpro/calico/include/calico.h \
  /opt/devkitpro/calico/include/calico/types.h \
@@ -117,15 +118,15 @@ main.o: /home/luke-warren/OpenBLOX/C_Engine/Makefiles/../main.c \
  /opt/devkitpro/libnds/include/nds/arm9/trig_lut.h \
  /opt/devkitpro/libnds/include/nds/arm9/video.h \
  /opt/devkitpro/libnds/include/nds/arm9/videoGL.h \
- /home/luke-warren/OpenBLOX/C_Engine/Makefiles/../Platform/DS/ds_function_debug.h \
- /home/luke-warren/OpenBLOX/C_Engine/Makefiles/../Platform/DS/ds_function_opnGL.h \
- /home/luke-warren/OpenBLOX/C_Engine/Makefiles/../Platform/DS/ds_function_time.h \
- /home/luke-warren/OpenBLOX/C_Engine/Makefiles/../CoreEngine/GL/gameGL_globals.h
-/home/luke-warren/OpenBLOX/C_Engine/Makefiles/../CoreEngine/gameGlobalVariables.h:
-/home/luke-warren/OpenBLOX/C_Engine/Makefiles/../CoreEngine/color.h:
-/home/luke-warren/OpenBLOX/C_Engine/Makefiles/../CoreEngine/timing.h:
-/home/luke-warren/OpenBLOX/C_Engine/Makefiles/../ThirdParty/TinyPhysicsEngine/tinyphysicsengine.h:
-/home/luke-warren/OpenBLOX/C_Engine/Makefiles/../Platform/DS/dsINC.h:
+ /home/luke-warren/kms/OpenBLOX-Complete-Rework/C_Engine/Makefiles/../Platform/DS/ds_function_debug.h \
+ /home/luke-warren/kms/OpenBLOX-Complete-Rework/C_Engine/Makefiles/../Platform/DS/ds_function_opnGL.h \
+ /home/luke-warren/kms/OpenBLOX-Complete-Rework/C_Engine/Makefiles/../Platform/DS/ds_function_time.h \
+ /home/luke-warren/kms/OpenBLOX-Complete-Rework/C_Engine/Makefiles/../CoreEngine/GL/gameGL_globals.h
+/home/luke-warren/kms/OpenBLOX-Complete-Rework/C_Engine/Makefiles/../CoreEngine/gameGlobalVariables.h:
+/home/luke-warren/kms/OpenBLOX-Complete-Rework/C_Engine/Makefiles/../CoreEngine/color.h:
+/home/luke-warren/kms/OpenBLOX-Complete-Rework/C_Engine/Makefiles/../CoreEngine/timing.h:
+/home/luke-warren/kms/OpenBLOX-Complete-Rework/C_Engine/Makefiles/../ThirdParty/TinyPhysicsEngine/tinyphysicsengine.h:
+/home/luke-warren/kms/OpenBLOX-Complete-Rework/C_Engine/Makefiles/../Platform/DS/dsINC.h:
 /opt/devkitpro/libnds/include/nds.h:
 /opt/devkitpro/calico/include/calico.h:
 /opt/devkitpro/calico/include/calico/types.h:
@@ -239,7 +240,7 @@ main.o: /home/luke-warren/OpenBLOX/C_Engine/Makefiles/../main.c \
 /opt/devkitpro/libnds/include/nds/arm9/trig_lut.h:
 /opt/devkitpro/libnds/include/nds/arm9/video.h:
 /opt/devkitpro/libnds/include/nds/arm9/videoGL.h:
-/home/luke-warren/OpenBLOX/C_Engine/Makefiles/../Platform/DS/ds_function_debug.h:
-/home/luke-warren/OpenBLOX/C_Engine/Makefiles/../Platform/DS/ds_function_opnGL.h:
-/home/luke-warren/OpenBLOX/C_Engine/Makefiles/../Platform/DS/ds_function_time.h:
-/home/luke-warren/OpenBLOX/C_Engine/Makefiles/../CoreEngine/GL/gameGL_globals.h:
+/home/luke-warren/kms/OpenBLOX-Complete-Rework/C_Engine/Makefiles/../Platform/DS/ds_function_debug.h:
+/home/luke-warren/kms/OpenBLOX-Complete-Rework/C_Engine/Makefiles/../Platform/DS/ds_function_opnGL.h:
+/home/luke-warren/kms/OpenBLOX-Complete-Rework/C_Engine/Makefiles/../Platform/DS/ds_function_time.h:
+/home/luke-warren/kms/OpenBLOX-Complete-Rework/C_Engine/Makefiles/../CoreEngine/GL/gameGL_globals.h:

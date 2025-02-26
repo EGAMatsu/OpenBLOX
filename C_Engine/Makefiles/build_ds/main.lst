@@ -301,8 +301,8 @@
 020132bc 00000038 T __aeabi_dcmpun
 020132bc 00000038 T __unorddf2
 020132f4 T _fini
-02013300 00000008 t ____aeabi_ldiv0_from_arm
-02013308 00000008 t ____aeabi_idiv0_from_arm
+02013300 00000008 t ____aeabi_idiv0_from_arm
+02013308 00000008 t ____aeabi_ldiv0_from_arm
 020134d4 00000408 t CSWTCH.124
 020138dc 00000408 t CSWTCH.123
 02013ce4 00000408 t CSWTCH.122

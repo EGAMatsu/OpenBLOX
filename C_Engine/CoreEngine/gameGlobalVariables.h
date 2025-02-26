@@ -10,6 +10,6 @@ unsigned char isDebgRunning = 0;
 #define ONLINEPL_MODE 2
 #define __STUDIO_MODE 3
 
-unsigned char runtimeMode = 0
+unsigned char runtimeMode = 0;
 
 void gameRenderLoop();
