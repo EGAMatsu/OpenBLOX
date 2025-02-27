@@ -1,4 +1,4 @@
-main.o: /home/luke-warren/kms/OpenBLOX/C_Engine/Makefiles/../main.c \
+main.o: /home/luke-warren/kms/OpenBLOX/C_Engine/Makefiles/../main.cpp \
  /home/luke-warren/kms/OpenBLOX/C_Engine/Makefiles/../CoreEngine/gameGlobalVariables.h \
  /home/luke-warren/kms/OpenBLOX/C_Engine/Makefiles/../CoreEngine/./Node/nodes.h \
  /home/luke-warren/kms/OpenBLOX/C_Engine/Makefiles/../CoreEngine/./Localization/locale.h \

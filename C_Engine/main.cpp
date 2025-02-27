@@ -25,7 +25,7 @@ int main()
 
     // Print hello and platform
     char string[128];
-    sprintf(string, "Current Lang: %s\nC_Engine\nOpenBLOX says Hi.\nCurrent Platform: %s", locale_names[currentLanguageCode], platformName);
+    sprintf(string, "Current Lang: %s\n\nIf this updates, the thing\nis now running in C++.\n\nOpenBLOX says Hi.\nCurrent Platform: %s", locale_names[currentLanguageCode], platformName);
     print_message(string);
 
     initOpenGL();

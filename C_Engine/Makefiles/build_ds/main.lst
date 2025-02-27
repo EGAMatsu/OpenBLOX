@@ -37,10 +37,10 @@
 02001390 000000dc T main
 0200146c t __do_global_dtors_aux
 02001498 t frame_dummy
-020014bc 00000074 T initOpenGL
-02001530 0000048c T perspectiveModeGL
-020019bc 000000f0 T render_cube
-02001aac 000001c8 T gameRenderLoop
+020014bc 00000074 T initOpenGL()
+02001530 0000048c T perspectiveModeGL()
+020019bc 000000f0 T render_cube(int)
+02001aac 000001c8 T gameRenderLoop()
 02001c74 000000dc t newRow
 02001d50 000000e0 T consolePrintChar
 02001e30 00000320 T con_write
@@ -303,116 +303,116 @@
 020132fc T _fini
 02013308 00000008 t ____aeabi_ldiv0_from_arm
 02013310 00000008 t ____aeabi_idiv0_from_arm
-02013524 00000408 t CSWTCH.124
-0201392c 00000408 t CSWTCH.123
-02013d34 00000408 t CSWTCH.122
-02014210 00000080 t dotab_stdout
-02014290 00000204 T TAN_LUT
-02014494 00000102 T SIN_LUT
-02014598 T default_font_bin
-02014d98 T default_font_bin_end
-02014dd4 00000010 t zeroes.0
-02014de4 00000010 t blanks.1
-02014df4 0000006c T __action_table
-02014e60 0000006c T __state_table
-02014ecc 00000100 T __chclass
-02014fcc 00000010 t zeroes.0
-02014fdc 00000010 t blanks.1
-02014fec 00000022 t basefix.0
-02015010 00000010 t zeroes.0
-02015020 00000010 t blanks.1
-02015030 00000101 T _ctype_
-02015134 0000000c t p05.0
-02015140 00000028 T __mprec_bigtens
-02015168 000000c8 T __mprec_tens
-02015230 000035dc t categories
-0201880c 00000080 T dotab_stdnull
-02018890 00000024 D cube_inds
-020188b4 00000120 D cube_vert
-020189d4 00000004 D platformName
-020189d8 00000001 D isGameRunning
-020189dc 00000010 D locale_names
-020189ec 00000001 d firstConsoleInit.0
-020189f0 00000004 D currentConsole
-020189f4 0000005c D defaultConsole
-02018a50 00000020 D bgTransform
-02018a70 00000020 D bgScrollTable
-02018a90 00000020 D bgControl
-02018ab0 00000004 D __malloc_sbrk_base
-02018ab4 00000004 D __malloc_trim_threshold
-02018ab8 00000408 D __malloc_av_
-02018ec0 00000004 D _impure_ptr
-02018ec8 00000120 D _impure_data
-02018fe8 0000016c D __global_locale
-02019154 0000000c D __sglue
-02019160 00001000 d handles
-0201a160 0000000c d __stderr_handle
-0201a16c 0000000c d __stdout_handle
-0201a178 0000000c d __stdin_handle
-0201a184 0000008c D devoptab_list
-0201a210 r __EH_FRAME_BEGIN__
-0201a210 r __FRAME_END__
-0201a214 r __tls_info
-0201a220 d __frame_dummy_init_array_entry
-0201a220 d __init_array_start
-0201a220 d __preinit_array_end
-0201a220 d __preinit_array_start
-0201a224 d __do_global_dtors_aux_fini_array_entry
-0201a224 d __fini_array_start
-0201a224 d __init_array_end
-0201a228 b completed.1
-0201a228 d __fini_array_end
-0201a228 d __main_end
-0201a228 ? __tls_end
-0201a228 ? __tls_start
-0201a22c b object.0
-0201a244 00000004 B test
-0201a248 00000004 B deltaTime
-0201a250 00000008 B previousTime
-0201a258 00000001 B isDebgRunning
-0201a25c 00000004 B currentLanguageCode
-0201a260 0000005c B currentCopy
-0201a2bc 00000004 B glCurClearColor
-0201a2c0 00000004 b tickRef
-0201a2c4 00000008 B bgIsTextLut
-0201a2cc 00000140 B bgState
-0201a40c 00000004 b s_firstTask
-0201a410 00000008 b s_highTickCount
-0201a418 00000001 b s_tickInit
-0201a41c 00000008 b s_sleepThreads
-0201a424 00000008 b s_joinThreads
-0201a42c 00000070 b s_idleThread
-0201a49c 00000070 b s_mainThread
-0201a50c 00000004 b s_defaultErrno.0
-0201a510 00000001 B g_isTwlMode
-0201a514 000001f0 b s_pxiChannels
-0201a704 00000004 b s_pxiRecvState
-0201a708 00000008 b s_pxiRecvQueue
-0201a710 00000004 b s_pxiSendMutex
-0201a714 00000008 b s_mailboxRecvQueue
-0201a720 00000200 b s_pmPxiThreadStack
-0201a920 00000070 b s_pmPxiThread
-0201a990 00000008 b s_pmState
-0201a998 00000028 B __malloc_current_mallinfo
-0201a9c0 00000004 B __malloc_max_total_mem
-0201a9c4 00000004 B __malloc_max_sbrked_mem
-0201a9c8 00000004 B __malloc_top_pad
-0201a9cc 0000000c b __malloc_recursive_mutex
-0201a9d8 0000000c b __sfp_recursive_mutex
-0201a9e8 00000168 B __sf
-0201ab50 00000004 B __stdio_exit_handler
-0201ab54 00000004 b __hndl_lock
-0201ab58 00000004 B fake_heap_start
-0201ab5c 00000004 B fake_heap_end
-0201ab60 00000004 b heap_start.0
-0201ab64 b __heap_start_ntr
-0201ab64 b __main_bss_end
-0201ab80 r __heap_start_twl
-0201ab80 ? __twl_bss_end
-0201ab80 ? __twl_end
-0201ab80 ? __twl_start
-0201e264 a __loadlist_start
-0201e294 a __loadlist_end
+0201354c 00000408 t CSWTCH.184
+02013954 00000408 t CSWTCH.183
+02013d5c 00000408 t CSWTCH.182
+02014238 00000080 t dotab_stdout
+020142b8 00000204 T TAN_LUT
+020144bc 00000102 T SIN_LUT
+020145c0 T default_font_bin
+02014dc0 T default_font_bin_end
+02014dfc 00000010 t zeroes.0
+02014e0c 00000010 t blanks.1
+02014e1c 0000006c T __action_table
+02014e88 0000006c T __state_table
+02014ef4 00000100 T __chclass
+02014ff4 00000010 t zeroes.0
+02015004 00000010 t blanks.1
+02015014 00000022 t basefix.0
+02015038 00000010 t zeroes.0
+02015048 00000010 t blanks.1
+02015058 00000101 T _ctype_
+0201515c 0000000c t p05.0
+02015168 00000028 T __mprec_bigtens
+02015190 000000c8 T __mprec_tens
+02015258 000035dc t categories
+02018834 00000080 T dotab_stdnull
+020188b8 00000024 D cube_inds
+020188dc 00000120 D cube_vert
+020189fc 00000004 D platformName
+02018a00 00000001 D isGameRunning
+02018a04 00000010 D locale_names
+02018a14 00000001 d firstConsoleInit.0
+02018a18 00000004 D currentConsole
+02018a1c 0000005c D defaultConsole
+02018a78 00000020 D bgTransform
+02018a98 00000020 D bgScrollTable
+02018ab8 00000020 D bgControl
+02018ad8 00000004 D __malloc_sbrk_base
+02018adc 00000004 D __malloc_trim_threshold
+02018ae0 00000408 D __malloc_av_
+02018ee8 00000004 D _impure_ptr
+02018ef0 00000120 D _impure_data
+02019010 0000016c D __global_locale
+0201917c 0000000c D __sglue
+02019188 00001000 d handles
+0201a188 0000000c d __stderr_handle
+0201a194 0000000c d __stdout_handle
+0201a1a0 0000000c d __stdin_handle
+0201a1ac 0000008c D devoptab_list
+0201a238 r __EH_FRAME_BEGIN__
+0201a238 r __FRAME_END__
+0201a23c r __tls_info
+0201a248 d __frame_dummy_init_array_entry
+0201a248 d __init_array_start
+0201a248 d __preinit_array_end
+0201a248 d __preinit_array_start
+0201a24c d __do_global_dtors_aux_fini_array_entry
+0201a24c d __fini_array_start
+0201a24c d __init_array_end
+0201a250 b completed.1
+0201a250 d __fini_array_end
+0201a250 d __main_end
+0201a250 ? __tls_end
+0201a250 ? __tls_start
+0201a254 b object.0
+0201a26c 00000004 B test
+0201a270 00000004 B deltaTime
+0201a278 00000008 B previousTime
+0201a280 00000001 B isDebgRunning
+0201a284 00000004 B currentLanguageCode
+0201a288 0000005c B currentCopy
+0201a2e4 00000004 B glCurClearColor
+0201a2e8 00000004 b tickRef
+0201a2ec 00000008 B bgIsTextLut
+0201a2f4 00000140 B bgState
+0201a434 00000004 b s_firstTask
+0201a438 00000008 b s_highTickCount
+0201a440 00000001 b s_tickInit
+0201a444 00000008 b s_sleepThreads
+0201a44c 00000008 b s_joinThreads
+0201a454 00000070 b s_idleThread
+0201a4c4 00000070 b s_mainThread
+0201a534 00000004 b s_defaultErrno.0
+0201a538 00000001 B g_isTwlMode
+0201a53c 000001f0 b s_pxiChannels
+0201a72c 00000004 b s_pxiRecvState
+0201a730 00000008 b s_pxiRecvQueue
+0201a738 00000004 b s_pxiSendMutex
+0201a73c 00000008 b s_mailboxRecvQueue
+0201a748 00000200 b s_pmPxiThreadStack
+0201a948 00000070 b s_pmPxiThread
+0201a9b8 00000008 b s_pmState
+0201a9c0 00000028 B __malloc_current_mallinfo
+0201a9e8 00000004 B __malloc_max_total_mem
+0201a9ec 00000004 B __malloc_max_sbrked_mem
+0201a9f0 00000004 B __malloc_top_pad
+0201a9f4 0000000c b __malloc_recursive_mutex
+0201aa00 0000000c b __sfp_recursive_mutex
+0201aa10 00000168 B __sf
+0201ab78 00000004 B __stdio_exit_handler
+0201ab7c 00000004 b __hndl_lock
+0201ab80 00000004 B fake_heap_start
+0201ab84 00000004 B fake_heap_end
+0201ab88 00000004 b heap_start.0
+0201ab8c b __heap_start_ntr
+0201ab8c b __main_bss_end
+0201aba0 r __heap_start_twl
+0201aba0 ? __twl_bss_end
+0201aba0 ? __twl_end
+0201aba0 ? __twl_start
+0201e28c a __loadlist_start
+0201e2bc a __loadlist_end
 02400000 a __twl_lma
 02400000 a __twl_loadlist_lma
 02400000 a __twl_loadlist_start
