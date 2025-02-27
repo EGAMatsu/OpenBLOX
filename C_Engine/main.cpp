@@ -22,10 +22,13 @@ int main()
     // Enable printing debug info
     enableDebugConsole(1);
     systemStart();
+    currentLanguageCode=0;
 
     // Print hello and platform
     char string[128];
-    sprintf(string, "Current Lang: %s\n\nIf this updates, the thing\nis now running in C++.\n\nOpenBLOX says Hi.\nCurrent Platform: %s", locale_names[currentLanguageCode], platformName);
+    sprintf(string, "%s: %s\n%s: %s",
+            strings_debug[STRING_CURRENT_LANGUAGE][currentLanguageCode], locale_names[currentLanguageCode],
+            strings_debug[STRING_CURRENT_PLATFORM][currentLanguageCode], strings_platform[STRING_PLATFORM_DS______][currentLanguageCode]);
     print_message(string);
 
     initOpenGL();
