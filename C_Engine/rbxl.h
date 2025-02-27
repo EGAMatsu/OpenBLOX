@@ -2,10 +2,6 @@
 // XML file loader
 // - Adapted from OpenRblx
 
-#include <stdio.h>
-#include "CoreEngine/Node/nodes.h"
-#include "ThirdParty/xml/include/xml.h"
-
 Node *loadRBXLFile(const char *filename);
 Node *loadRBXLFilef(FILE *f);
 Node *loadRBXLFilex(struct xml_document *doc);
@@ -16,9 +12,9 @@ Node *loadRBXLFile(const char *filename)
 
     if (!f)
     {
-        //print_message("Unable to open file \"");
-        //print_message(filename);
-        //print_message("\"\n");
+        char text[256];
+        sprintf(text, "Unable to open file \"%s\".", filename);
+        print_message(text);
         return NULL;
     }
 

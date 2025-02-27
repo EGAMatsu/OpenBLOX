@@ -1,21 +1,7 @@
 #include <stdio.h>
 
-// Engine core that should be defined before the core platform includes
-#include "CoreEngine/gameGlobalVariables.h"
-#include "CoreEngine/color.h"
-#include "CoreEngine/timing.h"
-
-// Third party pre-platform includes
-#include "ThirdParty/TinyPhysicsEngine/tinyphysicsengine.h"
-
-#ifdef NDS_BUILD
-    #include "Platform/DS/dsINC.h"
-#elif   PC_BUILD
-    #include "Platform/PC/pcINC.h"
-#endif
-
-// Post platform includes
-#include "CoreEngine/GL/gameGL_globals.h"
+#include "./importantIncludes.h"
+#include "./rbxl.h"
 
 int main()
 {
