@@ -3,15 +3,16 @@
 */
 
 // Base Node
-typedef struct node {
+class Node {
+public:
     char name[128];
     char type[128];
-    struct node *parent;
-} Node;
+    Node* parent;
+};
 
 // Part
-typedef struct part {
-    Node node;
+class Part : public Node {
+public:
     int color;
     float x, y, z, rx, ry, rz, sx, sy, sz;
-} Part;
+};

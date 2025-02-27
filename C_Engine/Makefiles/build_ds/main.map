@@ -3222,45 +3222,45 @@ OUTPUT(/home/luke-warren/kms/OpenBLOX/C_Engine/Makefiles/build_ds/main.elf elf32
 LOAD linker stubs
 
 .debug_loclists
-                0x00000000    0x1a739
+                0x00000000    0x1a6d2
  .debug_loclists
-                0x00000000    0x1431d main.o
+                0x00000000    0x142b6 main.o
  .debug_loclists
-                0x0001431d     0x125e /opt/devkitpro/libnds/lib/libnds9.a(console.o)
+                0x000142b6     0x125e /opt/devkitpro/libnds/lib/libnds9.a(console.o)
  .debug_loclists
-                0x0001557b      0x819 /opt/devkitpro/libnds/lib/libnds9.a(trig.o)
+                0x00015514      0x819 /opt/devkitpro/libnds/lib/libnds9.a(trig.o)
  .debug_loclists
-                0x00015d94      0x419 /opt/devkitpro/libnds/lib/libnds9.a(videoGL_base.o)
+                0x00015d2d      0x419 /opt/devkitpro/libnds/lib/libnds9.a(videoGL_base.o)
  .debug_loclists
-                0x000161ad      0x207 /opt/devkitpro/libnds/lib/libnds9.a(timers.o)
+                0x00016146      0x207 /opt/devkitpro/libnds/lib/libnds9.a(timers.o)
  .debug_loclists
-                0x000163b4      0x2fd /opt/devkitpro/libnds/lib/libnds9.a(background.o)
+                0x0001634d      0x2fd /opt/devkitpro/libnds/lib/libnds9.a(background.o)
  .debug_loclists
-                0x000166b1       0x46 /opt/devkitpro/libnds/lib/libnds9.a(system.o)
+                0x0001664a       0x46 /opt/devkitpro/libnds/lib/libnds9.a(system.o)
  .debug_loclists
-                0x000166f7       0xba /opt/devkitpro/calico/lib/libcalico_ds9.a(irq.o)
+                0x00016690       0xba /opt/devkitpro/calico/lib/libcalico_ds9.a(irq.o)
  .debug_loclists
-                0x000167b1      0x4a5 /opt/devkitpro/calico/lib/libcalico_ds9.a(tick.o)
+                0x0001674a      0x4a5 /opt/devkitpro/calico/lib/libcalico_ds9.a(tick.o)
  .debug_loclists
-                0x00016c56      0xa60 /opt/devkitpro/calico/lib/libcalico_ds9.a(thread_cold.o)
+                0x00016bef      0xa60 /opt/devkitpro/calico/lib/libcalico_ds9.a(thread_cold.o)
  .debug_loclists
-                0x000176b6     0x10e2 /opt/devkitpro/calico/lib/libcalico_ds9.a(thread_hot.32.o)
+                0x0001764f     0x10e2 /opt/devkitpro/calico/lib/libcalico_ds9.a(thread_hot.32.o)
  .debug_loclists
-                0x00018798      0x10b /opt/devkitpro/calico/lib/libcalico_ds9.a(arm-shims.32.o)
+                0x00018731      0x10b /opt/devkitpro/calico/lib/libcalico_ds9.a(arm-shims.32.o)
  .debug_loclists
-                0x000188a3      0x3c5 /opt/devkitpro/calico/lib/libcalico_ds9.a(newlib_syscalls.o)
+                0x0001883c      0x3c5 /opt/devkitpro/calico/lib/libcalico_ds9.a(newlib_syscalls.o)
  .debug_loclists
-                0x00018c68      0x125 /opt/devkitpro/calico/lib/libcalico_ds9.a(startup.crt0.o)
+                0x00018c01      0x125 /opt/devkitpro/calico/lib/libcalico_ds9.a(startup.crt0.o)
  .debug_loclists
-                0x00018d8d      0x713 /opt/devkitpro/calico/lib/libcalico_ds9.a(pxi.o)
+                0x00018d26      0x713 /opt/devkitpro/calico/lib/libcalico_ds9.a(pxi.o)
  .debug_loclists
-                0x000194a0       0xea /opt/devkitpro/calico/lib/libcalico_ds9.a(sys_startup.o)
+                0x00019439       0xea /opt/devkitpro/calico/lib/libcalico_ds9.a(sys_startup.o)
  .debug_loclists
-                0x0001958a      0x978 /opt/devkitpro/calico/lib/libcalico_ds9.a(mutex.o)
+                0x00019523      0x978 /opt/devkitpro/calico/lib/libcalico_ds9.a(mutex.o)
  .debug_loclists
-                0x00019f02      0x358 /opt/devkitpro/calico/lib/libcalico_ds9.a(mailbox.o)
+                0x00019e9b      0x358 /opt/devkitpro/calico/lib/libcalico_ds9.a(mailbox.o)
  .debug_loclists
-                0x0001a25a      0x4df /opt/devkitpro/calico/lib/libcalico_ds9.a(pm.o)
+                0x0001a1f3      0x4df /opt/devkitpro/calico/lib/libcalico_ds9.a(pm.o)
 
 .debug_rnglists
                 0x00000000     0x3964
