@@ -1,7 +1,11 @@
 [OpenBLOX, By Digi-Space Productions](https://www.youtube.com/@DigiSpaceProductions) (Todo, Fix thumbnail)
+
 discord accounts:
+
 @baserisk (Alt)
+
 @digispaceproductions (Main)
+
 
 # About
 A project to make a new client for older ROBLOX Maps from 2005 to 2011
