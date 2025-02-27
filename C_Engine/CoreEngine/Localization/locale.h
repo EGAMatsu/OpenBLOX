@@ -5,6 +5,11 @@
 
 */
 
+#ifndef _LOCALES_H
+#define _LOCALES_H
+
+extern "C" {
+
 char *locale_codes[] = {
     "en",   // English
     "es",   // Spanish
@@ -51,3 +56,7 @@ char *strings_platform[][3] = {
 #define STRING_PLATFORM_DS______ 0
 #define STRING_PLATFORM_DSI_____ 1
 #define STRING_PLATFORM_PC______ 2
+
+}
+
+#endif

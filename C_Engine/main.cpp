@@ -1,34 +1,39 @@
 #include <stdio.h>
 
 #include "./importantIncludes.h"
-#include "./rbxl.h"
 
 int main()
 {
     // Enable printing debug info
     enableDebugConsole(1);
     systemStart();
-    currentLanguageCode=0;
 
-    // Print hello and platform
-    char string[128];
-    sprintf(string, "%s: %s\n%s: %s",
-            strings_debug[STRING_CURRENT_LANGUAGE][currentLanguageCode], locale_names[currentLanguageCode],
-            strings_debug[STRING_CURRENT_PLATFORM][currentLanguageCode], strings_platform[STRING_PLATFORM_DS______][currentLanguageCode]);
-    print_message(string);
+    if (startEngine) {
+        currentLanguageCode=0;
 
-    initOpenGL();
-    perspectiveModeGL();
+        // Print hello and platform
+        char string[128];
+        sprintf(string, "%s: %s\n%s: %s",
+                strings_debug[STRING_CURRENT_LANGUAGE][currentLanguageCode], locale_names[currentLanguageCode],
+                strings_debug[STRING_CURRENT_PLATFORM][currentLanguageCode], strings_platform[STRING_PLATFORM_DS______][currentLanguageCode]);
+        print_message(string);
 
-    while(isGameRunning) {
-        gameRenderLoop();
+        initOpenGL();
+        perspectiveModeGL();
 
-        deltaTime = deltaTimeCalc();
-        sprintf(string, "DeltaTime: %f\n", deltaTime);
-        //print_message(string);
+        while(isGameRunning) {
+            gameRenderLoop();
+
+            deltaTime = deltaTimeCalc();
+        }
+
+        return 0;
+    } else {
+        print_message("If you need help, look at:\n\nhttps://github.com/EGAMatsu/OpenBLOX/blob/main/README.md\n\nfor help, else join the discord:\nWf2bbU5z5J");
+        while(1) {
+            // Do nothing.
+        }
     }
-
-    return 0;
 }
 
 float test = 0;
