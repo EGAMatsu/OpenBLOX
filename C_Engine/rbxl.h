@@ -2,35 +2,26 @@
 // XML file loader
 // - Adapted from OpenRblx
 
-Node *loadRBXLFile(const char *filename);
-Node *loadRBXLFilef(FILE *f);
-Node *loadRBXLFilex(struct xml_document *doc);
+#include <stdio.h>
+#include "CoreEngine/Node/nodes.h"
+#include "ThirdParty/xml/include/xml.h"
+#include <dirent.h>
 
-Node *parseRBXMInternal(const char *filename)
-{
-    FILE *f = fopen(filename, "rb");
+#include <nds.h>
+#include <filesystem.h>
+#include <fat.h>
 
-    if (!f)
-    {
-        char text[256];
-        sprintf(text, "Unable to open file \"%s\".", filename);
-        print_message(text);
-        return NULL;
-    }
+#define parseRBXL(f) parseRBXMf(f, true)
+#define parseRBXM(f) parseRBXMf(f, false)
+Node *parseRBXMf(FILE *f, bool place);
+Node *parseRBXMx(struct xml_document *doc);
 
-    Node *dataModel = loadRBXLFilef(f);
-
-    //fclose(f); xml.c closes the file automatically
-
-    return dataModel;
-}
-
-Node *parseRBXMf(FILE *f)
+Node *parseRBXMf(FILE *f, bool place)
 {
     // TODO switch to use some kind of streaming reader
     struct xml_document *doc = xml_open_document(f);
 
-    Node *dataModel = loadRBXLFilex(doc);
+    Node *dataModel = parseRBXMx(doc);
 
     xml_document_free(doc, true);
 
@@ -46,10 +37,16 @@ Node *parseRBXMx(struct xml_document *doc)
     return dataModel;
 }
 
+static int crop, cropCurrent;
+static bool fileIsSelected;
+
 void loadFiles(Node **dataModel, Node **character)
 {
+    const char *mapFile[256];
+    int mapLength = 0;
+
     /* Start up fs */
-	if (fatInitDefault()) {
+	//if (fatInitDefault()) {
 		DIR *pdir;
 		struct dirent *pent;
 
@@ -173,9 +170,9 @@ void loadFiles(Node **dataModel, Node **character)
 			iprintf ("opendir() failure; terminating\n");
 		}
 		
-	} else {
-		iprintf("fatInit failure\n");
-	}
+//	} else {
+//		iprintf("fatInit failure\n");
+//	}
 
 }
 
