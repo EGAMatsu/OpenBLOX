@@ -2,6 +2,9 @@
     OpenBLOX nodes
 */
 
+#ifndef _NODES_H_
+#define _NODES_H_
+
 // Base Node
 class Node {
 public:
@@ -16,3 +19,6 @@ public:
     int color;
     float x, y, z, rx, ry, rz, sx, sy, sz;
 };
+
+#endif // _NODES_H_
+
