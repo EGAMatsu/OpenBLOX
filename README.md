@@ -1,10 +1,8 @@
 [OpenBLOX, By Digi-Space Productions](https://www.youtube.com/@DigiSpaceProductions) (Todo, Fix thumbnail)
 
 discord accounts:
-
-@baserisk (Alt)
-
-@digispaceproductions (Main)
+- @baserisk (Alt)
+- @digispaceproductions (Main)
 
 
 # About
