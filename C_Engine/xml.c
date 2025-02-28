@@ -20,7 +20,7 @@
  *
  *  3. This notice may not be removed or altered from any source distribution.
  */
-#include "xml.h"
+#include "ThirdParty/xml/include/xml.h"
 
 #ifdef XML_PARSER_VERBOSE
 #include <alloca.h>
