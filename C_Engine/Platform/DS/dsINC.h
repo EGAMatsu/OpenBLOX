@@ -16,6 +16,7 @@ void fileStart();
 void systemStart()  {
     cpuStartTiming(0);
     fileStart();
+    platSingleApp = 1;
 }
 
 void fileStart() {

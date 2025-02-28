@@ -17,6 +17,10 @@ int main()
                 strings_debug[STRING_CURRENT_LANGUAGE][currentLanguageCode], locale_names[currentLanguageCode],
                 strings_debug[STRING_CURRENT_PLATFORM][currentLanguageCode], strings_platform[STRING_PLATFORM_DS______][currentLanguageCode]);
         print_message(string);
+        
+        if (platSingleApp) {
+            loadFiles(nullptr, nullptr);
+        }
 
         initOpenGL();
         perspectiveModeGL();

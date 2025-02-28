@@ -419,7 +419,8 @@ void loadFiles(Node **dataModel, Node **character)
 					}
 				}
 			}
-			printf("\e[1;1H\e[2J"); 
+			//printf("\e[1;1H\e[2J"); 
+            printf("\n");
 			
 			/* Manager variables */
 			int pressed = 0;

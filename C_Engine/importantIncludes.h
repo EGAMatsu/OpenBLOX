@@ -9,7 +9,8 @@
 #include "ThirdParty/xml/include/xml.h"
 
 void print_message(const char * text);
-unsigned char startEngine = 0;
+unsigned char startEngine   = 0;
+unsigned char platSingleApp = 0;
 
 #include "./rbxl.h"
 
