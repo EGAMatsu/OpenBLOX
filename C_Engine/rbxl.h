@@ -303,7 +303,7 @@ static void serialize(SerializeInstance *inst, char *prop, char *propName, struc
 
     if (!done)
     {
-        print_message("property not serialized: %s, value %s\n", propName, prop);
+        //print_message("ns: %s\n", propName, prop);
     }
 
 }
@@ -319,14 +319,16 @@ static Node *loadModelPartXML(struct xml_node *node)
     struct xml_node *propertyNode = xml_node_child(node, 0);
     SerializeInstance inst;
 
+    inst.serializationCount = 0;
+
     if (!strcmp(className, "Part"))
     {
         newNode = new Part;
     }
     else
     {
-        print_message("Ignoring cl %s\n", className);
-        return NULL;
+        newNode = new Node;
+        print_message("Create placeholder for %s\n", className);
     }
 
     for (int i = 0; i < xml_node_children(propertyNode); i++)
