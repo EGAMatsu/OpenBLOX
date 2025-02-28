@@ -142,6 +142,9 @@ struct xml_parser {
 	uint8_t* buffer;
 	size_t position;
 	size_t length;
+    FILE *f;
+    size_t buf_off;
+    size_t buf_len;
 };
 
 /**
@@ -225,7 +228,7 @@ static uint8_t* xml_string_clone(struct xml_string* s) {
 		return 0;
 	}
 
-	uint8_t* clone = calloc(s->length + 1, sizeof(uint8_t));
+	uint8_t* clone = (uint8_t*)calloc(s->length + 1, sizeof(uint8_t));
 
 	xml_string_copy(s, clone, s->length);
 	clone[s->length] = 0;
@@ -293,7 +296,63 @@ static void xml_node_free(struct xml_node* node) {
 	free(node);
 }
 
+/**
+ * [PRIVATE]
+ *
+ * Prepares the parser to access a part of the file
+ */
 
+static void xml_parser_seek(struct xml_parser *parser, size_t offset, size_t size)
+{
+    if (parser->buf_off + parser->buf_len > offset + size && offset > parser->buf_off && parser->buffer)
+    {
+        return; // Buffer is within bounds
+    }
+    else if (parser->buf_len < size)
+    {
+        printf("xml_error: buffer length is not big enough (%d < %d)\n", parser->buf_len, size);
+        return;
+    }
+
+    if (!parser->buffer)
+    {
+        parser->buffer = (uint8_t*)malloc(parser->buf_len);
+    }
+
+    parser->position = offset;
+    parser->buf_off = offset;
+
+    fseek(parser->f, offset, SEEK_SET);
+    
+    fread(parser->buffer, parser->buf_len, 1, parser->f);
+
+    //printf("buf_off %d/%d\n", parser->buf_off, parser->length);
+}
+
+/**
+ * [PRIVATE]
+ *
+ * Reads bytes from the file
+ */
+static void xml_parser_read(struct xml_parser *parser, size_t offset, size_t size, void *dest)
+{
+    xml_parser_seek(parser, offset, size);
+    if (offset % 10000 == 0) printf("%08d/%08d\r", offset, parser->length);
+    memcpy(dest, parser->buffer + (offset - parser->buf_off), size);
+}
+
+/**
+ * [PRIVATE]
+ *
+ * Reads 1 byte from file
+*/
+static uint8_t xml_parser_getc(struct xml_parser *parser, size_t offset)
+{
+    uint8_t ret = 0;
+    xml_parser_read(parser, offset, 1, &ret);
+    //printf("%c", ret);
+    return ret;
+}
 
 /**
  * [PRIVATE]
@@ -328,18 +387,23 @@ static void xml_parser_error(struct xml_parser* parser, enum xml_parser_offset o
 	size_t position = 0; for (; position < character; ++position) {
 		column++;
 
-		if ('\n' == parser->buffer[position]) {
+		if ('\n' == xml_parser_getc(parser, position)) {
 			row++;
 			column = 0;
 		}
 	}
 
 	if (NO_CHARACTER != offset) {
-		fprintf(stderr,	"xml_parser_error at %i:%i (is %c): %s\n",
-				row + 1, column, parser->buffer[character], message
+		fprintf(stdout,	"xml_parser_error at %i:%i (is %c), char %d: %s\n",
+				row + 1, column, xml_parser_getc(parser, character), character, message
 		);
+        printf("buffer dump: ");
+        for (int i = 0; i < 50; i++)
+        {
+            printf("%c", parser->buffer[i]);
+        }
 	} else {
-		fprintf(stderr,	"xml_parser_error at %i:%i: %s\n",
+		fprintf(stdout,	"xml_parser_error at %i:%i: %s\n",
 				row + 1, column, message
 		);
 	}
@@ -354,12 +418,12 @@ static void xml_parser_error(struct xml_parser* parser, enum xml_parser_offset o
  * exist
  */
 static uint8_t xml_parser_peek(struct xml_parser* parser, size_t n) {
-	size_t position = parser->position;
+	size_t position = parser->position; 
 
 	while (position < parser->length) {
-		if (!isspace(parser->buffer[position])) {
+		if (!isspace(xml_parser_getc(parser, position))) {
 			if (n == 0) {
-				return parser->buffer[position];
+				return xml_parser_getc(parser, position);
 			} else {
 				--n;
 			}
@@ -386,8 +450,8 @@ static void xml_parser_consume(struct xml_parser* parser, size_t n) {
 	#ifdef XML_PARSER_VERBOSE
 	#define min(X,Y) ((X) < (Y) ? (X) : (Y))
 	char* consumed = alloca((n + 1) * sizeof(char));
-	memcpy(consumed, &parser->buffer[parser->position], min(n, parser->length - parser->position));
-	consumed[n] = 0;
+	xml_parser_read(parser, parser->position, min(n, parser->length - parser->position), consumed);
+    consumed[n] = 0;
 	#undef min
 
 	size_t message_buffer_length = 512;
@@ -422,7 +486,7 @@ static void xml_parser_consume(struct xml_parser* parser, size_t n) {
 static void xml_skip_whitespace(struct xml_parser* parser) {
 	xml_parser_info(parser, "whitespace");
 
-	while (isspace(parser->buffer[parser->position])) {
+	while (isspace(xml_parser_getc(parser, parser->position))) {
 		if (parser->position + 1 >= parser->length) {
 			return;
 		} else {
@@ -456,7 +520,7 @@ static struct xml_attribute** xml_find_attributes(struct xml_parser* parser, str
 	struct xml_attribute** attributes;
 	int position;
 
-	attributes = calloc(1, sizeof(struct xml_attribute*));
+	attributes = (struct xml_attribute **)calloc(1, sizeof(struct xml_attribute*));
 	attributes[0] = 0;
 
 	tmp = (char*) xml_string_clone(tag_open);
@@ -468,8 +532,8 @@ static struct xml_attribute** xml_find_attributes(struct xml_parser* parser, str
 	tag_open->length = strlen(token);
 
 	for(token=xml_strtok_r(NULL," ", &rest); token!=NULL; token=xml_strtok_r(NULL," ", &rest)) {
-		str_name = malloc(strlen(token)+1);
-		str_content = malloc(strlen(token)+1);
+		str_name = (char*)malloc(strlen(token)+1);
+		str_content = (char*)malloc(strlen(token)+1);
 		// %s=\"%s\" wasn't working for some reason, ugly hack to make it work
 		if(sscanf(token, "%[^=]=\"%[^\"]", str_name, str_content) != 2) {
 			if(sscanf(token, "%[^=]=\'%[^\']", str_name, str_content) != 2) {
@@ -482,17 +546,17 @@ static struct xml_attribute** xml_find_attributes(struct xml_parser* parser, str
 		start_name = &tag_open->buffer[position];
 		start_content = &tag_open->buffer[position + strlen(str_name) + 2];
 
-		new_attribute = malloc(sizeof(struct xml_attribute));
-		new_attribute->name = malloc(sizeof(struct xml_string));
+		new_attribute = (struct xml_attribute *)malloc(sizeof(struct xml_attribute));
+		new_attribute->name = (xml_string *)malloc(sizeof(struct xml_string));
 		new_attribute->name->buffer = (unsigned char*)start_name;
 		new_attribute->name->length = strlen(str_name);
-		new_attribute->content = malloc(sizeof(struct xml_string));
+		new_attribute->content = (xml_string*)malloc(sizeof(struct xml_string));
 		new_attribute->content->buffer = (unsigned char*)start_content;
 		new_attribute->content->length = strlen(str_content);
 
 		old_elements = get_zero_terminated_array_attributes(attributes);
 		new_elements = old_elements + 1;
-		attributes = realloc(attributes, (new_elements+1)*sizeof(struct xml_attribute*));
+		attributes = (xml_attribute**)realloc(attributes, (new_elements+1)*sizeof(struct xml_attribute*));
 
 		attributes[new_elements-1] = new_attribute;
 		attributes[new_elements] = 0;
@@ -546,8 +610,9 @@ static struct xml_string* xml_parse_tag_end(struct xml_parser* parser) {
 
 	/* Return parsed tag name
 	 */
-	struct xml_string* name = malloc(sizeof(struct xml_string));
-	name->buffer = &parser->buffer[start];
+	struct xml_string* name = (xml_string*)malloc(sizeof(struct xml_string));
+    name->buffer = (uint8_t*)malloc(length);
+    xml_parser_read(parser, start, length, (void*)name->buffer);
 	name->length = length;
 	return name;
 }
@@ -663,14 +728,15 @@ static struct xml_string* xml_parse_content(struct xml_parser* parser) {
 
 	/* Ignore tailing whitespace
 	 */
-	while ((length > 0) && isspace(parser->buffer[start + length - 1])) {
+	while ((length > 0) && isspace(xml_parser_getc(parser, start + length - 1))) {
 		length--;
 	}
 
 	/* Return text
 	 */
-	struct xml_string* content = malloc(sizeof(struct xml_string));
-	content->buffer = &parser->buffer[start];
+	struct xml_string* content = (xml_string*)malloc(sizeof(struct xml_string));
+	content->buffer = (uint8_t*)malloc(length);
+    xml_parser_read(parser, start, length, (void*)content->buffer);
 	content->length = length;
 	return content;
 }
@@ -706,9 +772,10 @@ static struct xml_node* xml_parse_node(struct xml_parser* parser) {
 	size_t original_length;
 	struct xml_attribute** attributes;
 
-	struct xml_node** children = calloc(1, sizeof(struct xml_node*));
+	struct xml_node** children = (xml_node**)calloc(1, sizeof(struct xml_node*));
 	children[0] = 0;
 
+    struct xml_node* node = (xml_node*)malloc(sizeof(struct xml_node)); // This causes a memory leak, but g++ doesn't like it being where it's supposed to.
 
 	/* Parse open tag
 	 */
@@ -734,7 +801,7 @@ static struct xml_node* xml_parse_node(struct xml_parser* parser) {
 		content = xml_parse_content(parser);
 
 		if (!content) {
-			xml_parser_error(parser, 0, "xml_parse_node::content");
+			xml_parser_error(parser, (xml_parser_offset)0, "xml_parse_node::content");
 			goto exit_failure;
 		}
 
@@ -755,7 +822,7 @@ static struct xml_node* xml_parse_node(struct xml_parser* parser) {
 		 */
 		size_t old_elements = get_zero_terminated_array_nodes(children);
 		size_t new_elements = old_elements + 1;
-		children = realloc(children, (new_elements + 1) * sizeof(struct xml_node*));
+		children = (xml_node**)realloc(children, (new_elements + 1) * sizeof(struct xml_node*));
 
 		/* Save child
 		 */
@@ -786,7 +853,7 @@ static struct xml_node* xml_parse_node(struct xml_parser* parser) {
 	xml_string_free(tag_close);
 
 node_creation:;
-	struct xml_node* node = malloc(sizeof(struct xml_node));
+	
 	node->name = tag_open;
 	node->content = content;
 	node->attributes = attributes;
@@ -824,19 +891,25 @@ exit_failure:
 /**
  * [PUBLIC API]
  */
-struct xml_document* xml_parse_document(uint8_t* buffer, size_t length) {
+struct xml_document* xml_parse_document(FILE *source) {
+
+    fseek(source, 0, SEEK_END);
+    long fsz = ftell(source);
+    fseek(source, 0, SEEK_SET);
 
 	/* Initialize parser
 	 */
 	struct xml_parser parser = {
-		.buffer = buffer,
+		.buffer = NULL,
 		.position = 0,
-		.length = length
+		.length = fsz,
+        .f = source,
+        .buf_len = fsz, // TODO
 	};
 
 	/* An empty buffer can never contain a valid document
 	 */
-	if (!length) {
+	if (!fsz) {
 		xml_parser_error(&parser, NO_CHARACTER, "xml_parse_document::length equals zero");
 		return 0;
 	}
@@ -849,11 +922,13 @@ struct xml_document* xml_parse_document(uint8_t* buffer, size_t length) {
 		return 0;
 	}
 
+    free(parser.buffer);
+
 	/* Return parsed document
 	 */
-	struct xml_document* document = malloc(sizeof(struct xml_document));
-	document->buffer.buffer = buffer;
-	document->buffer.length = length;
+	struct xml_document* document = (xml_document*)malloc(sizeof(struct xml_document));
+	//document->buffer.buffer = buffer;
+	//document->buffer.length = length;
 	document->root = root;
 
 	return document;
@@ -868,20 +943,20 @@ struct xml_document* xml_open_document(FILE* source) {
 
 	/* Prepare buffer
 	 */
-	size_t const read_chunk = 4096; // TODO 4096;
+	//size_t const read_chunk = 4096; // TODO 4096;
 
-	size_t document_length = 0;
-	size_t buffer_size = 1;	// TODO 4069
-	uint8_t* buffer = malloc(buffer_size * sizeof(uint8_t));
+	//size_t document_length = 0;
+	//size_t buffer_size = 1;	// TODO 4069
+	//uint8_t* buffer = (uint8_t*)malloc(buffer_size * sizeof(uint8_t));
 
 	/* Read hole file into buffer
 	 */
-	while (!feof(source)) {
+	//while (!feof(source)) {
 
 		/* Reallocate buffer
 		 */
-		if (buffer_size - document_length < read_chunk) {
-			buffer = realloc(buffer, buffer_size + 2 * read_chunk);
+	/*	if (buffer_size - document_length < read_chunk) {
+			buffer = (uint8_t*)realloc(buffer, buffer_size + 2 * read_chunk);
 			buffer_size += 2 * read_chunk;
 		}
 
@@ -893,14 +968,14 @@ struct xml_document* xml_open_document(FILE* source) {
 
 		document_length += read;
 	}
-	fclose(source);
+	fclose(source);*/
 
 	/* Try to parse buffer
 	 */
-	struct xml_document* document = xml_parse_document(buffer, document_length);
+	struct xml_document* document = xml_parse_document(source);
 
 	if (!document) {
-		free(buffer);
+		//free(buffer);
 		return 0;
 	}
 	return document;
@@ -915,7 +990,7 @@ void xml_document_free(struct xml_document* document, bool free_buffer) {
 	xml_node_free(document->root);
 
 	if (free_buffer) {
-		free(document->buffer.buffer);
+		//free(document->buffer.buffer);
 	}
 	free(document);
 }
@@ -1029,7 +1104,7 @@ struct xml_node* xml_easy_child(struct xml_node* node, uint8_t const* child_name
 		 */
 		struct xml_string cn = {
 			.buffer = child_name,
-			.length = strlen(child_name)
+			.length = strlen((const char *)child_name)
 		};
 
 		/* Interate through all children

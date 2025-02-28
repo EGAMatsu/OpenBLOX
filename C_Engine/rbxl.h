@@ -16,6 +16,8 @@
 #include <fat.h>
 #include <vector>
 
+#include "xml.h"
+
 #define parseRBXL(f) parseRBXMf(f, true)
 #define parseRBXM(f) parseRBXMf(f, false)
 Node *parseRBXMf(FILE *f, bool place);
@@ -24,9 +26,13 @@ Node *parseRBXMx(struct xml_document *doc);
 Node *parseRBXMf(FILE *f, bool place)
 {
     // TODO switch to use some kind of streaming reader
+    printf("Building XML tree...");
     struct xml_document *doc = xml_open_document(f);
+    printf("done\n");
 
+    printf("Building datamodel...");
     Node *dataModel = parseRBXMx(doc);
+    printf("done\n");
 
     xml_document_free(doc, true);
 
@@ -302,6 +308,9 @@ static void serialize(SerializeInstance *inst, char *prop, char *propName, struc
 
 }
 
+static int loadCount = 0;
+static int loadedCount = 0;
+
 // Load a model or part from XML
 static Node *loadModelPartXML(struct xml_node *node)
 {
@@ -357,8 +366,12 @@ static Node *loadModelPartXML(struct xml_node *node)
         free(type);
     }
 
+    loadCount += xml_node_children(node);
+
     for (int i = 0; i < xml_node_children(node); i++)
     {
+        loadedCount++;
+        printf("Loading %d/%d\n", loadedCount, loadCount);
         struct xml_node *child = xml_node_child(node, i);
         char *type = xml_easy_string(xml_node_name(child));
         if (!strcmp(type, "Item"))
@@ -378,13 +391,16 @@ Node *parseRBXMx(struct xml_document *doc)
 
     struct xml_node *root = xml_document_root(doc);
 
+    loadCount = xml_node_children(root);
     for (size_t i = 0; i < xml_node_children(root); i++)
     {
+        loadedCount++;
+        printf("Loading %d/%d\n", loadedCount, loadCount);
         struct xml_node *child = xml_node_child(root, i);
         char *name = (char *)xml_easy_name(child);
         if (!strcmp(name, "Item")) {
             Node *newNode = loadModelPartXML(child);//, &refsInst);
-            newNode->parent = dataModel;
+            if (newNode) newNode->parent = dataModel;
         }
         free(name);
     }
