@@ -371,7 +371,7 @@ static Node *loadModelPartXML(struct xml_node *node)
     for (int i = 0; i < xml_node_children(node); i++)
     {
         loadedCount++;
-        printf("Loading %d/%d\n", loadedCount, loadCount);
+        //printf("Loading %d/%d\n", loadedCount, loadCount);
         struct xml_node *child = xml_node_child(node, i);
         char *type = xml_easy_string(xml_node_name(child));
         if (!strcmp(type, "Item"))
@@ -391,11 +391,12 @@ Node *parseRBXMx(struct xml_document *doc)
 
     struct xml_node *root = xml_document_root(doc);
 
+    loadedCount = 0;
     loadCount = xml_node_children(root);
     for (size_t i = 0; i < xml_node_children(root); i++)
     {
         loadedCount++;
-        printf("Loading %d/%d\n", loadedCount, loadCount);
+        //printf("Loading %d/%d\n", loadedCount, loadCount);
         struct xml_node *child = xml_node_child(root, i);
         char *name = (char *)xml_easy_name(child);
         if (!strcmp(name, "Item")) {

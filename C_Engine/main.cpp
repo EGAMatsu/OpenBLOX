@@ -17,7 +17,8 @@ int main()
                 strings_debug[STRING_CURRENT_PLATFORM][currentLanguageCode], strings_platform[STRING_PLATFORM_DS______][currentLanguageCode]);
         
         if (platSingleApp) {
-            loadFiles(nullptr, nullptr);
+            Node *dataModel, *characterModel;
+            loadFiles(&dataModel, &characterModel);
         }
 
         initOpenGL();
