@@ -211,7 +211,7 @@ static void xmlserialize_token(int *val, char *prop, char *propName)
 
     if (*val == 0 && index == -1 && strlen(prop) > 1)
     {
-        //FIXME("token not serialized: %s (propname %s)\n", prop, propName);
+        print_message("token not serialized: %s (propname %s)\n", prop, propName);
     }
 }
 
@@ -219,9 +219,11 @@ static void xmlserialize_token(int *val, char *prop, char *propName)
 static void serialize(SerializeInstance *inst, char *prop, char *propName, struct xml_node *child, Node *ret)
 {
     char *type = xml_easy_string(xml_node_name(child));
+    bool done = false;
 
     if (!strcmp(type, "Complex"))
     {
+        print_message("TODO complex\n");
         // TODO complex
     }
 
@@ -235,7 +237,7 @@ static void serialize(SerializeInstance *inst, char *prop, char *propName, struc
             (!strcmp(inst->serializations[j].name, "Locked") && !strcmp(propName, "CanSelect")) ||
             (!strcmp(inst->serializations[j].name, "ClassName") && !strcmp(propName, "Keywords")))
         {
-            //done = true;
+            done = true;
             void *val = inst->serializations[j].val;
             switch (inst->serializations[j].type)
             {
@@ -286,11 +288,16 @@ static void serialize(SerializeInstance *inst, char *prop, char *propName, struc
                 //} break;
                 default:
                 {
-                    //FIXME("serialization type %d not implemented.\n", inst->serializations[j].type);
+                    print_message("serialization type %d not implemented.\n", inst->serializations[j].type);
                 } break;
             }
             break;
         }
+    }
+
+    if (!done)
+    {
+        print_message("property not serialized: %s, value %s\n", propName, prop);
     }
 
 }
@@ -309,7 +316,7 @@ static Node *loadModelPartXML(struct xml_node *node)
     }
     else
     {
-        // error somehow
+        print_message("Ignoring cl %s\n", className);
         return NULL;
     }
 
@@ -323,7 +330,7 @@ static Node *loadModelPartXML(struct xml_node *node)
             char *pName = xml_easy_string(xml_node_attribute_content(child, 0));
             if (!strcmp(pName, "Card"))
             {
-                //FIXME("No support for %s Feature\n", "Card");
+                //print_message("No support for %s Feature\n", "Card");
                 free(pName);
                 free(type);
                 continue;
@@ -368,8 +375,6 @@ static Node *loadModelPartXML(struct xml_node *node)
 Node *parseRBXMx(struct xml_document *doc)
 {
     Node *dataModel = new Node;
-
-    //print_message("TODO: parse xml");
 
     struct xml_node *root = xml_document_root(doc);
 
