@@ -9,6 +9,11 @@ class vec3 {
     public:
         float x, y, z;
 };
+void set_vec3(vec3* vector3, float x, float y, float z) {
+    vector3->x = x;
+    vector3->y = y;
+    vector3->z = z;
+}
 
 // Base Node
 class Node {
