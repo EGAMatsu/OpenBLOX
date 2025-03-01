@@ -413,7 +413,7 @@ static Node *loadModelPartXML(struct xml_node *node)
         if (!strcmp(type, "Item"))
         {
             Node *childNode = loadModelPartXML(child);
-            if (childNode) childNode->parent = newNode; 
+            if (childNode) childNode->SetParent(newNode); 
         }
         free(type);
     }
@@ -437,7 +437,7 @@ Node *parseRBXMx(struct xml_document *doc)
         char *name = (char *)xml_easy_name(child);
         if (!strcmp(name, "Item")) {
             Node *newNode = loadModelPartXML(child);//, &refsInst);
-            if (newNode) newNode->parent = dataModel;
+            if (newNode) newNode->SetParent(dataModel);
         }
         free(name);
     }

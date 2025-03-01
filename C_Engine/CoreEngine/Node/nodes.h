@@ -17,6 +17,8 @@ void set_vec3(vec3* vector3, float x, float y, float z) {
     vector3->z = z;
 }
 
+#include <vector>
+
 // Base Node
 class Node {
 public:
@@ -24,6 +26,13 @@ public:
     char name[64];
     char type[32];
     Node* parent;
+    std::vector<Node*> children;
+
+    void SetParent(Node *newParent)
+    {
+        parent = newParent;
+        newParent->children.push_back(this);
+    }
 };
 
 // Part
