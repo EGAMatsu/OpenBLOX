@@ -102,7 +102,7 @@ void xmlserialize_vector3_v3(void* val, struct xml_node *child)
 }
 
 // We don't have these classes yet, but they will be here eventually...
-/*static void xmlserialize_coordinateframe(CoordinateFrame *cf, struct xml_node *node)
+static void xmlserialize_coordinateframe(CoordinateFrame *cf, struct xml_node *node)
 {
     for (int i = 0; i < xml_node_children(node); i++)
     {
@@ -138,28 +138,7 @@ void xmlserialize_vector3_v3(void* val, struct xml_node *child)
         free(prop);
     }
 }
-
-static void xmlserialize_vector3(Vector3 *v, struct xml_node *node)
-{
-    for (int i = 0; i < xml_node_children(node); i++)
-    {
-        struct xml_node *child = xml_node_child(node, i);
-        char *propName = xml_easy_string(xml_node_name(child));
-        char *prop = xml_easy_string(xml_node_content(child));
-        float propI = atof(prop);
-
-        switch (*propName)
-        {
-            case 'X': v->x = propI; break;
-            case 'Y': v->y = propI; break;
-            case 'Z': v->z = propI; break;
-        }
-
-        free(propName);
-        free(prop);
-    }
-}
-
+/*
 static void xmlserialize_color3(Color3 *c, struct xml_node *node)
 {
     for (int i = 0; i < xml_node_children(node); i++)
@@ -300,11 +279,11 @@ static void serialize(SerializeInstance *inst, char *prop, char *propName, struc
                 {
                     xmlserialize_vector3_v3(val, child);
                 } break;
-                /*case Serialize_CoordinateFrame:
+                case Serialize_CoordinateFrame:
                 {
-                    xmlserialize_coordinateframe(val, child);
+                    xmlserialize_coordinateframe((CFrame*)val, child);
                 } break;
-                case Serialize_Color3:
+                /*case Serialize_Color3:
                 {
                     xmlserialize_color3(val, child);
                 } break;
@@ -333,13 +312,18 @@ static void serialize(SerializeInstance *inst, char *prop, char *propName, struc
 
     if (!done)
     {
-        //print_message("ns: %s\n", propName, prop);
+        print_message("ns: %s\n", propName, prop);
     }
 
 }
 
 static int loadCount = 0;
 static int loadedCount = 0;
+
+// pName: property name - the name in the roblox engine
+// sName: struct name - the name of the class member that corresponds to the value
+// cName: class name - the name of the class
+#define serialize_atomic(type, pName, obj, sName) inst.serializations.push_back((Serialization){Serialize_##type, pName, &obj->sName})
 
 // Load a model or part from XML
 static Node *loadModelPartXML(struct xml_node *node)
@@ -353,11 +337,25 @@ static Node *loadModelPartXML(struct xml_node *node)
 
     if (!strcmp(className, "Part"))
     {
-        newNode = new Part;
+        Part *newPart = new Part;
+
+        serialize_atomic(Vector3, "size", newPart, scale);
+        serialize_atomic(int, "BrickColor", newPart, color);
+        serialize_atomic(token, "Shape", newPart, shape);
+        serialize_atomic(CoordinateFrame, "CFrame", newPart, cf);
+
+        newNode = newPart;
     }
     else if (!strcmp(className, "SpawnLocation"))
     {
-        newNode = new SpawnLocation;
+        SpawnLocation *newSL = new SpawnLocation;
+    
+        serialize_atomic(Vector3, "size", newSL, scale);
+        serialize_atomic(int, "BrickColor", newSL, color);
+        serialize_atomic(token, "Shape", newSL, shape);
+        serialize_atomic(CoordinateFrame, "CFrame", newSL, cf);
+
+        newNode = newSL;
     }
     else
     {
@@ -413,7 +411,7 @@ static Node *loadModelPartXML(struct xml_node *node)
         if (!strcmp(type, "Item"))
         {
             Node *childNode = loadModelPartXML(child);
-            if (childNode) childNode->parent = newNode; 
+            if (childNode) childNode->SetParent(newNode); 
         }
         free(type);
     }
@@ -437,7 +435,7 @@ Node *parseRBXMx(struct xml_document *doc)
         char *name = (char *)xml_easy_name(child);
         if (!strcmp(name, "Item")) {
             Node *newNode = loadModelPartXML(child);//, &refsInst);
-            if (newNode) newNode->parent = dataModel;
+            if (newNode) newNode->SetParent(dataModel);
         }
         free(name);
     }

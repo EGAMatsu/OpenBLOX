@@ -5,7 +5,7 @@
 #ifndef _NODES_H_
 #define _NODES_H_
 
-void render_cube_transform(float x, float y, float z, float rx, float ry, float rz, float sx, float sy, float sz, int color);
+void render_cube_transform(float x, float y, float z, float rx, float ry, float rz, float sx, float sy, float sz, int color); 
 
 class vec3 {
     public:
@@ -17,6 +17,53 @@ void set_vec3(vec3* vector3, float x, float y, float z) {
     vector3->z = z;
 }
 
+#include <cmath>
+
+class CFrame {
+    public:
+        float X,Y,Z,R00,R01,R02,R10,R11,R12,R20,R21,R22;
+
+    vec3 toEulerAngles()
+    {
+        vec3 ret;
+       
+        // Extract angles assuming YXZ rotation order
+        float sy = -R20;
+    
+        if (fabs(sy) < 1.0f) // Standard case
+        {
+            ret.x = atan2(R21, R22); // Roll
+            ret.y = asin(sy);        // Pitch
+            ret.z = atan2(R10, R00); // Yaw
+        }
+        else // Gimbal lock case
+        {
+            ret.x = 0; // Roll is undefined, set to zero
+            ret.y = (sy > 0) ? M_PI / 2 : -M_PI / 2; // ±90 degrees
+            ret.z = atan2(-R01, R11); // Yaw
+        }
+
+        return ret; 
+    }
+
+    vec3 position()
+    {
+        vec3 ret;
+
+        ret.x = X;
+        ret.y = Y;
+        ret.z = Z;
+
+        return ret;
+    }
+
+};
+typedef CFrame CoordinateFrame;
+
+void render_cube_cf(CFrame cf, vec3 size, int color);
+
+#include <vector>
+
 // Base Node
 class Node {
 public:
@@ -24,6 +71,13 @@ public:
     char name[64];
     char type[32];
     Node* parent;
+    std::vector<Node*> children;
+
+    void SetParent(Node *newParent)
+    {
+        parent = newParent;
+        newParent->children.push_back(this);
+    }
 };
 
 // Part
@@ -31,13 +85,10 @@ class Part : public Node {
 public:
     int color = 2;
     int shape; // Maybe make -1 force the engine to find a SpecialMesh?
-    vec3 position, scale, rotation;
+    vec3 scale;
+    CFrame cf;
     void render() {
-        vec3 p, s, r;
-        p = this->position;
-        s = this->scale;
-        r = this->rotation;
-        render_cube_transform(p.x,p.y,p.z, s.x,s.y,s.z, r.x,r.y,r.z, this->color);
+        render_cube_cf(cf, scale, color);
     }
 };
 
@@ -49,15 +100,17 @@ public:
 
 // Shitty world render function, will be slow, but will hopefully work if shit doesn't break.
 void renderWorld(Node *world) {
-    int length = sizeof(world) / sizeof(Node); // Might work.
-    for (int i = 0; i < length; i++) {
-        Node* node = &world[i];
+    for (int i = 0; i < world->children.size(); i++) {
+        Node* node = world->children[i];
         
         // Attempt Cast.
         Part* part = dynamic_cast<Part*>(node);
         if (part != nullptr) {
+            //printf("Render part\n");
             part->render(); // Part exists, render (TODO: Make optimized.)
         }
+
+        renderWorld(node);
     }
 }
 

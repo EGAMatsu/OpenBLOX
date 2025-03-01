@@ -123,3 +123,11 @@ void render_cube_transform(float x, float y, float z, float rx, float ry, float 
         render_cube(color);
     popMatrix();
 }
+
+void render_cube_cf(CFrame cf, vec3 size, int color)
+{
+    vec3 p = cf.position();
+    vec3 r = cf.toEulerAngles();
+    render_cube_transform(p.x, p.y, p.z, r.x, r.y, r.z, size.x, size.y, size.z, color);
+}
+
