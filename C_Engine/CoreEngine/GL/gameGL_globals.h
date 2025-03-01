@@ -123,3 +123,38 @@ void render_cube_transform(float x, float y, float z, float rx, float ry, float 
         render_cube(color);
     popMatrix();
 }
+
+void glMultMatrixf(float matf[16])
+{
+    m4x4 m;
+
+    for (int i = 0; i < 16; i++)
+    {
+        m.m[i] = matf[i];
+    }
+
+    glMultMatrix4x4(&m);
+}
+
+void scale_and_cf(CFrame cf, vec3 scale)
+{
+    glTranslatef(cf.X, cf.Y, cf.Z);
+    // rotation
+    float matf[16] = {
+        -cf.R00, cf.R01, -cf.R02, 0.0f,
+        -cf.R10, cf.R11, -cf.R12, 0.0f,
+        -cf.R20, cf.R21, -cf.R22, 0.0f,
+           0.0f,   0.0f,    0.0f, 1.0f 
+    };
+    glMultMatrixf(matf);
+    glScalef(scale.x, scale.y, scale.z);
+}
+
+void render_cube_cf(CFrame cf, vec3 size, int color)
+{
+    pushMatrix();
+        scale_and_cf(cf, size);
+        render_cube(color);
+    popMatrix();
+}
+
