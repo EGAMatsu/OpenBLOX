@@ -72,7 +72,6 @@ struct Serialization {
 
 struct SerializeInstance {
     std::vector<Serialization> serializations;
-    int serializationCount;
 };
 
 static void xmlserialize_vector3_DS(Vector3 *v, struct xml_node *node)
@@ -238,7 +237,7 @@ static void serialize(SerializeInstance *inst, char *prop, char *propName, struc
         // TODO complex
     }
 
-    for (int j = 0; j < inst->serializationCount; j++)
+    for (int j = 0; j < inst->serializations.size(); j++)
     {
         if (!strcmp(inst->serializations[j].name, propName) ||
 
@@ -312,7 +311,7 @@ static void serialize(SerializeInstance *inst, char *prop, char *propName, struc
 
     if (!done)
     {
-        print_message("ns: %s\n", propName, prop);
+        print_message("ns: %s %s\n", propName, prop);
     }
 
 }
@@ -332,8 +331,6 @@ static Node *loadModelPartXML(struct xml_node *node)
     char *className = xml_easy_string(xml_node_attribute_content(node, 0));
     struct xml_node *propertyNode = xml_node_child(node, 0);
     SerializeInstance inst;
-
-    inst.serializationCount = 0;
 
     if (!strcmp(className, "Part"))
     {
@@ -360,7 +357,7 @@ static Node *loadModelPartXML(struct xml_node *node)
     else
     {
         newNode = new Node;
-        print_message("Create placeholder for %s\n", className);
+        //print_message("Create placeholder for %s\n", className);
     }
 
     for (int i = 0; i < xml_node_children(propertyNode); i++)
