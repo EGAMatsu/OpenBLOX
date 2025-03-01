@@ -5,12 +5,14 @@
 #ifndef _NODES_H_
 #define _NODES_H_
 
+#include <iostream>
+
 void render_cube_transform(float x, float y, float z, float rx, float ry, float rz, float sx, float sy, float sz, int color);
 
 class vec3 {
     public:
         float x, y, z;
-};
+}; typedef vec3 Vector3;
 void set_vec3(vec3* vector3, float x, float y, float z) {
     vector3->x = x;
     vector3->y = y;
@@ -20,6 +22,7 @@ void set_vec3(vec3* vector3, float x, float y, float z) {
 // Base Node
 class Node {
 public:
+    virtual ~Node() {}
     char name[64];
     char type[32];
     Node* parent;
@@ -28,7 +31,8 @@ public:
 // Part
 class Part : public Node {
 public:
-    int color;
+    int color = 2;
+    int shape; // Maybe make -1 force the engine to find a SpecialMesh?
     vec3 position, scale, rotation;
     void render() {
         vec3 p, s, r;
@@ -42,8 +46,21 @@ public:
 // SpawnLocation
 class SpawnLocation : public Part {
 public:
-    int teamColor;
+    int teamColor = 2;
 };
+
+// Shitty world render function, will be slow, but will hopefully work if shit doesn't break.
+void renderWorld(Node* world, int length) {
+    for (int i = 0; i < length; i++) {
+        Node* node = &world[i];
+        
+        // Attempt Cast.
+        Part* part = dynamic_cast<Part*>(node);
+        if (part) {
+            part->render(); // Part exists, render (TODO: Make optimized.)
+        }
+    }
+}
 
 #endif // _NODES_H_
 

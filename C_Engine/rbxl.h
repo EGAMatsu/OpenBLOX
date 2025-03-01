@@ -75,6 +75,32 @@ struct SerializeInstance {
     int serializationCount;
 };
 
+static void xmlserialize_vector3_DS(Vector3 *v, struct xml_node *node)
+{
+    for (int i = 0; i < xml_node_children(node); i++)
+    {
+        struct xml_node *child = xml_node_child(node, i);
+        char *propName = xml_easy_string(xml_node_name(child));
+        char *prop = xml_easy_string(xml_node_content(child));
+        float propI = atof(prop);
+
+        switch (*propName)
+        {
+            case 'X': v->x = propI; break;
+            case 'Y': v->y = propI; break;
+            case 'Z': v->z = propI; break;
+        }
+
+        free(propName);
+        free(prop);
+    }
+}
+
+void xmlserialize_vector3_v3(void* val, struct xml_node *child)
+{
+    xmlserialize_vector3_DS((Vector3*)val, child);
+}
+
 // We don't have these classes yet, but they will be here eventually...
 /*static void xmlserialize_coordinateframe(CoordinateFrame *cf, struct xml_node *node)
 {
@@ -269,6 +295,10 @@ static void serialize(SerializeInstance *inst, char *prop, char *propName, struc
                     memcpy(str, prop, strlen(prop));
                     str[strlen(prop)] = 0;
                     *(char**)val = str;
+                } break;
+                case Serialize_Vector3:
+                {
+                    xmlserialize_vector3_v3(val, child);
                 } break;
                 /*case Serialize_CoordinateFrame:
                 {
