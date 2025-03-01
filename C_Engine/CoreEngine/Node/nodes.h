@@ -5,7 +5,7 @@
 #ifndef _NODES_H_
 #define _NODES_H_
 
-
+void render_cube_transform(float x, float y, float z, float rx, float ry, float rz, float sx, float sy, float sz, int color); 
 
 class vec3 {
     public:
@@ -18,29 +18,33 @@ void set_vec3(vec3* vector3, float x, float y, float z) {
 }
 
 #include <cmath>
-#define PI 3.1415f
 
 class CFrame {
     public:
         float X,Y,Z,R00,R01,R02,R10,R11,R12,R20,R21,R22;
 
-    /*vec3 toEulerAngles()
+    vec3 toEulerAngles()
     {
         vec3 ret;
-
-        float T1 = atan2(R21, R22);
-        float C2 = sqrt(R00*R00 + R10*R10);
-        float T2 = atan2(-R20, C2);
-        float S1 = sin(T1);
-        float C1 = cos(T1);
-        float T3 = atan2(S1*R02 - C1*R01, C1*R11 - S1*R12);
-
-        ret.x = -T1;
-        ret.y = -T2;
-        ret.z = -T3;
+       
+        // Extract angles assuming YXZ rotation order
+        float sy = -R20;
     
-        return ret;
-    }*/
+        if (fabs(sy) < 1.0f) // Standard case
+        {
+            ret.x = atan2(R21, R22); // Roll
+            ret.y = asin(sy);        // Pitch
+            ret.z = atan2(R10, R00); // Yaw
+        }
+        else // Gimbal lock case
+        {
+            ret.x = 0; // Roll is undefined, set to zero
+            ret.y = (sy > 0) ? M_PI / 2 : -M_PI / 2; // ±90 degrees
+            ret.z = atan2(-R01, R11); // Yaw
+        }
+
+        return ret; 
+    }
 
     vec3 position()
     {

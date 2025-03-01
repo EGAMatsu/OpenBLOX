@@ -124,38 +124,10 @@ void render_cube_transform(float x, float y, float z, float rx, float ry, float 
     popMatrix();
 }
 
-void glMultMatrixf(float matf[16])
-{
-    m4x4 m;
-
-    for (int i = 0; i < 16; i++)
-    {
-        m.m[i] = floattof32(matf[i]);
-    }
-
-    glMultMatrix4x4(&m);
-}
-
-void scale_and_cf(CFrame cf, vec3 scale)
-{
-    glTranslatef(cf.X, cf.Y, cf.Z);
-    // rotation
-    // this is converted to traditional OpenGL matrix
-    float matf[16] = {
-        -cf.R00, -cf.R10, -cf.R20, 0.0f,
-         cf.R01,  cf.R11,  cf.R21, 0.0f,
-        -cf.R02, -cf.R12, -cf.R22, 0.0f,
-         0.0f,    0.0f,    0.0f,   1.0f,
-    };
-    glMultMatrixf(matf);
-    glScalef(scale.x, scale.y, scale.z);
-}
-
 void render_cube_cf(CFrame cf, vec3 size, int color)
 {
-    pushMatrix();
-        scale_and_cf(cf, size);
-        render_cube(color);
-    popMatrix();
+    vec3 p = cf.position();
+    vec3 r = cf.toEulerAngles();
+    render_cube_transform(p.x, p.y, p.z, r.x, r.y, r.z, size.x, size.y, size.z, color);
 }
 
