@@ -55,7 +55,7 @@ void renderWorld(Node *world) {
         
         // Attempt Cast.
         Part* part = dynamic_cast<Part*>(node);
-        if (part) {
+        if (part != nullptr) {
             part->render(); // Part exists, render (TODO: Make optimized.)
         }
     }
