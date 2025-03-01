@@ -20,5 +20,11 @@ public:
     float x, y, z, rx, ry, rz, sx, sy, sz;
 };
 
+// SpawnLocation
+class SpawnLocation : public Part {
+public:
+    int teamColor;
+};
+
 #endif // _NODES_H_
 

@@ -18,7 +18,9 @@ int main()
         
         if (platSingleApp) {
             Node *dataModel, *characterModel;
+            print_message("Loading...");
             loadFiles(&dataModel, &characterModel);
+            print_message("Done.");
         }
 
         initOpenGL();

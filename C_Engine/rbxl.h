@@ -30,7 +30,7 @@ Node *parseRBXMf(FILE *f, bool place)
     struct xml_document *doc = xml_open_document(f);
     printf("done\n");
 
-    printf("Building datamodel...");
+    printf("Building datamodel...\n");
     Node *dataModel = parseRBXMx(doc);
     printf("done\n");
 
@@ -324,6 +324,10 @@ static Node *loadModelPartXML(struct xml_node *node)
     if (!strcmp(className, "Part"))
     {
         newNode = new Part;
+    }
+    else if (!strcmp(className, "SpawnLocation"))
+    {
+        newNode = new SpawnLocation;
     }
     else
     {
