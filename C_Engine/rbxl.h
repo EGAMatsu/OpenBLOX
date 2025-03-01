@@ -139,7 +139,7 @@ void xmlserialize_vector3_v3(void* val, struct xml_node *child)
     }
 }
 
-static void xmlserialize_vector3(Vector3 *v, struct xml_node *node)
+static void xmlserialize_vector3(vec3 *v, struct xml_node *node)
 {
     for (int i = 0; i < xml_node_children(node); i++)
     {
@@ -159,6 +159,7 @@ static void xmlserialize_vector3(Vector3 *v, struct xml_node *node)
         free(prop);
     }
 }
+
 
 static void xmlserialize_color3(Color3 *c, struct xml_node *node)
 {
@@ -333,13 +334,18 @@ static void serialize(SerializeInstance *inst, char *prop, char *propName, struc
 
     if (!done)
     {
-        //print_message("ns: %s\n", propName, prop);
+        print_message("ns: %s\n", propName, prop);
     }
 
 }
 
 static int loadCount = 0;
 static int loadedCount = 0;
+
+// pName: property name - the name in the roblox engine
+// sName: struct name - the name of the class member that corresponds to the value
+// cName: class name - the name of the class
+#define serialize_atomic(type, pName, obj, sName) inst.serializations.push_back((Serialization){Serialize_##type, pName, &obj->sName})
 
 // Load a model or part from XML
 static Node *loadModelPartXML(struct xml_node *node)
@@ -353,11 +359,28 @@ static Node *loadModelPartXML(struct xml_node *node)
 
     if (!strcmp(className, "Part"))
     {
-        newNode = new Part;
+        Part *newPart = new Part;
+
+        serialize_atomic(Vector3, "Position", newPart, position);
+        serialize_atomic(Vector3, "Size", newPart, scale);
+        serialize_atomic(Vector3, "Rotation", newPart, rotation);
+        serialize_atomic(int, "BrickColor", newPart, color);
+        serialize_atomic(token, "Shape", newPart, shape);
+
+
+        newNode = newPart;
     }
     else if (!strcmp(className, "SpawnLocation"))
     {
-        newNode = new SpawnLocation;
+        SpawnLocation *newSL = new SpawnLocation;
+    
+        serialize_atomic(Vector3, "Position", newSL, position);
+        serialize_atomic(Vector3, "Size", newSL, scale);
+        serialize_atomic(Vector3, "Rotation", newSL, rotation);
+        serialize_atomic(int, "BrickColor", newSL, color);
+        serialize_atomic(token, "Shape", newSL, shape);
+
+        newNode = newSL;
     }
     else
     {
@@ -402,6 +425,11 @@ static Node *loadModelPartXML(struct xml_node *node)
         free(type);
     }
 
+    if (!strcmp(className, "Part"))
+    {
+        Part *newPart = dynamic_cast<Part*>(newNode);
+        printf("Loaded part p %f %f %f s %f %f %f r %f %f %f c %d s %d\n", newPart->position.x, newPart->position.y, newPart->position.z, newPart->scale.x, newPart->scale.y, newPart->scale.z, newPart->rotation.x, newPart->rotation.y, newPart->rotation.z, newPart->color, newPart->shape);
+    }
     loadCount += xml_node_children(node);
 
     for (int i = 0; i < xml_node_children(node); i++)

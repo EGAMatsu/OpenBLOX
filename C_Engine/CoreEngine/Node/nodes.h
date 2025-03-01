@@ -46,6 +46,7 @@ public:
         p = this->position;
         s = this->scale;
         r = this->rotation;
+        
         render_cube_transform(p.x,p.y,p.z, s.x,s.y,s.z, r.x,r.y,r.z, this->color);
     }
 };
@@ -58,15 +59,17 @@ public:
 
 // Shitty world render function, will be slow, but will hopefully work if shit doesn't break.
 void renderWorld(Node *world) {
-    int length = sizeof(world) / sizeof(Node); // Might work.
-    for (int i = 0; i < length; i++) {
-        Node* node = &world[i];
+    for (int i = 0; i < world->children.size(); i++) {
+        Node* node = world->children[i];
         
         // Attempt Cast.
         Part* part = dynamic_cast<Part*>(node);
         if (part != nullptr) {
+            //printf("Render part\n");
             part->render(); // Part exists, render (TODO: Make optimized.)
         }
+
+        renderWorld(node);
     }
 }
 
