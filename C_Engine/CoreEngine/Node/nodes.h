@@ -18,8 +18,8 @@ void set_vec3(vec3* vector3, float x, float y, float z) {
 // Base Node
 class Node {
 public:
-    char name[128];
-    char type[128];
+    char name[64];
+    char type[32];
     Node* parent;
 };
 
