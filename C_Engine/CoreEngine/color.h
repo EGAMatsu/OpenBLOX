@@ -1053,6 +1053,8 @@ int colorGrab(int value, unsigned char returnType) {
         color_g = 0;
         color_b = 191;
         break;
+    default:
+        print_message("unknown color %d\n", value);
 	}
     
     // User should ALWAYS do 0 for fastest speed, but for testing, eg just wanting to get something working, doing 1, 2, or 3 is validish.
