@@ -5,6 +5,11 @@
 #ifndef _NODES_H_
 #define _NODES_H_
 
+class vec3 {
+    public:
+        float x, y, z;
+};
+
 // Base Node
 class Node {
 public:
@@ -17,7 +22,7 @@ public:
 class Part : public Node {
 public:
     int color;
-    float x, y, z, rx, ry, rz, sx, sy, sz;
+    vec3 position, scale, rotation;
 };
 
 // SpawnLocation
