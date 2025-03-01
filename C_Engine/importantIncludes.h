@@ -3,16 +3,12 @@
 
 // Engine core that should be defined before the core platform includes
 #include "CoreEngine/gameGlobalVariables.h"
-#include "CoreEngine/color.h"
 #include "CoreEngine/timing.h"
-#include "CoreEngine/Node/nodes.h"
 #include "ThirdParty/xml/include/xml.h"
 
 void print_message(const char * text, ...);
 unsigned char startEngine   = 0;
 unsigned char platSingleApp = 0;
-
-#include "./rbxl.h"
 
 // Third party pre-platform includes
 #include "ThirdParty/TinyPhysicsEngine/tinyphysicsengine.h"
@@ -24,7 +20,11 @@ unsigned char platSingleApp = 0;
 #endif
 
 // Post platform includes
+#include "CoreEngine/color.h"
 #include "CoreEngine/GL/gameGL_globals.h"
 
+// Level/Model stuff
+#include "CoreEngine/Node/nodes.h"
+#include "./rbxl.h"
 
 #endif
