@@ -102,7 +102,7 @@ void xmlserialize_vector3_v3(void* val, struct xml_node *child)
 }
 
 // We don't have these classes yet, but they will be here eventually...
-/*static void xmlserialize_coordinateframe(CoordinateFrame *cf, struct xml_node *node)
+static void xmlserialize_coordinateframe(CoordinateFrame *cf, struct xml_node *node)
 {
     for (int i = 0; i < xml_node_children(node); i++)
     {
@@ -138,29 +138,7 @@ void xmlserialize_vector3_v3(void* val, struct xml_node *child)
         free(prop);
     }
 }
-
-static void xmlserialize_vector3(vec3 *v, struct xml_node *node)
-{
-    for (int i = 0; i < xml_node_children(node); i++)
-    {
-        struct xml_node *child = xml_node_child(node, i);
-        char *propName = xml_easy_string(xml_node_name(child));
-        char *prop = xml_easy_string(xml_node_content(child));
-        float propI = atof(prop);
-
-        switch (*propName)
-        {
-            case 'X': v->x = propI; break;
-            case 'Y': v->y = propI; break;
-            case 'Z': v->z = propI; break;
-        }
-
-        free(propName);
-        free(prop);
-    }
-}
-
-
+/*
 static void xmlserialize_color3(Color3 *c, struct xml_node *node)
 {
     for (int i = 0; i < xml_node_children(node); i++)
@@ -301,11 +279,11 @@ static void serialize(SerializeInstance *inst, char *prop, char *propName, struc
                 {
                     xmlserialize_vector3_v3(val, child);
                 } break;
-                /*case Serialize_CoordinateFrame:
+                case Serialize_CoordinateFrame:
                 {
-                    xmlserialize_coordinateframe(val, child);
+                    xmlserialize_coordinateframe((CFrame*)val, child);
                 } break;
-                case Serialize_Color3:
+                /*case Serialize_Color3:
                 {
                     xmlserialize_color3(val, child);
                 } break;
@@ -361,12 +339,10 @@ static Node *loadModelPartXML(struct xml_node *node)
     {
         Part *newPart = new Part;
 
-        serialize_atomic(Vector3, "Position", newPart, position);
-        serialize_atomic(Vector3, "Size", newPart, scale);
-        serialize_atomic(Vector3, "Rotation", newPart, rotation);
+        serialize_atomic(Vector3, "size", newPart, scale);
         serialize_atomic(int, "BrickColor", newPart, color);
         serialize_atomic(token, "Shape", newPart, shape);
-
+        serialize_atomic(CoordinateFrame, "CFrame", newPart, cf);
 
         newNode = newPart;
     }
@@ -374,11 +350,10 @@ static Node *loadModelPartXML(struct xml_node *node)
     {
         SpawnLocation *newSL = new SpawnLocation;
     
-        serialize_atomic(Vector3, "Position", newSL, position);
-        serialize_atomic(Vector3, "Size", newSL, scale);
-        serialize_atomic(Vector3, "Rotation", newSL, rotation);
+        serialize_atomic(Vector3, "size", newSL, scale);
         serialize_atomic(int, "BrickColor", newSL, color);
         serialize_atomic(token, "Shape", newSL, shape);
+        serialize_atomic(CoordinateFrame, "CFrame", newSL, cf);
 
         newNode = newSL;
     }
@@ -425,11 +400,6 @@ static Node *loadModelPartXML(struct xml_node *node)
         free(type);
     }
 
-    if (!strcmp(className, "Part"))
-    {
-        Part *newPart = dynamic_cast<Part*>(newNode);
-        printf("Loaded part p %f %f %f s %f %f %f r %f %f %f c %d s %d\n", newPart->position.x, newPart->position.y, newPart->position.z, newPart->scale.x, newPart->scale.y, newPart->scale.z, newPart->rotation.x, newPart->rotation.y, newPart->rotation.z, newPart->color, newPart->shape);
-    }
     loadCount += xml_node_children(node);
 
     for (int i = 0; i < xml_node_children(node); i++)
