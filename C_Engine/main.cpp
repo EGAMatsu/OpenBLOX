@@ -12,14 +12,13 @@ int main()
         currentLanguageCode=0;
 
         // Print hello and platform
-        char string[128];
-        sprintf(string, "%s: %s\n%s: %s",
+        print_message("%s: %s\n%s: %s",
                 strings_debug[STRING_CURRENT_LANGUAGE][currentLanguageCode], locale_names[currentLanguageCode],
                 strings_debug[STRING_CURRENT_PLATFORM][currentLanguageCode], strings_platform[STRING_PLATFORM_DS______][currentLanguageCode]);
-        print_message(string);
         
         if (platSingleApp) {
-            loadFiles(nullptr, nullptr);
+            Node *dataModel, *characterModel;
+            loadFiles(&dataModel, &characterModel);
         }
 
         initOpenGL();

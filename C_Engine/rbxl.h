@@ -16,6 +16,8 @@
 #include <fat.h>
 #include <vector>
 
+#include "xml.h"
+
 #define parseRBXL(f) parseRBXMf(f, true)
 #define parseRBXM(f) parseRBXMf(f, false)
 Node *parseRBXMf(FILE *f, bool place);
@@ -24,9 +26,13 @@ Node *parseRBXMx(struct xml_document *doc);
 Node *parseRBXMf(FILE *f, bool place)
 {
     // TODO switch to use some kind of streaming reader
+    printf("Building XML tree...");
     struct xml_document *doc = xml_open_document(f);
+    printf("done\n");
 
+    printf("Building datamodel...");
     Node *dataModel = parseRBXMx(doc);
+    printf("done\n");
 
     xml_document_free(doc, true);
 
@@ -211,7 +217,7 @@ static void xmlserialize_token(int *val, char *prop, char *propName)
 
     if (*val == 0 && index == -1 && strlen(prop) > 1)
     {
-        //FIXME("token not serialized: %s (propname %s)\n", prop, propName);
+        print_message("token not serialized: %s (propname %s)\n", prop, propName);
     }
 }
 
@@ -219,9 +225,11 @@ static void xmlserialize_token(int *val, char *prop, char *propName)
 static void serialize(SerializeInstance *inst, char *prop, char *propName, struct xml_node *child, Node *ret)
 {
     char *type = xml_easy_string(xml_node_name(child));
+    bool done = false;
 
     if (!strcmp(type, "Complex"))
     {
+        print_message("TODO complex\n");
         // TODO complex
     }
 
@@ -235,7 +243,7 @@ static void serialize(SerializeInstance *inst, char *prop, char *propName, struc
             (!strcmp(inst->serializations[j].name, "Locked") && !strcmp(propName, "CanSelect")) ||
             (!strcmp(inst->serializations[j].name, "ClassName") && !strcmp(propName, "Keywords")))
         {
-            //done = true;
+            done = true;
             void *val = inst->serializations[j].val;
             switch (inst->serializations[j].type)
             {
@@ -286,14 +294,22 @@ static void serialize(SerializeInstance *inst, char *prop, char *propName, struc
                 //} break;
                 default:
                 {
-                    //FIXME("serialization type %d not implemented.\n", inst->serializations[j].type);
+                    print_message("serialization type %d not implemented.\n", inst->serializations[j].type);
                 } break;
             }
             break;
         }
     }
 
+    if (!done)
+    {
+        //print_message("ns: %s\n", propName, prop);
+    }
+
 }
+
+static int loadCount = 0;
+static int loadedCount = 0;
 
 // Load a model or part from XML
 static Node *loadModelPartXML(struct xml_node *node)
@@ -303,14 +319,16 @@ static Node *loadModelPartXML(struct xml_node *node)
     struct xml_node *propertyNode = xml_node_child(node, 0);
     SerializeInstance inst;
 
+    inst.serializationCount = 0;
+
     if (!strcmp(className, "Part"))
     {
         newNode = new Part;
     }
     else
     {
-        // error somehow
-        return NULL;
+        newNode = new Node;
+        print_message("Create placeholder for %s\n", className);
     }
 
     for (int i = 0; i < xml_node_children(propertyNode); i++)
@@ -323,7 +341,7 @@ static Node *loadModelPartXML(struct xml_node *node)
             char *pName = xml_easy_string(xml_node_attribute_content(child, 0));
             if (!strcmp(pName, "Card"))
             {
-                //FIXME("No support for %s Feature\n", "Card");
+                //print_message("No support for %s Feature\n", "Card");
                 free(pName);
                 free(type);
                 continue;
@@ -350,8 +368,12 @@ static Node *loadModelPartXML(struct xml_node *node)
         free(type);
     }
 
+    loadCount += xml_node_children(node);
+
     for (int i = 0; i < xml_node_children(node); i++)
     {
+        loadedCount++;
+        //printf("Loading %d/%d\n", loadedCount, loadCount);
         struct xml_node *child = xml_node_child(node, i);
         char *type = xml_easy_string(xml_node_name(child));
         if (!strcmp(type, "Item"))
@@ -369,17 +391,19 @@ Node *parseRBXMx(struct xml_document *doc)
 {
     Node *dataModel = new Node;
 
-    //print_message("TODO: parse xml");
-
     struct xml_node *root = xml_document_root(doc);
 
+    loadedCount = 0;
+    loadCount = xml_node_children(root);
     for (size_t i = 0; i < xml_node_children(root); i++)
     {
+        loadedCount++;
+        //printf("Loading %d/%d\n", loadedCount, loadCount);
         struct xml_node *child = xml_node_child(root, i);
         char *name = (char *)xml_easy_name(child);
         if (!strcmp(name, "Item")) {
             Node *newNode = loadModelPartXML(child);//, &refsInst);
-            newNode->parent = dataModel;
+            if (newNode) newNode->parent = dataModel;
         }
         free(name);
     }
