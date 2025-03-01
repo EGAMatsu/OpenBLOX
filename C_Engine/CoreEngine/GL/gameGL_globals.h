@@ -130,7 +130,7 @@ void glMultMatrixf(float matf[16])
 
     for (int i = 0; i < 16; i++)
     {
-        m.m[i] = matf[i];
+        m.m[i] = floattof32(matf[i]);
     }
 
     glMultMatrix4x4(&m);
@@ -140,11 +140,12 @@ void scale_and_cf(CFrame cf, vec3 scale)
 {
     glTranslatef(cf.X, cf.Y, cf.Z);
     // rotation
+    // this is converted to traditional OpenGL matrix
     float matf[16] = {
-        -cf.R00, cf.R01, -cf.R02, 0.0f,
-        -cf.R10, cf.R11, -cf.R12, 0.0f,
-        -cf.R20, cf.R21, -cf.R22, 0.0f,
-           0.0f,   0.0f,    0.0f, 1.0f 
+        -cf.R00, -cf.R10, -cf.R20, 0.0f,
+         cf.R01,  cf.R11,  cf.R21, 0.0f,
+        -cf.R02, -cf.R12, -cf.R22, 0.0f,
+         0.0f,    0.0f,    0.0f,   1.0f,
     };
     glMultMatrixf(matf);
     glScalef(scale.x, scale.y, scale.z);
