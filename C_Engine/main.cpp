@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 #include "./importantIncludes.h"
+Node *dataModel, *characterModel;
 
 int main()
 {
@@ -17,7 +18,6 @@ int main()
                 strings_debug[STRING_CURRENT_PLATFORM][currentLanguageCode], strings_platform[STRING_PLATFORM_DS______][currentLanguageCode]);
         
         if (platSingleApp) {
-            Node *dataModel, *characterModel;
             print_message("Loading...");
             loadFiles(&dataModel, &characterModel);
             print_message("Done.");
@@ -45,8 +45,9 @@ float test = 0;
 void gameRenderLoop() {
     start3DFrame();
     test += 90*deltaTime;
-        render_cube_transform(0, 0, 2, 0, test, 0, 1, 1, 1, 1);
+        /*render_cube_transform(0, 0, 2, 0, test, 0, 1, 1, 1, 1);
         render_cube_transform(3, 1, 4, 0, test, 0, 1, 1, 1, 26);
-        render_cube_transform(-3, 1, 4, 0, test, 0, 1, 1, 1, 137);
+        render_cube_transform(-3, 1, 4, 0, test, 0, 1, 1, 1, 137);*/
+        renderWorld(dataModel);
     endFrame();
 }

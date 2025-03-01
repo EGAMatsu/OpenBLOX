@@ -5,8 +5,6 @@
 #ifndef _NODES_H_
 #define _NODES_H_
 
-#include <iostream>
-
 void render_cube_transform(float x, float y, float z, float rx, float ry, float rz, float sx, float sy, float sz, int color);
 
 class vec3 {
@@ -50,7 +48,8 @@ public:
 };
 
 // Shitty world render function, will be slow, but will hopefully work if shit doesn't break.
-void renderWorld(Node* world, int length) {
+void renderWorld(Node *world) {
+    int length = sizeof(world) / sizeof(Node); // Might work.
     for (int i = 0; i < length; i++) {
         Node* node = &world[i];
         
