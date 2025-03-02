@@ -57,7 +57,7 @@ void endFrame() {
 }
 
 void start3DFrame() {
-    //perspectiveModeGL();
+    perspectiveModeGL();
     glPushMatrix();
 }
 
@@ -76,5 +76,7 @@ void glSetColor(int r, int g, int b) {
 void setupLighting() {
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
-    glLight(0, RGB15(31,31,31), floattov10(0), floattov10(1.0), floattov10(1.0));
+    pushMatrix();
+        glLight(0, RGB15(31,31,31), floattov10(1.0), floattov10(-1.0), floattov10(1.0));
+    popMatrix();
 }
