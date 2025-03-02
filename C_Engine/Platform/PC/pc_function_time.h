@@ -10,7 +10,7 @@ clock_t get_clock_time() {
 
 double deltaTimeCalc() {
     double currentTime = get_clock_time();
-    double dt = ((currentTime - previousTime)/CLOCKS_PER_SEC)*0.5;
+    double dt = ((currentTime - previousTime)/CLOCKS_PER_SEC)*0.5; // 30 FPS
     previousTime = currentTime;
     return dt;
 }
