@@ -3,9 +3,8 @@ BUILD       :=  build_pc
 SOURCES     :=  ../src ../include
 INCLUDES    :=  ../include
 
-CFLAGS      :=  -g -Wall -Oz -ffunction-sections -fdata-sections
-CFLAGS      +=  $(INCLUDES:%=-I%) -DPC_BUILD
-CXXFLAGS    := $(CFLAGS) -fno-exceptions
+CFLAGS      := -g -Wall -Oz -ffunction-sections -fdata-sections $(INCLUDES:%=-I%)
+CXXFLAGS    := $(CFLAGS) -fno-exceptions -DPC_BUILD
 
 LIBS        :=  -lSDL -lGL -lGLU
 

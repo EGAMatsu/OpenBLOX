@@ -15,7 +15,7 @@ unsigned char platSingleApp = 0;
 
 #ifdef NDS_BUILD
     #include "Platform/DS/dsINC.h"
-#elif   PC_BUILD
+#else
     #include "Platform/PC/pcINC.h"
 #endif
 
@@ -29,7 +29,7 @@ unsigned char platSingleApp = 0;
 
 #ifdef NDS_BUILD
     #include "Platform/DS/ds_function_loading.h"
-#elif   PC_BUILD
+#else
     #include "Platform/PC/pc_function_loading.h"
 #endif
 
