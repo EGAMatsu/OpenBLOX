@@ -115,7 +115,8 @@ void render_cube(int colorIndex) {
     for (unsigned int i = 0; i < sizeof(cube_inds) / sizeof(cube_inds[0]); i++) {
         unsigned int index = cube_inds[i];
         unsigned int indVr = index * 3;
-        glSetColor(r, g, b);
+        unsigned int indexL= cube_inds[i]/4;
+        glSetColor(r*clr_multi[indexL], g*clr_multi[indexL], b*clr_multi[indexL]);
         glVertex3f(cube_vert[indVr], cube_vert[indVr + 1], cube_vert[indVr + 2]);
         glNormal3f(cube_norm[indVr], cube_norm[indVr + 1], cube_norm[indVr + 2]);
     }
