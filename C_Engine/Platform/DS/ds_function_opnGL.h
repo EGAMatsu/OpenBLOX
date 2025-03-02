@@ -50,14 +50,14 @@ void popMatrix() {
 }
 
 void endFrame() {
-    glLight(0, RGB15(31,31,31), floattov10(0), floattov10(1.0), floattov10(0));
-    glPopMatrix(1);
+    popMatrix();
     glFlush(0);
     
     swiWaitForVBlank();
 }
 
 void start3DFrame() {
+    //perspectiveModeGL();
     glPushMatrix();
 }
 
@@ -71,4 +71,9 @@ void glSetColor(int r, int g, int b) {
     glMaterialf(GL_DIFFUSE, RGB15(rr,gg,bb));
     glMaterialf(GL_SPECULAR, RGB15(16,16,16));
     glMaterialf(GL_EMISSION, RGB15(0,0,0));
+}
+
+void setupLighting() {
+    glLoadIdentity();
+    glLight(0, RGB15(31,31,31), floattov10(0), floattov10(1.0), floattov10(1.0));
 }

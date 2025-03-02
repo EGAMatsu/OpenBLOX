@@ -85,3 +85,7 @@ void SDL_Initialization() {
 void glSetColor(int r, int g, int b) {
     glColor3f(r/255.0f,g/255.0f,b/255.0f);
 }
+
+void setupLighting() {
+    //TODO: Implement
+}
