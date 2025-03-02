@@ -50,6 +50,7 @@ char *strings_platform[][3] = {
     {"Nintendo DS", "Nintendo DS", "ilo Si Esu"},
     {"Nintendo DSi", "Nintendo DSi", "ilo Si Esu Ije"},
     {"PC", "Computadora", "ilo lipu"},
+    {"SEGA Dreamcast", "SEGA Dreamcast", "ilo Seka Sikaso"},
     0
 };
 
