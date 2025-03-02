@@ -3,8 +3,8 @@ BUILD       :=  build_pc
 SOURCES     :=  ../src ../include
 INCLUDES    :=  ../include
 
-CFLAGS      := -g -Wall -O2 -ffunction-sections -fdata-sections $(INCLUDES:%=-I%)
-CXXFLAGS    := $(CFLAGS) -fno-exceptions -DPC_BUILD
+CFLAGS      := -Wall -ffunction-sections -fdata-sections $(INCLUDES:%=-I%)
+CXXFLAGS    := $(CFLAGS) -fno-exceptions -DPC_BUILD -g
 
 LIBS        :=  -lSDL -lSDLmain -lGL -lGLU
 
@@ -14,7 +14,7 @@ OBJS        :=  $(CPPFILES:../src/%.cpp=$(BUILD)/%.o)
 
 $(TARGET): $(OBJS)
 	mkdir -p $(BUILD)
-	$(CXX) $(OBJS) $(LIBS) -o $(TARGET)
+	$(CXX) $(CXXFLAGS) $(OBJS) $(LIBS) -o $(TARGET)
 
 
 $(BUILD)/%.o: ../src/%.cpp
