@@ -302,16 +302,16 @@ static void xml_node_free(struct xml_node* node) {
  * Prepares the parser to access a part of the file
  */
 
-static void xml_parser_seek(struct xml_parser *parser, size_t offset, size_t size)
+static bool xml_parser_seek(struct xml_parser *parser, size_t offset, size_t size)
 {
     if (parser->buf_off + parser->buf_len > offset + size && offset > parser->buf_off && parser->buffer)
     {
-        return; // Buffer is within bounds
+        return true; // Buffer is within bounds
     }
     else if (parser->buf_len < size)
     {
-        printf("xml_error: buffer length is not big enough (%d < %d)\n", parser->buf_len, size);
-        return;
+        //printf("xml_error: buffer length is not big enough (%d < %d)\n", parser->buf_len, size);
+        return false;
     }
 
     if (!parser->buffer)
@@ -327,6 +327,8 @@ static void xml_parser_seek(struct xml_parser *parser, size_t offset, size_t siz
     fread(parser->buffer, parser->buf_len, 1, parser->f);
 
     //printf("buf_off %d/%d\n", parser->buf_off, parser->length);
+
+    return true;
 }
 
 /**
@@ -336,11 +338,22 @@ static void xml_parser_seek(struct xml_parser *parser, size_t offset, size_t siz
  */
 static void xml_parser_read(struct xml_parser *parser, size_t offset, size_t size, void *dest)
 {
-	#ifdef NDS_BUILD
-    	xml_parser_seek(parser, offset, size), getHeapEnd() - getHeapStart();
-		if (offset % 10000 == 0) printf("\r%08d/%08d m %08d", offset, parser->length, getHeapEnd() - getHeapStart());
-	#endif
-    memcpy(dest, parser->buffer + (offset - parser->buf_off), size);
+    xml_parser_seek(parser, offset, size);
+#ifdef NDS_BUILD
+	if (offset % 10000 == 0) printf("\r%08d/%08d m %08d", offset, parser->length, getHeapEnd() - getHeapStart());
+#else
+    if (offset % 10000 == 0) printf("\r%08d/%08d", offset, parser->length); 
+#endif
+    if (xml_parser_seek(parser, offset, size))
+    {
+        memcpy(dest, parser->buffer + (offset - parser->buf_off), size);
+    }
+    else
+    {
+        fseek(parser->f, offset, SEEK_SET);
+        fread(dest, size, 1, parser->f);
+    }
+   
 }
 
 /**
