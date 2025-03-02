@@ -27,3 +27,21 @@ void systemStart()  {
     }
     printf("Done with init startup, resuming.\n");
 }
+
+bool keyboard[2048] = { false };
+
+void processInput() {
+    const Uint8 *state = SDL_GetKeyState(NULL);
+    
+    for (int i = 0; i < 2048; ++i) {
+        keyboard[i] = state[i] ? true : false;
+    }
+
+    vertical_axis = (keyboard[SDLK_w] ? 1.0f : 0.0f) - (keyboard[SDLK_s] ? 1.0f : 0.0f);
+    horizontal_axis = (keyboard[SDLK_a] ? 1.0f : 0.0f) - (keyboard[SDLK_d] ? 1.0f : 0.0f);
+    fly_vertical_axis = (keyboard[SDLK_q] ? 1.0f : 0.0f) - (keyboard[SDLK_e] ? 1.0f : 0.0f);
+
+    debug_camera_x += (horizontal_axis*32) * deltaTime;
+    debug_camera_y += (fly_vertical_axis*32) * deltaTime;
+    debug_camera_z += (vertical_axis*32) * deltaTime;
+}

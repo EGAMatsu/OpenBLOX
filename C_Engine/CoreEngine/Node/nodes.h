@@ -32,15 +32,15 @@ class CFrame {
     
         if (fabs(sy) < 1.0f) // Standard case
         {
-            ret.x = atan2(R21, R22); // Roll
-            ret.y = asin(sy);        // Pitch
-            ret.z = atan2(R10, R00); // Yaw
+            ret.x = atan2(R21, R22) * (180.0 / M_PI);   // Roll
+            ret.y = asin(sy)        * (180.0 / M_PI);   // Pitch
+            ret.z = atan2(R10, R00) * (180.0 / M_PI);   // Yaw
         }
         else // Gimbal lock case
         {
             ret.x = 0; // Roll is undefined, set to zero
-            ret.y = (sy > 0) ? M_PI / 2 : -M_PI / 2; // ±90 degrees
-            ret.z = atan2(-R01, R11); // Yaw
+            ret.y = ((sy > 0) ? M_PI / 2 : -M_PI / 2) * (180.0 / M_PI); // ±90 degrees
+            ret.z = atan2(-R01, R11)                  * (180.0 / M_PI); // Yaw
         }
 
         return ret; 

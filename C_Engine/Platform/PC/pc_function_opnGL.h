@@ -67,6 +67,9 @@ void start3DFrame() {
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
     glEnable(GL_DEPTH_TEST); 
+
+    glEnable(GL_LIGHTING);
+    glEnable(GL_LIGHT0);
 }
 
 void SDL_Initialization() {
@@ -83,9 +86,41 @@ void SDL_Initialization() {
 }
 
 void glSetColor(int r, int g, int b) {
-    glColor3f(r/255.0f,g/255.0f,b/255.0f);
+    //glColor3f(r/255.0f,g/255.0f,b/255.0f);
+
+    float rr, gg, bb, rrr, ggg, bbb;
+    rr = (r/255.0f)*0.75;
+    gg = (g/255.0f)*0.75;
+    bb = (b/255.0f)*0.75;
+    
+    rrr= (r/255.0f);
+    ggg= (g/255.0f);
+    bbb= (b/255.0f);
+
+    GLfloat a[] = {rrr,ggg,bbb, 1.0f};
+    GLfloat d[] = {rrr,ggg,bbb, 1.0f};
+    GLfloat s[] = {0.5,0.5,0.5, 1.0f};
+    GLfloat e[] = {0, 0, 0, 1.0f};
+
+    glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, a);
+    glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, d);
+    glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, s);
+    glMaterialfv(GL_FRONT_AND_BACK, GL_EMISSION, e);
+
+    float sh = 0.9f;
+    glMaterialf(GL_FRONT_AND_BACK, GL_SHININESS, sh);
 }
 
 void setupLighting() {
-    //TODO: Implement
+    glShadeModel(GL_SMOOTH);
+
+    glMatrixMode(GL_MODELVIEW);
+    glLoadIdentity();
+    pushMatrix();
+        GLfloat lightColor[] = {2.0f, 2.0f, 2.0f, 1.0f};
+        GLfloat lightPos[] = {1.0f, 1.0f, 1.0f, 0.0f}; 
+
+        glLightfv(GL_LIGHT0, GL_DIFFUSE, lightColor);
+        glLightfv(GL_LIGHT0, GL_POSITION, lightPos);
+    popMatrix();
 }

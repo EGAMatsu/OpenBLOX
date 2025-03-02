@@ -10,6 +10,19 @@ void print_message(const char * text, ...);
 unsigned char startEngine   = 0;
 unsigned char platSingleApp = 0;
 
+float debug_camera_x = 0;
+float debug_camera_y = -128;
+float debug_camera_z = 0;
+
+float vertical_axis = 0.0;
+float horizontal_axis = 0.0;
+float look_vertical_axis = 0.0;
+float look_horizontal_axis = 0.0;
+float fly_vertical_axis = 0.0;
+
+unsigned char jump = 0;
+unsigned char backpackItem = 0;
+
 // Third party pre-platform includes
 #include "ThirdParty/TinyPhysicsEngine/tinyphysicsengine.h"
 

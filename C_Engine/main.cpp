@@ -30,6 +30,7 @@ int main(int argc, char *argv[])
         perspectiveModeGL();
 
         while(isGameRunning) {
+            processInput();
             gameRenderLoop();
 
             deltaTime = deltaTimeCalc();
@@ -46,11 +47,11 @@ int main(int argc, char *argv[])
 
 float test = 0;
 void gameRenderLoop() {
+    setupLighting();
     start3DFrame();
-        setupLighting();
-        test += 45*deltaTime;
-        scale_rotate_translate(1,1,1, 0,test,0, 0,0,0);
-        scale_rotate_translate(1,1,1, 0,0,0, 0,-16,-16);
+        //test += 45*deltaTime;
+        scale_rotate_translate(1,1,1, -90,180,0, 0,0,0);
+        scale_rotate_translate(1,1,1, 0,0,0, debug_camera_x,debug_camera_y,debug_camera_z);
         renderWorld(dataModel);
     endFrame();
 }
