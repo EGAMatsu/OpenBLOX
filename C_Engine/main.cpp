@@ -46,11 +46,11 @@ int main(int argc, char *argv[])
 
 float test = 0;
 void gameRenderLoop() {
+    setupLighting();
     start3DFrame();
         test += 45*deltaTime;
         scale_rotate_translate(1,1,1, 0,test,0, 0,0,0);
         scale_rotate_translate(1,1,1, 0,0,0, 0,-16,-16);
         renderWorld(dataModel);
-        setupLighting();
     endFrame();
 }
