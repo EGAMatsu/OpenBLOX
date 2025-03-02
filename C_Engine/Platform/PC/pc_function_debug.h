@@ -5,9 +5,6 @@
 #include <stdarg.h>
 
 void enableDebugConsole(unsigned char enable) {
-    if (enable) { 
-        consoleDemoInit();
-    }
     isDebgRunning = enable;
 }
 
