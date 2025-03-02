@@ -14,8 +14,10 @@ unsigned char platSingleApp = 0;
 #include "ThirdParty/TinyPhysicsEngine/tinyphysicsengine.h"
 
 #ifdef NDS_BUILD
+    #define platformNameLoc STRING_PLATFORM_DS______
     #include "Platform/DS/dsINC.h"
 #else
+    #define platformNameLoc STRING_PLATFORM_PC______
     #include "Platform/PC/pcINC.h"
 #endif
 

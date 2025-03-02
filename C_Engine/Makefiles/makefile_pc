@@ -6,7 +6,7 @@ INCLUDES    :=  ../include
 CFLAGS      := -g -Wall -Oz -ffunction-sections -fdata-sections $(INCLUDES:%=-I%)
 CXXFLAGS    := $(CFLAGS) -fno-exceptions -DPC_BUILD
 
-LIBS        :=  -lSDL -lGL -lGLU
+LIBS        :=  -lSDL -lSDLmain -lGL -lGLU
 
 CPPFILES := ../main.cpp
 
@@ -21,4 +21,5 @@ $(BUILD)/%.o: ../src/%.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
-	rm -rf $(BUILD)
+	rm -rf $(TARGET)
+	rm -rf $(BUILD)/*.o

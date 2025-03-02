@@ -968,7 +968,14 @@ struct xml_document* xml_open_document(FILE* source) {
 
 	/* Try to parse buffer
 	 */
-	struct xml_document* document = xml_parse_document(source);
+	struct xml_document* document;
+	if (source != nullptr) {
+		printf("...Start parse.\n");
+		document = xml_parse_document(source);
+	} else {
+		printf("FILE DOESN'T EXIST.\n");
+	}
+	
 
 	if (!document) {
 		//free(buffer);

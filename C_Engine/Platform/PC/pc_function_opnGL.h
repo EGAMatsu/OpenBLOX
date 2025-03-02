@@ -5,7 +5,10 @@
 #include <GL/gl.h>
 #include <GL/glu.h>
 
+void SDL_Initialization();
 void initOpenGL() {
+    SDL_Initialization();
+    
     glEnable(GL_TEXTURE_2D);
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
     glClearDepth(1.0f);
@@ -49,4 +52,17 @@ void start3DFrame() {
     glDisable(GL_CULL_FACE);
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+}
+
+void SDL_Initialization() {
+    if (SDL_Init(SDL_INIT_VIDEO) < 0) {
+        fprintf(stderr, "Unable to initialize SDL: %s\n", SDL_GetError());
+    }
+
+    SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
+    SDL_Surface* screen = SDL_SetVideoMode(640, 480, 32, SDL_OPENGL);
+    if (!screen) {
+        fprintf(stderr, "Unable to set video mode: %s\n", SDL_GetError());
+        SDL_Quit();
+    }
 }

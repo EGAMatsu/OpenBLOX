@@ -22,10 +22,11 @@ Node *parseRBXMx(struct xml_document *doc);
 
 Node *parseRBXMf(FILE *f, bool place)
 {
+    print_message("STARTING TO PARSE.\n");
     // TODO switch to use some kind of streaming reader
-    printf("Building XML tree...");
+    print_message("Building XML Tree.\n");
     struct xml_document *doc = xml_open_document(f);
-    printf("done\n");
+    print_message("Done.\n");
 
     printf("Building datamodel...\n");
     Node *dataModel = parseRBXMx(doc);
@@ -442,8 +443,7 @@ static int crop, cropCurrent;
 static bool fileIsSelected;
 
 void levelLoaderMenu(Node **dataModel, Node **character);
-void loadFiles(Node **dataModel, Node **character)
-{
+void loadFiles(Node **dataModel, Node **character)  {
     levelLoaderMenu(dataModel, character);
 }
 

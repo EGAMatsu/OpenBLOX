@@ -10,17 +10,20 @@ int main(int argc, char *argv[])
     systemStart();
 
     if (startEngine) {
+        print_message("Start engine done, now loading data.\n");
         currentLanguageCode=0;
 
         // Print hello and platform
-        print_message("%s: %s\n%s: %s",
+        print_message("%s: %s\n%s: %s\n",
                 strings_debug[STRING_CURRENT_LANGUAGE][currentLanguageCode], locale_names[currentLanguageCode],
-                strings_debug[STRING_CURRENT_PLATFORM][currentLanguageCode], strings_platform[STRING_PLATFORM_DS______][currentLanguageCode]);
+                strings_debug[STRING_CURRENT_PLATFORM][currentLanguageCode], strings_platform[platformNameLoc][currentLanguageCode]);
         
-        if (platSingleApp) {
-            print_message("Loading...");
+        print_message("Start to load.\n");
+
+        if ( 1/*platSingleApp*/) {
+            print_message("Loading...\n");
             loadFiles(&dataModel, &characterModel);
-            print_message("Done.");
+            print_message("Done.\n");
         }
 
         initOpenGL();
