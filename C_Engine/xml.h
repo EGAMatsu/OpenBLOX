@@ -754,7 +754,11 @@ static struct xml_string xml_parse_content(struct xml_parser* parser) {
 	return content;
 }
 
-
+static const char *implemented_classes[] = {
+    "Part",
+    "SpawnLocation",
+    NULL
+};
 
 /**
  * [PRIVATE]
@@ -831,6 +835,45 @@ static struct xml_node* xml_parse_node(struct xml_parser* parser) {
 			xml_parser_error(parser, NEXT_CHARACTER, "xml_parse_node::child");
 			goto exit_failure;
 		}
+
+        if (!strncmp((const char *)child->name.buffer, "Properties", child->name.length))
+        {
+            size_t i = 0;
+            struct xml_attribute *attr = attributes[i];
+
+            bool implemented = false;
+
+            while (attr)
+            {
+
+                if (!strncmp((const char *)attr->name.buffer, "class", attr->name.length))
+                {
+                    for (int j = 0; implemented_classes[j] != NULL; j++)
+                    {
+                        if (!strncmp((const char *)attr->content.buffer, implemented_classes[j], attr->content.length))
+                        {
+                            implemented = true;
+                            break;
+                        }
+                    }
+/*                    if (!implemented)
+                    {
+                        printf("UI %s\n\n", attr->content.buffer);
+                    }*/
+
+                }
+
+                i++;
+                attr = attributes[i];
+            }
+
+            if (!implemented)
+            {
+                xml_node_free(child);
+                continue;
+            }
+        }
+        
 
 		/* Grow child array :)
 		 */
