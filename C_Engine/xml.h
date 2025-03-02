@@ -396,7 +396,7 @@ static void xml_parser_error(struct xml_parser* parser, enum xml_parser_offset o
 	}
 
 	if (NO_CHARACTER != offset) {
-		fprintf(stdout,	"xml_parser_error at %i:%i (is %c), char %d: %s\n",
+		printf("xml_parser_error at %i:%i (is %c), char %d: %s\n",
 				row + 1, column, xml_parser_getc(parser, character), character, message
 		);
         printf("buffer dump: ");
@@ -405,7 +405,7 @@ static void xml_parser_error(struct xml_parser* parser, enum xml_parser_offset o
             printf("%c", parser->buffer[i]);
         }
 	} else {
-		fprintf(stdout,	"xml_parser_error at %i:%i: %s\n",
+		printf("xml_parser_error at %i:%i: %s\n",
 				row + 1, column, message
 		);
 	}
@@ -763,6 +763,7 @@ static struct xml_string xml_parse_content(struct xml_parser* parser) {
  * ---
  */
 static struct xml_node* xml_parse_node(struct xml_parser* parser) {
+	printf("static struct xml_node* xml_parse_node(struct xml_parser* parser)");
 	xml_parser_info(parser, "node");
 
 	/* Setup variables
@@ -888,7 +889,7 @@ exit_failure:
  * [PUBLIC API]
  */
 struct xml_document* xml_parse_document(FILE *source) {
-
+	printf("xml_parse_document\n");
     fseek(source, 0, SEEK_END);
     long fsz = ftell(source);
     fseek(source, 0, SEEK_SET);
@@ -902,6 +903,7 @@ struct xml_document* xml_parse_document(FILE *source) {
         .f = source,
         .buf_len = 4096,
 	};
+	printf("struct xml_parser parser\n");
 
 	/* An empty buffer can never contain a valid document
 	 */
@@ -909,23 +911,29 @@ struct xml_document* xml_parse_document(FILE *source) {
 		xml_parser_error(&parser, NO_CHARACTER, "xml_parse_document::length equals zero");
 		return 0;
 	}
+	printf("if (!fsz)\n");
 
 	/* Parse the root node
 	 */
 	struct xml_node* root = xml_parse_node(&parser);
+	printf("struct xml_node* root = xml_parse_node(&parser);\n");
 	if (!root) {
 		xml_parser_error(&parser, NO_CHARACTER, "xml_parse_document::parsing document failed");
 		return 0;
 	}
+	printf("if (!root)\n");
 
     free(parser.buffer);
+	printf("free(parser.buffer);\n");
 
 	/* Return parsed document
 	 */
 	struct xml_document* document = (xml_document*)malloc(sizeof(struct xml_document));
+	printf("struct xml_document* document = (xml_document*)malloc(sizeof(struct xml_document));\n");
 	//document->buffer.buffer = buffer;
 	//document->buffer.length = length;
 	document->root = root;
+	printf("document->root = root;\n");
 
 	return document;
 }
