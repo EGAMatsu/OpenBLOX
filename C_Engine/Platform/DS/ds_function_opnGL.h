@@ -55,3 +55,7 @@ void start3DFrame() {
 	glMatrixMode(GL_MODELVIEW);
     glPolyFmt(POLY_ALPHA(31) | POLY_CULL_NONE);
 }
+
+void glSetColor(int r, int g, int b) {
+    glColor3b(r,g,b);
+}

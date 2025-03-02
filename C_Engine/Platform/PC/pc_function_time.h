@@ -9,13 +9,8 @@ clock_t get_clock_time() {
 }
 
 double deltaTimeCalc() {
-    static double previousTime = 0.0;
-
-    struct timespec currentTimeSpec;
-    clock_gettime(CLOCK_REALTIME, &currentTimeSpec);
-    double currentTime = currentTimeSpec.tv_sec + currentTimeSpec.tv_nsec / 1e9;
-
-    double dt = (currentTime - previousTime) / 30.0;
+    double currentTime = get_clock_time();
+    double dt = (currentTime - previousTime)/CLOCKS_PER_SEC;
     previousTime = currentTime;
     return dt;
 }

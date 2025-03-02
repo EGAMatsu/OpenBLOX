@@ -5,6 +5,10 @@
 #include <GL/gl.h>
 #include <GL/glu.h>
 
+#define defaultWidth 640
+#define defaultHeight 480
+SDL_Event event;
+
 void SDL_Initialization();
 void initOpenGL() {
     SDL_Initialization();
@@ -12,13 +16,13 @@ void initOpenGL() {
     glEnable(GL_TEXTURE_2D);
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
     glClearDepth(1.0f);
-    glViewport(0, 0, 256, 192);
+    glViewport(0, 0, defaultWidth, defaultHeight);
 }
 
 void perspectiveModeGL() {
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    gluPerspective(70.0, 256.0 / 192.0, 0.1, 1024.0);
+    gluPerspective(70.0, defaultWidth / defaultHeight, 0.1, 1024.0);
 
     gluLookAt(  0.0, 0.0, 0.0,      // Camera position
                 0.0, 0.0, 1.0,      // Look at
@@ -43,7 +47,14 @@ void popMatrix() {
 
 void endFrame() {
     glPopMatrix();
+    SDL_GL_SwapBuffers();
     glFlush();
+
+    while (SDL_PollEvent(&event)) {
+        if (event.type == SDL_QUIT) {
+            isGameRunning = 0;
+        }
+    }
 }
 
 void start3DFrame() {
@@ -60,9 +71,13 @@ void SDL_Initialization() {
     }
 
     SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
-    SDL_Surface* screen = SDL_SetVideoMode(640, 480, 32, SDL_OPENGL);
+    SDL_Surface* screen = SDL_SetVideoMode(defaultWidth, defaultHeight, 32, SDL_OPENGL);
     if (!screen) {
         fprintf(stderr, "Unable to set video mode: %s\n", SDL_GetError());
         SDL_Quit();
     }
+}
+
+void glSetColor(int r, int g, int b) {
+    glColor3f(r/255.0f,g/255.0f,b/255.0f);
 }
