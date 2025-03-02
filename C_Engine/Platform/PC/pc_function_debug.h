@@ -10,16 +10,8 @@ void vprint_message(const char * text, va_list args)
 {
     if (isDebgRunning)
     {
-        vprintf(text, args);
+        printf(text, args);
     }
 }
 
-void print_message(const char * text, ...) {
-    va_list args;
-
-    va_start(args, text);
-
-    vprint_message(text, args);
-
-    va_end(args);
-}
+#define print_message printf

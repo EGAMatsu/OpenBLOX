@@ -2,6 +2,15 @@
     OpenBLOX PC Includes
 */
 
-#include "pc_function_debug.h"
+#include <GL/gl.h>
+#include <GL/glu.h>
 
-const char* platformName = "*nix based OS";
+#include "pc_function_debug.h"
+#include "pc_function_opnGL.h"
+#include "pc_function_time.h"
+
+const char* platformName = "Desktop";
+
+void systemStart()  {
+    platSingleApp = 0;
+}

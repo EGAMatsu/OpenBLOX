@@ -27,4 +27,10 @@ unsigned char platSingleApp = 0;
 #include "CoreEngine/Node/nodes.h"
 #include "./rbxl.h"
 
+#ifdef NDS_BUILD
+    #include "Platform/DS/ds_function_loading.h"
+#elif   PC_BUILD
+    #include "Platform/PC/pc_function_loading.h"
+#endif
+
 #endif

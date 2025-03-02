@@ -3,7 +3,7 @@
 #include "./importantIncludes.h"
 Node *dataModel, *characterModel;
 
-int main()
+int main(int argc, char *argv[])
 {
     // Enable printing debug info
     enableDebugConsole(1);
