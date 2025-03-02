@@ -47,22 +47,26 @@ void popMatrix() {
 
 void endFrame() {
     glPopMatrix();
-    SDL_GL_SwapBuffers();
     glFlush();
+    SDL_GL_SwapBuffers();
+}
 
+void start3DFrame() {
     while (SDL_PollEvent(&event)) {
         if (event.type == SDL_QUIT) {
             isGameRunning = 0;
         }
     }
-}
 
-void start3DFrame() {
+    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
     glPushMatrix();
     glMatrixMode(GL_MODELVIEW);
     glDisable(GL_CULL_FACE);
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+    glEnable(GL_DEPTH_TEST); 
 }
 
 void SDL_Initialization() {
