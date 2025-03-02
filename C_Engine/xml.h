@@ -39,7 +39,7 @@
 
 
 
-
+//#define XML_PARSER_VERBOSE
 
 /* 
  * public domain strtok_r() by Charlie Gordon
@@ -88,8 +88,9 @@ static char* xml_strtok_r(char *str, const char *delim, char **nextp) {
  * UTF-8 text
  */
 struct xml_string {
-	uint8_t const* buffer;
+	uint8_t *buffer;
 	size_t length;
+    bool shouldntfree;
 };
 
 /**
@@ -98,8 +99,8 @@ struct xml_string {
  * An xml_attribute may contain text content.
  */
 struct xml_attribute {
-	struct xml_string* name;
-	struct xml_string* content;
+	struct xml_string name;
+	struct xml_string content;
 };
 
 /**
@@ -109,8 +110,8 @@ struct xml_attribute {
  * and a 0-terminated list of children. Moreover it may contain text content.
  */
 struct xml_node {
-	struct xml_string* name;
-	struct xml_string* content;
+	struct xml_string name;
+	struct xml_string content;
 	struct xml_attribute** attributes;
 	struct xml_node** children;
 };
@@ -121,10 +122,10 @@ struct xml_node {
  * An xml_document simply contains the root node and the underlying buffer
  */
 struct xml_document {
-	struct {
-		uint8_t* buffer;
-		size_t length;
-	} buffer;
+	//struct {
+	//	uint8_t* buffer;
+	//	size_t length;
+	//} buffer;
 
 	struct xml_node* root;
 };
@@ -243,11 +244,17 @@ static uint8_t* xml_string_clone(struct xml_string* s) {
  *
  * Frees the resources allocated by the string
  *
- * @warning `buffer` must _not_ be freed, since it is a reference to the
- *     document's buffer
  */
 static void xml_string_free(struct xml_string* string) {
-	free(string);
+    if (string->shouldntfree) return;
+    //printf("free %p:%05d\r", string->buffer, string->length);
+    if (string->buffer || !string->length)
+    {
+        if (string->length) free(string->buffer);
+        string->buffer = NULL;
+        string->length = 0;
+    }
+    //free(string);
 }
 
 
@@ -258,12 +265,8 @@ static void xml_string_free(struct xml_string* string) {
  * Frees the resources allocated by the attribute
  */
 static void xml_attribute_free(struct xml_attribute* attribute) {
-	if(attribute->name) {
-		xml_string_free(attribute->name);
-	}
-	if(attribute->content) {
-		xml_string_free(attribute->content);
-	}
+	xml_string_free(&attribute->name);
+	xml_string_free(&attribute->content);
 	free(attribute);
 }
 
@@ -273,11 +276,8 @@ static void xml_attribute_free(struct xml_attribute* attribute) {
  * Frees the resources allocated by the node
  */
 static void xml_node_free(struct xml_node* node) {
-	xml_string_free(node->name);
-
-	if (node->content) {
-		xml_string_free(node->content);
-	}
+	xml_string_free(&node->name);
+	xml_string_free(&node->content);
 
 	struct xml_attribute** at = node->attributes;
 	while(*at) {
@@ -319,7 +319,7 @@ static void xml_parser_seek(struct xml_parser *parser, size_t offset, size_t siz
         parser->buffer = (uint8_t*)malloc(parser->buf_len);
     }
 
-    parser->position = offset;
+    //parser->position = offset;
     parser->buf_off = offset;
 
     fseek(parser->f, offset, SEEK_SET);
@@ -336,8 +336,8 @@ static void xml_parser_seek(struct xml_parser *parser, size_t offset, size_t siz
  */
 static void xml_parser_read(struct xml_parser *parser, size_t offset, size_t size, void *dest)
 {
-    xml_parser_seek(parser, offset, size);
-    if (offset % 10000 == 0) printf("%08d/%08d\r", offset, parser->length);
+    xml_parser_seek(parser, offset, size), getHeapEnd() - getHeapStart();
+    if (offset % 10000 == 0) printf("\r%08d/%08d m %08d", offset, parser->length, getHeapEnd() - getHeapStart());
     memcpy(dest, parser->buffer + (offset - parser->buf_off), size);
 }
 
@@ -505,7 +505,7 @@ static void xml_skip_whitespace(struct xml_parser* parser) {
  * @author Blake Felt
  * @see https://github.com/Molorius
  */
-static struct xml_attribute** xml_find_attributes(struct xml_parser* parser, struct xml_string* tag_open) {
+static struct xml_attribute** xml_find_attributes(struct xml_parser* parser, struct xml_string *tag_open) {
 	xml_parser_info(parser, "find_attributes");
 	char* tmp;
 	char* rest = NULL;
@@ -547,12 +547,12 @@ static struct xml_attribute** xml_find_attributes(struct xml_parser* parser, str
 		start_content = &tag_open->buffer[position + strlen(str_name) + 2];
 
 		new_attribute = (struct xml_attribute *)malloc(sizeof(struct xml_attribute));
-		new_attribute->name = (xml_string *)malloc(sizeof(struct xml_string));
-		new_attribute->name->buffer = (unsigned char*)start_name;
-		new_attribute->name->length = strlen(str_name);
-		new_attribute->content = (xml_string*)malloc(sizeof(struct xml_string));
-		new_attribute->content->buffer = (unsigned char*)start_content;
-		new_attribute->content->length = strlen(str_content);
+		new_attribute->name.buffer = (unsigned char*)start_name;
+		new_attribute->name.length = strlen(str_name);
+        new_attribute->name.shouldntfree = true;
+		new_attribute->content.buffer = (unsigned char*)start_content;
+		new_attribute->content.length = strlen(str_content);
+        new_attribute->content.shouldntfree = true;
 
 		old_elements = get_zero_terminated_array_attributes(attributes);
 		new_elements = old_elements + 1;
@@ -582,7 +582,7 @@ cleanup:
  * tag_name>
  * ---
  */
-static struct xml_string* xml_parse_tag_end(struct xml_parser* parser) {
+static struct xml_string xml_parse_tag_end(struct xml_parser* parser) {
 	xml_parser_info(parser, "tag_end");
 	size_t start = parser->position;
 	size_t length = 0;
@@ -604,16 +604,16 @@ static struct xml_string* xml_parse_tag_end(struct xml_parser* parser) {
 	 */
 	if ('>' != xml_parser_peek(parser, CURRENT_CHARACTER)) {
 		xml_parser_error(parser, CURRENT_CHARACTER, "xml_parse_tag_end::expected tag end");
-		return 0;
+		return (xml_string){0};
 	}
 	xml_parser_consume(parser, 1);
 
 	/* Return parsed tag name
 	 */
-	struct xml_string* name = (xml_string*)malloc(sizeof(struct xml_string));
-    name->buffer = (uint8_t*)malloc(length);
-    xml_parser_read(parser, start, length, (void*)name->buffer);
-	name->length = length;
+	struct xml_string name = {0};
+    name.buffer = (uint8_t*)malloc(length);
+    xml_parser_read(parser, start, length, (void*)name.buffer);
+	name.length = length;
 	return name;
 }
 
@@ -628,7 +628,7 @@ static struct xml_string* xml_parse_tag_end(struct xml_parser* parser) {
  * <tag_name>
  * ---
  */
-static struct xml_string* xml_parse_tag_open(struct xml_parser* parser) {
+static struct xml_string xml_parse_tag_open(struct xml_parser* parser) {
 	xml_parser_info(parser, "tag_open");
 	xml_skip_whitespace(parser);
 
@@ -636,7 +636,7 @@ static struct xml_string* xml_parse_tag_open(struct xml_parser* parser) {
 	 */
 	if ('<' != xml_parser_peek(parser, CURRENT_CHARACTER)) {
 		xml_parser_error(parser, CURRENT_CHARACTER, "xml_parse_tag_open::expected opening tag");
-		return 0;
+		return (xml_string){0};
 	}
 	xml_parser_consume(parser, 1);
 
@@ -656,7 +656,7 @@ static struct xml_string* xml_parse_tag_open(struct xml_parser* parser) {
  * </tag_name>
  * ---
  */
-static struct xml_string* xml_parse_tag_close(struct xml_parser* parser) {
+static struct xml_string xml_parse_tag_close(struct xml_parser* parser) {
 	xml_parser_info(parser, "tag_close");
 	xml_skip_whitespace(parser);
 
@@ -672,7 +672,7 @@ static struct xml_string* xml_parse_tag_close(struct xml_parser* parser) {
 			xml_parser_error(parser, NEXT_CHARACTER, "xml_parse_tag_close::expected closing tag `/'");
 		}
 
-		return 0;
+		return (xml_string){0};
 	}
 	xml_parser_consume(parser, 2);
 
@@ -696,7 +696,7 @@ static struct xml_string* xml_parse_tag_close(struct xml_parser* parser) {
  *
  * @warning CDATA etc. is _not_ and will never be supported
  */
-static struct xml_string* xml_parse_content(struct xml_parser* parser) {
+static struct xml_string xml_parse_content(struct xml_parser* parser) {
 	xml_parser_info(parser, "content");
 
 	/* Whitespace will be ignored
@@ -723,7 +723,7 @@ static struct xml_string* xml_parse_content(struct xml_parser* parser) {
 	 */
 	if ('<' != xml_parser_peek(parser, CURRENT_CHARACTER)) {
 		xml_parser_error(parser, CURRENT_CHARACTER, "xml_parse_content::expected <");
-		return 0;
+		return (xml_string){0};
 	}
 
 	/* Ignore tailing whitespace
@@ -734,10 +734,10 @@ static struct xml_string* xml_parse_content(struct xml_parser* parser) {
 
 	/* Return text
 	 */
-	struct xml_string* content = (xml_string*)malloc(sizeof(struct xml_string));
-	content->buffer = (uint8_t*)malloc(length);
-    xml_parser_read(parser, start, length, (void*)content->buffer);
-	content->length = length;
+	struct xml_string content = { 0 };
+	content.buffer = (uint8_t*)malloc(length);
+    xml_parser_read(parser, start, length, (void*)content.buffer);
+	content.length = length;
 	return content;
 }
 
@@ -765,9 +765,9 @@ static struct xml_node* xml_parse_node(struct xml_parser* parser) {
 
 	/* Setup variables
 	 */
-	struct xml_string* tag_open = 0;
-	struct xml_string* tag_close = 0;
-	struct xml_string* content = 0;
+	struct xml_string tag_open = {0};
+	struct xml_string tag_close = {0};
+	struct xml_string content = {0};
 
 	size_t original_length;
 	struct xml_attribute** attributes;
@@ -780,16 +780,16 @@ static struct xml_node* xml_parse_node(struct xml_parser* parser) {
 	/* Parse open tag
 	 */
 	tag_open = xml_parse_tag_open(parser);
-	if (!tag_open) {
+	if (!tag_open.buffer) {
 		xml_parser_error(parser, NO_CHARACTER, "xml_parse_node::tag_open");
 		goto exit_failure;
 	}
 
-	original_length = tag_open->length;
-	attributes = xml_find_attributes(parser, tag_open);
+	original_length = tag_open.length;
+	attributes = xml_find_attributes(parser, &tag_open);
 
 	/* If tag ends with `/' it's self closing, skip content lookup */
-	if (tag_open->length > 0 && '/' == tag_open->buffer[original_length - 1]) {
+	if (tag_open.length > 0 && '/' == tag_open.buffer[original_length - 1]) {
 		/* Drop `/'
 		 */
 		goto node_creation;
@@ -800,7 +800,7 @@ static struct xml_node* xml_parse_node(struct xml_parser* parser) {
 	if ('<' != xml_parser_peek(parser, CURRENT_CHARACTER)) {
 		content = xml_parse_content(parser);
 
-		if (!content) {
+		if (!content.buffer) {
 			xml_parser_error(parser, (xml_parser_offset)0, "xml_parse_node::content");
 			goto exit_failure;
 		}
@@ -834,7 +834,7 @@ static struct xml_node* xml_parse_node(struct xml_parser* parser) {
 	/* Parse close tag
 	 */
 	tag_close = xml_parse_tag_close(parser);
-	if (!tag_close) {
+	if (!tag_close.buffer) {
 		xml_parser_error(parser, NO_CHARACTER, "xml_parse_node::tag_close");
 		goto exit_failure;
 	}
@@ -842,7 +842,7 @@ static struct xml_node* xml_parse_node(struct xml_parser* parser) {
 
 	/* Close tag has to match open tag
 	 */
-	if (!xml_string_equals(tag_open, tag_close)) {
+	if (!xml_string_equals(&tag_open, &tag_close)) {
 		xml_parser_error(parser, NO_CHARACTER, "xml_parse_node::tag missmatch");
 		goto exit_failure;
 	}
@@ -850,7 +850,7 @@ static struct xml_node* xml_parse_node(struct xml_parser* parser) {
 
 	/* Return parsed node
 	 */
-	xml_string_free(tag_close);
+	xml_string_free(&tag_close);
 
 node_creation:;
 	
@@ -864,15 +864,9 @@ node_creation:;
 	/* A failure occured, so free all allocalted resources
 	 */
 exit_failure:
-	if (tag_open) {
-		xml_string_free(tag_open);
-	}
-	if (tag_close) {
-		xml_string_free(tag_close);
-	}
-	if (content) {
-		xml_string_free(content);
-	}
+	xml_string_free(&tag_open);
+	xml_string_free(&tag_close);
+	xml_string_free(&content);
 
 	struct xml_node** it = children;
 	while (*it) {
@@ -904,7 +898,7 @@ struct xml_document* xml_parse_document(FILE *source) {
 		.position = 0,
 		.length = fsz,
         .f = source,
-        .buf_len = fsz, // TODO
+        .buf_len = 4096,
 	};
 
 	/* An empty buffer can never contain a valid document
@@ -1010,7 +1004,7 @@ struct xml_node* xml_document_root(struct xml_document* document) {
  * [PUBLIC API]
  */
 struct xml_string* xml_node_name(struct xml_node* node) {
-	return node->name;
+	return &node->name;
 }
 
 
@@ -1019,7 +1013,7 @@ struct xml_string* xml_node_name(struct xml_node* node) {
  * [PUBLIC API]
  */
 struct xml_string* xml_node_content(struct xml_node* node) {
-	return node->content;
+	return &node->content;
 }
 
 
@@ -1065,7 +1059,7 @@ struct xml_string* xml_node_attribute_name(struct xml_node* node, size_t attribu
 		return 0;
 	}
 
-	return node->attributes[attribute]->name;
+	return &node->attributes[attribute]->name;
 }
 
 
@@ -1078,7 +1072,7 @@ struct xml_string* xml_node_attribute_content(struct xml_node* node, size_t attr
 		return 0;
 	}
 
-	return node->attributes[attribute]->content;
+	return &node->attributes[attribute]->content;
 }
 
 
@@ -1086,7 +1080,7 @@ struct xml_string* xml_node_attribute_content(struct xml_node* node, size_t attr
 /**
  * [PUBLIC API]
  */
-struct xml_node* xml_easy_child(struct xml_node* node, uint8_t const* child_name, ...) {
+struct xml_node* xml_easy_child(struct xml_node* node, uint8_t* child_name, ...) {
 
 	/* Find children, one by one
 	 */
@@ -1137,7 +1131,7 @@ struct xml_node* xml_easy_child(struct xml_node* node, uint8_t const* child_name
 		
 		/* Find name of next child
 		 */
-		child_name = va_arg(arguments, uint8_t const*);
+		child_name = va_arg(arguments, uint8_t *);
 	}
 	va_end(arguments);
 
