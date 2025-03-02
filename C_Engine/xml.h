@@ -302,16 +302,16 @@ static void xml_node_free(struct xml_node* node) {
  * Prepares the parser to access a part of the file
  */
 
-static void xml_parser_seek(struct xml_parser *parser, size_t offset, size_t size)
+static bool xml_parser_seek(struct xml_parser *parser, size_t offset, size_t size)
 {
     if (parser->buf_off + parser->buf_len > offset + size && offset > parser->buf_off && parser->buffer)
     {
-        return; // Buffer is within bounds
+        return true; // Buffer is within bounds
     }
     else if (parser->buf_len < size)
     {
-        printf("xml_error: buffer length is not big enough (%d < %d)\n", parser->buf_len, size);
-        return;
+        //printf("xml_error: buffer length is not big enough (%d < %d)\n", parser->buf_len, size);
+        return false;
     }
 
     if (!parser->buffer)
@@ -327,6 +327,8 @@ static void xml_parser_seek(struct xml_parser *parser, size_t offset, size_t siz
     fread(parser->buffer, parser->buf_len, 1, parser->f);
 
     //printf("buf_off %d/%d\n", parser->buf_off, parser->length);
+
+    return true;
 }
 
 /**
