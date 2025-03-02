@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
 
         return 0;
     } else {
-        print_message("If you need help, look at:\n\nhttps://github.com/EGAMatsu/OpenBLOX/blob/main/README.md\n\nfor help, else join the discord:\nWf2bbU5z5J");
+        print_message("ERROR, ENGINE KILLED.\n\nIf you need help, look at:\n\nhttps://github.com/EGAMatsu/OpenBLOX/blob/main/README.md\n\nfor help, else join the discord:\nWf2bbU5z5J");
         while(1) {
             // Do nothing.
         }
