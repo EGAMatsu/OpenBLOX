@@ -446,7 +446,7 @@ static bool fileIsSelected;
 
 void loadFiles(Node **dataModel, Node **character)
 {
-    const char *mapFile[256];
+    const char *mapFile[1024];
     int mapLength = 0;
 
     /* Start up fs */

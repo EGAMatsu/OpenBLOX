@@ -44,10 +44,14 @@ int main()
 float test = 0;
 void gameRenderLoop() {
     start3DFrame();
-    test += 90*deltaTime;
-        render_cube_transform(0, 0, 2, 0, test, 0, 1, 1, 1, 1);
+    test += 45*deltaTime;
+        /*render_cube_transform(0, 0, 2, 0, test, 0, 1, 1, 1, 1);
         render_cube_transform(3, 1, 4, 0, test, 0, 1, 1, 1, 26);
-        render_cube_transform(-3, 1, 4, 0, test, 0, 1, 1, 1, 137);
-        renderWorld(dataModel);
+        render_cube_transform(-3, 1, 4, 0, test, 0, 1, 1, 1, 137);*/
+        pushMatrix();
+            scale_rotate_translate(1,1,1, 0,test,0, 0,0,0);
+            scale_rotate_translate(1,1,1, 0,0,0, 0,-16,-16);
+            renderWorld(dataModel);
+        popMatrix();
     endFrame();
 }

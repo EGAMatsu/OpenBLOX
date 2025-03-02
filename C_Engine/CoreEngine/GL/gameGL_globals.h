@@ -93,6 +93,10 @@ float cube_norm[] = {
     0.0, -1.0,  0.0,
 };
 
+float clr_multi[] = {
+    0.9, 0.7, 0.8, 0.8, 1, 0.5
+};
+
 void scale_rotate_translate(float xs, float ys, float zs, float rx, float ry, float rz, float tx, float ty, float tz) {
     // Use appropriate gl functions for transformations
     glTranslatef(tx, ty, tz);
@@ -110,9 +114,10 @@ void render_cube(int colorIndex) {
     glBegin(GL_TRIANGLES);
     for (unsigned int i = 0; i < sizeof(cube_inds) / sizeof(cube_inds[0]); i++) {
         unsigned int index = cube_inds[i];
+        unsigned int indVr = index * 3;
         glColor3b(r, g, b);
-        //glNormal3f(cube_norm[index * 3], cube_norm[index * 3 + 1], cube_norm[index * 3 + 2]);
-        glVertex3f(cube_vert[index * 3], cube_vert[index * 3 + 1], cube_vert[index * 3 + 2]);
+        glVertex3f(cube_vert[indVr], cube_vert[indVr + 1], cube_vert[indVr + 2]);
+        glNormal3f(cube_norm[indVr], cube_norm[indVr + 1], cube_norm[indVr + 2]);
     }
     glEnd();
 }
@@ -128,6 +133,6 @@ void render_cube_cf(CFrame cf, vec3 size, int color)
 {
     vec3 p = cf.position();
     vec3 r = cf.toEulerAngles();
-    render_cube_transform(p.x, p.y, p.z, r.x, r.y, r.z, size.x, size.y, size.z, color);
+    render_cube_transform(p.x, p.y, p.z, r.x, r.y, r.z, abs(size.x), abs(size.y), abs(size.z), color);
 }
 

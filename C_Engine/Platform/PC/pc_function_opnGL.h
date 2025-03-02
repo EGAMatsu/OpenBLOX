@@ -2,34 +2,28 @@
     OpenBLOX DS OpenGL Functions
 */
 
-void initOpenGL() {
-    // Set video modes
-    videoSetMode(MODE_0_3D);
-    vramSetBankA(VRAM_A_TEXTURE);
+#include <GL/gl.h>
+#include <GL/glu.h>
 
-    // Start GL
-    glInit();
+void initOpenGL() {
     glEnable(GL_TEXTURE_2D);
-    glClearColor(0, 0, 0, 31);
-    glClearPolyID(63);
-    glClearDepth(0x7FFF);
-    glViewport(0, 0, 255, 191);
+    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+    glClearDepth(1.0f);
+    glViewport(0, 0, 256, 192);
 }
 
-
-// Use perspective projection
 void perspectiveModeGL() {
-    // Set up the projection matrix
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    gluPerspective(70, 256.0 / 192.0, 0.1, 1024);
+    gluPerspective(70.0, 256.0 / 192.0, 0.1, 1024.0);
 
     gluLookAt(  0.0, 0.0, 0.0,      // Camera position
                 0.0, 0.0, 1.0,      // Look at
                 0.0, 1.0, 0.0);     // Up direction
     
     // Configure the polygon format
-    glPolyFmt(POLY_ALPHA(31) | POLY_CULL_BACK);
+    glEnable(GL_CULL_FACE);
+    glCullFace(GL_BACK);
 
     // Set up the modelview matrix
     glMatrixMode(GL_MODELVIEW);
@@ -41,17 +35,18 @@ void pushMatrix() {
 }
 
 void popMatrix() {
-    glPopMatrix(1);
+    glPopMatrix();
 }
 
 void endFrame() {
-    glPopMatrix(1);
-    glFlush(0);
-    swiWaitForVBlank();
+    glPopMatrix();
+    glFlush();
 }
 
 void start3DFrame() {
     glPushMatrix();
-	glMatrixMode(GL_MODELVIEW);
-    glPolyFmt(POLY_ALPHA(31) | POLY_CULL_NONE);
+    glMatrixMode(GL_MODELVIEW);
+    glDisable(GL_CULL_FACE);
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 }
