@@ -339,13 +339,19 @@ static bool xml_parser_seek(struct xml_parser *parser, size_t offset, size_t siz
 static void xml_parser_read(struct xml_parser *parser, size_t offset, size_t size, void *dest)
 {
 	#ifdef NDS_BUILD
-		xml_parser_seek(parser, offset, size), getHeapEnd() - getHeapStart();
 		if (offset % 10000 == 0) printf("\r%08d/%08d m %08d", offset, parser->length, getHeapEnd() - getHeapStart());
 	#else
-		xml_parser_seek(parser, offset, size), size;
-		if (offset % 10000 == 0) printf("\r%08d/%08d m %08d", offset, parser->length, size);
+		if (offset % 10000 == 0) printf("\r%08d/%08d", offset, parser->length); 
 	#endif
-    memcpy(dest, parser->buffer + (offset - parser->buf_off), size);
+    if (xml_parser_seek(parser, offset, size))
+    {
+        memcpy(dest, parser->buffer + (offset - parser->buf_off), size);
+    }
+    else
+    {
+        fseek(parser->f, offset, SEEK_SET);
+        fread(dest, size, 1, parser->f);
+    }
 }
 
 /**
