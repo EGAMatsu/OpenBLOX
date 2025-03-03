@@ -54,6 +54,10 @@ void endFrame() {
     #ifndef NO_SDL
         SDL_GL_SwapBuffers();
     #endif
+
+    #ifdef WII_BUILD
+        VIDEO_WaitVSync();
+    #endif
 }
 
 void start3DFrame() {

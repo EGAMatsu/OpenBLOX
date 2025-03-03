@@ -67,6 +67,16 @@ void processInput() {
         key_d = keyboard[SDLK_d];
         key_q = keyboard[SDLK_q];
         key_e = keyboard[SDLK_e];
+    #else
+        WPAD_ScanPads();
+        u32 pressed = WPAD_ButtonsDown(0);
+
+        key_w = ( pressed & WPAD_BUTTON_UP );
+        key_s = ( pressed & WPAD_BUTTON_DOWN );
+        key_a = ( pressed & WPAD_BUTTON_LEFT );
+        key_d = ( pressed & WPAD_BUTTON_RIGHT );
+        key_q = ( pressed & WPAD_BUTTON_B );
+        key_e = ( pressed & WPAD_BUTTON_A );
     #endif
 
     vertical_axis = (key_s ? 1.0f : 0.0f) - (key_w ? 1.0f : 0.0f);
