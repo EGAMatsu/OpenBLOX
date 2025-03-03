@@ -35,6 +35,10 @@ unsigned char backpackItem = 0;
 #elif PC_BUILD
     #define platformNameLoc STRING_PLATFORM_PC______
     #include "Platform/PC/pcINC.h"
+#elif WII_BUILD
+    #define platformNameLoc STRING_PLATFORM_PC______
+    #include "Platform/Wii/wii_specific.h"
+    #include "Platform/PC/pcINC.h"
 #endif
 
 // Post platform includes
@@ -48,6 +52,8 @@ unsigned char backpackItem = 0;
 #ifdef NDS_BUILD
     #include "Platform/DS/ds_function_loading.h"
 #elif PC_BUILD
+    #include "Platform/PC/pc_function_loading.h"
+#elif WII_BUILD
     #include "Platform/PC/pc_function_loading.h"
 #endif
 

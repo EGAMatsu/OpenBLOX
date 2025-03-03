@@ -7,7 +7,9 @@
 
 #define defaultWidth 640
 #define defaultHeight 480
-SDL_Event event;
+#ifndef WII_BUILD
+    SDL_Event event;
+#endif
 
 void SDL_Initialization();
 void initOpenGL() {
@@ -48,15 +50,20 @@ void popMatrix() {
 void endFrame() {
     glPopMatrix();
     glFlush();
-    SDL_GL_SwapBuffers();
+    
+    #ifndef WII_BUILD
+        SDL_GL_SwapBuffers();
+    #endif
 }
 
 void start3DFrame() {
-    while (SDL_PollEvent(&event)) {
-        if (event.type == SDL_QUIT) {
-            isGameRunning = 0;
+    #ifndef WII_BUILD
+        while (SDL_PollEvent(&event)) {
+            if (event.type == SDL_QUIT) {
+                isGameRunning = 0;
+            }
         }
-    }
+    #endif
 
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -75,16 +82,18 @@ void start3DFrame() {
 }
 
 void SDL_Initialization() {
-    if (SDL_Init(SDL_INIT_VIDEO) < 0) {
-        fprintf(stderr, "Unable to initialize SDL: %s\n", SDL_GetError());
-    }
+    #ifndef WII_BUILD
+        if (SDL_Init(SDL_INIT_VIDEO) < 0) {
+            fprintf(stderr, "Unable to initialize SDL: %s\n", SDL_GetError());
+        }
 
-    SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
-    SDL_Surface* screen = SDL_SetVideoMode(defaultWidth, defaultHeight, 32, SDL_OPENGL);
-    if (!screen) {
-        fprintf(stderr, "Unable to set video mode: %s\n", SDL_GetError());
-        SDL_Quit();
-    }
+        SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
+        SDL_Surface* screen = SDL_SetVideoMode(defaultWidth, defaultHeight, 32, SDL_OPENGL);
+        if (!screen) {
+            fprintf(stderr, "Unable to set video mode: %s\n", SDL_GetError());
+            SDL_Quit();
+        }
+    #endif
 }
 
 void glSetColor(int r, int g, int b, float transparency) {
