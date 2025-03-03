@@ -32,7 +32,7 @@ unsigned char backpackItem = 0;
 #ifdef NDS_BUILD
     #define platformNameLoc STRING_PLATFORM_DS______
     #include "Platform/DS/dsINC.h"
-#else
+#elif PC_BUILD
     #define platformNameLoc STRING_PLATFORM_PC______
     #include "Platform/PC/pcINC.h"
 #endif
@@ -47,7 +47,7 @@ unsigned char backpackItem = 0;
 
 #ifdef NDS_BUILD
     #include "Platform/DS/ds_function_loading.h"
-#else
+#elif PC_BUILD
     #include "Platform/PC/pc_function_loading.h"
 #endif
 
