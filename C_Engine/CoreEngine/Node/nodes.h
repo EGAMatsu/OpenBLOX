@@ -106,7 +106,9 @@ public:
     }
     void makePhysicsPart() {
         TPE_makeBox(joints, connections, scale.x, scale.y, scale.z, 0.1);
+        vec3 rotation = cf.toEulerAngles();
         TPE_bodyInit(&body, joints, 16, connections, 32, 1);
+        TPE_bodyRotateByAxis(&body, TPE_vec3(rotation.x, rotation.y, rotation.z));
     }
 };
 
