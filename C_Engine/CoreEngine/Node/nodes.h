@@ -73,6 +73,9 @@ public:
     Node* parent;
     std::vector<Node*> children;
 
+    bool locked = false;
+    bool anchored = true;
+
     void SetParent(Node *newParent)
     {
         parent = newParent;
