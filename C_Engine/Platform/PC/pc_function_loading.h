@@ -3,11 +3,14 @@
 */
 
 
-void levelLoaderMenu(Node **dataModel, Node **character) {
+void levelLoaderMenu(Node **dataModel, Node **character, int argc, char **argv) {
     /* Load Map */
-    print_message("Loading map. (./test.rbxl)\n");
-    char filePath[2048];
-    sprintf(filePath, "%s/%s", filePathForProgram, "test.rbxl");
+    char *filePath = argv[1];
+    if (argc < 2)
+    {
+        filePath = "./test.rbxl";
+    }
+    print_message("Loading map. (%s)\n", filePath);
     FILE *fp = fopen(filePath, "r");
     if (fp != nullptr) {
         print_message("Parsing XML Data.\n(File is %s.)\n", filePath);

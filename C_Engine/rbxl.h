@@ -455,8 +455,17 @@ Node *parseRBXMx(struct xml_document *doc)
 static int crop, cropCurrent;
 static bool fileIsSelected;
 
+#ifdef NDS_BUILD
 void levelLoaderMenu(Node **dataModel, Node **character);
-void loadFiles(Node **dataModel, Node **character)  {
+#else
+void levelLoaderMenu(Node **dataModel, Node **character, int argc, char **argv);
+#endif
+
+void loadFiles(Node **dataModel, Node **character, int argc, char **argv)  {
+#ifdef NDS_BUILD
     levelLoaderMenu(dataModel, character);
+#else
+    levelLoaderMenu(dataModel, character, argc, argv);
+#endif
 }
 

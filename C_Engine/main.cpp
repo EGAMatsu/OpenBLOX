@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 
         if ( 1/*platSingleApp*/) {
             print_message("Loading...\n");
-            loadFiles(&dataModel, &characterModel);
+            loadFiles(&dataModel, &characterModel, argc, argv);
             print_message("Done.\n");
         }
 
