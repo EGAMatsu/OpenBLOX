@@ -10,10 +10,7 @@
 void wiiInit() {
     // Initialise the video system
 	VIDEO_Init();
-
-	// This function initialises the attached controllers
-	WPAD_Init();
-
+	
 	// Obtain the preferred video mode from the system
 	// This will correspond to the settings in the Wii menu
 	rmode = VIDEO_GetPreferredMode(NULL);
