@@ -87,6 +87,7 @@ public:
 class Part : public Node {
 public:
     int color = 2;
+    float transparency = 0;
     int shape; // Maybe make -1 force the engine to find a SpecialMesh?
     vec3 scale;
     CFrame cf;

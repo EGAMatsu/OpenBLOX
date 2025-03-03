@@ -37,11 +37,11 @@ void processInput() {
         keyboard[i] = state[i] ? true : false;
     }
 
-    vertical_axis = (keyboard[SDLK_w] ? 1.0f : 0.0f) - (keyboard[SDLK_s] ? 1.0f : 0.0f);
-    horizontal_axis = (keyboard[SDLK_a] ? 1.0f : 0.0f) - (keyboard[SDLK_d] ? 1.0f : 0.0f);
+    vertical_axis = (keyboard[SDLK_s] ? 1.0f : 0.0f) - (keyboard[SDLK_w] ? 1.0f : 0.0f);
+    horizontal_axis = (keyboard[SDLK_d] ? 1.0f : 0.0f) - (keyboard[SDLK_a] ? 1.0f : 0.0f);
     fly_vertical_axis = (keyboard[SDLK_q] ? 1.0f : 0.0f) - (keyboard[SDLK_e] ? 1.0f : 0.0f);
 
-    debug_camera_x += (horizontal_axis*32) * deltaTime;
-    debug_camera_y += (fly_vertical_axis*32) * deltaTime;
-    debug_camera_z += (vertical_axis*32) * deltaTime;
+    debug_camera_x += (horizontal_axis*64) * deltaTime;
+    debug_camera_y += (fly_vertical_axis*64) * deltaTime;
+    debug_camera_z += (vertical_axis*64) * deltaTime;
 }

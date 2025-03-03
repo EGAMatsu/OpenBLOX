@@ -11,7 +11,7 @@ unsigned char startEngine   = 0;
 unsigned char platSingleApp = 0;
 
 float debug_camera_x = 0;
-float debug_camera_y = -128;
+float debug_camera_y = -16;
 float debug_camera_z = 0;
 
 float vertical_axis = 0.0;
