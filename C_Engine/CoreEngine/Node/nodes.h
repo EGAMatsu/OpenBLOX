@@ -115,7 +115,7 @@ public:
         TPE_makeBox(joints, connections, scale.x, scale.y, scale.z, 0.1);
         vec3 rotation = cf.toEulerAngles();
         TPE_bodyInit(&body, joints, 16, connections, 32, 1);
-        TPE_bodyRotateByAxis(&body, TPE_vec3(rotation.x, rotation.y, rotation.z));
+        TPE_bodyRotateByAxis(&body, TPE_vec3(rotation.x*512, rotation.y*512, rotation.z*512));
         TPE_bodyMoveTo(&body,TPE_vec3(cf.X*512,cf.Y*512,cf.Z*512));
     }
 };
