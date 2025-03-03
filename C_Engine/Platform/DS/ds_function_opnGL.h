@@ -59,10 +59,20 @@ void endFrame() {
 
 void start3DFrame() {
     perspectiveModeGL();
+    glEnable(GL_ANTIALIAS);
+	glEnable(GL_BLEND);
+	glEnable(GL_FOG);
+	glEnable(POLY_TOON_HIGHLIGHT);
+	glEnable(POLY_DECAL);
+	glEnable(POLY_SHADOW);
+	glEnable(GL_POLY_OVERFLOW);
+    
     glPushMatrix();
 }
 
 void glSetColor(int r, int g, int b, float transparency) {
+    int alpha = 31 - int((floor(transparency*4)/4)*31);
+    //printf("%f\n", transparency);
     glColor3b(r,g,b);
     int rr, gg, bb;
     rr = int(r*0.125);
@@ -72,6 +82,10 @@ void glSetColor(int r, int g, int b, float transparency) {
     glMaterialf(GL_DIFFUSE, RGB15(rr,gg,bb));
     glMaterialf(GL_SPECULAR, RGB15(16,16,16));
     glMaterialf(GL_EMISSION, RGB15(0,0,0));
+
+    int flagsAlphaY = (POLY_ALPHA(alpha) | POLY_CULL_BACK | POLY_FORMAT_LIGHT0 | POLY_FOG);
+    int flagsAlphaN = (POLY_ALPHA(31) | POLY_CULL_BACK | POLY_FORMAT_LIGHT0);
+    glPolyFmt((alpha==31) ? flagsAlphaN : flagsAlphaY);
 }
 
 void setupLighting() {

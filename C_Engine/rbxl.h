@@ -340,7 +340,7 @@ static Node *loadModelPartXML(struct xml_node *node)
         serialize_atomic(CoordinateFrame, "CFrame", newPart, cf);
         serialize_atomic(bool, "Locked", newPart, locked);
         serialize_atomic(bool, "Anchored", newPart, anchored);
-        serialize_atomic(float, "Transparancy", newPart, transparency);
+        serialize_atomic(float, "Transparency", newPart, transparency);
 
         newNode = newPart;
     }
@@ -354,6 +354,7 @@ static Node *loadModelPartXML(struct xml_node *node)
         serialize_atomic(CoordinateFrame, "CFrame", newSL, cf);
         serialize_atomic(bool, "Locked", newSL, locked);
         serialize_atomic(bool, "Anchored", newSL, anchored);
+        serialize_atomic(float, "Transparency", newSL, transparency);
 
         newNode = newSL;
     }

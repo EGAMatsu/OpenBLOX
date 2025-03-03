@@ -124,13 +124,13 @@ void render_cube(int colorIndex, float transparency) {
     int b = getHex_value(color, 2);
     
     glBegin(GL_TRIANGLES);
+    glSetColor(r, g, b, transparency);
     for (unsigned int i = 0; i < sizeof(cube_inds) / sizeof(cube_inds[0]); i += 4) {
         for (unsigned int j = 0; j < 4; ++j) {
             unsigned int index = cube_inds[i + j];
             unsigned int indVr = index * 3;
             unsigned int indexL = cube_inds[i + j] / 4;
             
-            glSetColor(r, g, b, transparency);
             glNormal3f(cube_norm[indVr + 1], cube_norm[indVr + 2], cube_norm[indVr]);
             glVertex3f(cube_vert[indVr + 1], cube_vert[indVr + 2], cube_vert[indVr]); 
         }
@@ -139,7 +139,9 @@ void render_cube(int colorIndex, float transparency) {
 }
 
 void render_cube_transform(float x, float y, float z, float rx, float ry, float rz, float sx, float sy, float sz, int color, float transparency) {
-    if ((distanceBetweenPoints(-camera_x, -camera_y, -camera_z, x,y,z) < maxPartDist) || (averageSize(sx,sy,sz) > 16)) {
+    unsigned char xy_check = (distanceBetweenPoints(-camera_x, 0, -camera_z,    x,0,z) < maxPartDist);
+    unsigned char  z_check = (distanceBetweenPoints(0, -camera_y, 0,            0,y,0) < (maxPartDist/3));
+    if ((xy_check && z_check) || (averageSize(sx,sy,sz) > 8)) {
         pushMatrix();
             scale_rotate_translate(sx, sy, sz, rx, ry, rz, x, y, z);
             render_cube(color, transparency);

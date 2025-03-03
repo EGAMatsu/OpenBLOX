@@ -10,7 +10,7 @@
 #include "ds_function_opnGL.h"
 #include "ds_function_time.h"
 
-float maxPartDist = 64;
+float maxPartDist = 128;
 
 const char* platformName = "Nintendo DS(i)";
 
