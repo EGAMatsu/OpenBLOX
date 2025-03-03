@@ -7,7 +7,7 @@
 
 #define defaultWidth 640
 #define defaultHeight 480
-#ifndef WII_BUILD
+#ifndef NO_SDL
     SDL_Event event;
 #endif
 
@@ -51,13 +51,13 @@ void endFrame() {
     glPopMatrix();
     glFlush();
     
-    #ifndef WII_BUILD
+    #ifndef NO_SDL
         SDL_GL_SwapBuffers();
     #endif
 }
 
 void start3DFrame() {
-    #ifndef WII_BUILD
+    #ifndef NO_SDL
         while (SDL_PollEvent(&event)) {
             if (event.type == SDL_QUIT) {
                 isGameRunning = 0;
@@ -82,7 +82,7 @@ void start3DFrame() {
 }
 
 void SDL_Initialization() {
-    #ifndef WII_BUILD
+    #ifndef NO_SDL
         if (SDL_Init(SDL_INIT_VIDEO) < 0) {
             fprintf(stderr, "Unable to initialize SDL: %s\n", SDL_GetError());
         }

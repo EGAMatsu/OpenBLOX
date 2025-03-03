@@ -9,6 +9,8 @@ endif
 
 include $(DEVKITPPC)/wii_rules
 
+CONFIG = $(DEVKITPRO)/portlibs/wii/bin/powerpc-eabi-pkg-config
+
 #---------------------------------------------------------------------------------
 # TARGET is the name of the output
 # BUILD is the directory where object files & intermediate files will be placed
@@ -24,22 +26,22 @@ INCLUDES    :=  ../ build_rvl
 # options for code generation
 #---------------------------------------------------------------------------------
 
-CFLAGS	= -g -O2 -Wall $(MACHDEP) $(INCLUDE) -DWII_BUILD -I/opt/devkitpro/portlibs/wii/include
+CFLAGS	= -g -O2 -Wall $(MACHDEP) $(INCLUDE) $(shell $(CONFIG) --cflags sdl) -DWII_BUILD
 CXXFLAGS	=	$(CFLAGS)
 
-LDFLAGS	=	-g $(MACHDEP) -Wl,-Map,$(notdir $@).map -L/opt/devkitpro/portlibs/wii/lib
+LDFLAGS	=	-g $(MACHDEP) -Wl,-Map,$(notdir $@).map $(shell $(CONFIG) --libs-only-L --libs-only-other sdl)
 
 #---------------------------------------------------------------------------------
 # any extra libraries we wish to link with the project
 #---------------------------------------------------------------------------------
 LIBS	:=	-lopengx -lGLU -lfat
-LIBS	+=	-lSDLmain -lSDL -lwiiuse -lbte -logc -lwiikeyboard -lm
+LIBS	+=	$(shell $(CONFIG) --libs-only-l sdl) -lwiiuse -lbte -logc -lwiikeyboard -lm
 
 #---------------------------------------------------------------------------------
 # list of directories containing libraries, this must be the top level containing
 # include and lib
 #---------------------------------------------------------------------------------
-LIBDIRS	:= #$(PORTLIBS)
+LIBDIRS	:= $(PORTLIBS)
 
 #---------------------------------------------------------------------------------
 # no real need to edit anything past this point unless you need to add additional
