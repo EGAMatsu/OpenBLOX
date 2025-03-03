@@ -336,7 +336,7 @@ static Node *loadModelPartXML(struct xml_node *node)
 
         serialize_atomic(Vector3, "size", newPart, scale);
         serialize_atomic(int, "BrickColor", newPart, color);
-        serialize_atomic(token, "Shape", newPart, shape);
+        serialize_atomic(int, "shape", newPart, shape);
         serialize_atomic(CoordinateFrame, "CFrame", newPart, cf);
         serialize_atomic(bool, "Locked", newPart, locked);
         serialize_atomic(bool, "Anchored", newPart, anchored);
@@ -350,7 +350,7 @@ static Node *loadModelPartXML(struct xml_node *node)
     
         serialize_atomic(Vector3, "size", newSL, scale);
         serialize_atomic(int, "BrickColor", newSL, color);
-        serialize_atomic(token, "Shape", newSL, shape);
+        serialize_atomic(int, "shape", newSL, shape);
         serialize_atomic(CoordinateFrame, "CFrame", newSL, cf);
         serialize_atomic(bool, "Locked", newSL, locked);
         serialize_atomic(bool, "Anchored", newSL, anchored);

@@ -32,6 +32,7 @@ int main(int argc, char *argv[])
         while(isGameRunning) {
             processInput();
             gameRenderLoop();
+            TPE_worldStep(&world);
 
             deltaTime = deltaTimeCalc();
         }
