@@ -34,7 +34,7 @@ LDFLAGS	=	-g $(MACHDEP) -Wl,-Map,$(notdir $@).map $(shell $(CONFIG) --libs-only-
 #---------------------------------------------------------------------------------
 # any extra libraries we wish to link with the project
 #---------------------------------------------------------------------------------
-LIBS	:=	-lopengx -lGLU -lfat
+LIBS	:=	-lGLU -lfat
 LIBS	+=	$(shell $(CONFIG) --libs-only-l sdl) -lwiiuse -lbte -logc -lwiikeyboard -lm
 
 #---------------------------------------------------------------------------------
