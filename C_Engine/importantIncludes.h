@@ -6,6 +6,10 @@
 #include "CoreEngine/timing.h"
 #include "ThirdParty/xml/include/xml.h"
 
+// Physics
+#include "ThirdParty/TinyPhysicsEngine/tinyphysicsengine.h"
+TPE_World world;    // The physical world.
+
 float distanceBetweenPoints(float x1, float y1, float z1, float x2, float y2, float z2);
 float averageSize(float x, float y, float z);
 void print_message(const char * text, ...);
@@ -24,9 +28,6 @@ float fly_vertical_axis = 0.0;
 
 unsigned char jump = 0;
 unsigned char backpackItem = 0;
-
-// Third party pre-platform includes
-#include "ThirdParty/TinyPhysicsEngine/tinyphysicsengine.h"
 
 #ifdef NDS_BUILD
     #define platformNameLoc STRING_PLATFORM_DS______

@@ -5,6 +5,8 @@
 #ifndef _NODES_H_
 #define _NODES_H_
 
+#include "../../ThirdParty/TinyPhysicsEngine/tinyphysicsengine.h"
+
 void render_cube_transform(float x, float y, float z, float rx, float ry, float rz, float sx, float sy, float sz, int color); 
 
 class vec3 {
@@ -91,8 +93,20 @@ public:
     int shape; // Maybe make -1 force the engine to find a SpecialMesh?
     vec3 scale;
     CFrame cf;
+
+    TPE_Joint joints[16];
+    TPE_Connection connections[32];
+    TPE_Body body;
+    
     void render() {
         render_cube_cf(cf, scale, color, transparency);
+        if (anchored) {
+            TPE_bodyMoveTo(&body,TPE_vec3(cf.X,cf.Y,cf.Z));
+        }
+    }
+    void makePhysicsPart() {
+        TPE_makeBox(joints, connections, scale.x, scale.y, scale.z, 0.1);
+        TPE_bodyInit(&body, joints, 16, connections, 32, 1);
     }
 };
 
