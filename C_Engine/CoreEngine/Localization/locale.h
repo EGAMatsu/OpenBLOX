@@ -49,6 +49,7 @@ char *strings_lingo[][3] = {
 char *strings_platform[][3] = {
     {"Nintendo DS", "Nintendo DS", "ilo Si Esu"},
     {"Nintendo DSi", "Nintendo DSi", "ilo Si Esu Ije"},
+    {"Nintendo Wii", "Nintendo Wii", "ilo Wi"},
     {"PC", "Computadora", "ilo lipu"},
     {"SEGA Dreamcast", "SEGA Dreamcast", "ilo Seka Sikaso"},
     0
