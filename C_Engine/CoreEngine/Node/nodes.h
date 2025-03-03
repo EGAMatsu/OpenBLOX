@@ -60,7 +60,7 @@ class CFrame {
 };
 typedef CFrame CoordinateFrame;
 
-void render_cube_cf(CFrame cf, vec3 size, int color);
+void render_cube_cf(CFrame cf, vec3 size, int color, float transparency);
 
 #include <vector>
 
@@ -92,7 +92,7 @@ public:
     vec3 scale;
     CFrame cf;
     void render() {
-        render_cube_cf(cf, scale, color);
+        render_cube_cf(cf, scale, color, transparency);
     }
 };
 

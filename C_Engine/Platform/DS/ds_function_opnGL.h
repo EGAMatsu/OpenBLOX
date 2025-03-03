@@ -62,7 +62,7 @@ void start3DFrame() {
     glPushMatrix();
 }
 
-void glSetColor(int r, int g, int b) {
+void glSetColor(int r, int g, int b, float transparency) {
     glColor3b(r,g,b);
     int rr, gg, bb;
     rr = int(r*0.125);

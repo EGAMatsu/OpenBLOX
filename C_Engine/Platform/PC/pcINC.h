@@ -12,6 +12,8 @@
 #include "pc_function_opnGL.h"
 #include "pc_function_time.h"
 
+float maxPartDist = 256;
+
 char filePathForProgram[1024];
 const char* platformName = "Desktop";
 
@@ -41,7 +43,7 @@ void processInput() {
     horizontal_axis = (keyboard[SDLK_d] ? 1.0f : 0.0f) - (keyboard[SDLK_a] ? 1.0f : 0.0f);
     fly_vertical_axis = (keyboard[SDLK_q] ? 1.0f : 0.0f) - (keyboard[SDLK_e] ? 1.0f : 0.0f);
 
-    debug_camera_x += (horizontal_axis*64) * deltaTime;
-    debug_camera_y += (fly_vertical_axis*64) * deltaTime;
-    debug_camera_z += (vertical_axis*64) * deltaTime;
+    camera_x += (horizontal_axis*64) * deltaTime;
+    camera_y += (fly_vertical_axis*64) * deltaTime;
+    camera_z += (vertical_axis*64) * deltaTime;
 }

@@ -6,13 +6,15 @@
 #include "CoreEngine/timing.h"
 #include "ThirdParty/xml/include/xml.h"
 
+float distanceBetweenPoints(float x1, float y1, float z1, float x2, float y2, float z2);
+float averageSize(float x, float y, float z);
 void print_message(const char * text, ...);
 unsigned char startEngine   = 0;
 unsigned char platSingleApp = 0;
 
-float debug_camera_x = 0;
-float debug_camera_y = -16;
-float debug_camera_z = 0;
+float camera_x = 0;
+float camera_y = -16;
+float camera_z = 0;
 
 float vertical_axis = 0.0;
 float horizontal_axis = 0.0;

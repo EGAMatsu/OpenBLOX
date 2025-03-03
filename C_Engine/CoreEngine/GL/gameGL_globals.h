@@ -2,6 +2,17 @@
     OpenBLOX OpenGL globals
 */
 
+float distanceBetweenPoints(float x1, float y1, float z1, float x2, float y2, float z2) {
+    float dx = x2 - x1;
+    float dy = y2 - y1;
+    float dz = z2 - z1;
+    return sqrt(dx * dx + dy * dy + dz * dz);
+}
+
+float averageSize(float x, float y, float z) {
+    return (x + y + z) / 3.0f;
+}
+
 float cube_vert[] = {
     // Front face
     -0.5, -0.5,  0.5,
@@ -106,7 +117,7 @@ void scale_rotate_translate(float xs, float ys, float zs, float rx, float ry, fl
     glScalef(xs, ys, zs);
 }
 
-void render_cube(int colorIndex) {
+void render_cube(int colorIndex, float transparency) {
     int color = colorGrab(colorIndex, 0);
     int r = getHex_value(color, 0);
     int g = getHex_value(color, 1);
@@ -119,25 +130,27 @@ void render_cube(int colorIndex) {
             unsigned int indVr = index * 3;
             unsigned int indexL = cube_inds[i + j] / 4;
             
-            glSetColor(r, g, b);
+            glSetColor(r, g, b, transparency);
             glNormal3f(cube_norm[indVr + 1], cube_norm[indVr + 2], cube_norm[indVr]);
-            glVertex3f(cube_vert[indVr + 1], cube_vert[indVr + 2], cube_vert[indVr]);
+            glVertex3f(cube_vert[indVr + 1], cube_vert[indVr + 2], cube_vert[indVr]); 
         }
     }
     glEnd();
 }
 
-void render_cube_transform(float x, float y, float z, float rx, float ry, float rz, float sx, float sy, float sz, int color) {
-    pushMatrix();
-        scale_rotate_translate(sx, sy, sz, rx, ry, rz, x, y, z);
-        render_cube(color);
-    popMatrix();
+void render_cube_transform(float x, float y, float z, float rx, float ry, float rz, float sx, float sy, float sz, int color, float transparency) {
+    if ((distanceBetweenPoints(-camera_x, -camera_y, -camera_z, x,y,z) < maxPartDist) || (averageSize(sx,sy,sz) > 16)) {
+        pushMatrix();
+            scale_rotate_translate(sx, sy, sz, rx, ry, rz, x, y, z);
+            render_cube(color, transparency);
+        popMatrix();
+    }
 }
 
-void render_cube_cf(CFrame cf, vec3 size, int color)
+void render_cube_cf(CFrame cf, vec3 size, int color, float transparency)
 {
     vec3 p = cf.position();
     vec3 r = cf.toEulerAngles();
-    render_cube_transform(p.x, p.y, p.z, r.x, r.y, r.z, abs(size.x), abs(size.y), abs(size.z), color);
+    render_cube_transform(p.x, p.y, p.z, r.x, r.y, r.z, abs(size.x), abs(size.y), abs(size.z), color, transparency);
 }
 
