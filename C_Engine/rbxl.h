@@ -342,6 +342,7 @@ static Node *loadModelPartXML(struct xml_node *node)
         serialize_atomic(bool, "Anchored", newPart, anchored);
         serialize_atomic(float, "Transparency", newPart, transparency);
 
+        newPart->makePhysicsPart();
         newNode = newPart;
     }
     else if (!strcmp(className, "SpawnLocation"))
@@ -356,6 +357,7 @@ static Node *loadModelPartXML(struct xml_node *node)
         serialize_atomic(bool, "Anchored", newSL, anchored);
         serialize_atomic(float, "Transparency", newSL, transparency);
 
+        newSL->makePhysicsPart();
         newNode = newSL;
     }
     else

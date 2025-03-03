@@ -94,28 +94,29 @@ public:
     vec3 scale;
     CFrame cf;
 
-    /*TPE_Joint joints[16];
+    TPE_Joint joints[16];
     TPE_Connection connections[32];
-    TPE_Body body;*/
+    TPE_Body body;
     
     void render() {
         render_cf(cf, scale, color, transparency, shape);
         
-        /*if (anchored) {
-            TPE_bodyMoveTo(&body,TPE_vec3(cf.X,cf.Y,cf.Z));
+        if (anchored) {
+            TPE_bodyMoveTo(&body,TPE_vec3(cf.X*512,cf.Y*512,cf.Z*512));
         } else {
             TPE_bodyApplyGravity(&body,TPE_F / 100);
         }
         TPE_Vec3 position = TPE_bodyGetCenterOfMass(&body);
         cf.X = position.x/512.0;
         cf.Y = position.y/512.0;
-        cf.Z = position.z/512.0;*/
+        cf.Z = position.z/512.0;
     }
     void makePhysicsPart() {
-        /*TPE_makeBox(joints, connections, scale.x, scale.y, scale.z, 0.1);
+        TPE_makeBox(joints, connections, scale.x, scale.y, scale.z, 0.1);
         vec3 rotation = cf.toEulerAngles();
         TPE_bodyInit(&body, joints, 16, connections, 32, 1);
-        TPE_bodyRotateByAxis(&body, TPE_vec3(rotation.x, rotation.y, rotation.z));*/
+        TPE_bodyRotateByAxis(&body, TPE_vec3(rotation.x, rotation.y, rotation.z));
+        TPE_bodyMoveTo(&body,TPE_vec3(cf.X*512,cf.Y*512,cf.Z*512));
     }
 };
 
