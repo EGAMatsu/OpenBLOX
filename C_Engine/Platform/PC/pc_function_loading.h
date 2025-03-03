@@ -5,12 +5,15 @@
 
 void levelLoaderMenu(Node **dataModel, Node **character, int argc, char **argv) {
     /* Load Map */
-    char *filePath = argv[1];
+    char filePath[1024];
+    char *filePathToLoad = argv[1];
+
     if (argc < 2)
     {
-        filePath = "./test.rbxl";
+        filePathToLoad = "./test.rbxl";
     }
-    print_message("Loading map. (%s)\n", filePath);
+    sprintf(filePath, "%s/%s", filePathForProgram, filePathToLoad);
+    print_message("Loading map. (%s)\n", filePathToLoad);
     FILE *fp = fopen(filePath, "r");
     if (fp != nullptr) {
         print_message("Parsing XML Data.\n(File is %s.)\n", filePath);
