@@ -2,9 +2,10 @@
     OpenBLOX PC Includes
 */
 
-#ifndef WII_BUILD
+#ifndef NO_SDL
     #include <SDL/SDL.h>
 #endif
+
 
 #include <GL/gl.h>
 #include <GL/glu.h>

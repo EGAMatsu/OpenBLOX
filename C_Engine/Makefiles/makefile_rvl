@@ -32,7 +32,8 @@ LDFLAGS	=	-g $(MACHDEP) -Wl,-Map,$(notdir $@).map -L/opt/devkitpro/portlibs/wii/
 #---------------------------------------------------------------------------------
 # any extra libraries we wish to link with the project
 #---------------------------------------------------------------------------------
-LIBS	:=	-lopengx -lGLU -L$(LIBOGC_LIB) -lwiiuse -lbte -lwiikeyboard -lfat -logc -lm
+LIBS	:=	-lopengx -lGLU -lfat
+LIBS	+=	-lSDLmain -lSDL -lwiiuse -lbte -logc -lwiikeyboard -lm
 
 #---------------------------------------------------------------------------------
 # list of directories containing libraries, this must be the top level containing
@@ -65,7 +66,7 @@ SFILES		:=	$(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.S)))
 # use CXX for linking C++ projects, CC for standard C
 #---------------------------------------------------------------------------------
 ifeq ($(strip $(CPPFILES)),)
-	export LD	:=	$(CC)
+	export LD	:=	$(CXX)
 else
 	export LD	:=	$(CXX)
 endif

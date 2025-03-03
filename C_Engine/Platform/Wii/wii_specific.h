@@ -6,6 +6,8 @@
 
 #include <gccore.h>
 #include <fat.h>
+#include <wiiuse/wpad.h>
+
 
 static void *xfb = NULL;
 static GXRModeObj *rmode = NULL;
@@ -28,7 +30,7 @@ void wiiInit() {
 	VIDEO_Configure(rmode);
 
 	// Tell the video hardware where our display memory is
-	VIDEO_SetNextFramebuffer(xfb);
+	//VIDEO_SetNextFramebuffer(xfb);
 
 	// Make the display visible
 	VIDEO_SetBlack(false);
