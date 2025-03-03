@@ -358,6 +358,9 @@ static Node *loadModelPartXML(struct xml_node *node)
         //print_message("Create placeholder for %s\n", className);
     }
 
+    if (!propertyNode)
+        goto noPropNode;
+
     for (int i = 0; i < xml_node_children(propertyNode); i++)
     {
         struct xml_node *child = xml_node_child(propertyNode, i);
@@ -394,6 +397,8 @@ static Node *loadModelPartXML(struct xml_node *node)
         }
         free(type);
     }
+
+noPropNode:
 
     loadCount += xml_node_children(node);
 
