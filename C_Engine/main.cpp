@@ -50,6 +50,7 @@ void gameRenderLoop() {
     setupLighting();
     start3DFrame();
         test += 45*deltaTime;
+        test = fmod(test, 360);
         /*scale_rotate_translate(1,1,1, -90,180,0, 0,0,0);
         scale_rotate_translate(1,1,1, 0,0,0, debug_camera_x,debug_camera_y,debug_camera_z);*/
         scale_rotate_translate(1,1,1, 0, test, 0, 0,0,0);

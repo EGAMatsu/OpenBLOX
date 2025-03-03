@@ -250,6 +250,8 @@ typedef struct
                                             performance. */
 #define TPE_BODY_FLAG_ALWAYS_ACTIVE 32 /**< Will never deactivate due to low
                                             energy. */
+#define TPE_BODY_FLAG_NO_BSPHERE 64    /**< Stops quick bounding sphere checks
+                                            against environment. */
 
 /** Function used for defining static environment, working similarly to an SDF
   (signed distance function). The parameters are: 3D point P, max distance D.
@@ -537,7 +539,7 @@ TPE_Vec3 TPE_bodyGetCenterOfMass(const TPE_Body *body);
   e.g. 16). */
 void TPE_worldDebugDraw(TPE_World *world, TPE_DebugDrawFunction drawFunc,
   TPE_Vec3 camPos, TPE_Vec3 camRot, TPE_Vec3 camView, uint16_t envGridRes,
-  TPE_Unit envGridSize);
+  TPE_Unit envGridSize, TPE_Unit offset);
 
 #define TPE_DEBUG_COLOR_CONNECTION 0
 #define TPE_DEBUG_COLOR_JOINT 1
@@ -590,7 +592,7 @@ TPE_Vec3 TPE_envLineSegment(TPE_Vec3 point, TPE_Vec3 a, TPE_Vec3 b);
 TPE_Vec3 TPE_envHeightmap(TPE_Vec3 point, TPE_Vec3 center, TPE_Unit gridSize,
   TPE_Unit (*heightFunction)(int32_t x, int32_t y), TPE_Unit maxDist);
 
-/** Environment function for triagnular prism, e.g. for ramps. The sides array
+/** Environment function for triangular prism, e.g. for ramps. The sides array
   contains three 2D coordinates of points of the triangle in given plane with
   respect to the center. WARNING: the points must be specified in counter
   clowckwise direction! The direction var specified axis direction (0, 1 or
@@ -1911,10 +1913,13 @@ uint8_t TPE_bodyEnvironmentResolveCollision(TPE_Body *body,
   TPE_Vec3 c;
   TPE_Unit d;
 
-  TPE_bodyGetFastBSphere(body,&c,&d);
+  if (!(body->flags & TPE_BODY_FLAG_NO_BSPHERE))
+  {
+    TPE_bodyGetFastBSphere(body,&c,&d);
 
-  if (TPE_DISTANCE(c,env(c,d)) > d)
-    return 0;
+    if (TPE_DISTANCE(c,env(c,d)) > d)
+      return 0;
+  }
 
   // now test the full body collision:
 
@@ -2074,7 +2079,7 @@ void _TPE_drawDebugPixel(
 
 void TPE_worldDebugDraw(TPE_World *world, TPE_DebugDrawFunction drawFunc,
   TPE_Vec3 camPos, TPE_Vec3 camRot, TPE_Vec3 camView, uint16_t envGridRes,
-  TPE_Unit envGridSize)
+  TPE_Unit envGridSize, TPE_Unit offset)
 {
 #define Z_LIMIT 250
   if (world->environmentFunction != 0)
@@ -2087,6 +2092,8 @@ void TPE_worldDebugDraw(TPE_World *world, TPE_DebugDrawFunction drawFunc,
 
     TPE_Vec3 center;
 
+    offset %= envGridSize;
+
     if (envGridRes != 0)
     {
       center = TPE_vec3(0,TPE_sin(camRot.x),TPE_cos(camRot.x));
@@ -2096,9 +2103,9 @@ void TPE_worldDebugDraw(TPE_World *world, TPE_DebugDrawFunction drawFunc,
       center = TPE_vec3Times(center,gridHalfSize);
       center = TPE_vec3Plus(camPos,center);
 
-      center.x = (center.x / envGridSize) * envGridSize;
-      center.y = (center.y / envGridSize) * envGridSize;
-      center.z = (center.z / envGridSize) * envGridSize;
+      center.x = (center.x / envGridSize) * envGridSize + offset;
+      center.y = (center.y / envGridSize) * envGridSize + offset;
+      center.z = (center.z / envGridSize) * envGridSize + offset;
     }
 
     testPoint.y = center.y - gridHalfSize;

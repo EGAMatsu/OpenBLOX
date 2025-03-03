@@ -19,6 +19,7 @@ void initOpenGL() {
 
     glSetToonTableRange( 0, 15, RGB15(8,8,8) );
 	glSetToonTableRange( 16, 31, RGB15(24,24,24) );
+    glEnable(GL_ANTIALIAS); 
 }
 
 
