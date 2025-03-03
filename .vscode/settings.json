@@ -51,6 +51,8 @@
         "queue": "cpp",
         "stack": "cpp",
         "vector": "cpp",
-        "__config": "cpp"
+        "__config": "cpp",
+        "iostream": "cpp",
+        "__locale": "cpp"
     }
 }

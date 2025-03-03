@@ -24,11 +24,25 @@ though maps in latter versions (2010+) WILL have issues.\
 # How to compile for DS/i:
 [Install devkitPro](https://devkitpro.org/wiki/Getting_Started)
 
-Clone/Download this repository
+Clone/Download this library
 
-Extract it in a desired location if you downloaded it
+Go into C_Engine, and run ``make ds`` (I personally run ``make ds-clean; make ds``).
 
-Go to Platforms->NDS then run Make.
+# How to compile for Wii:
+[Install devkitPro](https://devkitpro.org/wiki/Getting_Started)
+
+Install sdl-wii, and [this version of OpenGX](https://github.com/I-asked/opengx)
+
+Clone/Download this library
+
+Go into C_Engine, and run ``make wii`` (I personally run ``make wii-clean; make wii``).
+
+# How to compile for Linux (Windows MINGW should be the same):
+Install SDL 1.2
+
+Clone/Download this library
+
+Go into C_Engine, and run ``make pc`` (I personally run ``make pc-clean; make pc``).
 
 # Running the game on DS/i:
 [Timecode within a video by SharkBlox showing how to set this version up](https://youtu.be/Nzu9oocSujc?t=154)
