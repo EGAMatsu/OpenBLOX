@@ -12,3 +12,7 @@
 *.n64
 *.z64
 *.cdi
+
+C_Engine/Makefiles/build_ds
+C_Engine/Makefiles/build_pc
+
