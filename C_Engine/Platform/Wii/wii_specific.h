@@ -11,6 +11,7 @@
 
 static void *xfb = NULL;
 static GXRModeObj *rmode = NULL;
+#define WII_CONSOLE
 
 void wiiInit() {
 	#ifdef WII_CONSOLE
