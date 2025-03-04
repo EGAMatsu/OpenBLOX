@@ -29,4 +29,8 @@ float clamp(float value, float min, float max) {
     }
 }
 
+float lerp(float start, float end, float t) {
+  return start + t * (end - start);
+}
+
 #endif

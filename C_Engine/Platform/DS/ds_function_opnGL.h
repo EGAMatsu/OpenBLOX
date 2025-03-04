@@ -80,7 +80,7 @@ void glSetColor(int r, int g, int b, float transparency) {
     bb = int(b*0.125);
     glMaterialf(GL_AMBIENT, RGB15(rr/2,gg/2,bb/2));
     glMaterialf(GL_DIFFUSE, RGB15(rr,gg,bb));
-    glMaterialf(GL_SPECULAR, RGB15(16,16,16));
+    glMaterialf(GL_SPECULAR, RGB15(0,0,0));
     glMaterialf(GL_EMISSION, RGB15(0,0,0));
 
     int flagsAlphaY = (POLY_ALPHA(alpha) | POLY_CULL_BACK | POLY_FORMAT_LIGHT0 | POLY_FOG);

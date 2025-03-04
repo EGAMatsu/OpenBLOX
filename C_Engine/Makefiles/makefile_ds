@@ -19,19 +19,21 @@ BUILD       :=  build_ds
 SOURCES     :=  ../
 INCLUDES    :=  ../ build_ds
 
+COMPILE_SPEED = -O3
+
 #---------------------------------------------------------------------------------
 # options for code generation
 #---------------------------------------------------------------------------------
 ARCH    :=  -march=armv5te -mtune=arm946e-s -mthumb
 
-CFLAGS  :=  -g -Wall -Oz -ffunction-sections -fdata-sections\
+CFLAGS  :=  $(COMPILE_SPEED) -Wall -Oz -ffunction-sections -fdata-sections\
             $(ARCH)
 
 CFLAGS  +=  $(INCLUDE) -DARM9 -DNDS_BUILD
 CXXFLAGS    := $(CFLAGS) -fno-exceptions
 
-ASFLAGS :=  -g $(ARCH)
-LDFLAGS =   -specs=ds_arm9.specs -g $(ARCH) -Wl,-Map,$(notdir $*.map)
+ASFLAGS :=  $(COMPILE_SPEED) $(ARCH)
+LDFLAGS =   -specs=ds_arm9.specs $(COMPILE_SPEED) $(ARCH) -Wl,-Map,$(notdir $*.map)
 
 #---------------------------------------------------------------------------------
 # any extra libraries we wish to link with the project

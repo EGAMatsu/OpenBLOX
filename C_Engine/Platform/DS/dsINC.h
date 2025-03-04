@@ -34,11 +34,15 @@ void fileStart() {
 
 touchPosition	thisXY;
 touchPosition	lastXY = { 0,0,0,0 };
+float multiSpeed = 8;
+float lh = 0;
+float lv = 0;
+
 void processInput() {
     scanKeys();
     int held = keysHeld();
-    look_horizontal_axis = 0;
-    look_vertical_axis = 0;
+    lh = lerp(lh, 0, deltaTime*25);
+    lv = lerp(lv, 0, deltaTime*25);
 
 	if (held & KEY_TOUCH)   {
         touchRead(&thisXY);
@@ -50,12 +54,16 @@ void processInput() {
 			if(dx>-3&&dx<3)
 				dx=0;
 			if(dy>-2&&dy<2) dy=0;
-                look_horizontal_axis = dx;
-                look_vertical_axis = dy;
-			}
+
+            lh = dx*60;
+            lv = dy*60;
+        }
 
 		lastXY = thisXY;
 	}
+
+    look_horizontal_axis = lerp(look_horizontal_axis, lh, deltaTime*2);
+    look_vertical_axis = lerp(look_vertical_axis, lv, deltaTime*2);
 
     int button_up = (held & KEY_UP);
     int button_down = (held & KEY_DOWN);
@@ -83,7 +91,7 @@ void processInput() {
     camera_y += (yy_move*64) * deltaTime;
     camera_z += (zz_move*64) * deltaTime;
 
-    camera_ry += (look_horizontal_axis*15) * deltaTime;
-    camera_rx -= (look_vertical_axis*15) * deltaTime;
+    camera_ry += (look_horizontal_axis*deltaTime);
+    camera_rx -= (look_vertical_axis*deltaTime);
     camera_rx = clamp(camera_rx, -90, 90);
 }
