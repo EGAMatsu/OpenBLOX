@@ -54,7 +54,7 @@ void gameRenderLoop() {
         test = fmod(test, 360);
         /*scale_rotate_translate(1,1,1, -90,180,0, 0,0,0);
         scale_rotate_translate(1,1,1, 0,0,0, camera_x,camera_y,camera_z);*/
-        scale_rotate_translate(1,1,1, 0, 0, 0, 0,0,0);
+        scale_rotate_translate(1,1,1, camera_rx, camera_ry, 0, 0,0,0);
         scale_rotate_translate(1,1,1, 0, 0, 0, camera_x,camera_y,camera_z);
         renderWorld(dataModel);
     endFrame();

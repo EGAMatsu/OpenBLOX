@@ -3,6 +3,7 @@
 
 // Engine core that should be defined before the core platform includes
 #include "CoreEngine/gameGlobalVariables.h"
+#include "CoreEngine/mathHelper.h"
 #include "CoreEngine/timing.h"
 #include "ThirdParty/xml/include/xml.h"
 
@@ -19,6 +20,9 @@ unsigned char platSingleApp = 0;
 float camera_x = 0;
 float camera_y = -16;
 float camera_z = 0;
+float camera_rx= 0;
+float camera_ry= 0;
+float camera_rz= 0;
 
 float vertical_axis = 0.0;
 float horizontal_axis = 0.0;
