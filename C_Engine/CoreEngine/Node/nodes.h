@@ -77,6 +77,9 @@ public:
 
     bool locked = false;
     bool anchored = true;
+    bool raycastAble = true; // Blockland Specific, ROBLOX Levels will ignore this
+    bool canCollide = true;
+    bool visible = true;
 
     void SetParent(Node *newParent)
     {
@@ -91,6 +94,7 @@ public:
     int color = 2;
     float transparency = 0;
     int shape; // Maybe make -1 force the engine to find a SpecialMesh?
+    int partMode = 0; // 0 = ROBLOX, 1 = BlockLand
     vec3 scale;
     CFrame cf;
 
