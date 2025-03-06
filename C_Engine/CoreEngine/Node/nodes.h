@@ -48,6 +48,49 @@ class CFrame {
         return ret; 
     }
 
+    void rotateZXY(vec3 angle)
+    {
+        float cz = cosf(angle.z);
+        float sz = sinf(angle.z);
+        float cy = cosf(angle.y);
+        float sy = sinf(angle.y);
+        float cx = cosf(angle.x);
+        float sx = sinf(angle.x);
+
+        result.m0 = cz*cy;
+        result.m4 = cz*sy*sx - cx*sz;
+        result.m8 = sz*sx + cz*cx*sy;
+        result.m12 = 0;
+
+        result.m1 = cy*sz;
+        result.m5 = cz*cx + sz*sy*sx;
+        result.m9 = cx*sz*sy - cz*sx;
+        result.m13 = 0;
+
+        result.m2 = -sy;
+        result.m6 = cy*sx;
+        result.m10 = cy*cx;
+        result.m14 = 0;
+
+        result.m3 = 0;
+        result.m7 = 0;
+        result.m11 = 0;
+        result.m15 = 1;
+
+        // m0 -> -R00
+        // m1 -> -R10
+        // m2 -> -R20
+
+       
+
+        // m4 -> R01
+        // m5 -> R11
+        // m6 -> R21
+        // m8 -> -R02
+        // m9 -> -R12
+        // m10 -> -R22
+    }
+
     vec3 position()
     {
         vec3 ret;
@@ -88,6 +131,63 @@ public:
     }
 };
 
+class Part;
+
+class PhysicsService {
+    
+    private:
+    TPE_World world;
+
+    #define BODY_COUNT 1024
+
+    TPE_Body bodies[BODY_COUNT];
+    int nextBodyId;
+
+    static TPE_Vec3 environmentDistance(TPE_Vec3 point, TPE_Unit maxDistance)
+    {
+        return TPE_envGround(point, 0); // perhaps change 0 to Workspace.FallenPartsDestroyHeight later on
+    }
+
+    //void step_phys_recursive(Node *nd)
+    //{
+    //    Part *pt = dynamic_cast<Part*>(nd);
+    //    if (pt)
+    //    {
+    //        pt->stepPhysics();
+    //    }
+    //    for (int i = 0; i < nd->children.size(); i++)
+    //    {
+    //        step_phys_recursive(nd->children[i]);
+    //    }
+    //}
+
+    public:
+    void init()
+    {
+        TPE_worldInit(&world, bodies, 0, environmentDistance);
+    }
+
+    void step(Node *root)
+    {
+      //  step_phys_recursive(root);
+        TPE_worldStep(&world);
+    }
+
+    TPE_Body *createBody()
+    {
+        world.bodyCount = nextBodyId+1;
+        printf("body count %d\n", nextBodyId);
+        if (nextBodyId == BODY_COUNT - 1)
+        {
+            printf("max bodies reached (%d)\n", BODY_COUNT);
+            return NULL;
+        }
+        return &bodies[nextBodyId++];
+    }
+};
+
+PhysicsService *physicsService;
+
 // Part
 class Part : public Node {
 public:
@@ -98,36 +198,53 @@ public:
     vec3 scale;
     CFrame cf;
 
-    TPE_Joint joints[16];
-    TPE_Connection connections[32];
-    TPE_Body body;
+    TPE_Joint joints[8];
+    TPE_Connection connections[16];
+    TPE_Body *body = NULL;
     bool hasBeenPositioned = false;
-    
-    
+   
     void render() {
         render_cf(cf, scale, color, transparency, shape);
-        
+        stepPhysics();
+    }
+
+    void stepPhysics()
+    {
+        if (anchored)
+            return;
+        printf("ps %f %f %f -> ", cf.X, cf.Y, cf.Z);
         if (anchored) {
-            TPE_bodyMoveTo(&body,TPE_vec3(cf.X*512,cf.Y*512,cf.Z*512));
+            //TPE_bodyMoveTo(body,TPE_vec3(cf.X*512,cf.Y*512,cf.Z*512));
         } else {
             if (!hasBeenPositioned) {
-                TPE_bodyMoveTo(&body,TPE_vec3(cf.X*512,cf.Y*512,cf.Z*512));
+                TPE_bodyMoveTo(body,TPE_vec3(cf.X*512,cf.Y*512,cf.Z*512));
                 hasBeenPositioned = true;
             } else {
-                TPE_bodyApplyGravity(&body,TPE_F / 100);
+                TPE_bodyApplyGravity(body, 5);
             }
         }
-        TPE_Vec3 position = TPE_bodyGetCenterOfMass(&body);
+        TPE_Vec3 position = TPE_bodyGetCenterOfMass(body);
         cf.X = position.x/512.0;
         cf.Y = position.y/512.0;
         cf.Z = position.z/512.0;
+
+        printf("pm %f %f %f\n", cf.X, cf.Y, cf.Z);
     }
+    
     void makePhysicsPart() {
-        TPE_makeBox(joints, connections, scale.x*512, scale.y*512, scale.z*512, 0.1);
-        vec3 rotation = cf.toEulerAngles();
-        TPE_bodyInit(&body, joints, 16, connections, 32, 1);
-        TPE_bodyRotateByAxis(&body, TPE_vec3(rotation.x*512, rotation.y*512, rotation.z*512));
-        TPE_bodyMoveTo(&body,TPE_vec3(cf.X*512,cf.Y*512,cf.Z*512));
+        if (anchored)
+        {
+            return;
+        }
+        else
+        {
+            body = physicsService->createBody();
+            TPE_makeBox(joints, connections, scale.x*512, scale.y*512, scale.z*512, TPE_F);
+            vec3 rotation = cf.toEulerAngles();
+            TPE_bodyInit(body, joints, 8, connections, 16, 1);
+            TPE_bodyRotateByAxis(body, TPE_vec3(rotation.x*512, rotation.y*512, rotation.z*512));
+            TPE_bodyMoveTo(body,TPE_vec3(cf.X*512,cf.Y*512,cf.Z*512));
+        }
     }
 };
 
@@ -135,6 +252,16 @@ public:
 class SpawnLocation : public Part {
 public:
     int teamColor = 2;
+};
+
+// Workspace
+class Workspace : public Node {
+};
+
+// DataModel
+class DataModel : public Node {
+    public:
+        Workspace *workspace;
 };
 
 // Shitty world render function, will be slow, but will hopefully work if shit doesn't break.

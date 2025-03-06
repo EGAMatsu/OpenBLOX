@@ -18,7 +18,7 @@
 #define parseRBXL(f) parseRBXMf(f, true)
 #define parseRBXM(f) parseRBXMf(f, false)
 Node *parseRBXMf(FILE *f, bool place);
-Node *parseRBXMx(struct xml_document *doc);
+Node *parseRBXMx(struct xml_document *doc, bool place);
 
 Node *parseRBXMf(FILE *f, bool place)
 {
@@ -29,7 +29,7 @@ Node *parseRBXMf(FILE *f, bool place)
     print_message("Done.\n");
 
     printf("Building datamodel...\n");
-    Node *dataModel = parseRBXMx(doc);
+    Node *dataModel = parseRBXMx(doc, place);
     printf("done\n");
 
     xml_document_free(doc, true);
@@ -322,6 +322,8 @@ static int loadedCount = 0;
 // cName: class name - the name of the class
 #define serialize_atomic(type, pName, obj, sName) inst.serializations.push_back((Serialization){Serialize_##type, pName, &obj->sName})
 
+static DataModel *G_dataModel;
+
 // Load a model or part from XML
 static Node *loadModelPartXML(struct xml_node *node)
 {
@@ -342,7 +344,6 @@ static Node *loadModelPartXML(struct xml_node *node)
         serialize_atomic(bool, "Anchored", newPart, anchored);
         serialize_atomic(float, "Transparency", newPart, transparency);
 
-        newPart->makePhysicsPart();
         newNode = newPart;
     }
     else if (!strcmp(className, "SpawnLocation"))
@@ -357,8 +358,12 @@ static Node *loadModelPartXML(struct xml_node *node)
         serialize_atomic(bool, "Anchored", newSL, anchored);
         serialize_atomic(float, "Transparency", newSL, transparency);
 
-        newSL->makePhysicsPart();
         newNode = newSL;
+    }
+    else if (!strcmp(className, "Workspace"))
+    {
+        newNode = new Workspace;
+        G_dataModel->workspace = (Workspace*)newNode;
     }
     else
     {
@@ -408,6 +413,13 @@ static Node *loadModelPartXML(struct xml_node *node)
 
 noPropNode:
 
+    // Load physics data as it requires some fields to be set
+    Part *pt = dynamic_cast<Part*>(newNode);
+    if (pt)
+    {
+        pt->makePhysicsPart();
+    }
+
     loadCount += xml_node_children(node);
 
     for (int i = 0; i < xml_node_children(node); i++)
@@ -427,9 +439,19 @@ noPropNode:
     return newNode;
 }
 
-Node *parseRBXMx(struct xml_document *doc)
+Node *parseRBXMx(struct xml_document *doc, bool isPlace)
 {
-    Node *dataModel = new Node;
+    Node *dataModel;
+
+    if (isPlace)
+    {
+        dataModel = new DataModel;
+        G_dataModel = (DataModel*)dataModel;
+    }
+    else
+    {
+        dataModel = new Node;
+    }
 
     struct xml_node *root = xml_document_root(doc);
 

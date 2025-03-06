@@ -1,7 +1,8 @@
 #include <stdio.h>
 
 #include "./importantIncludes.h"
-Node *dataModel, *characterModel;
+DataModel *dataModel;
+Node *characterModel;
 
 int main(int argc, char *argv[])
 {
@@ -20,9 +21,12 @@ int main(int argc, char *argv[])
         
         print_message("Start to load.\n");
 
+        physicsService = new PhysicsService;
+        physicsService->init();
+
         if ( 1/*platSingleApp*/) {
             print_message("Loading...\n");
-            loadFiles(&dataModel, &characterModel, argc, argv);
+            loadFiles((Node**)&dataModel, &characterModel, argc, argv);
             print_message("Done.\n");
         }
 
@@ -32,7 +36,7 @@ int main(int argc, char *argv[])
         while(isGameRunning) {
             processInput();
             gameRenderLoop();
-            TPE_worldStep(&world);
+            physicsService->step(dataModel->workspace);
 
             deltaTime = deltaTimeCalc();
         }
@@ -56,6 +60,6 @@ void gameRenderLoop() {
         scale_rotate_translate(1,1,1, 0,0,0, camera_x,camera_y,camera_z);*/
         scale_rotate_translate(1,1,1, camera_rx, camera_ry, 0, 0,0,0);
         scale_rotate_translate(1,1,1, 0, 0, 0, camera_x,camera_y,camera_z);
-        renderWorld(dataModel);
+        renderWorld(dataModel->workspace);
     endFrame();
 }
