@@ -20,31 +20,6 @@
 Node *parseRBXMf(FILE *f, bool place);
 Node *parseRBXMx(struct xml_document *doc);
 
-Node *parseRBXMf(FILE *f, bool place)
-{
-    print_message("STARTING TO PARSE.\n");
-    // TODO switch to use some kind of streaming reader
-    print_message("Building XML Tree.\n");
-    struct xml_document *doc = xml_open_document(f);
-    print_message("Done.\n");
-
-    printf("Building datamodel...\n");
-    Node *dataModel = parseRBXMx(doc);
-    printf("done\n");
-
-    xml_document_free(doc, true);
-
-    return dataModel;
-}
-
-static char *xml_easy_string(struct xml_string *str)
-{
-    uint8_t *buf = (uint8_t*)malloc(xml_string_length(str) + 1);
-    xml_string_copy(str, buf, xml_string_length(str));
-    buf[xml_string_length(str)] = 0;
-    return (char*)buf;
-}
-
 // Serialization:
 // This is how we get the values from the file and into the values in the data model.
 // Every class should have some serialization data associated with it.
@@ -71,6 +46,49 @@ struct Serialization {
 struct SerializeInstance {
     std::vector<Serialization> serializations;
 };
+
+#include "rbxlb.h" // parseRBXMb()
+
+Node *parseRBXMf(FILE *f, bool place)
+{
+    fseek(f, 0, SEEK_SET);
+    char sign[8];
+    fread(sign, 8, 1, f);
+
+    if (!strncmp(sign, "<roblox!", 8))
+    {
+        fseek(f, 0, SEEK_SET);
+        // This is guaranteed a binary file
+        return parseRBXMb(f, place);
+    }
+    else
+    {
+        fseek(f, 0, SEEK_SET);
+        print_message("STARTING TO PARSE.\n");
+        // TODO switch to use some kind of streaming reader
+        print_message("Building XML Tree.\n");
+        struct xml_document *doc = xml_open_document(f);
+        print_message("Done.\n");
+
+        printf("Building datamodel...\n");
+        Node *dataModel = parseRBXMx(doc);
+        printf("done\n");
+
+        xml_document_free(doc, true);
+
+        return dataModel;
+    }
+}
+
+// rbxmx/rbxlx parser
+
+static char *xml_easy_string(struct xml_string *str)
+{
+    uint8_t *buf = (uint8_t*)malloc(xml_string_length(str) + 1);
+    xml_string_copy(str, buf, xml_string_length(str));
+    buf[xml_string_length(str)] = 0;
+    return (char*)buf;
+}
 
 static void xmlserialize_vector3_DS(Vector3 *v, struct xml_node *node)
 {
