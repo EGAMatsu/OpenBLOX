@@ -1,4 +1,4 @@
-name: Build OpenBLOX DS (Complete Rework)
+name: Build OpenBLOX DS
 
 on:
   push:
@@ -8,19 +8,22 @@ on:
 
 jobs:
   build-ds:
-    name: 🕹️ Build DS .nds
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Set up devkitARM container & build .nds
+      - name: Build using devkitARM container
         run: |
-          docker run --rm -v ${{ github.workspace }}:/project -w /project/C_Engine/Makefiles devkitpro/devkitarm make -f makefile_ds
+          docker run --rm \
+            -v "${{ github.workspace }}:/src" \
+            -w /src/C_Engine/Makefiles \
+            devkitpro/devkitarm \
+            make -f makefile_ds
 
-      - name: Upload OpenBLOX.nds artifact
+      - name: Upload NDS build
         uses: actions/upload-artifact@v3
         with:
           name: OpenBLOX.nds
-          path: ./C_Engine/main.nds
+          path: C_Engine/main.nds
