@@ -11,16 +11,13 @@ jobs:
     name: 🕹️ Build DS .nds
     runs-on: ubuntu-latest
 
-    container:
-      image: devkitpro/devkitarm
-
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Build .nds file
-        working-directory: ./C_Engine/Makefiles
-        run: make -f makefile_ds
+      - name: Set up devkitARM container & build .nds
+        run: |
+          docker run --rm -v ${{ github.workspace }}:/project -w /project/C_Engine/Makefiles devkitpro/devkitarm make -f makefile_ds
 
       - name: Upload OpenBLOX.nds artifact
         uses: actions/upload-artifact@v3
