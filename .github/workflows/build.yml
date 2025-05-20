@@ -8,38 +8,25 @@ on:
 
 jobs:
   build-ds:
-    name: 🕹️ Build DS
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Install devkitPro pacman
+      - name: Build inside devkitARM container
         run: |
-          sudo apt update
-          sudo apt install -y wget gnupg curl
-          wget https://apt.devkitpro.org/install-devkitpro-pacman
-          chmod +x install-devkitpro-pacman
-          sudo ./install-devkitpro-pacman
+          docker run --rm \
+            -v "${{ github.workspace }}:/project" \
+            -w /project/C_Engine/Makefiles \
+            devkitpro/devkitarm \
+            make -f makefile_ds
 
-      - name: Install devkitARM and tools
-        run: |
-          sudo dkp-pacman -Syu --noconfirm
-          sudo dkp-pacman -S --noconfirm nds-dev
+      - name: Rename NDS output
+        run: mv C_Engine/Makefiles/build_ds/main.nds C_Engine/OpenBLOX_Rework.nds
 
-      - name: Set environment variables
-        run: |
-          echo "DEVKITPRO=/opt/devkitpro" >> $GITHUB_ENV
-          echo "DEVKITARM=/opt/devkitpro/devkitARM" >> $GITHUB_ENV
-          echo "/opt/devkitpro/tools/bin" >> $GITHUB_PATH
-
-      - name: Build NDS
-        working-directory: ./C_Engine/Makefiles
-        run: make -f makefile_ds
-
-      - name: Upload OpenBLOX.nds
+      - name: Upload OpenBLOX_Rework.nds
         uses: actions/upload-artifact@v4
         with:
-          name: OpenBLOX.nds
-          path: C_Engine/main.nds
+          name: OpenBLOX_Rework.nds
+          path: C_Engine/OpenBLOX_Rework.nds
