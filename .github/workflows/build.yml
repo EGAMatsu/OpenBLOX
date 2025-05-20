@@ -22,11 +22,8 @@ jobs:
             devkitpro/devkitarm \
             make -f makefile_ds
 
-      - name: Rename NDS output
-        run: mv C_Engine/Makefiles/build_ds/main.nds C_Engine/OpenBLOX_Rework.nds
-
-      - name: Upload OpenBLOX_Rework.nds
+      - name: Upload OpenBLOX.nds
         uses: actions/upload-artifact@v4
         with:
-          name: OpenBLOX_Rework.nds
-          path: C_Engine/OpenBLOX_Rework.nds
+          name: OpenBLOX.nds
+          path: C_Engine/main.nds
