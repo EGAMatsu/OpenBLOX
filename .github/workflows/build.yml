@@ -1,4 +1,4 @@
-name: Build OpenBLOX DS
+name: Build DS (Docker)
 
 on:
   push:
@@ -14,28 +14,16 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Install devkitPro + devkitARM
+      - name: Run devkitARM container to build
         run: |
-          sudo apt update
-          sudo apt install -y wget gnupg curl
-          wget https://apt.devkitpro.org/install-devkitpro-pacman
-          chmod +x install-devkitpro-pacman
-          sudo ./install-devkitpro-pacman
-          sudo dkp-pacman -Syu --noconfirm
-          sudo dkp-pacman -S --noconfirm nds-dev
+          docker run --rm \
+            -v "$PWD:/project" \
+            -w /project/C_Engine/Makefiles \
+            devkitpro/devkitarm \
+            make -f makefile_ds
 
-      - name: Set environment variables
-        run: |
-          echo "DEVKITPRO=/opt/devkitpro" >> $GITHUB_ENV
-          echo "DEVKITARM=/opt/devkitpro/devkitARM" >> $GITHUB_ENV
-          echo "/opt/devkitpro/tools/bin" >> $GITHUB_PATH
-
-      - name: Build .nds
-        working-directory: ./C_Engine/Makefiles
-        run: make -f makefile_ds
-
-      - name: Upload OpenBLOX.nds
+      - name: Upload .nds artifact
         uses: actions/upload-artifact@v3
         with:
           name: OpenBLOX.nds
-          path: ./C_Engine/main.nds
+          path: C_Engine/main.nds
