@@ -11,19 +11,31 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Build using devkitARM container
+      - name: Install devkitPro + devkitARM
         run: |
-          docker run --rm \
-            -v "${{ github.workspace }}:/src" \
-            -w /src/C_Engine/Makefiles \
-            devkitpro/devkitarm \
-            make -f makefile_ds
+          sudo apt update
+          sudo apt install -y wget gnupg curl
+          wget https://apt.devkitpro.org/install-devkitpro-pacman
+          chmod +x install-devkitpro-pacman
+          sudo ./install-devkitpro-pacman
+          sudo dkp-pacman -Syu --noconfirm
+          sudo dkp-pacman -S --noconfirm nds-dev
 
-      - name: Upload NDS build
+      - name: Set environment variables
+        run: |
+          echo "DEVKITPRO=/opt/devkitpro" >> $GITHUB_ENV
+          echo "DEVKITARM=/opt/devkitpro/devkitARM" >> $GITHUB_ENV
+          echo "/opt/devkitpro/tools/bin" >> $GITHUB_PATH
+
+      - name: Build .nds
+        working-directory: ./C_Engine/Makefiles
+        run: make -f makefile_ds
+
+      - name: Upload OpenBLOX.nds
         uses: actions/upload-artifact@v3
         with:
           name: OpenBLOX.nds
-          path: C_Engine/main.nds
+          path: ./C_Engine/main.nds
