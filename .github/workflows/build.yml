@@ -39,7 +39,7 @@ jobs:
         run: make -f makefile_ds
 
       - name: Upload OpenBLOX.nds
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: OpenBLOX.nds
           path: C_Engine/main.nds
