@@ -16,6 +16,8 @@
 #include "pc_function_opnGL.h"
 #include "pc_function_time.h"
 
+#define SENSITIVITY 0.2f
+
 float maxPartDist = 256;
 
 char filePathForProgram[1024];
@@ -80,10 +82,19 @@ void processInput() {
     #endif
 
     vertical_axis = (key_s ? 1.0f : 0.0f) - (key_w ? 1.0f : 0.0f);
-    horizontal_axis = (key_d ? 1.0f : 0.0f) - (key_a ? 1.0f : 0.0f);
+    horizontal_axis = (key_a ? 1.0f : 0.0f) - (key_d ? 1.0f : 0.0f);
     fly_vertical_axis = (key_q ? 1.0f : 0.0f) - (key_e ? 1.0f : 0.0f);
 
-    camera_x += (horizontal_axis*64) * deltaTime;
-    camera_y += (fly_vertical_axis*64) * deltaTime;
-    camera_z += (vertical_axis*64) * deltaTime;
+    float yy_move = lengthdir_z(-vertical_axis, camera_rx);
+    float yM_move = abs(1.0 - lengthdir_z(1, camera_rx));
+    float xx_move = lengthdir_x(vertical_axis*yM_move, camera_ry) + lengthdir_x(horizontal_axis, camera_ry+90);
+    float zz_move = lengthdir_y(vertical_axis*yM_move, camera_ry) + lengthdir_y(horizontal_axis, camera_ry+90);
+
+    camera_x += (xx_move*64) * deltaTime;
+    camera_y += ((yy_move+fly_vertical_axis)*64) * deltaTime;
+    camera_z += (zz_move*64) * deltaTime;
+
+    camera_ry += (float)mx * SENSITIVITY;
+    camera_rx -= (float)my * SENSITIVITY;
+    camera_rx = clamp(camera_rx, -90, 90);
 }

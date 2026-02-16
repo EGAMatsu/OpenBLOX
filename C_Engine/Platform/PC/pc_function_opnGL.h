@@ -11,6 +11,8 @@
     SDL_Event event;
 #endif
 
+int mx=0, my=0;
+
 void SDL_Initialization();
 void initOpenGL() {
     SDL_Initialization();
@@ -24,7 +26,7 @@ void initOpenGL() {
 void perspectiveModeGL() {
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    gluPerspective(70.0, defaultWidth / defaultHeight, 0.1, 1024.0);
+    gluPerspective(70.0, (float)defaultWidth / (float)defaultHeight, 0.1, 1024.0);
 
     gluLookAt(  0.0, 0.0, 0.0,      // Camera position
                 0.0, 0.0, 1.0,      // Look at
@@ -60,13 +62,29 @@ void endFrame() {
     #endif
 }
 
+bool mouse_captured = true;
+
 void start3DFrame() {
     #ifndef NO_SDL
+        bool mouse_moved = false;
         while (SDL_PollEvent(&event)) {
             if (event.type == SDL_QUIT) {
                 isGameRunning = 0;
             }
+            if (event.type == SDL_MOUSEMOTION && mouse_captured) {
+                mouse_moved = true;
+                mx = event.motion.xrel;
+                my = event.motion.yrel;
+            }
+            if (event.type == SDL_KEYDOWN && event.key.keysym.sym == SDLK_F1) {
+                mouse_captured = !mouse_captured;
+                if(mouse_captured) SDL_ShowCursor(0);
+                else               SDL_ShowCursor(1);
+            }
         }
+        if(!mouse_moved) {mx=0;my=0;}
+        if(mouse_captured)
+            SDL_WarpMouse(defaultWidth / 2, defaultHeight / 2);
     #endif
 
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
@@ -74,7 +92,7 @@ void start3DFrame() {
 
     glPushMatrix();
     glMatrixMode(GL_MODELVIEW);
-    glDisable(GL_CULL_FACE);
+    //glDisable(GL_CULL_FACE);
 
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
@@ -97,6 +115,9 @@ void SDL_Initialization() {
             fprintf(stderr, "Unable to set video mode: %s\n", SDL_GetError());
             SDL_Quit();
         }
+
+        SDL_ShowCursor(0);
+        //SDL_WM_GrabInput(SDL_GRAB_ON);
     #endif
 }
 
