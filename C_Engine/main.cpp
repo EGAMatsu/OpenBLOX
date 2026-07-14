@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define PC_BUILD 1
+
 #include "./importantIncludes.h"
 Node *dataModel, *characterModel;
 
