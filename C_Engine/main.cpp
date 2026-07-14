@@ -46,14 +46,9 @@ int main(int argc, char *argv[])
     }
 }
 
-float test = 0;
 void gameRenderLoop() {
     setupLighting();
     start3DFrame();
-        test += 45*deltaTime;
-        test = fmod(test, 360);
-        /*scale_rotate_translate(1,1,1, -90,180,0, 0,0,0);
-        scale_rotate_translate(1,1,1, 0,0,0, camera_x,camera_y,camera_z);*/
         scale_rotate_translate(1,1,1, camera_rx, camera_ry, 0, 0,0,0);
         scale_rotate_translate(1,1,1, 0, 0, 0, camera_x,camera_y,camera_z);
         renderWorld(dataModel);
